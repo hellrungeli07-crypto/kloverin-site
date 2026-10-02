@@ -499,7 +499,6 @@
     <a class="logo" href="#top" style="font-size:18px; color:var(--text)"><svg class="logo-mark" style="width:30px;height:30px"><use href="#mark"/></svg><span class="txt">kloverin<span class="dot">.</span></span></a>
     <div class="links">
       <a class="js-email js-email-text" href="#"></a>
-      <a class="js-call js-phone-text" href="#" hidden></a>
       <a href="/sms.html">SMS Terms</a>
       <a href="/privacy.html">Privacy</a>
       <a href="/terms.html">Terms</a>
@@ -507,6 +506,47 @@
     </div>
   </div>
 </footer>
+
+<style>
+  .cm-back{position:fixed; inset:0; z-index:100; background:rgba(3,5,5,.72); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); display:none; align-items:center; justify-content:center; padding:16px;}
+  .cm-back.open{display:flex;}
+  .cm{width:100%; max-width:440px; max-height:92vh; overflow:auto; background:#0d1110; border:1px solid var(--line-hi); border-radius:20px; padding:24px; position:relative; box-shadow:0 30px 80px -20px rgba(0,0,0,.8);}
+  .cm h3{font-family:'Inter Tight',sans-serif; font-size:24px; letter-spacing:-.02em; margin:0 0 4px;}
+  .cm .sub{color:var(--muted); font-size:14px; margin:0 0 18px;}
+  .cm label{display:block; font-size:13px; color:var(--muted); margin:12px 0 6px;}
+  .cm input,.cm textarea{width:100%; box-sizing:border-box; background:var(--card); border:1px solid var(--line-hi); border-radius:12px; color:var(--text); font:inherit; font-size:16px; padding:12px 14px;}
+  .cm textarea{min-height:110px; resize:vertical;}
+  .cm input:focus,.cm textarea:focus{outline:none; border-color:var(--green-hi);}
+  .cm .btn{width:100%; justify-content:center; margin-top:18px;}
+  .cm-x{position:absolute; top:12px; right:12px; width:36px; height:36px; border-radius:50%; border:1px solid var(--line); background:var(--card); color:var(--text); font-size:20px; line-height:1; cursor:pointer;}
+  .cm-msg{font-size:14px; margin-top:12px; min-height:1em;}
+  .cm-alt{font-size:13px; color:var(--dim); margin-top:14px; text-align:center;}
+  .cm-alt button{background:none; border:0; color:var(--green-hi); font:inherit; cursor:pointer; padding:0;}
+  .cm-hp{position:absolute; left:-9999px;}
+</style>
+<div class="cm-back" id="contact" role="dialog" aria-modal="true" aria-labelledby="cm-title">
+  <div class="cm">
+    <button class="cm-x" type="button" aria-label="Close">×</button>
+    <div id="cm-body">
+      <h3 id="cm-title">Get in touch</h3>
+      <p class="sub">Send us a message and we'll reply within one business day.</p>
+      <form id="cm-form" novalidate>
+        <label for="cm-name">Your name</label>
+        <input id="cm-name" name="name" autocomplete="name" required>
+        <label for="cm-email">Email</label>
+        <input id="cm-email" name="email" type="email" autocomplete="email" required>
+        <label for="cm-biz">Business name (optional)</label>
+        <input id="cm-biz" name="business" autocomplete="organization">
+        <label for="cm-text">Message</label>
+        <textarea id="cm-text" name="message" required></textarea>
+        <input class="cm-hp" name="_honey" tabindex="-1" autocomplete="off">
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <div class="cm-msg" id="cm-msg" aria-live="polite"></div>
+      </form>
+      <div class="cm-alt">Prefer your own email app? <button type="button" id="cm-copy">Copy our address</button></div>
+    </div>
+  </div>
+</div>
 
 <script>
 (function(){
@@ -525,7 +565,47 @@
     a.href = links[plan] || ("mailto:" + c.email + "?subject=" + encodeURIComponent("Kloverin " + plan + " plan"));
   });
   each(".js-chat", function(a){ a.href = c.chatDemoUrl; });
-  each(".js-email", function(a){ a.href = "mailto:" + c.email; });
+  var modal = document.getElementById("contact");
+  var form = document.getElementById("cm-form");
+  var msg = document.getElementById("cm-msg");
+  function openContact(e){ if (e) e.preventDefault(); modal.classList.add("open"); setTimeout(function(){ document.getElementById("cm-name").focus(); }, 50); }
+  function closeContact(){ modal.classList.remove("open"); }
+  each(".js-email", function(a){ a.href = "#contact"; a.addEventListener("click", openContact); });
+  modal.querySelector(".cm-x").addEventListener("click", closeContact);
+  modal.addEventListener("click", function(e){ if (e.target === modal) closeContact(); });
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeContact(); });
+  if (location.hash === "#contact") openContact();
+  document.getElementById("cm-copy").addEventListener("click", function(){
+    var b = this;
+    function done(){ b.textContent = "Copied: " + c.email; }
+    if (navigator.clipboard) navigator.clipboard.writeText(c.email).then(done, function(){ b.textContent = c.email; });
+    else b.textContent = c.email;
+  });
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var f = form.elements;
+    if (!f.name.value.trim() || !/^\S+@\S+\.\S+$/.test(f.email.value) || !f.message.value.trim()){
+      msg.style.color = "var(--orange)"; msg.textContent = "Please add your name, a valid email and a message."; return;
+    }
+    var btn = form.querySelector("button[type=submit]");
+    btn.disabled = true; btn.textContent = "Sending...";
+    fetch("https://formsubmit.co/ajax/" + c.email, {
+      method: "POST",
+      headers: {"Content-Type": "application/json", "Accept": "application/json"},
+      body: JSON.stringify({
+        name: f.name.value, email: f.email.value, business: f.business.value, message: f.message.value,
+        _subject: "New Kloverin website message from " + f.name.value, _replyto: f.email.value,
+        _template: "table", _captcha: "false", _honey: f._honey.value
+      })
+    }).then(function(r){ return r.json(); }).then(function(d){
+      if (d && (d.success === true || d.success === "true")){
+        document.getElementById("cm-body").innerHTML = '<h3>Message sent</h3><p class="sub" style="margin:0">Thanks! We will get back to you within one business day.</p>';
+      } else { throw new Error(); }
+    }).catch(function(){
+      btn.disabled = false; btn.textContent = "Send message";
+      msg.style.color = "var(--orange)"; msg.textContent = "That didn't go through. Please try again, or email " + c.email;
+    });
+  });
   each(".js-email-text", function(a){ a.textContent = c.email; });
   each(".js-call", function(a){
     if (digits){ a.href = "tel:" + digits; a.hidden = false; }
