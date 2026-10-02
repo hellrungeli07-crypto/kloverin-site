@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SMS Program & Consent | Kloverin</title>
+<meta name="theme-color" content="#07090a">
+<link rel="icon" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#07090a;--card:rgba(255,255,255,.04);--line:rgba(255,255,255,.1);--text:#f4f1ea;--muted:#a3ada9;--green:#10b981;--green-hi:#34d399;color-scheme:dark;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,-apple-system,sans-serif;line-height:1.65;font-size:16px;}
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px;}
+  header{border-bottom:1px solid var(--line);padding:18px 0;}
+  .logo{font-family:'Inter Tight',sans-serif;font-weight:900;font-size:22px;letter-spacing:-.05em;color:var(--text);text-decoration:none;text-shadow:0 0 1px rgba(255,150,90,1),0 0 5px rgba(255,130,70,.85),0 0 14px rgba(255,115,55,.6);}
+  .logo span{color:var(--green-hi);}
+  h1{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(30px,5vw,42px);letter-spacing:-.02em;line-height:1.1;margin:44px 0 8px;}
+  h2{font-family:'Inter Tight',sans-serif;font-weight:700;font-size:21px;margin:34px 0 8px;}
+  p,li{color:var(--muted);} strong{color:var(--text);}
+  a{color:var(--green-hi);}
+  .updated{color:var(--muted);font-size:14px;}
+  .box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:18px 0;}
+  label{display:block;font-weight:600;color:var(--text);margin:14px 0 6px;font-size:15px;}
+  input[type=text],input[type=tel]{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:#0e1211;color:var(--text);font:inherit;}
+  .check{display:flex;gap:10px;align-items:flex-start;margin-top:16px;}
+  .check input{margin-top:5px;width:18px;height:18px;flex:none;}
+  .check span{color:var(--muted);font-size:14px;line-height:1.55;}
+  button{margin-top:18px;background:var(--green);color:#03140a;border:0;border-radius:999px;padding:12px 22px;font:600 15px 'Inter Tight',sans-serif;cursor:pointer;}
+  button:disabled{opacity:.45;cursor:not-allowed;}
+  .note{font-size:13px;color:var(--muted);margin-top:12px;}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding:26px 0 40px;font-size:14px;color:var(--muted);}
+  footer a{color:var(--muted);margin-right:18px;}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="/">kloverin<span>.</span></a></div></header>
+<main class="wrap">
+<h1>Kloverin SMS Program</h1>
+<p class="updated">Last updated: October 2, 2026</p>
+
+<p>Kloverin sends text messages to people who ask us to, such as a booking link after a call, a confirmation that we received a request, or a follow-up about a question they asked. <strong>We only text people who have agreed to receive messages, and we never text marketing to anyone who hasn't opted in.</strong></p>
+
+<h2>How you opt in</h2>
+<p>You can agree to receive texts from Kloverin in any of these ways:</p>
+<ul>
+  <li><strong>Online form:</strong> entering your mobile number on our website and checking the consent box (example below).</li>
+  <li><strong>On a phone call:</strong> calling our number and saying "yes" when our assistant asks, "Can I text you a link to book?"</li>
+  <li><strong>By texting us first:</strong> sending a text to our number. We reply only to that conversation.</li>
+</ul>
+<p>Consent is never a condition of purchase.</p>
+
+<div class="box" id="optin">
+  <strong>Get a text from Kloverin</strong>
+  <form onsubmit="event.preventDefault(); document.getElementById('ok').hidden=false;">
+    <label for="name">Name</label>
+    <input id="name" type="text" autocomplete="name" required>
+    <label for="phone">Mobile number</label>
+    <input id="phone" type="tel" autocomplete="tel" required>
+    <div class="check">
+      <input id="consent" type="checkbox" required onchange="document.getElementById('send').disabled=!this.checked">
+      <span>I agree to receive text messages from Kloverin about my inquiry, including booking links, appointment confirmations and follow-ups, at the number provided. Message frequency varies. Message and data rates may apply. Reply HELP for help or STOP to opt out at any time. Consent is not a condition of purchase. See our <a href="/privacy.html">Privacy Policy</a> and <a href="/terms.html">Terms</a>.</span>
+    </div>
+    <button id="send" type="submit" disabled>Text me</button>
+    <p class="note" id="ok" hidden>Thanks! We'll text you shortly.</p>
+  </form>
+</div>
+
+<h2>What we send</h2>
+<p>Booking links, confirmations that we received your call or request, appointment reminders, and replies to your questions. Message frequency varies based on your requests, typically 1 to 5 messages per inquiry.</p>
+
+<h2>Opting out and help</h2>
+<p>Reply <strong>STOP</strong> to any message to stop receiving texts. You'll get one confirmation and no further messages. Reply <strong>HELP</strong> for help, or email <a href="mailto:contact@kloverin.com">contact@kloverin.com</a>.</p>
+
+<h2>Costs and carriers</h2>
+<p>Message and data rates may apply depending on your mobile plan. Carriers are not liable for delayed or undelivered messages.</p>
+
+<h2>Privacy</h2>
+<p><strong>No mobile information will be sold or shared with third parties or affiliates for marketing or promotional purposes.</strong> Text messaging opt-in data and consent are never shared with any third parties. See our <a href="/privacy.html">Privacy Policy</a>.</p>
+</main>
+<footer><div class="wrap"><a href="/">Home</a><a href="/sms.html">SMS Terms</a><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a><br><br>© 2026 Kloverin · contact@kloverin.com</div></footer>
+</body>
+</html>
