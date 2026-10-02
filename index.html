@@ -17,7 +17,7 @@
 <!--
   =====================  KLOVERIN SITE SETTINGS  =====================
   Fill these in before going live. Everything on the page updates from here.
-  - bookingUrl: your Calendly link (leave "" to fall back to email)
+  - checkout:   Stripe payment link for each plan (leave "" to fall back to email)
   - demoPhone:  the Twilio number the AI receptionist answers, digits only
                 with country code, e.g. "+13125550142" (leave "" to hide
                 the "Call our AI" buttons)
@@ -27,7 +27,11 @@
 -->
 <script>
   window.KLOVERIN = {
-    bookingUrl: "",
+    checkout: {
+      starter: "",
+      growth: "",
+      pro: ""
+    },
     demoPhone: "",
     email: "contact@kloverin.com",
     chatDemoUrl: "https://frontdesk-ai-chatbot.onrender.com/demo"
@@ -280,7 +284,7 @@
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="btn btn-solid js-book" href="#">Book a demo</a>
+    <a class="btn btn-solid" href="#pricing">Get started</a>
   </div>
 </header>
 
@@ -292,9 +296,9 @@
       <h1>Stop losing customers to <em>voicemail</em>.</h1>
       <p class="lede">Kloverin answers your phone, texts back every call you miss, chats with your website visitors and books the appointment, day or night. We set it all up and run it for you. You just see the bookings come in.</p>
       <div class="ctas">
-        <a class="btn btn-solid js-book" href="#">
-          <svg width="16" height="16"><use href="#cal"/></svg>
-          Book a free demo call
+        <a class="btn btn-solid" href="#pricing">
+          Get started
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <a class="btn btn-ghost js-call" href="#">
           <svg width="16" height="16"><use href="#phone"/></svg>
@@ -405,7 +409,6 @@
       <div class="actions">
         <a class="btn btn-solid js-call" href="#"><svg width="16" height="16"><use href="#phone"/></svg>Call the AI demo</a>
         <a class="btn btn-ghost js-chat" href="#" target="_blank" rel="noopener">Chat with the demo</a>
-        <a class="btn btn-ghost js-book" href="#">Book a walkthrough</a>
       </div>
     </div>
   </section>
@@ -431,7 +434,7 @@
             <li><svg width="16" height="16"><use href="#check"/></svg>Leads texted straight to your phone</li>
           </ul>
           <div class="plan-foot">Capture every lead without hiring a receptionist.</div>
-          <a class="btn btn-ghost js-book" href="#">Get started</a>
+          <a class="btn btn-ghost js-plan" data-plan="starter" href="#">Get started</a>
         </div>
       </div>
 
@@ -449,7 +452,7 @@
             <li><svg width="16" height="16"><use href="#check"/></svg>Appointment booking links by service</li>
           </ul>
           <div class="plan-foot">For businesses ready to stop sending calls to voicemail.</div>
-          <a class="btn btn-solid js-book" href="#">Get started</a>
+          <a class="btn btn-solid js-plan" data-plan="growth" href="#">Get started</a>
         </div>
       </div>
 
@@ -466,7 +469,7 @@
             <li><svg width="16" height="16"><use href="#check"/></svg>Priority setup &amp; ongoing tuning</li>
           </ul>
           <div class="plan-foot">Build your reputation on autopilot.</div>
-          <a class="btn btn-ghost js-book" href="#">Get started</a>
+          <a class="btn btn-ghost js-plan" data-plan="pro" href="#">Get started</a>
         </div>
       </div>
     </div>
@@ -508,9 +511,9 @@
 
   <section class="final">
     <h2>Ready to stop missing customers?</h2>
-    <p>Book a 15-minute call. We'll show it working for a business like yours, then decide together whether it's a fit.</p>
+    <p>Pick a plan and we'll have your AI front desk live in a few days. Questions first? <a class="js-email" href="#">Email us</a>.</p>
     <div class="ctas">
-      <a class="btn btn-solid js-book" href="#"><svg width="16" height="16"><use href="#cal"/></svg>Book a free demo call</a>
+      <a class="btn btn-solid" href="#pricing">Get started</a>
       <a class="btn btn-ghost js-call" href="#"><svg width="16" height="16"><use href="#phone"/></svg>Call our AI now</a>
     </div>
   </section>
@@ -534,8 +537,7 @@
 <script>
 (function(){
   var c = window.KLOVERIN || {};
-  var mail = "mailto:" + c.email + "?subject=" + encodeURIComponent("Kloverin demo");
-  var book = c.bookingUrl || mail;
+  var links = c.checkout || {};
   var digits = (c.demoPhone || "").replace(/[^\d+]/g, "");
   function pretty(p){
     var d = p.replace(/\D/g, "");
@@ -544,9 +546,9 @@
   }
   function each(sel, fn){ document.querySelectorAll(sel).forEach(fn); }
 
-  each(".js-book", function(a){
-    a.href = book;
-    if (c.bookingUrl){ a.target = "_blank"; a.rel = "noopener"; }
+  each(".js-plan", function(a){
+    var plan = a.getAttribute("data-plan");
+    a.href = links[plan] || ("mailto:" + c.email + "?subject=" + encodeURIComponent("Kloverin " + plan + " plan"));
   });
   each(".js-chat", function(a){ a.href = c.chatDemoUrl; });
   each(".js-email", function(a){ a.href = "mailto:" + c.email; });
