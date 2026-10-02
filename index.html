@@ -2,10 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kloverin | AI Front Desk for Local Businesses</title>
 <meta name="description" content="Kloverin answers your calls, texts back every missed call, chats with website visitors and books appointments, 24/7. Done-for-you setup for local businesses.">
 <meta name="theme-color" content="#07090a">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Kloverin">
 <meta property="og:title" content="Kloverin | Never miss another customer">
 <meta property="og:description" content="An AI front desk that answers calls, texts back missed calls and books appointments for you, day or night.">
 <meta property="og:type" content="website">
@@ -111,7 +117,7 @@
 
   /* nav */
   header.top{
-    position:sticky; top:0; z-index:30;
+    position:sticky; top:0; z-index:30; padding-top:env(safe-area-inset-top);
     background:rgba(7,9,10,0.72); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
     border-bottom:1px solid var(--line);
   }
