@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kloverin | AI Front Desk for Local Businesses</title>
 <meta name="description" content="Kloverin answers your calls, texts back every missed call, chats with website visitors and books appointments, 24/7. Done-for-you setup for local businesses.">
+<meta name="author" content="Elijah Hellrung">
 <meta name="theme-color" content="#07090a">
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -76,9 +77,9 @@
   @media (max-width:560px){ .wrap{padding-inline:16px;} }
   h1,h2,h3{font-family:'Inter Tight', sans-serif; margin:0; letter-spacing:-0.02em; line-height:1.05; text-wrap:balance;}
   /* Light neon orange glow on headings, matching the logo */
-  h1, h2, .stat .n, .plan .price b{text-shadow:0 0 1px rgba(255,150,90,1), 0 0 5px rgba(255,130,70,.85), 0 0 14px rgba(255,115,55,.6), 0 0 30px rgba(255,100,45,.35);}
-  h3{text-shadow:0 0 1px rgba(255,150,90,.9), 0 0 5px rgba(255,130,70,.6), 0 0 12px rgba(255,115,55,.3);}
-  h1 .grad{text-shadow:none; filter:drop-shadow(0 0 1px rgba(255,150,90,.9)) drop-shadow(0 0 7px rgba(255,130,70,.7)) drop-shadow(0 0 18px rgba(255,110,50,.4));}
+  h1{text-shadow:0 0 1px rgba(255,150,90,.6), 0 0 10px rgba(255,120,60,.28), 0 0 26px rgba(255,100,45,.12);}
+  h2{text-shadow:0 0 14px rgba(255,120,60,.14);}
+  h1 .grad{text-shadow:none; filter:drop-shadow(0 0 8px rgba(52,211,153,.25));}
   .stat .n em, h2 span, .final h2 span{text-shadow:0 0 6px rgba(52,211,153,.55);}
   .label{
     font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:0.12em; text-transform:uppercase;
@@ -123,13 +124,25 @@
   }
   .top-inner{display:flex; align-items:center; justify-content:space-between; gap:16px; height:68px;}
   .logo{display:flex; align-items:center; gap:10px; font-family:'Inter Tight', sans-serif; font-weight:900; font-size:23px; letter-spacing:-0.05em; line-height:1;}
-  .logo .txt{color:#f4f1ea; text-shadow:0 0 1px rgba(255,150,90,1), 0 0 5px rgba(255,130,70,.85), 0 0 14px rgba(255,115,55,.6), 0 0 28px rgba(255,100,45,.35);}
+  .logo .txt{color:#f4f1ea; text-shadow:0 0 1px rgba(255,150,90,.7), 0 0 6px rgba(255,130,70,.35), 0 0 16px rgba(255,110,50,.15);}
   .logo .dot{color:var(--green-hi); text-shadow:0 0 6px rgba(52,211,153,.6);}
-  .logo-mark{width:36px; height:36px; flex:none; filter:drop-shadow(0 0 2px rgba(255,150,90,.95)) drop-shadow(0 0 7px rgba(255,122,69,.7)) drop-shadow(0 0 16px rgba(255,106,57,.4));}
+  .logo-mark{width:36px; height:36px; flex:none; filter:drop-shadow(0 0 2px rgba(255,150,90,.7)) drop-shadow(0 0 8px rgba(255,122,69,.4));}
   .top nav{display:flex; gap:30px; font-size:14px; color:var(--muted);}
   .top nav a:hover{color:var(--text);}
   .top .btn{padding:10px 18px; font-size:14px;}
-  @media (max-width:820px){ .top nav{display:none;} }
+  .menu-btn{display:none; width:42px; height:42px; border-radius:12px; border:1px solid var(--line-hi); background:var(--card); color:var(--text); cursor:pointer; align-items:center; justify-content:center; font-size:18px;}
+  .top-right{display:flex; align-items:center; gap:10px;}
+  @media (max-width:820px){
+    .menu-btn{display:inline-flex;}
+    .top nav{display:none; position:absolute; left:0; right:0; top:100%; flex-direction:column; gap:0; background:rgba(7,9,10,.97); border-bottom:1px solid var(--line); padding:6px 16px 12px;}
+    .top nav.open{display:flex;}
+    .top nav a{padding:14px 4px; font-size:16px; border-bottom:1px solid var(--line);}
+    .top nav a:last-child{border-bottom:0;}
+  }
+  .toast{position:fixed; left:50%; bottom:24px; transform:translateX(-50%); z-index:120; background:#0d1110; border:1px solid var(--line-hi); color:var(--text); padding:14px 18px; border-radius:14px; font-size:15px; box-shadow:0 20px 50px -15px rgba(0,0,0,.8); display:none; max-width:calc(100% - 32px); text-align:center;}
+  .toast.show{display:block;}
+  .toast b{color:var(--green-hi);}
+  .foot .by{color:var(--muted);}
 
   /* hero */
   .hero{padding-block:80px 72px; display:grid; grid-template-columns:1.05fr 1fr; gap:56px; align-items:center;}
@@ -311,9 +324,13 @@
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="btn btn-primary" href="#pricing">Get started</a>
+    <div class="top-right">
+      <a class="btn btn-primary" href="#pricing">Get started</a>
+      <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    </div>
   </div>
 </header>
+<div class="toast" id="toast" role="status"></div>
 
 <main id="top">
   <div class="wrap">
@@ -502,6 +519,7 @@
       <a href="/sms.html">SMS Terms</a>
       <a href="/privacy.html">Privacy</a>
       <a href="/terms.html">Terms</a>
+      <span class="by">Founded by Elijah Hellrung</span>
       <span>© <span id="yr">2026</span> Kloverin</span>
     </div>
   </div>
@@ -612,6 +630,22 @@
     else { a.hidden = true; }
   });
   each(".js-phone-text", function(a){ if (digits) a.textContent = pretty(digits); });
+  var nav = document.querySelector(".top nav"), mb = document.querySelector(".menu-btn");
+  if (mb && nav){
+    mb.addEventListener("click", function(){ var o = nav.classList.toggle("open"); mb.setAttribute("aria-expanded", o); mb.innerHTML = o ? "&times;" : "&#9776;"; });
+    nav.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ nav.classList.remove("open"); mb.innerHTML = "&#9776;"; mb.setAttribute("aria-expanded", false); }); });
+  }
+  var toast = document.getElementById("toast"), tt;
+  function showToast(html){ toast.innerHTML = html; toast.classList.add("show"); clearTimeout(tt); tt = setTimeout(function(){ toast.classList.remove("show"); }, 6000); }
+  var canCall = window.matchMedia("(pointer:coarse)").matches || /iPhone|iPad|Android/i.test(navigator.userAgent);
+  if (!canCall && digits){
+    each(".js-call", function(a){ a.addEventListener("click", function(e){
+      e.preventDefault();
+      if (navigator.clipboard) navigator.clipboard.writeText(pretty(digits)).catch(function(){});
+      showToast("Call our AI from your phone: <b>" + pretty(digits) + "</b> (number copied)");
+    }); });
+  }
+  if (c.chatDemoUrl){ try { fetch(c.chatDemoUrl, {mode:"no-cors"}).catch(function(){}); } catch(e){} }
   if (!digits){
     var h = document.getElementById("demo-title"), p = document.getElementById("demo-copy");
     if (h) h.textContent = "Don't take our word for it. Try it.";
