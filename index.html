@@ -37,7 +37,8 @@
     checkout: {
       starter: "https://buy.stripe.com/8x29AVfAx2eP4Qqghoc7u00",
       growth: "https://buy.stripe.com/4gM28tewt3iTbeO6GOc7u01",
-      pro: "https://buy.stripe.com/7sY14pewt8Dd2Ii6GOc7u02"
+      pro: "https://buy.stripe.com/7sY14pewt8Dd2Ii6GOc7u02",
+    addon: "https://buy.stripe.com/bJe14p9c9aLl1Ee1muc7u03"
     },
     demoPhone: "+19044788644",
     email: "contact@kloverin.com",
@@ -271,6 +272,8 @@
   .addon h4{margin:4px 0 4px; font-family:'Inter Tight', sans-serif; font-size:18px; font-weight:700;}
   .addon p{margin:0; font-size:14px; color:var(--muted); max-width:52ch;}
   .addon .amt{font-family:'Inter Tight', sans-serif; font-size:28px; font-weight:700; white-space:nowrap;}
+  .addon-buy{display:flex; align-items:center; gap:16px;}
+  .addon-buy .btn{padding:10px 20px; font-size:14px;}
   .addon .amt span{font-size:14px; color:var(--dim); font-weight:500;}
   .fine{margin-top:22px; text-align:center; font-size:13.5px; color:var(--dim);}
   .fine a{color:var(--muted); border-bottom:1px solid var(--line-hi);}
@@ -490,9 +493,12 @@
         <div>
           <div class="kicker">Add-on</div>
           <h4>Managed scheduling</h4>
-          <p>We run your calendar for you: new services, price changes, holiday hours, blocked days and availability, all updated whenever you text us. Add it to any plan, anytime. <a class="js-email" href="#" style="color:var(--text); border-bottom:1px solid var(--line-hi)">Ask us</a>.</p>
+          <p>We run your calendar for you: new services, price changes, holiday hours, blocked days and availability, all updated whenever you text us. Add it to any plan, anytime. Questions? <a class="js-email" href="#" style="color:var(--text); border-bottom:1px solid var(--line-hi)">Ask us</a>.</p>
         </div>
-        <div class="amt">$75<span>/mo</span></div>
+        <div class="addon-buy">
+          <div class="amt">$75<span>/mo</span></div>
+          <a class="btn btn-ghost js-plan" data-plan="addon" href="#pricing">Add it</a>
+        </div>
       </div>
       <p class="fine">Setup includes your business number, your booking page and full configuration. Multiple locations? <a class="js-email" href="#">Email us</a>.</p>
     </section>
