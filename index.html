@@ -17,7 +17,12 @@
 <meta property="og:description" content="An AI front desk that answers calls, texts back missed calls and books appointments for you, day or night.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kloverin.com/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%230b0d0c'/%3E%3Crect x='5' y='13' width='38' height='22' rx='11' fill='%23f4f1ea'/%3E%3Cg stroke='%2310b981' stroke-width='3.4' stroke-linecap='round'%3E%3Cpath d='M15 21.5v5'/%3E%3Cpath d='M20 18v12'/%3E%3Cpath d='M25 20.5v7'/%3E%3Cpath d='M30 16.5v15'/%3E%3Cpath d='M35 22.5v3'/%3E%3C/g%3E%3C/svg%3E">
+<meta property="og:image" content="https://kloverin.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
@@ -77,7 +82,7 @@
   .wrap{max-width:1120px; margin:0 auto; padding-inline:24px;}
   @media (max-width:560px){ .wrap{padding-inline:16px;} }
   h1,h2,h3{font-family:'Inter Tight', sans-serif; margin:0; letter-spacing:-0.02em; line-height:1.05; text-wrap:balance;}
-  /* Light neon orange glow on headings, matching the logo */
+  /* Light neon orange glow on headings */
   h1{text-shadow:0 0 1px rgba(255,150,90,.6), 0 0 10px rgba(255,120,60,.28), 0 0 26px rgba(255,100,45,.12);}
   h2{text-shadow:0 0 14px rgba(255,120,60,.14);}
   h1 .grad{text-shadow:none; filter:drop-shadow(0 0 8px rgba(52,211,153,.25));}
@@ -124,10 +129,9 @@
     border-bottom:1px solid var(--line);
   }
   .top-inner{display:flex; align-items:center; justify-content:space-between; gap:16px; height:68px;}
-  .logo{display:flex; align-items:center; gap:10px; font-family:'Inter Tight', sans-serif; font-weight:900; font-size:23px; letter-spacing:-0.05em; line-height:1;}
-  .logo .txt{color:#f4f1ea; text-shadow:0 0 1px rgba(255,150,90,.7), 0 0 6px rgba(255,130,70,.35), 0 0 16px rgba(255,110,50,.15);}
-  .logo .dot{color:var(--green-hi); text-shadow:0 0 6px rgba(52,211,153,.6);}
-  .logo-mark{width:36px; height:36px; flex:none; filter:drop-shadow(0 0 2px rgba(255,150,90,.7)) drop-shadow(0 0 8px rgba(255,122,69,.4));}
+  .logo{display:flex; align-items:center; gap:14px; font-family:'Inter Tight', sans-serif; font-weight:600; font-size:17px; letter-spacing:0.3em; line-height:1;}
+  .logo .txt{color:#F2F7F4; margin-right:-0.3em;}
+  .logo-mark{width:31px; height:36px; flex:none;}
   .top nav{display:flex; gap:30px; font-size:14px; color:var(--muted);}
   .top nav a:hover{color:var(--text);}
   .top .btn{padding:10px 18px; font-size:14px;}
@@ -312,12 +316,7 @@
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <symbol id="mark" viewBox="0 0 48 48">
-      <rect x="3" y="11" width="42" height="26" rx="13" fill="#f4f1ea"/>
-      <g stroke="#10b981" stroke-width="3.6" stroke-linecap="round">
-        <path d="M14 21v6"/><path d="M20 17v14"/><path d="M26 20v8"/><path d="M32 15.5v17"/><path d="M38 22v4"/>
-      </g>
-    </symbol>
+    <symbol id="mark" viewBox="-52 -52 104 118"><g fill="none" stroke="#A7E8C3" stroke-width="6" stroke-linejoin="round"><path d="M5 5H24A19 19 0 0 1 43 24A19 19 0 0 1 24 43A19 19 0 0 1 5 24Z" transform="rotate(0)"/><path d="M5 5H24A19 19 0 0 1 43 24A19 19 0 0 1 24 43A19 19 0 0 1 5 24Z" transform="rotate(90)"/><path d="M5 5H24A19 19 0 0 1 43 24A19 19 0 0 1 24 43A19 19 0 0 1 5 24Z" transform="rotate(180)"/><path d="M5 5H24A19 19 0 0 1 43 24A19 19 0 0 1 24 43A19 19 0 0 1 5 24Z" transform="rotate(270)"/></g><path d="M0 0C0 30 8 50 20 60" fill="none" stroke="#A7E8C3" stroke-width="6" stroke-linecap="round"/></symbol>
     <symbol id="check" viewBox="0 0 16 16"><path d="M3 8.5 6.5 12 13 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1C10.7 20 4 13.3 4 5a1 1 0 0 1 1-1Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
     <symbol id="arrow" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -326,7 +325,7 @@
 
 <header class="top">
   <div class="wrap top-inner">
-    <a class="logo" href="#top" aria-label="Kloverin home"><svg class="logo-mark"><use href="#mark"/></svg><span class="txt">kloverin<span class="dot">.</span></span></a>
+    <a class="logo" href="#top" aria-label="Kloverin home"><svg class="logo-mark"><use href="#mark"/></svg><span class="txt">KLOVERIN</span></a>
     <nav aria-label="Main">
       <a href="#how">How it works</a>
       <a href="#features">Features</a>
@@ -531,7 +530,7 @@
 
 <footer>
   <div class="wrap foot">
-    <a class="logo" href="#top" style="font-size:18px; color:var(--text)"><svg class="logo-mark" style="width:30px;height:30px"><use href="#mark"/></svg><span class="txt">kloverin<span class="dot">.</span></span></a>
+    <a class="logo" href="#top" style="font-size:15px; color:var(--text)"><svg class="logo-mark" style="width:27px;height:31px"><use href="#mark"/></svg><span class="txt">KLOVERIN</span></a>
     <div class="links">
       <a class="js-email js-email-text" href="#"></a>
       <a href="/sms.html">SMS Terms</a>
