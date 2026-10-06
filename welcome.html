@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Welcome to Kloverin | Set up your AI front desk</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#07090a">
+<link rel="icon" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#07090a;--card:rgba(255,255,255,.035);--field:#0e1211;--line:rgba(255,255,255,.1);--line-hi:rgba(255,255,255,.18);--text:#f4f1ea;--muted:#a3ada9;--dim:#6b7672;--green:#10b981;--green-hi:#34d399;--orange:#ff8a4c;color-scheme:dark;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,-apple-system,sans-serif;line-height:1.6;font-size:16px;}
+  .wrap{max-width:720px;margin:0 auto;padding:0 16px;}
+  header{border-bottom:1px solid var(--line);padding:18px 0;padding-top:calc(18px + env(safe-area-inset-top));}
+  .logo{font-family:'Inter Tight',sans-serif;font-weight:900;font-size:22px;letter-spacing:-.05em;color:var(--text);text-decoration:none;text-shadow:0 0 1px rgba(255,150,90,.7),0 0 6px rgba(255,130,70,.35),0 0 16px rgba(255,110,50,.15);}
+  .logo span{color:var(--green-hi);}
+  .kicker{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--green-hi);margin:44px 0 10px;}
+  h1{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(30px,6vw,44px);letter-spacing:-.025em;line-height:1.08;margin:0 0 12px;text-shadow:0 0 14px rgba(255,120,60,.14);}
+  .lead{color:var(--muted);font-size:17px;margin:0 0 26px;max-width:58ch;}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 30px;}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;}
+  .step b{display:block;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--green-hi);font-weight:500;margin-bottom:4px;}
+  .step span{font-size:14px;color:var(--muted);line-height:1.45;display:block;}
+  @media (max-width:600px){.steps{grid-template-columns:1fr;}}
+  fieldset{border:1px solid var(--line);background:var(--card);border-radius:18px;padding:6px 20px 22px;margin:0 0 16px;}
+  legend{font-family:'Inter Tight',sans-serif;font-weight:700;font-size:18px;padding:0 8px;margin-left:-8px;}
+  label{display:block;font-weight:600;color:var(--text);margin:18px 0 6px;font-size:15px;}
+  .hint{display:block;font-weight:400;color:var(--dim);font-size:13.5px;margin-top:2px;}
+  .opt{color:var(--dim);font-weight:400;}
+  input[type=text],input[type=email],input[type=tel],input[type=url],select,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line-hi);background:var(--field);color:var(--text);font:inherit;font-size:16px;}
+  textarea{min-height:110px;resize:vertical;}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--green-hi);}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media (max-width:600px){.row{grid-template-columns:1fr;} .spacer{display:none;}}
+  .check{display:flex;gap:10px;align-items:flex-start;margin-top:12px;font-size:14.5px;color:var(--muted);}
+  .check input{margin-top:4px;width:18px;height:18px;flex:none;accent-color:var(--green);}
+  .bad{border-color:var(--orange)!important;}
+  .submit{width:100%;margin-top:6px;background:var(--green);color:#03140a;border:0;border-radius:999px;padding:16px 22px;font:700 16px 'Inter Tight',sans-serif;cursor:pointer;box-shadow:0 8px 30px -8px rgba(16,185,129,.35);}
+  .submit:hover{background:var(--green-hi);}
+  .submit:disabled{opacity:.5;cursor:wait;}
+  .msg{min-height:1.2em;margin:12px 0 0;font-size:14.5px;color:var(--orange);text-align:center;}
+  .hp{position:absolute;left:-9999px;}
+  .done{display:none;text-align:center;padding:30px 20px;background:var(--card);border:1px solid var(--line);border-radius:18px;margin:10px 0 30px;}
+  .done h2{font-family:'Inter Tight',sans-serif;font-size:28px;margin:6px 0 8px;}
+  .done p{color:var(--muted);margin:0 auto;max-width:48ch;}
+  footer{border-top:1px solid var(--line);margin-top:48px;padding:26px 0 40px;font-size:14px;color:var(--muted);}
+  footer a{color:var(--muted);}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="/">kloverin<span>.</span></a></div></header>
+
+<main class="wrap">
+  <div class="kicker">Payment received</div>
+  <h1>Welcome to Kloverin. Let's set up your front desk.</h1>
+  <p class="lead">Answer these questions so your AI knows your business. It takes about 5 minutes, and you won't need to get on a call.</p>
+
+  <div class="steps">
+    <div class="step"><b>1 · Today</b><span>You fill out this form.</span></div>
+    <div class="step"><b>2 · 2&ndash;5 days</b><span>We build, train and test your AI.</span></div>
+    <div class="step"><b>3 · Go live</b><span>We email your new number and one quick forwarding step.</span></div>
+  </div>
+
+  <form id="intake" novalidate>
+    <fieldset>
+      <legend>About you</legend>
+      <div class="row">
+        <div><label for="biz">Business name</label><input id="biz" name="Business name" type="text" autocomplete="organization" required></div>
+        <div><label for="name">Your name</label><input id="name" name="Contact name" type="text" autocomplete="name" required></div>
+      </div>
+      <div class="row">
+        <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+        <div><label for="site">Website <span class="opt">(optional)</span></label><input id="site" name="Website" type="text" placeholder="yourbusiness.com"></div>
+      </div>
+      <div class="row">
+        <div><label for="plan">Plan you signed up for</label>
+          <select id="plan" name="Plan" required>
+            <option value="">Choose one</option>
+            <option>Starter ($149/mo)</option>
+            <option>Growth ($249/mo)</option>
+            <option>Pro ($349/mo)</option>
+          </select>
+        </div>
+        <div><label class="spacer">&nbsp;</label><label class="check" style="margin-top:12px"><input type="checkbox" name="Managed scheduling add-on" value="Yes"> I also added Managed scheduling ($75/mo)</label></div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Phones</legend>
+      <div class="row">
+        <div><label for="bizphone">Business phone number<span class="hint">The number customers call today.</span></label><input id="bizphone" name="Business phone" type="tel" autocomplete="tel" required></div>
+        <div><label for="carrier">Who provides that line?<span class="hint">So we can send forwarding steps.</span></label>
+          <select id="carrier" name="Phone carrier" required>
+            <option value="">Choose one</option>
+            <option>AT&amp;T</option><option>Verizon</option><option>T-Mobile</option>
+            <option>Comcast / Xfinity</option><option>Spectrum</option><option>RingCentral</option>
+            <option>Google Voice</option><option>Other / not sure</option>
+          </select>
+        </div>
+      </div>
+      <label for="cell">Cell number for new-lead texts<span class="hint">We text you here the moment a new customer comes in.</span></label>
+      <input id="cell" name="Lead alert cell" type="tel" required>
+    </fieldset>
+
+    <fieldset>
+      <legend>Your business</legend>
+      <label for="services">Services and starting prices<span class="hint">One per line, e.g. "Drain cleaning, from $149"</span></label>
+      <textarea id="services" name="Services and prices" required></textarea>
+      <div class="row">
+        <div><label for="hours">Business hours</label><textarea id="hours" name="Hours" style="min-height:90px" placeholder="Mon–Fri 8am–6pm, Sat 9am–2pm" required></textarea></div>
+        <div><label for="area">Service area<span class="hint">Cities or zip codes you cover.</span></label><textarea id="area" name="Service area" style="min-height:90px" required></textarea></div>
+      </div>
+      <label for="faq">Questions customers ask most, with your answers<span class="hint">5 to 10 is perfect. e.g. "Do you charge for estimates? No, estimates are free."</span></label>
+      <textarea id="faq" name="Common questions and answers" style="min-height:150px" required></textarea>
+    </fieldset>
+
+    <fieldset>
+      <legend>Links</legend>
+      <label for="booking">Booking link <span class="opt">(Calendly, Jobber, Square, Booksy…)</span></label>
+      <input id="booking" name="Booking link" type="text" placeholder="https://">
+      <label class="check"><input type="checkbox" id="nobooking" name="Needs a booking page" value="Yes, please set one up"> I don't have one. Set one up for me.</label>
+      <label for="review">Google review link <span class="opt">(or just your business name as it shows on Google)</span></label>
+      <input id="review" name="Google review link" type="text">
+      <label for="notes">Anything else we should know? <span class="opt">(optional)</span><span class="hint">Things the AI should never say, emergency rules, who to transfer calls to…</span></label>
+      <textarea id="notes" name="Notes" style="min-height:90px"></textarea>
+    </fieldset>
+
+    <input class="hp" name="_honey" tabindex="-1" autocomplete="off">
+    <button class="submit" type="submit">Send my answers</button>
+    <p class="msg" id="msg" aria-live="polite"></p>
+  </form>
+
+  <div class="done" id="done">
+    <div class="kicker" style="margin:0">All set</div>
+    <h2>Thanks! We've got everything.</h2>
+    <p>We'll start building your AI front desk now and email you within one business day with an update. Questions anytime: <a href="/#contact" style="color:var(--green-hi)">contact us</a>.</p>
+  </div>
+</main>
+
+<footer><div class="wrap"><a href="/">kloverin.com</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></div></footer>
+
+<script>
+(function(){
+  var EMAIL = "contact@kloverin.com";
+  var form = document.getElementById("intake"), msg = document.getElementById("msg");
+  var nob = document.getElementById("nobooking"), booking = document.getElementById("booking");
+  nob.addEventListener("change", function(){ booking.disabled = nob.checked; if (nob.checked) booking.value = ""; });
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var missing = [];
+    form.querySelectorAll("[required]").forEach(function(el){
+      var ok = el.value.trim() !== "" && (el.type !== "email" || /^\S+@\S+\.\S+$/.test(el.value));
+      el.classList.toggle("bad", !ok); if (!ok) missing.push(el);
+    });
+    if (!nob.checked && !booking.value.trim()){ booking.classList.add("bad"); missing.push(booking); } else booking.classList.remove("bad");
+    if (missing.length){ msg.textContent = "Please fill in the highlighted fields."; missing[0].focus(); return; }
+    var data = {};
+    new FormData(form).forEach(function(v,k){ if (v !== "") data[k] = v; });
+    data._subject = "New client intake: " + data["Business name"];
+    data._replyto = data.email; data._template = "table"; data._captcha = "false";
+    var btn = form.querySelector(".submit"); btn.disabled = true; btn.textContent = "Sending..."; msg.textContent = "";
+    fetch("https://formsubmit.co/ajax/" + EMAIL, {method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"}, body:JSON.stringify(data)})
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        if (d && (d.success === true || d.success === "true")){ form.style.display = "none"; document.getElementById("done").style.display = "block"; window.scrollTo(0,0); }
+        else throw new Error();
+      })
+      .catch(function(){ btn.disabled = false; btn.textContent = "Send my answers"; msg.textContent = "That didn't go through. Please try again, or email " + EMAIL + "."; });
+  });
+})();
+</script>
+</body>
+</html>
