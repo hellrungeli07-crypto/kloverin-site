@@ -216,6 +216,21 @@
       <textarea id="notes"></textarea>
     </fieldset>
 
+    <!-- 7 -->
+    <fieldset>
+      <legend>7. Texting registration</legend>
+      <p class="sec-note">Phone carriers require every business that sends texts to be registered. We file it for you; these details are used only for that and are never shown to customers.</p>
+      <label for="legal">Legal business name<span class="hint">As it appears on your IRS / EIN paperwork. Sole proprietor? Use your full legal name.</span></label>
+      <input id="legal" type="text" data-req>
+      <div class="row">
+        <div><label for="ein">EIN (federal tax ID)<span class="hint">9 digits, e.g. 12-3456789.</span></label><input id="ein" type="text" inputmode="numeric" data-type="einopt" placeholder="12-3456789"></div>
+        <div><label class="check" style="margin-top:34px"><input type="checkbox" id="noein"> I'm a sole proprietor without an EIN</label></div>
+      </div>
+      <div class="err" id="einErr"></div>
+      <label for="addr">Business mailing address<span class="hint">Street, city, state and ZIP.</span></label>
+      <input id="addr" type="text" autocomplete="street-address" data-req>
+    </fieldset>
+
     <input class="hp" id="hp" tabindex="-1" autocomplete="off">
     <button class="submit" type="submit">Review my answers</button>
     <p class="msg" id="msg" aria-live="polite"></p>
@@ -295,6 +310,8 @@
   });
   function fmtTime(m){ m=+m; var h=Math.floor(m/60), mm=m%60; return (h%12||12)+":"+(mm?"30":"00")+(h<12?" AM":" PM"); }
 
+  $("noein").onchange = function(){ if (this.checked){ $("ein").classList.remove("bad"); $("einErr").textContent = ""; } };
+
   /* booking toggle */
   $("nobooking").onchange = function(){ $("booking").disabled = this.checked; if (this.checked){ $("booking").value=""; $("booking").classList.remove("bad"); } };
 
@@ -317,6 +334,7 @@
     else if (t==="url") ok = isUrl(v);
     else if (t==="gmaps") ok = /^(https?:\/\/)?((www\.)?google\.[a-z.]+\/maps|maps\.google\.|maps\.app\.goo\.gl|goo\.gl\/maps|g\.page|share\.google)/i.test(v);
     else if (t==="moneyopt") ok = !v || (+v >= 0 && +v < 100000);
+    else if (t==="einopt") ok = !v || v.replace(/\D/g,"").length===9;
     el.classList.toggle("bad", !ok); return ok;
   }
   form.addEventListener("input", function(e){ if (e.target.classList.contains("bad")) check(e.target); });
@@ -354,6 +372,10 @@
     var pays = [].map.call(document.querySelectorAll("#pay input:checked"), function(x){ return x.value; });
     $("payErr").textContent = pays.length ? "" : "Pick at least one payment method.";
     if (!pays.length) bad.push(document.querySelector("#pay input"));
+    // EIN or sole proprietor
+    var einV = $("ein").value.trim(), noEin = $("noein").checked;
+    $("einErr").textContent = (einV || noEin) ? "" : "Enter your EIN, or tick the sole proprietor box.";
+    if (!einV && !noEin) { $("ein").classList.add("bad"); bad.push($("ein")); }
     // extra faq
     var faqs = [];
     [].forEach.call($("faqBody").children, function(tr){ var q = tr.querySelector(".f-q").value.trim(), a = tr.querySelector(".f-a").value.trim(); if (q && a) faqs.push(q+" -> "+a); });
@@ -373,7 +395,10 @@
       "Never say or promise": $("q_never").value.trim() || "Nothing specified",
       "Other questions": faqs.join("\n") || "None",
       "Booking link": $("nobooking").checked ? "None, please set one up" : $("booking").value.trim(),
-      "Notes": $("notes").value.trim() || "None"
+      "Notes": $("notes").value.trim() || "None",
+      "Legal business name": $("legal").value.trim(),
+      "EIN": einV ? einV : (noEin ? "Sole proprietor, no EIN" : ""),
+      "Business mailing address": $("addr").value.trim()
     };
     return {bad: bad, data: data};
   }
@@ -384,7 +409,8 @@
     ["Services and prices",["Services (starting price, free estimate)"]],
     ["Hours and area",["Hours","Service area"]],
     ["What your AI will tell customers",["Free estimates","After-hours / emergency","How soon new customers are seen","Licensed / insured","Payment methods","Warranty","Never say or promise","Other questions"]],
-    ["Booking",["Booking link","Notes"]]];
+    ["Booking",["Booking link","Notes"]],
+    ["Texting registration (not shown to customers)",["Legal business name","EIN","Business mailing address"]]];
   var current = null;
 
   form.addEventListener("submit", function(e){
