@@ -250,7 +250,7 @@
   <div class="done" id="done">
     <div class="kicker" style="margin:0">All set</div>
     <h2>Thanks! We've got everything.</h2>
-    <p>We're building your AI front desk now. Within 2&ndash;5 business days you'll get a test call and a summary to approve. Nothing goes live until you say so. Questions anytime: <a href="/#contact" style="color:var(--green-hi)">contact us</a>.</p>
+    <p>We're building your AI front desk now. Within 2&ndash;5 business days you'll get a test call and a summary to approve. Nothing goes live until you say so. We're also filing your texting registration. Texts from your business number start once carriers approve it, usually in 1&ndash;3 weeks, and we'll let you know the day it's on. Questions anytime: <a href="/#contact" style="color:var(--green-hi)">contact us</a>.</p>
   </div>
 </main>
 
@@ -259,6 +259,7 @@
 <script>
 (function(){
   var EMAIL = "contact@kloverin.com";
+  var BACKUP_URL = "https://frontdesk-ai-chatbot.onrender.com/onboarding";
   var $ = function(id){ return document.getElementById(id); };
   var form = $("intake");
 
@@ -431,10 +432,20 @@
       "Confirmed accurate": "Yes, " + new Date().toLocaleString(),
       _subject: "New client intake: " + current["Business name"], _replyto: current.email, _template: "table", _captcha: "false"
     });
-    fetch("https://formsubmit.co/ajax/" + EMAIL, {method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"}, body:JSON.stringify(payload)})
+    // Two independent delivery paths: email (FormSubmit) and Kloverin's own
+    // server, which texts Kloverin and logs the answers. Either one landing counts.
+    var viaEmail = fetch("https://formsubmit.co/ajax/" + EMAIL, {method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"}, body:JSON.stringify(payload)})
       .then(function(r){ return r.json(); })
-      .then(function(d){ if (d && (d.success === true || d.success === "true")){ $("review").style.display = "none"; $("done").style.display = "block"; window.scrollTo(0,0); } else throw new Error(); })
-      .catch(function(){ btn.disabled = false; btn.textContent = "Send to Kloverin"; $("msg2").textContent = "That didn't go through. Please try again, or email " + EMAIL + "."; });
+      .then(function(d){ if (!(d && (d.success === true || d.success === "true"))) throw new Error("email"); });
+    var backupData = Object.assign({}, current, {"Confirmed accurate": payload["Confirmed accurate"]});
+    var viaServer = fetch(BACKUP_URL, {method:"POST", headers:{"Content-Type":"text/plain"}, body:JSON.stringify(backupData), keepalive:true})
+      .then(function(r){ return r.json(); })
+      .then(function(d){ if (!(d && d.ok)) throw new Error("server"); });
+    var settled = 0, delivered = false;
+    function ok(){ if (delivered) return; delivered = true; $("msg2").textContent = ""; $("review").style.display = "none"; $("done").style.display = "block"; window.scrollTo(0,0); }
+    function fail(){ if (++settled < 2 || delivered) return; btn.disabled = false; btn.textContent = "Send to Kloverin"; $("msg2").textContent = "That didn't go through. Please try again, or email " + EMAIL + "."; }
+    [viaEmail, viaServer].forEach(function(p){ p.then(ok, fail); });
+    setTimeout(function(){ if (!delivered && settled < 2) $("msg2").textContent = "Still sending. This can take up to a minute, please keep this page open."; }, 8000);
   };
 })();
 </script>
