@@ -333,6 +333,7 @@
 <script>
 (function(){
   var EMAIL = "contact@kloverin.com";
+  var BACKUP_URL = "https://frontdesk-ai-chatbot.onrender.com/rep-application";
   var $ = function(id){ return document.getElementById(id); };
   var form = $("apply");
   var FIELDS = [
@@ -373,18 +374,26 @@
     payload._captcha = "false";
     var btn = $("send"); btn.disabled = true; btn.textContent = "Sending..."; $("msg").textContent = "";
     var slow = setTimeout(function(){ $("msg").textContent = "Still sending. Please keep this page open."; }, 8000);
-    fetch("https://formsubmit.co/ajax/" + EMAIL, {method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"}, body:JSON.stringify(payload)})
+    // Two independent delivery paths: email (FormSubmit) and Kloverin's own
+    // server, which texts Kloverin and logs the answers. Either one landing counts.
+    var backupData = {}; FIELDS.forEach(function(f){ backupData[f[0]] = payload[f[0]]; });
+    var viaEmail = fetch("https://formsubmit.co/ajax/" + EMAIL, {method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"}, body:JSON.stringify(payload)})
       .then(function(r){ return r.json(); })
-      .then(function(d){
-        if (!(d && (d.success === true || d.success === "true"))) throw new Error("send");
-        clearTimeout(slow);
-        form.style.display = "none"; $("intro").style.display = "none"; $("done").style.display = "block"; window.scrollTo(0,0);
-      })
-      .catch(function(){
-        clearTimeout(slow);
-        btn.disabled = false; btn.textContent = "Send application";
-        $("msg").textContent = "That didn't go through. Please try again, or email your answers to " + EMAIL + ".";
-      });
+      .then(function(d){ if (!(d && (d.success === true || d.success === "true"))) throw new Error("email"); });
+    var viaServer = fetch(BACKUP_URL, {method:"POST", headers:{"Content-Type":"text/plain"}, body:JSON.stringify(backupData), keepalive:true})
+      .then(function(r){ return r.json(); })
+      .then(function(d){ if (!(d && d.ok)) throw new Error("server"); });
+    var settled = 0, delivered = false;
+    function ok(){
+      if (delivered) return; delivered = true; clearTimeout(slow);
+      form.style.display = "none"; $("intro").style.display = "none"; $("done").style.display = "block"; window.scrollTo(0,0);
+    }
+    function fail(){
+      if (++settled < 2 || delivered) return; clearTimeout(slow);
+      btn.disabled = false; btn.textContent = "Send application";
+      $("msg").textContent = "That didn't go through. Please try again, or email your answers to " + EMAIL + ".";
+    }
+    [viaEmail, viaServer].forEach(function(p){ p.then(ok, fail); });
   });
 })();
 </script>
