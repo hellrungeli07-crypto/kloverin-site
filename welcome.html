@@ -136,7 +136,7 @@
         <option value="">Choose the plan you paid for</option>
         <option value="Starter">Starter ($259.99/mo)</option>
         <option value="Growth">Growth ($459.99/mo)</option>
-        <option value="Pro">Pro ($655.99/mo)</option>
+        <option value="Pro">Pro ($600.99/mo)</option>
       </select>
       <label class="check"><input type="checkbox" id="addon"> I also added Managed scheduling ($75/mo)</label>
     </fieldset>
@@ -276,7 +276,7 @@
 
   /* plan from Stripe redirect (?plan=growth) */
   var PLANS = {starter:"Starter",growth:"Growth",pro:"Pro"};
-  var PRICES = {Starter:"$259.99/mo",Growth:"$459.99/mo",Pro:"$655.99/mo"};
+  var PRICES = {Starter:"$259.99/mo",Growth:"$459.99/mo",Pro:"$600.99/mo"};
   var qp = new URLSearchParams(location.search);
   var planParam = PLANS[(qp.get("plan")||"").toLowerCase()];
   if (planParam){
