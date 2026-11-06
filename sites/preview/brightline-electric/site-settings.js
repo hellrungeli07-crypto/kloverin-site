@@ -3,7 +3,7 @@
 
 window.SITE = {
   samplePreview: true,
-  style: "modern",
+  style: "bold",
 
   business: {
     name: "Brightline Electric",
@@ -27,15 +27,16 @@ window.SITE = {
   logo: "",
 
   colors: {
-    primary: "#1E6B47",
-    dark:    "#0F2219",
-    accent:  "#1E6B47",
+    primary: "#0F5132",
+    dark:    "#0B241A",
+    accent:  "#F5C842",
   },
 
   hero: {
     headline: "Electrical work done safely, and done to code.",
     subhead: "Licensed electricians serving {city} homeowners. Clear quotes, on-time arrivals, and work that passes inspection.",
     image: "https://images.unsplash.com/photo-1660330589487-39cc0177ba89?w=2000&q=80&auto=format&fit=crop",
+    layout: "panel",
     focus: "60% center",
     highlights: ["Licensed electricians", "Permits handled", "2-year labor warranty"],
   },

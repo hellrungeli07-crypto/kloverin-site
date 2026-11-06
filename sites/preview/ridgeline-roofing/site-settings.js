@@ -2,7 +2,7 @@
 
 window.SITE = {
   samplePreview: true,
-  style: "luxe",
+  style: "dark",
 
   business: {
     name: "Ridgeline Roofing",
@@ -26,9 +26,9 @@ window.SITE = {
   logo: "",
 
   colors: {
-    primary: "#23272D",
+    primary: "#2A2F36",
     dark:    "#16191D",
-    accent:  "#B07A47",
+    accent:  "#C08A54",
   },
 
   hero: {

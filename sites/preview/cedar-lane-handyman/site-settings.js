@@ -2,7 +2,7 @@
 
 window.SITE = {
   samplePreview: true,
-  style: "modern",
+  style: "warm",
 
   business: {
     name: "Cedar Lane Home Repair",
@@ -26,9 +26,9 @@ window.SITE = {
   logo: "",
 
   colors: {
-    primary: "#0E5A5F",
-    dark:    "#0C2426",
-    accent:  "#0E5A5F",
+    primary: "#4E6B3A",
+    dark:    "#26301F",
+    accent:  "#E2A23B",
   },
 
   hero: {
@@ -36,7 +36,7 @@ window.SITE = {
     subhead: "From a sticking door to a brand-new deck, {name} takes care of the projects you keep putting off. Fair prices, tidy work, and we show up when we say.",
     image: "https://images.unsplash.com/photo-1773430272653-375174373c4f?w=1400&q=80&auto=format&fit=crop",
     focus: "center 40%",
-    layout: "split",
+    layout: "center",
     highlights: ["Licensed and insured", "Flat, upfront pricing", "1-year guarantee"],
   },
 

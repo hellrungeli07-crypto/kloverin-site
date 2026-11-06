@@ -83,8 +83,10 @@
   if (C.dark) st.setProperty("--dark", C.dark);
 
   /* ---------- style: "luxe" (serif headlines) or "modern" (clean sans) ---------- */
-  document.body.classList.add("theme-" + (S.style === "modern" ? "modern" : "luxe"));
-  if ((S.hero || {}).layout === "full") document.getElementById("hero").classList.add("hero--full");
+  var STYLES = ["luxe", "modern", "dark", "bold", "warm"];
+  document.body.classList.add("theme-" + (STYLES.indexOf(S.style) >= 0 ? S.style : "luxe"));
+  var LAYOUT = (S.hero || {}).layout;
+  if (["full", "center", "panel"].indexOf(LAYOUT) >= 0) document.getElementById("hero").classList.add("hero--" + LAYOUT);
   if (C.accent) st.setProperty("--brass", C.accent);
 
   /* ---------- head: title, description, social preview ---------- */

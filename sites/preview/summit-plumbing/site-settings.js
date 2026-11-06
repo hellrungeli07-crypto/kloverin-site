@@ -12,8 +12,14 @@ window.SITE = {
   samplePreview: true,
 
   /* ---------- Look ----------
-     style: "luxe" (elegant serif headlines, fine lines) or "modern" (clean sans, softer corners).
-     hero.layout below: "split" (photo beside the headline) or "full" (wide photo behind it). */
+     style: each one is a different design, not just a color.
+       "luxe"   white, elegant serif headlines, fine lines (high-end, established)
+       "dark"   all-dark, wide light headlines, photos first (premium, big-ticket jobs)
+       "bold"   heavy wide type, big brand-color hero panel, rounded (energetic, younger)
+       "warm"   sand tones, friendly rounded type, centered hero (family-run, personal)
+       "modern" clean sans, simple and light (safe default for anyone)
+     hero.layout below: "split" (photo beside headline), "full" (wide photo behind it),
+       "panel" (brand-color block, best with bold), "center" (headline centered, photo below). */
   style: "luxe",
 
   /* ---------- Business basics ---------- */
