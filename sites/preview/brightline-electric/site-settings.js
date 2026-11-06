@@ -11,7 +11,7 @@ window.SITE = {
     phone: "(555) 010-7730",
     email: "hello@brightline.example",
     address: "",
-    license: "TECL #00000",
+    license: "Licensed in Texas",
     yearsInBusiness: 8,
     warranty: "2-year labor warranty",
     responseTime: "Same-day callbacks, every weekday",
@@ -26,9 +26,8 @@ window.SITE = {
   logo: "",
 
   colors: {
-    primary: "#1E7A4C",
-    accent:  "#FFD23F",
-    dark:    "#0D1A14",
+    primary: "#1E6B47",
+    dark:    "#0F2219",
   },
 
   hero: {
@@ -36,6 +35,7 @@ window.SITE = {
     subhead: "Licensed electricians serving {city} homeowners. Clear quotes, on-time arrivals, and work that passes inspection.",
     image: "https://images.unsplash.com/photo-1660330589487-39cc0177ba89?w=2000&q=80&auto=format&fit=crop",
     focus: "60% center",
+    highlights: ["Licensed electricians", "Permits handled", "2-year labor warranty"],
   },
 
   services: [

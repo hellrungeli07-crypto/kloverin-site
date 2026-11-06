@@ -36,6 +36,34 @@
     i.onerror = function () { i.remove(); }; return i;
   }
 
+  var ICONS = {
+    wrench: '<path d="M14.7 6.3a4 4 0 0 0-5.2 5.2L3.6 17.4a1.9 1.9 0 0 0 2.7 2.7l5.9-5.9a4 4 0 0 0 5.2-5.2l-2.5 2.5-2.4-.3-.3-2.4z"/>',
+    drop: '<path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z"/><path d="M9.5 15a2.5 2.5 0 0 0 2.5 2.5"/>',
+    heater: '<rect x="6" y="3" width="12" height="18" rx="3"/><path d="M10 15c0-1.4 2-2.3 2-4 1 1 2 2.2 2 3.5a2 2 0 0 1-4 .5z"/><path d="M9 7h6"/>',
+    drain: '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3.5v5M12 15.5v5M3.5 12h5M15.5 12h5"/>',
+    pipe: '<path d="M3 8h8a3 3 0 0 1 3 3v10"/><path d="M3 4v8M10 18h8M14 15v6"/><path d="M3 12h6a1 1 0 0 1 1 1v8"/>',
+    toilet: '<path d="M6 3h5v7H6z"/><path d="M4 10h16a8 8 0 0 1-8 8h0a8 8 0 0 1-8-8z"/><path d="M9 18l-1 3h8l-1-3"/>',
+    bolt: '<path d="M13 2 4.5 13.5H12L11 22l8.5-11.5H12z"/>',
+    panel: '<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h3M8 11h3M8 15h3M13 7h3M13 11h3M13 15h3"/>',
+    outlet: '<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M10 9v3M14 9v3M10.5 16h3"/>',
+    light: '<path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/>',
+    fan: '<circle cx="12" cy="12" r="1.8"/><path d="M12 10.2c-.5-3.2.5-6.2 3-6.2 2 0 2.5 2.5 1 4.2-1.2 1.3-2.6 1.8-4 2zM13.8 12c3.2-.5 6.2.5 6.2 3 0 2-2.5 2.5-4.2 1-1.3-1.2-1.8-2.6-2-4zM12 13.8c.5 3.2-.5 6.2-3 6.2-2 0-2.5-2.5-1-4.2 1.2-1.3 2.6-1.8 4-2zM10.2 12C7 12.5 4 11.5 4 9c0-2 2.5-2.5 4.2-1 1.3 1.2 1.8 2.6 2 4z"/>',
+    hammer: '<path d="M14 6 9.5 10.5l4 4L18 10"/><path d="M11.5 12.5 3.8 20.2a1.4 1.4 0 0 0 2 2l7.7-7.7"/><path d="M14 6l2-2 4 4-2 2"/>',
+    drill: '<path d="M4 7h11l2 2v3l-2 2H4z"/><path d="M17 10.5h4"/><path d="M7 14l-1 7h4l1-7"/>',
+    paint: '<rect x="4" y="3" width="14" height="6" rx="1.5"/><path d="M18 6h2v5h-8v3"/><rect x="10.5" y="14" width="3" height="7" rx="1"/>',
+    door: '<path d="M6 21V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17"/><path d="M4 21h16"/><circle cx="14.5" cy="12" r="1" fill="currentColor"/>',
+    tile: '<rect x="3.5" y="3.5" width="7.5" height="7.5" rx="1"/><rect x="13" y="3.5" width="7.5" height="7.5" rx="1"/><rect x="3.5" y="13" width="7.5" height="7.5" rx="1"/><rect x="13" y="13" width="7.5" height="7.5" rx="1"/>',
+    home: '<path d="M3 11 12 3.5 21 11"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5.5h4V20"/>',
+    shield: '<path d="M12 3 4.5 6v5.5c0 4.5 3.2 8.2 7.5 9.5 4.3-1.3 7.5-5 7.5-9.5V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/>',
+    clock: '<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>',
+    leaf: '<path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15"/><path d="M5 19l7-7"/>',
+    snow: '<path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9"/><path d="m9.5 4.5 2.5 2 2.5-2M9.5 19.5l2.5-2 2.5 2"/>',
+    flame: '<path d="M12 21a6 6 0 0 0 6-6c0-4-3-6-4-9-1.5 2-2 3.5-2 5-1-1-1.5-2-1.5-3C8 10 6 12.5 6 15a6 6 0 0 0 6 6z"/>',
+    check: '<circle cx="12" cy="12" r="8.5"/><path d="m8.5 12.2 2.4 2.4 4.8-5"/>'
+  };
+  function iconSvg(name, sw) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="' + (sw || 1.7) + '" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (ICONS[name] || ICONS.check) + "</svg>"; }
+  function tradeIcon(t) { t = String(t || ""); return /plumb|drain|water/i.test(t) ? "drop" : /electric/i.test(t) ? "bolt" : /hvac|heat|air|cool/i.test(t) ? "snow" : /roof/i.test(t) ? "home" : /paint/i.test(t) ? "paint" : /lawn|landscap/i.test(t) ? "leaf" : "wrench"; }
+
   /* ---------- color ---------- */
   function rgb(color) {
     var c = document.createElement("canvas").getContext("2d"); c.fillStyle = "#000"; c.fillStyle = color; var h = c.fillStyle;
@@ -73,23 +101,35 @@
   $$("[data-call]").forEach(function (a) { a.setAttribute("href", tel(B.phone)); });
   $$("[data-needs]").forEach(function (n) { if (!has(n.getAttribute("data-needs"))) n.hidden = true; });
   $("#exampleBar").hidden = !S.samplePreview;
-  if (!B.responseTime) $(".dispatch__note").hidden = true;
+  if (!B.responseTime) $(".live__note").hidden = true;
 
   /* ---------- logo ---------- */
-  var mark = $("#brandMark");
-  function mono() { mark.innerHTML = ""; mark.appendChild(el("span", "mono", initials(B.name))); }
+  var mark = $("#brandMark"), brand = $(".brand");
+  function glyph() { brand.classList.remove("has-logo"); mark.innerHTML = iconSvg(tradeIcon(B.trade), 2); }
   if (S.logo) {
-    var li = img(S.logo, (B.name || "") + " logo", true); li.onerror = mono; mark.appendChild(li);
+    brand.classList.add("has-logo");
+    var li = img(S.logo, (B.name || "") + " logo", true); li.onerror = glyph; mark.appendChild(li);
     var fav = el("link"); fav.rel = "icon"; fav.href = S.logo; document.head.appendChild(fav);
-  } else mono();
+  } else glyph();
+  var topbar = $(".top");
+  window.addEventListener("scroll", function () { topbar.classList.toggle("is-stuck", window.scrollY > 8); }, { passive: true });
 
   /* ---------- hero ---------- */
-  var media = $("#heroMedia");
+  var media = $("#heroPhoto");
   if (H.image) {
-    var hi = img(H.image, "", true); hi.style.objectPosition = H.focus || "center";
-    hi.onerror = function () { hi.remove(); media.classList.add("is-plain"); };
+    var hi = img(H.image, (B.name || "") + " at work", true); hi.style.objectPosition = H.focus || "center";
+    hi.onerror = function () { hi.remove(); media.classList.add("is-empty"); };
     media.appendChild(hi);
-  } else media.classList.add("is-plain");
+  } else media.classList.add("is-empty");
+  var hr = $("#heroRating");
+  if (R.rating) {
+    hr.appendChild(stars(R.rating));
+    var ht = el("span"); ht.appendChild(el("strong", null, Number(R.rating).toFixed(1)));
+    ht.appendChild(document.createTextNode(R.count ? " from " + R.count + " Google reviews" : " on Google"));
+    hr.appendChild(ht);
+  } else hr.hidden = true;
+  var checks = (H.highlights && H.highlights.length) ? H.highlights : [B.license ? "Licensed and insured" : "", "Upfront pricing", B.warranty || ""].filter(Boolean);
+  checks.slice(0, 4).forEach(function (c) { var li = el("li"); li.appendChild(use("i-check")); li.appendChild(document.createTextNode(fill(c))); $("#heroChecks").appendChild(li); });
 
   /* ---------- open-now status ---------- */
   var DAYS = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"], DAYNAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -117,7 +157,7 @@
   var week = parseSchedule(HO.schedule), status = $("#status"), statusText = $("#statusText");
   (function () {
     var any = week.some(function (d) { return d.length; });
-    if (!any) { status.hidden = true; return; }
+    if (!any) { status.hidden = true; if (!B.responseTime) $("#live").hidden = true; return; }
     var n = nowIn(HO.timezone), today = week[n.day];
     for (var i = 0; i < today.length; i++) {
       if (n.min >= today[i][0] && n.min < today[i][1]) { status.classList.add("is-open"); statusText.textContent = "Open now until " + clock(today[i][1]); return; }
@@ -133,52 +173,21 @@
     }
   })();
 
-  /* ---------- proof strip ---------- */
-  var proof = $("#proofList");
-  function proofItem(big, small, withStars) {
-    var li = el("li"), b = el("span", "proof__big", big); if (withStars) b.appendChild(stars(5));
-    li.appendChild(b); li.appendChild(el("span", "proof__small", small)); proof.appendChild(li);
-  }
-  if (R.rating) proofItem(Number(R.rating).toFixed(1), (R.count ? R.count + " Google reviews" : "Google rating"), true);
-  if (B.yearsInBusiness) proofItem(B.yearsInBusiness + " years", "Serving " + CITY + " homeowners");
-  if (B.license) proofItem("Licensed", "and insured. " + B.license);
-  if (B.warranty) { var w = B.warranty.match(/^(\S+\s\S+)\s(.*)$/); proofItem(w ? w[1] : "Guaranteed", w ? w[2] : B.warranty); }
-  if (!proof.children.length) proof.closest("section").hidden = true;
-
   /* ---------- services ---------- */
-  var ICONS = {
-    wrench: '<path d="M14.7 6.3a4 4 0 0 0-5.2 5.2L3.6 17.4a1.9 1.9 0 0 0 2.7 2.7l5.9-5.9a4 4 0 0 0 5.2-5.2l-2.5 2.5-2.4-.3-.3-2.4z"/>',
-    drop: '<path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z"/><path d="M9.5 15a2.5 2.5 0 0 0 2.5 2.5"/>',
-    heater: '<rect x="6" y="3" width="12" height="18" rx="3"/><path d="M10 15c0-1.4 2-2.3 2-4 1 1 2 2.2 2 3.5a2 2 0 0 1-4 .5z"/><path d="M9 7h6"/>',
-    drain: '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3.5v5M12 15.5v5M3.5 12h5M15.5 12h5"/>',
-    pipe: '<path d="M3 8h8a3 3 0 0 1 3 3v10"/><path d="M3 4v8M10 18h8M14 15v6"/><path d="M3 12h6a1 1 0 0 1 1 1v8"/>',
-    toilet: '<path d="M6 3h5v7H6z"/><path d="M4 10h16a8 8 0 0 1-8 8h0a8 8 0 0 1-8-8z"/><path d="M9 18l-1 3h8l-1-3"/>',
-    bolt: '<path d="M13 2 4.5 13.5H12L11 22l8.5-11.5H12z"/>',
-    panel: '<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h3M8 11h3M8 15h3M13 7h3M13 11h3M13 15h3"/>',
-    outlet: '<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M10 9v3M14 9v3M10.5 16h3"/>',
-    light: '<path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/>',
-    fan: '<circle cx="12" cy="12" r="1.8"/><path d="M12 10.2c-.5-3.2.5-6.2 3-6.2 2 0 2.5 2.5 1 4.2-1.2 1.3-2.6 1.8-4 2zM13.8 12c3.2-.5 6.2.5 6.2 3 0 2-2.5 2.5-4.2 1-1.3-1.2-1.8-2.6-2-4zM12 13.8c.5 3.2-.5 6.2-3 6.2-2 0-2.5-2.5-1-4.2 1.2-1.3 2.6-1.8 4-2zM10.2 12C7 12.5 4 11.5 4 9c0-2 2.5-2.5 4.2-1 1.3 1.2 1.8 2.6 2 4z"/>',
-    hammer: '<path d="M14 6 9.5 10.5l4 4L18 10"/><path d="M11.5 12.5 3.8 20.2a1.4 1.4 0 0 0 2 2l7.7-7.7"/><path d="M14 6l2-2 4 4-2 2"/>',
-    drill: '<path d="M4 7h11l2 2v3l-2 2H4z"/><path d="M17 10.5h4"/><path d="M7 14l-1 7h4l1-7"/>',
-    paint: '<rect x="4" y="3" width="14" height="6" rx="1.5"/><path d="M18 6h2v5h-8v3"/><rect x="10.5" y="14" width="3" height="7" rx="1"/>',
-    door: '<path d="M6 21V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17"/><path d="M4 21h16"/><circle cx="14.5" cy="12" r="1" fill="currentColor"/>',
-    tile: '<rect x="3.5" y="3.5" width="7.5" height="7.5" rx="1"/><rect x="13" y="3.5" width="7.5" height="7.5" rx="1"/><rect x="3.5" y="13" width="7.5" height="7.5" rx="1"/><rect x="13" y="13" width="7.5" height="7.5" rx="1"/>',
-    home: '<path d="M3 11 12 3.5 21 11"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5.5h4V20"/>',
-    shield: '<path d="M12 3 4.5 6v5.5c0 4.5 3.2 8.2 7.5 9.5 4.3-1.3 7.5-5 7.5-9.5V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/>',
-    clock: '<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>',
-    leaf: '<path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15"/><path d="M5 19l7-7"/>',
-    snow: '<path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9"/><path d="m9.5 4.5 2.5 2 2.5-2M9.5 19.5l2.5-2 2.5 2"/>',
-    flame: '<path d="M12 21a6 6 0 0 0 6-6c0-4-3-6-4-9-1.5 2-2 3.5-2 5-1-1-1.5-2-1.5-3C8 10 6 12.5 6 15a6 6 0 0 0 6 6z"/>',
-    check: '<circle cx="12" cy="12" r="8.5"/><path d="m8.5 12.2 2.4 2.4 4.8-5"/>'
-  };
-  var list = $("#services-list"), sel = $("#serviceSelect");
+  var list = $("#servicesList"), sel = $("#serviceSelect");
   sel.appendChild(new Option("Choose one", ""));
   (S.services || []).forEach(function (s) {
     var li = el("li", "svc"), ic = el("span", "svc__icon");
-    ic.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (ICONS[s.icon] || ICONS.check) + "</svg>";
+    ic.innerHTML = iconSvg(s.icon);
     li.appendChild(ic); li.appendChild(el("h3", null, fill(s.name))); li.appendChild(el("p", null, fill(s.text)));
     list.appendChild(li); sel.appendChild(new Option(s.name, s.name));
   });
+  if ((S.services || []).length % 3 !== 0 || (S.services || []).length < 6) {
+    var cta = el("li", "svc svc--cta"), ca = el("a"); ca.href = tel(B.phone); ca.style.textDecoration = "none";
+    cta.appendChild(el("h3", null, "Don't see your job?")); cta.appendChild(el("p", null, "We probably do it. Call and ask."));
+    var go = el("a", "svc__go"); go.href = tel(B.phone); go.appendChild(use("i-phone")); go.appendChild(document.createTextNode(B.phone || "Call us")); cta.appendChild(go);
+    list.appendChild(cta);
+  }
   sel.appendChild(new Option("Something else", "Other"));
 
   /* ---------- gallery ---------- */
@@ -206,12 +215,13 @@
       else sm.appendChild(el("span", null, (R.count ? "From " + R.count + " reviews" : "Rating") + " on Google"));
       score.appendChild(sm);
     } else score.hidden = true;
-    function cap(r) { var c = el("figcaption"); c.appendChild(document.createTextNode(r.name || "Customer")); c.appendChild(el("small", null, "Google review")); return c; }
-    var f0 = $("#featureReview"), first = items[0];
-    f0.appendChild(el("blockquote", null, "“" + fill(first.text) + "”")); f0.appendChild(cap(first));
-    items.slice(1, 4).forEach(function (r) {
-      var m = el("figure", "mini"); m.appendChild(stars(r.stars || 5)); m.appendChild(el("blockquote", null, "“" + fill(r.text) + "”")); m.appendChild(cap(r));
-      $("#moreReviews").appendChild(m);
+    function cap(r) {
+      var c = el("figcaption"); c.appendChild(el("span", "avatar", initials(r.name)));
+      var who = el("span", null, r.name || "Customer"); who.appendChild(el("small", null, "Google review")); c.appendChild(who); return c;
+    }
+    items.slice(0, 3).forEach(function (r) {
+      var m = el("figure", "review"); m.appendChild(stars(r.stars || 5)); m.appendChild(el("blockquote", null, "“" + fill(r.text) + "”")); m.appendChild(cap(r));
+      $("#reviewList").appendChild(m);
     });
   }
 
@@ -219,13 +229,20 @@
   var AB = S.about || {};
   if (AB.photo) $("#aboutPhoto").appendChild(img(AB.photo, AB.title || "Our team")); else $("#aboutPhoto").hidden = true;
   if (!AB.signature) $(".about__sig").hidden = true;
+  var facts = $("#facts");
+  function fact(big, small) { facts.appendChild(el("dt", null, big)); facts.appendChild(el("dd", null, small)); }
+  if (B.yearsInBusiness) fact(B.yearsInBusiness + " yrs", "serving " + CITY);
+  if (R.rating) fact(Number(R.rating).toFixed(1) + " stars", R.count ? R.count + " Google reviews" : "on Google");
+  if (B.warranty) { var wm = String(B.warranty).match(/^(\S+)\s+(.*)$/); fact(wm ? wm[1] : B.warranty, wm ? wm[2] : ""); }
+  if (!facts.children.length) facts.hidden = true;
 
   /* ---------- area ---------- */
-  (A.cities || []).forEach(function (c) { $("#towns").appendChild(el("li", null, c)); });
+  (A.cities || []).forEach(function (c) { var li = el("li"); li.appendChild(use("i-pin")); li.appendChild(document.createTextNode(c)); $("#towns").appendChild(li); });
   var hl = $("#hoursList");
   (HO.schedule || []).forEach(function (line) {
     var m = String(line).match(/^(\S+)\s+(.*)$/); if (!m) return;
-    var days = m[1].replace("-", " to "), times = m[2].replace(/(\d{1,2}):?(\d{2})?/g, function (_, h, mm) { return clock(+h * 60 + (+mm || 0)); }).replace(/\s*-\s*/, " to ");
+    var DN = { mon: "Monday", tue: "Tuesday", wed: "Wednesday", thu: "Thursday", fri: "Friday", sat: "Saturday", sun: "Sunday" };
+    var days = m[1].split("-").map(function (d) { return DN[d.slice(0, 3).toLowerCase()] || d; }).join(" to "), times = m[2].replace(/(\d{1,2}):?(\d{2})?/g, function (_, h, mm) { return clock(+h * 60 + (+mm || 0)); }).replace(/\s*-\s*/, " to ");
     hl.appendChild(el("dt", null, days)); hl.appendChild(el("dd", null, times));
   });
   if (HO.emergency) { hl.appendChild(el("dt", null, "Emergencies")); hl.appendChild(el("dd", null, "24/7")); }

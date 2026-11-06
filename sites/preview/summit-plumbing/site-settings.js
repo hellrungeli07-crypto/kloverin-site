@@ -19,7 +19,7 @@ window.SITE = {
     phone: "(555) 010-4821",
     email: "office@summitplumbing.example",     // quote requests are sent here
     address: "",                                // optional street address ("" hides it)
-    license: "TX Lic. #M-00000",                // optional
+    license: "Licensed in Texas",               // license line for the footer ("" hides it)
     yearsInBusiness: 12,                        // 0 hides it
     warranty: "1-year workmanship warranty",    // optional
     responseTime: "We call back within the hour", // shown under the call button
@@ -37,16 +37,16 @@ window.SITE = {
 
   /* ---------- Logo ----------
      Save the file into the assets folder and write e.g. "assets/logo.png".
-     "" = clean initials badge in the brand color. */
+     "" = the business name as a clean wordmark with a small trade icon. */
   logo: "",
 
   /* ---------- Colors ----------
-     primary: main brand color (buttons, icons). accent: the call button.
-     dark: deep background color. Text colors adjust automatically. */
+     primary: their brand color (buttons, icons, links). Pick it from their
+     logo, truck or uniform. dark: the quote section and footer background.
+     Text colors adjust automatically, so any color stays readable. */
   colors: {
-    primary: "#1665B5",
-    accent:  "#F2A93B",
-    dark:    "#0C1724",
+    primary: "#1F5FAD",
+    dark:    "#0E2238",
   },
 
   /* ---------- Hero ----------
@@ -54,10 +54,11 @@ window.SITE = {
      Google Business profile is ideal. Can be a file in assets/ or a link.
      focus: which part of the photo to keep in view ("center", "70% 30%"). */
   hero: {
-    headline: "Plumbing fixed today, done right the first time.",
-    subhead: "Licensed plumbers serving {city} and nearby towns. Upfront pricing, clean work, and a real person who picks up.",
-    image: "https://images.unsplash.com/photo-1676210134188-4c05dd172f89?w=2000&q=80&auto=format&fit=crop",
-    focus: "65% center",
+    headline: "Plumbing done right, the same day you call.",
+    subhead: "Licensed plumbers serving {city} and nearby towns. Upfront pricing, clean work, and a real person who picks up the phone.",
+    image: "https://images.unsplash.com/photo-1676210134050-6f12c6898395?w=1400&q=80&auto=format&fit=crop",
+    focus: "60% center",
+    highlights: ["Licensed and insured", "Upfront pricing", "1-year warranty"],  // 2 to 4 short checkmarks under the buttons
   },
 
   /* ---------- Services ----------
@@ -83,7 +84,7 @@ window.SITE = {
   /* ---------- Recent work photos (3 to 6) ----------
      Pull these from their Google Business profile. */
   gallery: [
-    { src: "https://images.unsplash.com/photo-1749532125405-70950966b0e5?w=1200&q=80&auto=format&fit=crop", caption: "Bathroom fixture replacement" },
+    { src: "https://images.unsplash.com/photo-1749532125405-70950966b0e5?w=1600&q=80&auto=format&fit=crop", caption: "Bathroom fixture replacement" },
     { src: "https://images.unsplash.com/photo-1676210134190-3f2c0d5cf58d?w=1200&q=80&auto=format&fit=crop", caption: "Under-sink drain repair" },
     { src: "https://images.unsplash.com/photo-1650551182991-b07558247564?w=1200&q=80&auto=format&fit=crop", caption: "Water heater install" },
     { src: "https://images.unsplash.com/photo-1542013936693-884638332954?w=1200&q=80&auto=format&fit=crop", caption: "Kitchen faucet upgrade" },
@@ -107,7 +108,7 @@ window.SITE = {
   about: {
     title: "Family-owned, and we answer our own phone",
     text: "Summit started with one truck and a promise to treat every home like our own. Twelve years later we're still local, still licensed, and still show up when we say we will.",
-    photo: "https://images.unsplash.com/photo-1772442198677-10c8e7b46a5f?w=1200&q=80&auto=format&fit=crop",
+    photo: "https://images.unsplash.com/photo-1676210133055-eab6ef033ce3?w=1200&q=80&auto=format&fit=crop",
     signature: "The Summit team",
   },
 
