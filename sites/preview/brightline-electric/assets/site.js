@@ -107,7 +107,13 @@
   $$("[data-city]").forEach(function (n) { n.textContent = CITY; });
   $$("[data-call]").forEach(function (a) { a.setAttribute("href", tel(B.phone)); });
   $$("[data-needs]").forEach(function (n) { if (!has(n.getAttribute("data-needs"))) n.hidden = true; });
-  $("#exampleBar").hidden = !S.samplePreview;
+  var bar = $("#exampleBar");
+  if (S.samplePreview) bar.hidden = false;
+  else if (/\/preview\//.test(location.pathname)) {
+    bar.hidden = false; bar.textContent = "";
+    bar.appendChild(document.createTextNode("Free preview made for " + (B.name || "you") + " by Kloverin. Want it live on your own domain? "));
+    var bl = el("a", null, "Call or text (469) 803-1034"); bl.href = "tel:+14698031034"; bl.style.color = "inherit"; bl.style.fontWeight = "600"; bar.appendChild(bl);
+  } else bar.hidden = true;
   if (!B.responseTime) $(".live__note").hidden = true;
 
   /* ---------- logo ---------- */
@@ -167,7 +173,11 @@
     if (!any) { status.hidden = true; if (!B.responseTime) $("#live").hidden = true; return; }
     var n = nowIn(HO.timezone), today = week[n.day];
     for (var i = 0; i < today.length; i++) {
-      if (n.min >= today[i][0] && n.min < today[i][1]) { status.classList.add("is-open"); statusText.textContent = "Open now until " + clock(today[i][1]); return; }
+      if (n.min >= today[i][0] && n.min < today[i][1]) {
+        status.classList.add("is-open");
+        statusText.textContent = (today[i][0] === 0 && today[i][1] >= 1440) ? "Open 24 hours" : "Open now until " + clock(today[i][1]);
+        return;
+      }
     }
     if (HO.emergency) { status.classList.add("is-open"); statusText.textContent = "Emergency line open 24/7"; return; }
     for (var k = 0; k < 8; k++) {
@@ -249,6 +259,7 @@
   (HO.schedule || []).forEach(function (line) {
     var m = String(line).match(/^(\S+)\s+(.*)$/); if (!m) return;
     var DN = { mon: "Monday", tue: "Tuesday", wed: "Wednesday", thu: "Thursday", fri: "Friday", sat: "Saturday", sun: "Sunday" };
+    if (/00:00\s*-\s*24:00/.test(m[2])) { var DN0 = { mon: "Monday", tue: "Tuesday", wed: "Wednesday", thu: "Thursday", fri: "Friday", sat: "Saturday", sun: "Sunday" }; hl.appendChild(el("dt", null, m[1].split("-").map(function (d) { return DN0[d.slice(0, 3).toLowerCase()] || d; }).join(" to "))); hl.appendChild(el("dd", null, "Open 24 hours")); return; }
     var days = m[1].split("-").map(function (d) { return DN[d.slice(0, 3).toLowerCase()] || d; }).join(" to "), times = m[2].replace(/(\d{1,2}):?(\d{2})?/g, function (_, h, mm) { return clock(+h * 60 + (+mm || 0)); }).replace(/\s*-\s*/, " to ");
     hl.appendChild(el("dt", null, days)); hl.appendChild(el("dd", null, times));
   });
@@ -298,7 +309,9 @@
     data._subject = "New quote request: " + (data.service || "General") + " (" + data.name + ")"; data._template = "table";
     var first = data.name.split(" ")[0], url = endpoint(), btn = form.querySelector("[type=submit]");
     if (S.samplePreview || !url) {
-      fs.className = "form__status ok"; fs.textContent = "Request sent. (This is an example site, so nothing was actually sent.)"; form.reset(); return;
+      fs.className = "form__status ok";
+      fs.textContent = S.samplePreview ? "Request sent. (This is an example site, so nothing was actually sent.)" : "This is a preview, so nothing was sent. On your live site, requests like this go straight to your inbox.";
+      form.reset(); return;
     }
     btn.disabled = true; btn.textContent = "Sending…";
     fetch(url, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(data) })
