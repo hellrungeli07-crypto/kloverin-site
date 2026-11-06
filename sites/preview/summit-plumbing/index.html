@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Home Services</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="assets/styles.css">
+  <!-- Every business detail lives in site-settings.js -->
+  <script src="site-settings.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="example-bar" id="exampleBar" hidden>Example site. The business, photos and reviews are samples.</div>
+
+  <header class="top" id="top">
+    <div class="wrap top__in">
+      <a class="brand" href="#top">
+        <span class="brand__mark" id="brandMark"></span>
+        <span class="brand__name" data-text="business.name"></span>
+      </a>
+      <nav class="top__nav" aria-label="Sections">
+        <a href="#services">Services</a>
+        <a href="#work" data-needs="gallery">Our work</a>
+        <a href="#reviews" data-needs="reviews.items">Reviews</a>
+        <a href="#area">Service area</a>
+      </nav>
+      <a class="btn btn--call top__call" data-call>
+        <svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>
+        <span class="top__num" data-text="business.phone"></span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero__media" id="heroMedia"></div>
+      <div class="wrap hero__in">
+        <div class="hero__copy">
+          <p class="hero__kicker"><span data-text="business.trade"></span> in <span data-city></span></p>
+          <h1 class="hero__title" data-text="hero.headline"></h1>
+          <p class="hero__sub" data-text="hero.subhead"></p>
+        </div>
+        <aside class="dispatch" aria-label="Contact">
+          <p class="status" id="status"><span class="status__dot"></span><span id="statusText"></span></p>
+          <a class="btn btn--call btn--xl" data-call>
+            <svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>
+            <span data-text="business.phone"></span>
+          </a>
+          <p class="dispatch__note" data-text="business.responseTime"></p>
+          <a class="dispatch__quote" href="#quote">Or request a free quote online</a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="proof" aria-label="Why customers trust us">
+      <ul class="wrap proof__list" id="proofList"></ul>
+    </section>
+
+    <!-- Services -->
+    <section class="block" id="services">
+      <div class="wrap split">
+        <div class="split__head">
+          <h2 class="h2"><span data-text="business.trade"></span>, handled properly</h2>
+          <p class="lead">From quick repairs to full installs. Not sure what you need? Call and we'll tell you straight.</p>
+          <a class="btn btn--primary" href="#quote">Request a quote</a>
+        </div>
+        <ul class="services" id="services-list"></ul>
+      </div>
+    </section>
+
+    <!-- Recent work -->
+    <section class="block block--paper" id="work" data-needs="gallery">
+      <div class="wrap">
+        <div class="row-head">
+          <h2 class="h2">Recent work</h2>
+          <p class="lead">Real jobs for homeowners around <span data-city></span>.</p>
+        </div>
+        <div class="gallery" id="gallery"></div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="block" id="process" data-needs="process">
+      <div class="wrap">
+        <h2 class="h2">How it works</h2>
+        <ol class="steps" id="steps"></ol>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="block block--ink" id="reviews" data-needs="reviews.items">
+      <div class="wrap">
+        <div class="score" id="score"></div>
+        <div class="reviews">
+          <figure class="feature" id="featureReview"></figure>
+          <div class="reviews__more" id="moreReviews"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="block" id="about" data-needs="about.text">
+      <div class="wrap about">
+        <div class="about__photo" id="aboutPhoto"></div>
+        <div class="about__copy">
+          <h2 class="h2" data-text="about.title"></h2>
+          <p class="lead" data-text="about.text"></p>
+          <p class="about__sig" data-text="about.signature"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service area -->
+    <section class="block block--paper" id="area">
+      <div class="wrap about">
+        <div>
+          <h2 class="h2">Serving <span data-city></span> and nearby</h2>
+          <ul class="towns" id="towns"></ul>
+          <dl class="hours" id="hoursList"></dl>
+        </div>
+        <div class="map" id="map"></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="block" id="faq" data-needs="faq">
+      <div class="wrap split">
+        <div class="split__head">
+          <h2 class="h2">Common questions</h2>
+          <p class="lead">Something else on your mind? Call <a data-call><span data-text="business.phone"></span></a>.</p>
+        </div>
+        <div class="faq" id="faqList"></div>
+      </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="block block--ink quote" id="quote">
+      <div class="wrap quote__in">
+        <div class="quote__copy">
+          <h2 class="h2" data-text="quoteForm.title"></h2>
+          <p class="lead" data-text="quoteForm.intro"></p>
+          <a class="quote__call" data-call>
+            <svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>
+            <span>Prefer to talk? <strong data-text="business.phone"></strong></span>
+          </a>
+        </div>
+        <form class="form" id="quoteForm" novalidate>
+          <div class="form__two">
+            <label>Name<input name="name" autocomplete="name" required></label>
+            <label>Phone<input name="phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
+          </div>
+          <label>Email <span class="opt">optional</span><input name="email" type="email" autocomplete="email"></label>
+          <div class="form__two">
+            <label>Service<select name="service" id="serviceSelect"></select></label>
+            <label>ZIP code<input name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="10"></label>
+          </div>
+          <label>What's going on?<textarea name="message" rows="4" placeholder="A short description helps us quote faster."></textarea></label>
+          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn btn--accent btn--block btn--lg" type="submit">Send my request</button>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <div>
+        <p class="foot__name" data-text="business.name"></p>
+        <p id="footContact"></p>
+        <p id="footMeta"></p>
+      </div>
+      <p class="foot__credit">© <span id="year"></span> <span data-text="business.name"></span>. Website by <a href="https://kloverin.com" target="_blank" rel="noopener">Kloverin</a></p>
+    </div>
+  </footer>
+
+  <!-- Phone call bar -->
+  <div class="callbar">
+    <a class="btn btn--call" data-call><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Call now</a>
+    <a class="btn btn--primary" href="#quote">Free quote</a>
+  </div>
+
+  <!-- Kloverin chatbot -->
+  <div class="chat" id="chat" hidden>
+    <div class="chat__panel" id="chatPanel" role="dialog" aria-label="Chat" hidden>
+      <div class="chat__head">
+        <span class="chat__avatar" id="chatAvatar"></span>
+        <div><strong data-text="business.name"></strong><small>Typically replies in seconds</small></div>
+        <button class="chat__x" id="chatClose" aria-label="Close chat">×</button>
+      </div>
+      <div class="chat__msgs" id="chatMsgs"></div>
+      <form class="chat__in" id="chatForm">
+        <input id="chatInput" placeholder="Type a message" autocomplete="off" aria-label="Message">
+        <button aria-label="Send"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg></button>
+      </form>
+      <p class="chat__by">AI assistant by <a href="https://kloverin.com" target="_blank" rel="noopener">Kloverin</a></p>
+    </div>
+    <button class="chat__bubble" id="chatBubble" aria-label="Chat with us">
+      <svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>
+    </button>
+  </div>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-4 3.5V17H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z" fill="currentColor"/></symbol>
+      <symbol id="i-send" viewBox="0 0 24 24"><path d="M3 20.5 21 12 3 3.5l2.5 8.5zM5.5 12H13" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2 6.4 20.2l1.1-6.3L2.9 9.5l6.3-.9z" fill="currentColor"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    </defs>
+  </svg>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>

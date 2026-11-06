@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Welcome to Kloverin Sites | Let's get your website live</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#07090a">
+<link rel="icon" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#07090a;--card:rgba(255,255,255,0.035);--card-hi:rgba(255,255,255,0.06);--field:#0d1110;--line:rgba(255,255,255,0.09);--line-hi:rgba(255,255,255,0.16);--text:#f4f1ea;--muted:#9aa5a1;--dim:#6b7672;--green:#10b981;--green-hi:#34d399;--green-glow:rgba(16,185,129,0.35);--orange:#ff8a4c;color-scheme:dark;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.55;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  a{color:inherit;}
+  .bg-fx{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;}
+  .bg-fx::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;opacity:.35;mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 75%);}
+  .bg-fx::after{content:"";position:absolute;width:900px;height:600px;left:50%;top:-260px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(16,185,129,0.22),transparent);filter:blur(20px);}
+  .wrap{max-width:760px;margin:0 auto;padding:0 16px;}
+  header.top{position:sticky;top:0;z-index:30;padding-top:env(safe-area-inset-top);background:rgba(7,9,10,0.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
+  .top-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px;}
+  .logo{display:flex;align-items:center;gap:14px;font-family:'Inter Tight',sans-serif;font-weight:600;font-size:17px;letter-spacing:0.3em;line-height:1;text-decoration:none;}
+  .logo .txt{color:#F2F7F4;margin-right:-0.3em;}
+  .logo-mark{width:31px;height:36px;flex:none;}
+  .kicker{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--green-hi);margin:44px 0 14px;display:flex;align-items:center;gap:8px;}
+  .kicker::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green);}
+  .done .kicker{justify-content:center;}
+  h1{font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(32px,6vw,48px);letter-spacing:-0.02em;line-height:1.05;margin:0 0 14px;text-wrap:balance;text-shadow:0 0 1px rgba(255,150,90,.6),0 0 10px rgba(255,120,60,.28),0 0 26px rgba(255,100,45,.12);}
+  .lead{color:var(--muted);font-size:17px;margin:0 0 26px;max-width:60ch;}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 30px;}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;}
+  .step b{display:block;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--green-hi);font-weight:500;margin-bottom:4px;}
+  .step span{font-size:14px;color:var(--muted);line-height:1.45;display:block;}
+  fieldset{border:1px solid var(--line);background:var(--card);border-radius:20px;padding:6px 20px 22px;margin:0 0 16px;min-width:0;}
+  legend{font-family:'Inter Tight',sans-serif;font-weight:700;font-size:18px;padding:0 8px;margin-left:-8px;}
+  .sec-note{color:var(--dim);font-size:14px;margin:2px 0 0;}
+  label,.lbl{display:block;font-weight:600;color:var(--text);margin:18px 0 6px;font-size:15px;}
+  .hint{display:block;font-weight:400;color:var(--dim);font-size:13.5px;margin-top:2px;}
+  .opt{color:var(--dim);font-weight:400;}
+  input[type=text],input[type=email],input[type=tel],input[type=url],input[type=number],select,textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line-hi);background:var(--field);color:var(--text);font:inherit;font-size:16px;}
+  textarea{min-height:90px;resize:vertical;}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--green-hi);}
+  input:disabled,select:disabled{opacity:.45;}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .check{display:flex;gap:10px;align-items:flex-start;margin-top:12px;font-size:14.5px;color:var(--muted);font-weight:400;}
+  .check input{margin-top:4px;width:18px;height:18px;flex:none;accent-color:var(--green);}
+  .bad{border-color:var(--orange)!important;}
+  .err{color:var(--orange);font-size:13px;margin-top:4px;min-height:0;}
+  .plan-locked{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:12px;border:1px solid rgba(52,211,153,.35);background:rgba(16,185,129,.08);font-weight:600;}
+  .plan-locked small{color:var(--muted);font-weight:400;}
+  /* tables */
+  .tbl{width:100%;border-collapse:separate;border-spacing:0 8px;}
+  .tbl th{text-align:left;font-size:12.5px;color:var(--dim);font-weight:600;text-transform:uppercase;letter-spacing:.06em;padding:0 6px;}
+  .tbl td{padding:0 4px;vertical-align:top;}
+  .tbl td input,.tbl td select{padding:10px 11px;font-size:15px;}
+  .money{position:relative;}
+  .money span{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--dim);}
+  .money input{padding-left:24px!important;}
+  .x{background:none;border:1px solid var(--line);color:var(--dim);border-radius:10px;width:38px;height:42px;cursor:pointer;font-size:18px;}
+  .x:hover{color:var(--orange);border-color:var(--orange);}
+  .add{margin-top:6px;background:none;border:1px dashed var(--line-hi);color:var(--green-hi);border-radius:12px;padding:10px 14px;cursor:pointer;font:600 14px Inter,sans-serif;width:100%;}
+  .hours td{padding:3px 4px;}
+  .hours .day{font-weight:600;width:62px;padding-top:12px;}
+  .hours select{padding:10px 8px;font-size:15px;}
+  .hours .closed{white-space:nowrap;padding-top:12px;font-size:14px;color:var(--muted);}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;}
+  .pills label{margin:0;font-weight:500;font-size:14.5px;display:flex;align-items:center;gap:8px;padding:9px 13px;border:1px solid var(--line-hi);border-radius:999px;background:var(--field);cursor:pointer;}
+  .pills input{accent-color:var(--green);width:16px;height:16px;}
+  .submit{width:100%;margin-top:6px;background:var(--green);color:#03140a;border:1px solid transparent;border-radius:999px;padding:16px 22px;font:600 16px 'Inter Tight',sans-serif;cursor:pointer;box-shadow:0 0 0 1px rgba(52,211,153,.4),0 8px 30px -8px var(--green-glow);transition:transform .15s ease,box-shadow .15s ease,background .15s ease;}
+  .submit:hover{background:var(--green-hi);transform:translateY(-1px);box-shadow:0 0 0 1px rgba(52,211,153,.6),0 12px 36px -8px var(--green-glow);}
+  .submit:disabled{opacity:.5;cursor:wait;}
+  .ghost{width:100%;margin-top:10px;background:var(--card);color:var(--text);border:1px solid var(--line-hi);border-radius:999px;padding:14px 22px;font:600 15px 'Inter Tight',sans-serif;cursor:pointer;}
+  .msg{min-height:1.2em;margin:12px 0 0;font-size:14.5px;color:var(--orange);text-align:center;}
+  .hp{position:absolute;left:-9999px;}
+  #review{display:none;}
+  .sum{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:8px 20px 18px;margin-bottom:16px;}
+  .sum h3{font-family:'Inter Tight',sans-serif;font-size:17px;margin:16px 0 6px;color:var(--green-hi);}
+  .sum dl{display:grid;grid-template-columns:200px 1fr;gap:6px 14px;margin:0;font-size:14.5px;}
+  .sum dt{color:var(--dim);} .sum dd{margin:0;white-space:pre-wrap;word-break:break-word;}
+  .attest{background:rgba(255,138,76,.07);border:1px solid rgba(255,138,76,.35);border-radius:14px;padding:14px 16px;margin:6px 0 14px;}
+  .attest .check{color:var(--text);margin:0;}
+  .done{display:none;text-align:center;padding:30px 20px;background:var(--card);border:1px solid var(--line);border-radius:18px;margin:10px 0 30px;}
+  .done h2{font-family:'Inter Tight',sans-serif;font-size:28px;margin:6px 0 8px;}
+  .done p{color:var(--muted);margin:0 auto;max-width:52ch;}
+  footer{border-top:1px solid var(--line);margin-top:48px;padding:36px 0 48px;}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--dim);}
+  .foot a{color:var(--muted);text-decoration:none;} .foot a:hover{color:var(--text);}
+  .foot .links{display:flex;gap:22px;flex-wrap:wrap;}
+  @media (max-width:640px){
+    .steps,.row{grid-template-columns:1fr;}
+    .sum dl{grid-template-columns:1fr;} .sum dt{margin-top:6px;}
+    .hours .day{width:40px;font-size:14px;} .hours select{padding:9px 4px;font-size:14px;} .hours td{padding:3px 2px;} .hours .closed{font-size:13px;}
+    .svc thead{display:none;} .svc tr{display:grid;grid-template-columns:1fr 110px 40px;gap:6px;margin-bottom:10px;}
+    .svc td{padding:0;} .svc td:nth-child(3){grid-column:1 / 3;}
+    .faq-extra tr{display:grid;grid-template-columns:1fr 40px;gap:6px;margin-bottom:10px;} .faq-extra thead{display:none;} .faq-extra td{padding:0;} .faq-extra td:nth-child(2){grid-row:2;}
+  }
+
+  .radio{display:flex;flex-direction:column;gap:8px;margin-top:4px;}
+  .radio label{margin:0;font-weight:500;font-size:15px;display:flex;gap:10px;align-items:center;padding:12px 14px;border:1px solid var(--line-hi);border-radius:12px;background:var(--field);cursor:pointer;}
+  .radio input{accent-color:var(--green);width:18px;height:18px;}
+  .note{color:var(--muted);font-size:14.5px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-top:14px;}
+  .note b{color:var(--text);}
+  [hidden]{display:none!important;}
+
+</style>
+</head>
+<body>
+<div class="bg-fx" aria-hidden="true"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="mark" viewBox="-52 -52 104 118"><g fill="none" stroke="#A7E8C3" stroke-width="6" stroke-linejoin="round"><path d="M5 5H24A19 19 0 0 1 43 24A19 19 0 0 1 24 43A19 19 0 0 1 5 24Z" transform="rotate(0)"/><path d="M5 5H24A19 19 0 0 1 43 24A19 19 0 0 1 24 43A19 19 0 0 1 5 24Z" transform="rotate(90)"/><path d="M5 5H24A19 19 0 0 1 43 24A19 19 0 0 1 24 43A19 19 0 0 1 5 24Z" transform="rotate(180)"/><path d="M5 5H24A19 19 0 0 1 43 24A19 19 0 0 1 24 43A19 19 0 0 1 5 24Z" transform="rotate(270)"/></g><path d="M0 0C0 30 8 50 20 60" fill="none" stroke="#A7E8C3" stroke-width="6" stroke-linecap="round"/></symbol></defs></svg>
+<header class="top"><div class="wrap top-inner"><a class="logo" href="/sites/" aria-label="Kloverin Sites home"><svg class="logo-mark"><use href="#mark"/></svg><span class="txt">KLOVERIN</span></a></div></header>
+
+<main class="wrap">
+  <div id="intro">
+    <div class="kicker">Payment received</div>
+    <h1>Thanks! Let's get your website live.</h1>
+    <p class="lead">Answer a few quick questions so we can put the site on your domain and send quote requests to the right inbox. It takes about 3 minutes.</p>
+    <div class="steps">
+      <div class="step"><b>1 · Today</b><span>You fill out this form.</span></div>
+      <div class="step"><b>2 · 1&ndash;2 days</b><span>We make your changes and connect your domain.</span></div>
+      <div class="step"><b>3 · Live</b><span>We text you the link to your live site.</span></div>
+    </div>
+  </div>
+
+  <form id="intake" novalidate>
+    <fieldset>
+      <legend>Your business</legend>
+      <label for="biz">Business name</label><input type="text" id="biz" autocomplete="organization" data-req>
+      <div class="row">
+        <div><label for="name">Your name</label><input type="text" id="name" autocomplete="name" data-req></div>
+        <div><label for="phone">Best phone for us to reach you</label><input type="tel" id="phone" autocomplete="tel" data-req></div>
+      </div>
+      <label for="email">Your email</label><input type="email" id="email" autocomplete="email" data-req>
+      <label>What you purchased</label>
+      <div id="planLocked" class="plan-locked" hidden></div>
+      <select id="plan" data-req>
+        <option value="">Choose what you paid for</option>
+        <option>Website ($500)</option>
+        <option>Website ($500) + Care plan ($49/mo)</option>
+        <option>Care plan ($49/mo)</option>
+      </select>
+      <label for="preview">Your preview link <span class="opt">(optional)</span><span class="hint">It's in the email or text we sent you, like kloverin.com/sites/preview/your-business</span></label>
+      <input type="url" id="preview" placeholder="https://kloverin.com/sites/preview/...">
+    </fieldset>
+
+    <fieldset>
+      <legend>Your domain</legend>
+      <p class="sec-note">Your domain is your web address, like acmeplumbing.com.</p>
+      <div class="radio" id="domainChoice">
+        <label><input type="radio" name="dom" value="have"> I already have a domain</label>
+        <label><input type="radio" name="dom" value="need"> I need one. Please help me get it</label>
+      </div>
+      <div class="err" id="domErr"></div>
+      <div id="haveBox" hidden>
+        <div class="row">
+          <div><label for="domain">Your domain</label><input type="text" id="domain" placeholder="acmeplumbing.com" autocapitalize="off"></div>
+          <div><label for="registrar">Where you bought it</label>
+            <select id="registrar"><option value="">Choose one</option><option>GoDaddy</option><option>Namecheap</option><option>Squarespace (was Google Domains)</option><option>Wix</option><option>Cloudflare</option><option>Other</option><option>Not sure</option></select></div>
+        </div>
+        <label for="oldsite">Is there an old website on it now?</label>
+        <select id="oldsite"><option value="">Choose one</option><option>No, nothing there</option><option>Yes, replace it with the new site</option><option>Not sure</option></select>
+      </div>
+      <div id="needBox" hidden>
+        <label for="domainIdeas">Names you'd like <span class="hint">We'll check which are available and send you the options. Domains usually cost $10&ndash;20 a year.</span></label>
+        <input type="text" id="domainIdeas" placeholder="acmeplumbing.com, acmeplumbingtx.com">
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Quote requests</legend>
+      <label for="leadEmail">Email where quote requests should go<span class="hint">Every form on your site sends here.</span></label>
+      <input type="email" id="leadEmail" data-req>
+      <label for="changes">Anything you'd like changed before launch? <span class="opt">(optional)</span><span class="hint">Wording, services, prices, hours, photos, colors.</span></label>
+      <textarea id="changes"></textarea>
+      <div class="note"><b>Logo and photos:</b> reply to your receipt email with them, or text them to (469) 803-1034. Photos of your team, truck and finished jobs make the biggest difference.</div>
+    </fieldset>
+
+    <input type="text" id="hp" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button class="submit" type="submit" id="send">Send to Kloverin</button>
+    <p class="msg" id="msg" role="alert"></p>
+  </form>
+
+  <div class="done" id="done">
+    <div class="kicker">All set</div>
+    <h2>Got it. We're on it.</h2>
+    <p>We'll make your changes and connect your domain within 1&ndash;2 business days, then text you the live link. Questions? Call or text (469) 803-1034.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="logo" href="/sites/" style="font-size:15px;color:var(--text)"><svg class="logo-mark" style="width:27px;height:31px"><use href="#mark"/></svg><span class="txt">KLOVERIN</span></a>
+    <div class="links"><a href="mailto:contact@kloverin.com">contact@kloverin.com</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var EMAIL = "contact@kloverin.com";
+  var BACKUP_URL = "https://frontdesk-ai-chatbot.onrender.com/onboarding";
+  var $ = function(id){ return document.getElementById(id); };
+  var PLANS = { "site": "Website ($500)", "site-care": "Website ($500) + Care plan ($49/mo)", "care": "Care plan ($49/mo)" };
+  var qp = new URLSearchParams(location.search);
+  var planParam = PLANS[(qp.get("plan") || "").toLowerCase()];
+  if (planParam) { $("plan").value = planParam; $("plan").hidden = true; var pl = $("planLocked"); pl.hidden = false; pl.textContent = "✓ " + planParam; }
+
+  var leadTouched = false;
+  $("leadEmail").addEventListener("input", function(){ leadTouched = true; });
+  $("email").addEventListener("input", function(){ if (!leadTouched) $("leadEmail").value = this.value; });
+  [].forEach.call(document.querySelectorAll("input[name=dom]"), function(r){
+    r.addEventListener("change", function(){ $("haveBox").hidden = this.value !== "have"; $("needBox").hidden = this.value !== "need"; $("domErr").textContent = ""; });
+  });
+
+  var form = $("intake");
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    if ($("hp").value) return;
+    var bad = [];
+    [].forEach.call(form.querySelectorAll("[data-req]"), function(f){
+      var ok = f.value.trim() !== "" && (f.type !== "email" || /.+@.+\..+/.test(f.value));
+      f.classList.toggle("bad", !ok); if (!ok) bad.push(f);
+    });
+    var dom = (form.querySelector("input[name=dom]:checked") || {}).value;
+    if (!dom) { $("domErr").textContent = "Pick one."; bad.push($("domainChoice")); }
+    if (dom === "have" && !$("domain").value.trim()) { $("domain").classList.add("bad"); bad.push($("domain")); }
+    if (bad.length) { $("msg").textContent = "Please fill in the highlighted items."; bad[0].scrollIntoView({behavior:"smooth", block:"center"}); return; }
+
+    var data = {
+      "Business name": $("biz").value.trim(), "Contact name": $("name").value.trim(), "email": $("email").value.trim(),
+      "Business phone": $("phone").value.trim(),
+      "Plan": "Kloverin Sites: " + $("plan").value + (planParam ? " (from checkout)" : " (self-selected, verify in Stripe)"),
+      "Preview link": $("preview").value.trim() || "Not given",
+      "Domain": dom === "have" ? $("domain").value.trim() + " (bought at " + ($("registrar").value || "not given") + "; old site: " + ($("oldsite").value || "not given") + ")" : "Needs a domain. Ideas: " + ($("domainIdeas").value.trim() || "none given"),
+      "Quote requests go to": $("leadEmail").value.trim(),
+      "Changes before launch": $("changes").value.trim() || "None"
+    };
+    var btn = $("send"); btn.disabled = true; btn.textContent = "Sending..."; $("msg").textContent = "";
+    var payload = Object.assign({}, data, { _subject: "New website client: " + data["Business name"], _replyto: data.email, _template: "table", _captcha: "false" });
+    var viaEmail = fetch("https://formsubmit.co/ajax/" + EMAIL, {method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"}, body:JSON.stringify(payload)})
+      .then(function(r){ return r.json(); }).then(function(d){ if (!(d && (d.success === true || d.success === "true"))) throw new Error("email"); });
+    var viaServer = fetch(BACKUP_URL, {method:"POST", headers:{"Content-Type":"text/plain"}, body:JSON.stringify(data), keepalive:true})
+      .then(function(r){ return r.json(); }).then(function(d){ if (!(d && d.ok)) throw new Error("server"); });
+    var settled = 0, delivered = false;
+    function ok(){ if (delivered) return; delivered = true; form.style.display = "none"; $("intro").style.display = "none"; $("done").style.display = "block"; window.scrollTo(0,0); }
+    function fail(){ if (++settled < 2 || delivered) return; btn.disabled = false; btn.textContent = "Send to Kloverin"; $("msg").textContent = "That didn't go through. Please try again, or text (469) 803-1034."; }
+    [viaEmail, viaServer].forEach(function(p){ p.then(ok, fail); });
+  });
+})();
+</script>
+</body>
+</html>
