@@ -30,14 +30,14 @@ window.SITE = {
   "hero": {
     "headline": "Remodels finished with real craftsmanship.",
     "subhead": "Bathrooms, showers, fireplaces and full remodels across {city}. Anna plans every detail, and Alex and the crew build it right.",
-    "image": "https://lh3.googleusercontent.com/grass-cs/AABkmLe0OzrZ-uk5aP3krqYoowRBODryyypc8UMlQMHYYTNUGwab5ObZv54Fqh2kDBB8fAuZYsLOW6xR7JtUORJurSS28uuj8JYZd7a2oPxq0LnTvVVpx75AopirnpusXA7HUSPzc7UmSyHaA0eL=w2400",
+    "image": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RyoBKLbOzlagJc5KEXszaicoKfUROeSA2cKO3C0Ndc0ZQGWRHtENa18lb5fLFmNwJ0xqhGM6637ULC9T1W8YSVpw6OnQXbmT4-y0EPpF1857Ja6cJqunZuCQrzuQVeJ4PKSpDksODeU6jO=w1600",
     "focus": "center",
     "highlights": [
       "Detailed written quotes",
       "Fixes others' unfinished work",
       "Open 7 days"
     ],
-    "layout": "full"
+    "layout": "split"
   },
   "services": [
     {
@@ -91,12 +91,12 @@ window.SITE = {
       "caption": "Custom shower"
     },
     {
-      "src": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RyoBKLbOzlagJc5KEXszaicoKfUROeSA2cKO3C0Ndc0ZQGWRHtENa18lb5fLFmNwJ0xqhGM6637ULC9T1W8YSVpw6OnQXbmT4-y0EPpF1857Ja6cJqunZuCQrzuQVeJ4PKSpDksODeU6jO=w1600",
-      "caption": "Freestanding tub"
+      "src": "https://lh3.googleusercontent.com/grass-cs/AABkmLffQslSrqZNMyDU4iN4sfz5V9lurpBA6AP5xYW99snZRyqd1s7ip0BuUXWhMknguif_c-rigem5SM-Pf25gPjCsOryXfZbO4urkrGLL6i4euNm_uJwjIFYn2uRsWUNkXUXvh11Ye10XQRpJ=w1600",
+      "caption": "Vanity and walk-in shower"
     },
     {
-      "src": "https://lh3.googleusercontent.com/grass-cs/AABkmLffQslSrqZNMyDU4iN4sfz5V9lurpBA6AP5xYW99snZRyqd1s7ip0BuUXWhMknguif_c-rigem5SM-Pf25gPjCsOryXfZbO4urkrGLL6i4euNm_uJwjIFYn2uRsWUNkXUXvh11Ye10XQRpJ=w1600",
-      "caption": "Vanity and mirrors"
+      "src": "https://lh3.googleusercontent.com/grass-cs/AABkmLe0OzrZ-uk5aP3krqYoowRBODryyypc8UMlQMHYYTNUGwab5ObZv54Fqh2kDBB8fAuZYsLOW6xR7JtUORJurSS28uuj8JYZd7a2oPxq0LnTvVVpx75AopirnpusXA7HUSPzc7UmSyHaA0eL=w1600",
+      "caption": "Bathroom remodel"
     },
     {
       "src": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RLNtEOqW1RA_AyT10HgjXB2oHqBkWq5uDaO63noUimtXwBDSapRi_DcAyGGs1ikI8dP8YzBYcA5XZFn2auu2B7uR5Ht15Hj_lcqgVWVtR8H9rMP9Dsw0hQIpy0cv92yLMxkGZyOUGQku4=w1600",
