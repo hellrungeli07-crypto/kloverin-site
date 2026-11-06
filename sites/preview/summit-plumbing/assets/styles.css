@@ -305,8 +305,9 @@ ul, ol { list-style: none; }
   .hero--full .hero__in { grid-template-columns: 1fr; min-height: min(86vh, 860px); align-items: end; padding-top: 120px; padding-bottom: 88px; }
   .hero--full .hero__copy { position: relative; z-index: 1; }
   .hero--full .hero__visual { position: absolute; inset: 0; margin: 0; z-index: 0; }
-  .hero--full .hero__photo { aspect-ratio: auto; height: 100%; border-radius: 0; }
-  .hero--full .hero__photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,12,18,.82) 0%, rgba(8,12,18,.55) 42%, rgba(8,12,18,.05) 75%), linear-gradient(0deg, rgba(8,12,18,.45), transparent 40%); }
+  .hero--full .hero__visual { background: var(--dark); }
+  .hero--full .hero__photo { position: absolute; top: 0; bottom: 0; right: 0; left: 30%; aspect-ratio: auto; height: auto; border-radius: 0; }
+  .hero--full .hero__photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--dark) 0%, color-mix(in srgb, var(--dark) 70%, transparent) 22%, transparent 55%), linear-gradient(0deg, color-mix(in srgb, var(--dark) 55%, transparent), transparent 35%); }
   .hero--full .hero__copy { max-width: 640px; color: rgba(255,255,255,.82); }
   .hero--full .hero__title { color: #fff; }
   .hero--full .hero__sub { color: rgba(255,255,255,.82); }
@@ -317,6 +318,5 @@ ul, ol { list-style: none; }
   .hero--full .checks { border-top-color: rgba(255,255,255,.2); }
   .hero--full .checks li { color: #fff; }
   .hero--full .live { left: auto; right: max(22px, calc((100vw - 1200px) / 2 + 22px)); bottom: 88px; }
-  .hero--full .hero__photo { position: relative; }
   .hero--full + .block { padding-top: 128px; }
 }
