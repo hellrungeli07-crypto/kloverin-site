@@ -11,6 +11,11 @@ window.SITE = {
      Set false before a business sees its mock-up. */
   samplePreview: true,
 
+  /* ---------- Look ----------
+     style: "luxe" (elegant serif headlines, fine lines) or "modern" (clean sans, softer corners).
+     hero.layout below: "split" (photo beside the headline) or "full" (wide photo behind it). */
+  style: "luxe",
+
   /* ---------- Business basics ---------- */
   business: {
     name: "Summit Plumbing Co.",
@@ -45,8 +50,9 @@ window.SITE = {
      logo, truck or uniform. dark: the quote section and footer background.
      Text colors adjust automatically, so any color stays readable. */
   colors: {
-    primary: "#1F5FAD",
-    dark:    "#0E2238",
+    primary: "#14304F",   // buttons and links: deep, rich colors look most premium
+    dark:    "#0E1A29",   // reviews band, quote section and footer
+    accent:  "#A9844B",   // small details: stars, check marks, dividers
   },
 
   /* ---------- Hero ----------
@@ -58,6 +64,7 @@ window.SITE = {
     subhead: "Licensed plumbers serving {city} and nearby towns. Upfront pricing, clean work, and a real person who picks up the phone.",
     image: "https://images.unsplash.com/photo-1676210134050-6f12c6898395?w=1400&q=80&auto=format&fit=crop",
     focus: "60% center",
+    layout: "split",
     highlights: ["Licensed and insured", "Upfront pricing", "1-year warranty"],  // 2 to 4 short checkmarks under the buttons
   },
 

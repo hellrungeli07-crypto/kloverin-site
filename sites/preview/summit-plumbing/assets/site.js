@@ -82,6 +82,11 @@
   if (C.accent) { st.setProperty("--accent", C.accent); st.setProperty("--on-accent", textOn(C.accent)); }
   if (C.dark) st.setProperty("--dark", C.dark);
 
+  /* ---------- style: "luxe" (serif headlines) or "modern" (clean sans) ---------- */
+  document.body.classList.add("theme-" + (S.style === "modern" ? "modern" : "luxe"));
+  if ((S.hero || {}).layout === "full") document.getElementById("hero").classList.add("hero--full");
+  if (C.accent) st.setProperty("--brass", C.accent);
+
   /* ---------- head: title, description, social preview ---------- */
   var title = (B.name || "Home Services") + " | " + (B.trade || "Home services") + " in " + (A.city || CITY);
   var description = fill(B.tagline || H.subhead || "");
@@ -194,7 +199,7 @@
   var gal = $("#gallery"), shots = (S.gallery || []).slice(0, 6);
   gal.classList.add("n" + shots.length);
   shots.forEach(function (g) {
-    var f = el("figure", "shot"); f.appendChild(img(g.src, g.caption || "Recent work"));
+    var f = el("figure", "shot"), box = el("div", "shot__img"); box.appendChild(img(g.src, g.caption || "Recent work")); f.appendChild(box);
     if (g.caption) f.appendChild(el("figcaption", null, fill(g.caption)));
     gal.appendChild(f);
   });
@@ -219,8 +224,8 @@
       var c = el("figcaption"); c.appendChild(el("span", "avatar", initials(r.name)));
       var who = el("span", null, r.name || "Customer"); who.appendChild(el("small", null, "Google review")); c.appendChild(who); return c;
     }
-    items.slice(0, 3).forEach(function (r) {
-      var m = el("figure", "review"); m.appendChild(stars(r.stars || 5)); m.appendChild(el("blockquote", null, "“" + fill(r.text) + "”")); m.appendChild(cap(r));
+    items.slice(0, 3).forEach(function (r, i) {
+      var m = el("figure", i === 0 ? "review review--feature" : "review"); m.appendChild(stars(r.stars || 5)); m.appendChild(el("blockquote", null, "“" + fill(r.text) + "”")); m.appendChild(cap(r));
       $("#reviewList").appendChild(m);
     });
   }

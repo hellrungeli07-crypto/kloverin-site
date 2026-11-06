@@ -3,6 +3,7 @@
 
 window.SITE = {
   samplePreview: true,
+  style: "modern",
 
   business: {
     name: "Brightline Electric",
@@ -28,6 +29,7 @@ window.SITE = {
   colors: {
     primary: "#1E6B47",
     dark:    "#0F2219",
+    accent:  "#1E6B47",
   },
 
   hero: {
