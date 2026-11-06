@@ -8,7 +8,7 @@
   <title>Home Services</title>
   <meta name="description" content="">
   <link rel="preload" href="assets/fonts/instrument-sans.woff" as="font" type="font/woff" crossorigin>
-  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/styles.css?v=7">
   <!-- Every business detail lives in site-settings.js -->
   <script src="site-settings.js"></script>
 </head>
@@ -158,7 +158,7 @@
             <label>Name<input name="name" autocomplete="name" required></label>
             <label>Phone<input name="phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
           </div>
-          <label>Email <span class="opt">optional</span><input name="email" type="email" autocomplete="email"></label>
+          <label><span>Email <span class="opt">(optional)</span></span><input name="email" type="email" autocomplete="email"></label>
           <div class="form__two">
             <label>Service<select name="service" id="serviceSelect"></select></label>
             <label>ZIP code<input name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="10"></label>
@@ -221,6 +221,6 @@
     </defs>
   </svg>
 
-  <script src="assets/site.js"></script>
+  <script src="assets/site.js?v=7"></script>
 </body>
 </html>

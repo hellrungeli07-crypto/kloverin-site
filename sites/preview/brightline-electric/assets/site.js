@@ -230,7 +230,7 @@
   if (AB.photo) $("#aboutPhoto").appendChild(img(AB.photo, AB.title || "Our team")); else $("#aboutPhoto").hidden = true;
   if (!AB.signature) $(".about__sig").hidden = true;
   var facts = $("#facts");
-  function fact(big, small) { facts.appendChild(el("dt", null, big)); facts.appendChild(el("dd", null, small)); }
+  function fact(big, small) { var d = el("div"); d.appendChild(el("dt", null, big)); d.appendChild(el("dd", null, small)); facts.appendChild(d); }
   if (B.yearsInBusiness) fact(B.yearsInBusiness + " yrs", "serving " + CITY);
   if (R.rating) fact(Number(R.rating).toFixed(1) + " stars", R.count ? R.count + " Google reviews" : "on Google");
   if (B.warranty) { var wm = String(B.warranty).match(/^(\S+)\s+(.*)$/); fact(wm ? wm[1] : B.warranty, wm ? wm[2] : ""); }
