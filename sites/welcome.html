@@ -198,6 +198,8 @@
 <script>
 (function(){
   var EMAIL = "contact@kloverin.com";
+  // Emails every answer to the Kloverin inbox (Google Apps Script "Kloverin form mailer" in hellrungeli07's Drive).
+  var MAILER_URL = "https://script.google.com/macros/s/AKfycbyIpijDNGLss8lk0WcwYQkXudbL7jiMqvlshgHIs_4VTTsmyF7WYE2bUrKYy-w2dE-I4A/exec";
   var BACKUP_URL = "https://frontdesk-ai-chatbot.onrender.com/onboarding";
   var $ = function(id){ return document.getElementById(id); };
   var PLANS = { "site": "Website ($500)", "site-care": "Website ($500) + Care plan ($49/mo)", "care": "Care plan ($49/mo)" };
@@ -237,8 +239,9 @@
     };
     var btn = $("send"); btn.disabled = true; btn.textContent = "Sending..."; $("msg").textContent = "";
     var payload = Object.assign({}, data, { _subject: "New website client: " + data["Business name"], _replyto: data.email, _template: "table", _captcha: "false" });
-    var viaEmail = fetch("https://formsubmit.co/ajax/" + EMAIL, {method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"}, body:JSON.stringify(payload)})
-      .then(function(r){ return r.json(); }).then(function(d){ if (!(d && (d.success === true || d.success === "true"))) throw new Error("email"); });
+    var viaEmail = fetch(MAILER_URL, {method:"POST", headers:{"Content-Type":"text/plain"}, body:JSON.stringify(Object.assign({}, payload, {_form:"sites", _name:data["Business name"]}))})
+      .then(function(r){ return r.json(); })
+      .then(function(d){ if (!(d && d.ok)) throw new Error("email"); });
     var viaServer = fetch(BACKUP_URL, {method:"POST", headers:{"Content-Type":"text/plain"}, body:JSON.stringify(data), keepalive:true})
       .then(function(r){ return r.json(); }).then(function(d){ if (!(d && d.ok)) throw new Error("server"); });
     var settled = 0, delivered = false;
