@@ -9,10 +9,10 @@
   <meta name="description" content="">
   <link rel="preload" href="assets/fonts/instrument-sans.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="assets/fonts/instrument-serif.woff" as="font" type="font/woff" crossorigin>
-  <link rel="stylesheet" href="assets/styles.css?v=11">
-  <link rel="stylesheet" href="assets/themes.css?v=11">
+  <link rel="stylesheet" href="assets/styles.css?v=20">
+  <link rel="stylesheet" href="assets/themes.css?v=20">
   <!-- Every business detail lives in site-settings.js -->
-  <script src="site-settings.js?v=11"></script>
+  <script src="site-settings.js?v=20"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -40,6 +40,9 @@
   <main id="main">
     <!-- Hero -->
     <section class="hero" id="hero">
+      <div class="hero__visual">
+        <div class="hero__photo" id="heroPhoto"></div>
+      </div>
       <div class="wrap hero__in">
         <div class="hero__copy">
           <a class="rating" id="heroRating" href="#reviews"></a>
@@ -54,20 +57,24 @@
           </div>
           <ul class="checks" id="heroChecks"></ul>
         </div>
-        <div class="hero__visual">
-          <div class="hero__photo" id="heroPhoto"></div>
-          <div class="live" id="live">
-            <p class="live__status" id="status"><span class="live__dot"></span><span id="statusText"></span></p>
-            <p class="live__note" data-text="business.responseTime"></p>
-          </div>
+        <div class="live" id="live">
+          <p class="live__status" id="status"><span class="live__dot"></span><span id="statusText"></span></p>
+          <p class="live__note" data-text="business.responseTime"></p>
         </div>
       </div>
     </section>
 
-    <!-- Services -->
-    <section class="block block--soft" id="services">
+    <!-- Proof strip -->
+    <section class="proof" id="proof" aria-label="At a glance">
       <div class="wrap">
-        <div class="head">
+        <dl class="proof__list" id="proofList"></dl>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="block" id="services">
+      <div class="wrap">
+        <div class="head head--row">
           <h2 class="h2">What we take care of</h2>
           <p class="lead">From quick fixes to full projects. Not sure what you need? Call and we'll tell you straight.</p>
         </div>
@@ -76,11 +83,11 @@
     </section>
 
     <!-- Recent work -->
-    <section class="block" id="work" data-needs="gallery">
+    <section class="block block--soft" id="work" data-needs="gallery">
       <div class="wrap">
         <div class="head head--row">
           <h2 class="h2">Recent work</h2>
-          <p class="lead">Jobs we've finished for homeowners around <span data-city></span>.</p>
+          <p class="lead">Real jobs we've finished for homeowners around <span data-city></span>.</p>
         </div>
         <div class="gallery" id="gallery"></div>
       </div>
@@ -113,7 +120,7 @@
         <div class="about__photo" id="aboutPhoto"></div>
         <div class="about__copy">
           <h2 class="h2" data-text="about.title"></h2>
-          <p class="lead" data-text="about.text"></p>
+          <p class="about__text" data-text="about.text"></p>
           <dl class="facts" id="facts"></dl>
           <p class="about__sig" data-text="about.signature"></p>
         </div>
@@ -124,7 +131,7 @@
     <section class="block" id="area">
       <div class="wrap area">
         <div class="area__copy">
-          <h2 class="h2">Serving <span data-city></span> and nearby towns</h2>
+          <h2 class="h2">Serving <span data-city></span> and nearby</h2>
           <ul class="towns" id="towns"></ul>
           <h3 class="h3">Hours</h3>
           <dl class="hours" id="hoursList"></dl>
@@ -146,6 +153,7 @@
 
     <!-- Quote -->
     <section class="quote" id="quote">
+      <div class="quote__bg" id="quoteBg"></div>
       <div class="wrap quote__in">
         <div class="quote__copy">
           <h2 class="h2" data-text="quoteForm.title"></h2>
@@ -175,13 +183,15 @@
   </main>
 
   <footer class="foot">
-    <div class="wrap foot__in">
-      <div class="foot__brand">
-        <p class="foot__name" data-text="business.name"></p>
-        <p class="foot__line" id="footContact"></p>
-        <p class="foot__line" id="footMeta"></p>
+    <div class="wrap">
+      <p class="foot__name" data-text="business.name"></p>
+      <div class="foot__in">
+        <div class="foot__brand">
+          <p class="foot__line" id="footContact"></p>
+          <p class="foot__line" id="footMeta"></p>
+        </div>
+        <p class="foot__credit">© <span id="year"></span> <span data-text="business.name"></span><br>Website by <a href="https://kloverin.com" target="_blank" rel="noopener">Kloverin</a></p>
       </div>
-      <p class="foot__credit">© <span id="year"></span> <span data-text="business.name"></span><br>Website by <a href="https://kloverin.com" target="_blank" rel="noopener">Kloverin</a></p>
     </div>
   </footer>
 
@@ -223,6 +233,6 @@
     </defs>
   </svg>
 
-  <script src="assets/site.js?v=12"></script>
+  <script src="assets/site.js?v=20"></script>
 </body>
 </html>

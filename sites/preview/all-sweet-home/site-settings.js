@@ -37,7 +37,7 @@ window.SITE = {
       "Fixes others' unfinished work",
       "Open 7 days"
     ],
-    "layout": "split"
+    "layout": "panel"
   },
   "services": [
     {

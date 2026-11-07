@@ -91,8 +91,8 @@ window.SITE = {
       "caption": "Yard cleanup"
     },
     {
-      "src": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9T0R2st-HZQcMug15EERh3IhpkqlXTTG8d4iA69pFbmM0PKz-8UPk8SxjzoT9_H8INsjEIPqdA_2NO2udASBqWWxDtf_xaDzk9TcGHEM1urpqQD7XdAmgYHZA3xofLwuINDKecOUg=w1600",
-      "caption": "Fresh cut"
+      "src": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RSKOHsRY5ptDfnWeP1Oo3Pm4xajW_xa9Npu2dcRthyAw7FBt7p0ld9pfKs2tejSA8IcnzcJ-P9XM8pRT9TEsoQEzfs5ULXm65jRcd9G_lG489KDCRvRWieGWqk2KjTnfgyp4A=w1600",
+      "caption": "After the cleanup"
     }
   ],
   "reviews": {
@@ -121,7 +121,7 @@ window.SITE = {
   "about": {
     "title": "Seth and the S&W crew",
     "text": "S&W Lawn Care is owned by Seth Green and serves Grand Bay and the surrounding area. We show up on time, quote fair prices, and go above and beyond to get your yard looking great.",
-    "photo": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RSKOHsRY5ptDfnWeP1Oo3Pm4xajW_xa9Npu2dcRthyAw7FBt7p0ld9pfKs2tejSA8IcnzcJ-P9XM8pRT9TEsoQEzfs5ULXm65jRcd9G_lG489KDCRvRWieGWqk2KjTnfgyp4A=w1200",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9T0R2st-HZQcMug15EERh3IhpkqlXTTG8d4iA69pFbmM0PKz-8UPk8SxjzoT9_H8INsjEIPqdA_2NO2udASBqWWxDtf_xaDzk9TcGHEM1urpqQD7XdAmgYHZA3xofLwuINDKecOUg=w1200",
     "signature": "Seth Green, owner"
   },
   "area": {

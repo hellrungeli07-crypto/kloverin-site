@@ -1,7 +1,7 @@
 /* Preview for Foster Electric, built by Kloverin from their Google Business profile. */
 window.SITE = {
   "samplePreview": false,
-  "style": "bold",
+  "style": "luxe",
   "business": {
     "name": "Foster Electric",
     "trade": "Electrical",
@@ -40,7 +40,7 @@ window.SITE = {
       "Clean, hidden wiring",
       "Fair pricing"
     ],
-    "layout": "panel"
+    "layout": "full"
   },
   "services": [
     {

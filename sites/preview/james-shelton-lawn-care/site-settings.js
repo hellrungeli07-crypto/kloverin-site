@@ -37,7 +37,7 @@ window.SITE = {
       "Mowing to tree work",
       "Customers for 5+ years"
     ],
-    "layout": "center"
+    "layout": "split"
   },
   "services": [
     {

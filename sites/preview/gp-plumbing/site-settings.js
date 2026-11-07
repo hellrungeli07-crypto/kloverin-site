@@ -37,7 +37,7 @@ window.SITE = {
       "Parts on the truck",
       "Friendly and fast"
     ],
-    "layout": "split"
+    "layout": "full"
   },
   "services": [
     {

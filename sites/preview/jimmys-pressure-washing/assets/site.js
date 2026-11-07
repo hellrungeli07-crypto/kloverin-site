@@ -86,8 +86,9 @@
   var STYLES = ["luxe", "modern", "dark", "bold", "warm"];
   document.body.classList.add("theme-" + (STYLES.indexOf(S.style) >= 0 ? S.style : "luxe"));
   var LAYOUT = (S.hero || {}).layout;
-  if (["full", "center", "panel"].indexOf(LAYOUT) >= 0) document.getElementById("hero").classList.add("hero--" + LAYOUT);
-  if (C.accent) st.setProperty("--brass", C.accent);
+  if (["full", "center", "panel", "split"].indexOf(LAYOUT) < 0) LAYOUT = "split";
+  document.getElementById("hero").classList.add("hero--" + LAYOUT);
+  if (LAYOUT !== "split") document.body.classList.add("hero-over");
 
   /* ---------- head: title, description, social preview ---------- */
   var title = (B.name || "Home Services") + " | " + (B.trade || "Home services") + " in " + (A.city || CITY);
@@ -118,6 +119,7 @@
 
   /* ---------- logo ---------- */
   var mark = $("#brandMark"), brand = $(".brand");
+  if (String(B.name || "").length > 24) brand.classList.add("brand--long");
   function glyph() { brand.classList.remove("has-logo"); mark.innerHTML = iconSvg(tradeIcon(B.trade), 2); }
   if (S.logo) {
     brand.classList.add("has-logo");
@@ -125,15 +127,19 @@
     var fav = el("link"); fav.rel = "icon"; fav.href = S.logo; document.head.appendChild(fav);
   } else glyph();
   var topbar = $(".top");
-  window.addEventListener("scroll", function () { topbar.classList.toggle("is-stuck", window.scrollY > 8); }, { passive: true });
+  function stick() { topbar.classList.toggle("is-stuck", window.scrollY > (LAYOUT === "split" ? 8 : 60)); }
+  window.addEventListener("scroll", stick, { passive: true }); stick();
 
   /* ---------- hero ---------- */
   var media = $("#heroPhoto");
   if (H.image) {
     var hi = img(H.image, (B.name || "") + " at work", true); hi.style.objectPosition = H.focus || "center";
-    hi.onerror = function () { hi.remove(); media.classList.add("is-empty"); };
+    hi.onerror = function () { hi.remove(); media.classList.add("is-empty"); ready(); };
+    hi.onload = ready;
     media.appendChild(hi);
-  } else media.classList.add("is-empty");
+    setTimeout(ready, 900);
+  } else { media.classList.add("is-empty"); ready(); }
+  function ready() { requestAnimationFrame(function () { document.body.classList.add("is-ready"); }); }
   var hr = $("#heroRating");
   if (R.rating) {
     hr.appendChild(stars(R.rating));
@@ -190,6 +196,17 @@
     }
   })();
 
+  /* ---------- proof strip ---------- */
+  (function () {
+    var pl = $("#proofList"), n = 0;
+    function item(big, small, extra) { var d = el("div"), t = el("dt"); if (typeof big === "string") t.textContent = big; else t.appendChild(big); if (extra) t.appendChild(extra); d.appendChild(t); d.appendChild(el("dd", null, small)); pl.appendChild(d); n++; }
+    if (R.rating) item(Number(R.rating).toFixed(1), "Google rating", stars(R.rating));
+    if (R.count) item(String(R.count), "Google reviews");
+    if ((A.cities || []).length) item(String(A.cities.length), (A.cities.length === 1 ? "town" : "towns") + " served around " + CITY);
+    if (B.phone) { var pa = el("a", null, B.phone); pa.href = tel(B.phone); item(pa, "Call or text"); }
+    if (n < 2) $("#proof").hidden = true;
+  })();
+
   /* ---------- services ---------- */
   var list = $("#servicesList"), sel = $("#serviceSelect");
   sel.appendChild(new Option("Choose one", ""));
@@ -200,7 +217,7 @@
     list.appendChild(li); sel.appendChild(new Option(s.name, s.name));
   });
   if ((S.services || []).length % 3 !== 0 || (S.services || []).length < 6) {
-    var cta = el("li", "svc svc--cta"), ca = el("a"); ca.href = tel(B.phone); ca.style.textDecoration = "none";
+    var cta = el("li", "svc svc--cta");
     cta.appendChild(el("h3", null, "Don't see your job?")); cta.appendChild(el("p", null, "We probably do it. Call and ask."));
     var go = el("a", "svc__go"); go.href = tel(B.phone); go.appendChild(use("i-phone")); go.appendChild(document.createTextNode(B.phone || "Call us")); cta.appendChild(go);
     list.appendChild(cta);
@@ -236,8 +253,9 @@
       var c = el("figcaption"); c.appendChild(el("span", "avatar", initials(r.name)));
       var who = el("span", null, r.name || "Customer"); who.appendChild(el("small", null, "Google review")); c.appendChild(who); return c;
     }
-    items.slice(0, 3).forEach(function (r, i) {
-      var m = el("figure", i === 0 ? "review review--feature" : "review"); m.appendChild(stars(r.stars || 5)); m.appendChild(el("blockquote", null, "“" + fill(r.text) + "”")); m.appendChild(cap(r));
+    var shown = items.slice(0, 4); $("#reviewList").classList.add("r" + (shown.length - 1));
+    shown.forEach(function (r, i) {
+      var m = el("figure", i === 0 ? "review review--feature" : "review"); m.appendChild(stars(r.stars || 5)); m.appendChild(el("blockquote", null, i === 0 ? fill(r.text) : "“" + fill(r.text) + "”")); m.appendChild(cap(r));
       $("#reviewList").appendChild(m);
     });
   }
@@ -249,9 +267,12 @@
   var facts = $("#facts");
   function fact(big, small) { var d = el("div"); d.appendChild(el("dt", null, big)); d.appendChild(el("dd", null, small)); facts.appendChild(d); }
   if (B.yearsInBusiness) fact(B.yearsInBusiness + " yrs", "serving " + CITY);
-  if (R.rating) fact(Number(R.rating).toFixed(1) + " stars", R.count ? R.count + " Google reviews" : "on Google");
   if (B.warranty) { var wm = String(B.warranty).match(/^(\S+)\s+(.*)$/); fact(wm ? wm[1] : B.warranty, wm ? wm[2] : ""); }
   if (!facts.children.length) facts.hidden = true;
+
+  /* ---------- quote backdrop ---------- */
+  var qsrc = (S.quoteForm && S.quoteForm.image) || H.image || ((S.gallery || [])[0] || {}).src;
+  if (qsrc) $("#quoteBg").appendChild(img(qsrc, ""));
 
   /* ---------- area ---------- */
   (A.cities || []).forEach(function (c) { var li = el("li"); li.appendChild(use("i-pin")); li.appendChild(document.createTextNode(c)); $("#towns").appendChild(li); });
