@@ -28,7 +28,7 @@ window.SITE = {
     "accent": "#F2C230"
   },
   "hero": {
-    "headline": "Years of grime gone. Your home looks new again.",
+    "headline": "Years of grime, gone.",
     "subhead": "Soft washing for houses and buildings, plus driveways, sidewalks and gutters across {city}. Jimmy even edges the lawn so every inch of concrete comes clean.",
     "image": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9ReI5RDB5mM_3v0DUdAUv_k7aXa4o5ceyEuQJ2yRk7rd5A4BoLyazSpb9AFEWB8H-PfzzFwETl9Z1iRQ6dCOdnKwkWVs5mvHpPh39_USklhvy5eFJG91PwYfKkfN7BkHdNOjoZw=w1600",
     "focus": "center 60%",
