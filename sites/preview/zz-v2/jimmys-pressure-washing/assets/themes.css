@@ -1,0 +1,156 @@
+/* =====================================================================
+   Kloverin Sites v2: five looks. Pick one with `style` in site-settings.js.
+   luxe (default, styles.css) · dark · modern · bold · warm
+   Each changes type, color, section order and details, not just the accent.
+   ===================================================================== */
+@font-face { font-family: "Archivo"; src: url("fonts/archivo-var.woff") format("woff"); font-weight: 100 900; font-stretch: 62% 125%; font-display: swap; }
+@font-face { font-family: "Bricolage Grotesque"; src: url("fonts/bricolage.woff") format("woff"); font-weight: 200 800; font-stretch: 75% 100%; font-display: swap; }
+
+main { display: flex; flex-direction: column; }
+#hero { order: -2; }
+#proof { order: -1; }
+
+/* ---------------------------------------------------------------------
+   LUXE (base): gallery-white, refined serif, brass details.
+   --------------------------------------------------------------------- */
+.theme-luxe #services { order: 1; }
+.theme-luxe #work { order: 2; }
+.theme-luxe #reviews { order: 3; }
+.theme-luxe #about { order: 4; }
+.theme-luxe #process { order: 5; }
+.theme-luxe #area { order: 6; }
+.theme-luxe #faq { order: 7; }
+.theme-luxe #quote { order: 8; }
+
+/* ---------------------------------------------------------------------
+   DARK: nocturne. Deep brand-dark pages, light wide grotesk, metal accent.
+   --------------------------------------------------------------------- */
+.theme-dark {
+  --bg: color-mix(in srgb, var(--dark) 55%, #08090A);
+  --paper: color-mix(in srgb, var(--dark) 40%, #121417);
+  --soft: color-mix(in srgb, var(--dark) 45%, #0E1012);
+  --ink: #F2F0EC; --body: rgba(242,240,236,.7); --muted: rgba(242,240,236,.48);
+  --line: rgba(255,255,255,.1); --line-strong: rgba(255,255,255,.18);
+  --display: "Archivo", var(--sans); --dw: 300; --dstretch: 112%; --dls: -0.035em; --dlh: .96;
+}
+body.theme-dark { background: var(--bg); color: var(--body); }
+.theme-dark .brand__name { font-size: 17px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; font-stretch: 118%; }
+.theme-dark .btn--primary { background: var(--accent); color: var(--on-accent); }
+.theme-dark .btn--primary:hover { background: color-mix(in srgb, var(--accent) 82%, #fff); }
+.theme-dark .hero__title { font-size: clamp(44px, 7.2vw, 104px); }
+.theme-dark .h2 { font-size: clamp(36px, 4.8vw, 68px); }
+.theme-dark .svc h3 { font-size: clamp(24px, 2.2vw, 32px); font-weight: 300; }
+.theme-dark .reviews-band { background: color-mix(in srgb, var(--dark) 30%, #050607); }
+.theme-dark .review--feature blockquote { font-size: clamp(26px, 3vw, 42px); line-height: 1.22; font-weight: 300; }
+.theme-dark .review--feature::before { font-family: var(--display); font-weight: 200; }
+.theme-dark .about__sig { font: 500 13px/1.3 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+.theme-dark .map iframe { filter: grayscale(1) invert(.9) contrast(.88) brightness(.95); }
+.theme-dark .quote__bg::after { background: linear-gradient(90deg, color-mix(in srgb, var(--bg) 96%, transparent), color-mix(in srgb, var(--bg) 78%, transparent)); }
+.theme-dark .form { background: var(--paper); color: var(--ink); box-shadow: none; border: 1px solid var(--line-strong); }
+.theme-dark .form label, .theme-dark .form input, .theme-dark .form select, .theme-dark .form textarea { color: var(--ink); }
+.theme-dark .form input:focus, .theme-dark .form select:focus, .theme-dark .form textarea:focus { border-color: var(--accent); }
+.theme-dark .foot { background: color-mix(in srgb, var(--dark) 25%, #040506); border-top: 1px solid var(--line); }
+.theme-dark .chat__bubble { background: var(--accent); color: var(--on-accent); }
+.theme-dark .hero--panel .hero__copy { background: var(--bg); }
+.theme-dark #work { order: 1; }
+.theme-dark #services { order: 2; }
+.theme-dark #reviews { order: 3; }
+.theme-dark #about { order: 4; }
+.theme-dark #process { order: 5; }
+.theme-dark #area { order: 6; }
+.theme-dark #faq { order: 7; }
+.theme-dark #quote { order: 8; }
+
+/* ---------------------------------------------------------------------
+   MODERN: crisp white, tight grotesk headlines, generous photography.
+   --------------------------------------------------------------------- */
+.theme-modern {
+  --bg: #FFFFFF; --paper: #FFFFFF; --soft: #F3F4F5;
+  --display: var(--sans); --dw: 600; --dls: -0.045em; --dlh: .98; --rb: 999px; --r: 18px;
+}
+.theme-modern .hero__title { font-size: clamp(46px, 7.4vw, 108px); }
+.theme-modern .h2 { font-size: clamp(36px, 4.8vw, 68px); line-height: 1.02; }
+.theme-modern .svc h3 { font-size: clamp(22px, 2vw, 28px); letter-spacing: -0.03em; }
+.theme-modern .step h3 { font-size: 24px; letter-spacing: -0.03em; }
+.theme-modern .step::before { font-weight: 500; letter-spacing: -0.05em; }
+.theme-modern .brand__name { font-size: 20px; }
+.theme-modern .review--feature blockquote { font-size: clamp(24px, 2.8vw, 38px); line-height: 1.25; letter-spacing: -0.03em; font-weight: 500; }
+.theme-modern .review--feature::before { font-family: var(--sans); font-weight: 600; }
+.theme-modern .about__sig { font: 600 17px/1.3 var(--sans); }
+.theme-modern .shot, .theme-modern .about__photo, .theme-modern .map { border-radius: 18px; }
+.theme-modern .hero--split .hero__photo { border-radius: 0; }
+.theme-modern .proof { background: var(--soft); border-bottom: 0; }
+.theme-modern #services { order: 1; }
+.theme-modern #process { order: 2; }
+.theme-modern #work { order: 3; }
+.theme-modern #reviews { order: 4; }
+.theme-modern #about { order: 5; }
+.theme-modern #area { order: 6; }
+.theme-modern #faq { order: 7; }
+.theme-modern #quote { order: 8; }
+
+/* ---------------------------------------------------------------------
+   BOLD: confident and graphic. Condensed heavy headlines in caps,
+   brand-color blocks, photos first.
+   --------------------------------------------------------------------- */
+.theme-bold {
+  --bg: #FFFFFF; --paper: #FFFFFF; --soft: color-mix(in srgb, var(--primary) 6%, #F6F6F4);
+  --display: "Archivo", var(--sans); --dw: 800; --dstretch: 72%; --dls: -0.01em; --dlh: .9; --dcase: uppercase;
+}
+.theme-bold .hero__title { font-size: clamp(54px, 9vw, 136px); max-width: 11ch; }
+.theme-bold .h2 { font-size: clamp(44px, 6vw, 92px); line-height: .92; }
+.theme-bold .svc h3 { font-size: clamp(30px, 3vw, 44px); line-height: .95; }
+.theme-bold .step h3 { font-size: 34px; line-height: .95; }
+.theme-bold .step::before { font-weight: 800; font-stretch: 72%; }
+.theme-bold .brand__name { font-size: 26px; }
+.theme-bold .faq summary { text-transform: none; font-stretch: 90%; font-weight: 700; font-size: 22px; letter-spacing: -0.02em; }
+.theme-bold .foot__name { font-size: clamp(48px, 9vw, 140px); }
+.theme-bold .btn { font-weight: 600; }
+.theme-bold .hero-over .btn--primary, .theme-bold.hero-over .hero .btn--primary { background: var(--accent); color: var(--on-accent); }
+.theme-bold .proof { background: var(--primary); border-bottom: 0; }
+.theme-bold .proof dt { color: var(--on-primary); }
+.theme-bold .proof dd { color: color-mix(in srgb, var(--on-primary) 70%, transparent); }
+.theme-bold .proof__list > div { border-color: color-mix(in srgb, var(--on-primary) 20%, transparent); }
+.theme-bold .proof .stars { color: var(--accent); }
+.theme-bold .reviews-band { background: var(--primary); }
+.theme-bold .review--feature blockquote { font-family: var(--sans); text-transform: none; font-stretch: 100%; font-weight: 500; font-size: clamp(24px, 2.8vw, 38px); line-height: 1.25; letter-spacing: -0.02em; }
+.theme-bold .review--feature::before { font-family: "Archivo", sans-serif; font-weight: 800; }
+.theme-bold .about__sig { font: 700 15px/1.3 var(--sans); letter-spacing: .04em; color: var(--primary-ink); }
+.theme-bold .hero--panel .hero__copy { background: var(--primary); color: var(--on-primary); }
+.theme-bold .hero--panel .hero__sub, .theme-bold .hero--panel .checks li { color: color-mix(in srgb, var(--on-primary) 84%, transparent); }
+.theme-bold .hero--panel .btn--primary { background: var(--accent); color: var(--on-accent); }
+.theme-bold .hero--panel .btn--ghost { color: var(--on-primary); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--on-primary) 45%, transparent); }
+.theme-bold .chat__bubble { background: var(--accent); color: var(--on-accent); }
+.theme-bold #work { order: 1; }
+.theme-bold #reviews { order: 2; }
+.theme-bold #services { order: 3; }
+.theme-bold #process { order: 4; }
+.theme-bold #about { order: 5; }
+.theme-bold #area { order: 6; }
+.theme-bold #faq { order: 7; }
+.theme-bold #quote { order: 8; }
+
+/* ---------------------------------------------------------------------
+   WARM: a studio feel. Soft tinted paper, characterful grotesk,
+   the story comes early.
+   --------------------------------------------------------------------- */
+.theme-warm {
+  --bg: color-mix(in srgb, var(--primary) 5%, #F7F6F2);
+  --paper: color-mix(in srgb, var(--primary) 2%, #FDFCFA);
+  --soft: color-mix(in srgb, var(--primary) 10%, #F1EFEA);
+  --display: "Bricolage Grotesque", var(--sans); --dw: 600; --dstretch: 88%; --dls: -0.035em; --dlh: .96; --rb: 999px; --r: 10px;
+}
+.theme-warm .hero__title { font-size: clamp(48px, 7.6vw, 112px); }
+.theme-warm .h2 { font-size: clamp(38px, 5vw, 72px); }
+.theme-warm .svc h3 { font-size: clamp(26px, 2.4vw, 34px); }
+.theme-warm .brand__name { font-size: 22px; }
+.theme-warm .review--feature blockquote { font-family: var(--serif); font-style: italic; font-weight: 400; font-stretch: 100%; letter-spacing: -0.005em; font-size: clamp(30px, 3.6vw, 52px); }
+.theme-warm .shot, .theme-warm .about__photo, .theme-warm .map { border-radius: 10px; }
+.theme-warm #services { order: 1; }
+.theme-warm #about { order: 2; }
+.theme-warm #work { order: 3; }
+.theme-warm #reviews { order: 4; }
+.theme-warm #process { order: 5; }
+.theme-warm #area { order: 6; }
+.theme-warm #faq { order: 7; }
+.theme-warm #quote { order: 8; }
