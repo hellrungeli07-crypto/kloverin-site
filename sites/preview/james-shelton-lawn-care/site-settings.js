@@ -31,7 +31,7 @@ window.SITE = {
     "headline": "A lawn the whole street notices.",
     "subhead": "Mowing, trimming and tree work for {city} homeowners. James and his crew show up, do it right, and keep your yard looking its best week after week.",
     "image": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9T7n8SSfR8xM65K2qxja__7xEeOAlysXoWKTHBdVCsr9XlaqYrEkd5_O3PYFmpHolmNyP8oFeBAi614YcpNKhCkFXPD80xvOmh-HsGA1xiQ0U5G_k3Mo2MqD9jjOFfH7y-y0OSFaVE5Hdhx=w2400",
-    "focus": "center 70%",
+    "focus": "center 88%",
     "highlights": [
       "5.0 stars on Google",
       "Mowing to tree work",
