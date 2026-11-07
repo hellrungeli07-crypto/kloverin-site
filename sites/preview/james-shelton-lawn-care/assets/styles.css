@@ -165,7 +165,7 @@ ul, ol { list-style: none; }
 
 /* One orchestrated entrance */
 @media (prefers-reduced-motion: no-preference) {
-  .hero__photo img { transform: scale(1.06); transition: transform 2.4s cubic-bezier(.2,.7,.2,1); }
+  .hero__photo img { transform: scale(1.03); transition: transform 2.4s cubic-bezier(.2,.7,.2,1); }
   .is-ready .hero__photo img { transform: scale(1); }
   .hero__copy > * { opacity: 0; transform: translateY(16px); transition: opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1); }
   .is-ready .hero__copy > * { opacity: 1; transform: none; }

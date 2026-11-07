@@ -31,6 +31,18 @@
     return (w.slice(0, 2).map(function (x) { return x[0]; }).join("") || "K").toUpperCase();
   }
   function tel(p) { var d = String(p || "").replace(/[^\d+]/g, ""); return d ? "tel:" + d : "#quote"; }
+  /* Ask Google/Unsplash for a photo big enough for where it's shown (sharp on retina screens). */
+  function sized(src, w) {
+    src = String(src || "");
+    if (/googleusercontent\.com\//.test(src)) {
+      var base = src.replace(/=[^\/]*$/, "");
+      return base + "=w" + w;
+    }
+    if (/images\.unsplash\.com\//.test(src)) {
+      return src.replace(/([?&])w=\d+/, "$1w=" + w).replace(/([?&])q=\d+/, "$1q=85");
+    }
+    return src;
+  }
   function img(src, alt, eager) {
     var i = el("img"); i.src = src; i.alt = alt || ""; i.decoding = "async"; if (!eager) i.loading = "lazy";
     i.onerror = function () { i.remove(); }; return i;
@@ -101,7 +113,7 @@
   meta("property", "og:title", title);
   meta("property", "og:description", description);
   meta("property", "og:type", "website");
-  meta("property", "og:image", H.image || S.logo);
+  meta("property", "og:image", H.image ? sized(H.image, 1200) : S.logo);
 
   /* ---------- simple fields ---------- */
   $$("[data-text]").forEach(function (n) { n.textContent = fill(get(n.getAttribute("data-text"))); });
@@ -133,7 +145,7 @@
   /* ---------- hero ---------- */
   var media = $("#heroPhoto");
   if (H.image) {
-    var hi = img(H.image, (B.name || "") + " at work", true); hi.style.objectPosition = H.focus || "center";
+    var hi = img(sized(H.image, 2800), (B.name || "") + " at work", true); hi.style.objectPosition = H.focus || "center";
     hi.onerror = function () { hi.remove(); media.classList.add("is-empty"); ready(); };
     hi.onload = ready;
     media.appendChild(hi);
@@ -227,8 +239,8 @@
   /* ---------- gallery ---------- */
   var gal = $("#gallery"), shots = (S.gallery || []).slice(0, 6);
   gal.classList.add("n" + shots.length);
-  shots.forEach(function (g) {
-    var f = el("figure", "shot"), box = el("div", "shot__img"); box.appendChild(img(g.src, g.caption || "Recent work")); f.appendChild(box);
+  shots.forEach(function (g, i) {
+    var f = el("figure", "shot"), box = el("div", "shot__img"); box.appendChild(img(sized(g.src, (i === 0 || i === 3) ? 2400 : 1600), g.caption || "Recent work")); f.appendChild(box);
     if (g.caption) f.appendChild(el("figcaption", null, fill(g.caption)));
     gal.appendChild(f);
   });
@@ -262,7 +274,7 @@
 
   /* ---------- about ---------- */
   var AB = S.about || {};
-  if (AB.photo) $("#aboutPhoto").appendChild(img(AB.photo, AB.title || "Our team")); else $("#aboutPhoto").hidden = true;
+  if (AB.photo) $("#aboutPhoto").appendChild(img(sized(AB.photo, 1800), AB.title || "Our team")); else $("#aboutPhoto").hidden = true;
   if (!AB.signature) $(".about__sig").hidden = true;
   var facts = $("#facts");
   function fact(big, small) { var d = el("div"); d.appendChild(el("dt", null, big)); d.appendChild(el("dd", null, small)); facts.appendChild(d); }
@@ -272,7 +284,7 @@
 
   /* ---------- quote backdrop ---------- */
   var qsrc = (S.quoteForm && S.quoteForm.image) || H.image || ((S.gallery || [])[0] || {}).src;
-  if (qsrc) $("#quoteBg").appendChild(img(qsrc, ""));
+  if (qsrc) $("#quoteBg").appendChild(img(sized(qsrc, 2400), ""));
 
   /* ---------- area ---------- */
   (A.cities || []).forEach(function (c) { var li = el("li"); li.appendChild(use("i-pin")); li.appendChild(document.createTextNode(c)); $("#towns").appendChild(li); });

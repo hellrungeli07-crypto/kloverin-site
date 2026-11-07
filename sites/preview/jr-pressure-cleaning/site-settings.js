@@ -30,7 +30,7 @@ window.SITE = {
   "hero": {
     "headline": "The Bay's best pressure cleaning, for every surface.",
     "subhead": "Houses, pool decks, lanais, fences and driveways across {city}. For about what it costs to rent a pressure washer, JR and Nina do it for you, and do it right.",
-    "image": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Spt975SopVxgQlB3JPvaRnXKlto0Hq48VYW2t-9NFSDD1SVCibD2POnyqycOw21XJM09XeAduRqnsKaxKQiwNFs3nehA-Bw7MSkcnsT1QQ-yGxCbvpFltm5vWYlqEklrQozTE3=w1600",
+    "image": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QFH9qevYaUC9ZTfBvIYAt9wrMAy0RCYNgFcDz70uNWiL2GI6gRycOHdo-LJHbmEd-SEHjOYgo2XNUlJiLtsbjICivPw5V1chUY0m5BU7wCywtf2mRXroSzxzkwpCc-G1swjOiyDg=w2400",
     "focus": "center",
     "highlights": [
       "5.0 stars on Google",
@@ -85,8 +85,8 @@ window.SITE = {
       "caption": "Pool deck pavers"
     },
     {
-      "src": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QtNiUzMDZw_BjwefI6tlcYGYctyOTpO_P836DLLVn9c9k3k38CEpoRziGnLF-ss8vjZlfS0Dycf3B5H7EX-hobci6wRzJBWLzgYWPk6TbVShr95U867Qwzt0MBsv2n9_D6skCF8F7-DU3-=w1200",
-      "caption": "Walkway cleaning"
+      "src": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9S1ZzvKu6KKZNJgWCdR6qU5Ajr1yoMTsKQ56aVt-kvpA2m0X-g370b0Oc_v2M7sJguu9deLq7009MF_D54rXnpxr0YftSAfbn9RnvsGbcLE1ztzNQuHmvK8VY0asHVXF7vgcgmM=w1800",
+      "caption": "Screen enclosure, before and after"
     },
     {
       "src": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RimWfjdCUd-Y_j2W5MpvG-BSOidbR2zs_t8yGVEWK7aphLNZpueGbtAeUUu8LW4jd_klnMlJQIoQIu1zbIkbybZjad_fFI-tBTUjRKIOHZHFPCTbWTSaQl0cyAmVuOvXhB35mPKcUDVHHO=w1600",
@@ -115,7 +115,7 @@ window.SITE = {
   "about": {
     "title": "We always exceed expectations",
     "text": "JR Pressure Cleaning Services is a local Tampa team serving Citrus Park, Carrollwood and the surrounding area. We're detail-oriented, we communicate clearly, and we don't leave until every nook and cranny is clean.",
-    "photo": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9S9Cl8EAd5f4gIJZBumT3G4rQhEaR32PGJBseWLjOfydDqpXqyX0jXbg1DB5AWwIMVO8mOA5oN28oU97-1hFV9gKHRCEBOy124I550HBa14xHVbTGaU1_N4588foNB306jw46LW=w1200",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TNowNb9t5-aI8JKEVPDaCs5Wox6jHhMuBrXMQHkepMVjgfoSfXl9_ehKjZUwWstwLSif5-6CYmML7GQcy3xleKP0RzEWdHjHXmrmA2AiQo-hufIT8KfU1ebrRERPhBnGSESDC9Yw=w1600",
     "signature": "JR and Nina"
   },
   "area": {

@@ -30,8 +30,8 @@ window.SITE = {
   "hero": {
     "headline": "A lawn the whole street notices.",
     "subhead": "Mowing, trimming and tree work for {city} homeowners. James and his crew show up, do it right, and keep your yard looking its best week after week.",
-    "image": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RSAyA7JChWdAHB7LHG4mMXT_4lrnCX66rITYTs-_UAkePBkF8c5hJ3oyrheqUtvmVqRzhlTqqPvUQk_JoUb3n3PDxHiMmMr7VCygt_M4A6nfJDZkEnOhr_A0S8X7UlW5T8HvQ0=w1600",
-    "focus": "center 55%",
+    "image": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9T7n8SSfR8xM65K2qxja__7xEeOAlysXoWKTHBdVCsr9XlaqYrEkd5_O3PYFmpHolmNyP8oFeBAi614YcpNKhCkFXPD80xvOmh-HsGA1xiQ0U5G_k3Mo2MqD9jjOFfH7y-y0OSFaVE5Hdhx=w2400",
+    "focus": "center 70%",
     "highlights": [
       "5.0 stars on Google",
       "Mowing to tree work",
@@ -82,15 +82,11 @@ window.SITE = {
     },
     {
       "src": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9S467FVjg7u_4rNhfPWit1tJYdhsIIhG_MT8QFWbH7btkf-8cwhfg9NUmfNdaYKkcsUtJ3vhLjXt9jtOMVdKZqXJXXr1ZaTYZ7fQHEvqWWTsqJJvi5AGYpiWVAImN2LBurh2ZOu=w1200",
-      "caption": "Striped front lawn"
-    },
-    {
-      "src": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9S4UfHPZoyS4Cc4we7yyD90m-woU-XC3dNqRIXaJ-BnAVep4egumojVg3QNX5nXGY25a2SnB5KFPwkWWa46srUpjljWWUlVCFlEkyqCFA8DeAJE_V0L4qIWkcwzEeUfyfOt7ag=w1200",
       "caption": "Beds and mulch"
     },
     {
-      "src": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9T7n8SSfR8xM65K2qxja__7xEeOAlysXoWKTHBdVCsr9XlaqYrEkd5_O3PYFmpHolmNyP8oFeBAi614YcpNKhCkFXPD80xvOmh-HsGA1xiQ0U5G_k3Mo2MqD9jjOFfH7y-y0OSFaVE5Hdhx=w1600",
-      "caption": "Weekly maintenance"
+      "src": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9S4UfHPZoyS4Cc4we7yyD90m-woU-XC3dNqRIXaJ-BnAVep4egumojVg3QNX5nXGY25a2SnB5KFPwkWWa46srUpjljWWUlVCFlEkyqCFA8DeAJE_V0L4qIWkcwzEeUfyfOt7ag=w1200",
+      "caption": "Striped front lawn"
     }
   ],
   "reviews": {
@@ -115,7 +111,7 @@ window.SITE = {
   "about": {
     "title": "Your trusted neighborhood lawn care company",
     "text": "James and his crew take care of yards across Jacksonville, from weekly mowing to trimming and removing trees. Neighbors keep them for years because they're reliable, fairly priced and go the extra mile.",
-    "photo": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TVnyIezob1RJVyqBZlq1yeW43sU8B7Pz45wucjRwr8eNUzrv21EZzzhNOK3eKpVe7pq9Xd8vbGBRnccCiVhBux8rs67sqtkd1d-_XGuOTPhzLWd9EGGDwKVAlFP0BQnLKXU5QY=w1200",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Roa5GN3I51YxtY-ZV4e88REwJFDxhks2brTpXRgr_xteapwXxq1lQGFMOjfL8heEAuw2JSJQPvOzIyF0B5ehXGMSq8Qk3zlsFbOQWVuMh8L6cIXBNR7rK6P3pgYytd6SLokAbFJjXDz_Nj=w1600",
     "signature": "James Shelton"
   },
   "area": {

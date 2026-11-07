@@ -30,8 +30,8 @@ window.SITE = {
   "hero": {
     "headline": "Lighting that makes your home stand out.",
     "subhead": "Chandeliers, exterior lighting, EV chargers and electrical work in {city} and nearby, installed by Kamran and the Star Lighting team.",
-    "image": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QJQzHmPB0XnoCfo8v-l20Wt2zbT1xGwTZ_mtaNDldx8QVnUGUx_Mm51Dr9HmCiJ_wMOihVZR3TSakugU__6TFDQbHrw3Pt6km2-RYOIod3VvITojYmCUl3dfU7XY6U9V47fcm_51xW4mg=w2400",
-    "focus": "center 60%",
+    "image": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9REotwjVG90PfdP21NTXYw-bHennHg__oL6Lsq554uqWIjY75SDMBtKx-n0VNDVxjOj47to_Iv7JRv7rC4O2TnXrZfs87O0GD1GHyggGpl9jfDEncvunoP9WDkDTaahhSEs3wX3bCjCYKAh=w2400",
+    "focus": "center 40%",
     "highlights": [
       "Open 7 days a week",
       "Fast, fair pricing",
@@ -87,20 +87,16 @@ window.SITE = {
   ],
   "gallery": [
     {
-      "src": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9REotwjVG90PfdP21NTXYw-bHennHg__oL6Lsq554uqWIjY75SDMBtKx-n0VNDVxjOj47to_Iv7JRv7rC4O2TnXrZfs87O0GD1GHyggGpl9jfDEncvunoP9WDkDTaahhSEs3wX3bCjCYKAh=w1600",
-      "caption": "Chandelier install"
-    },
-    {
       "src": "https://images.unsplash.com/photo-1473308822086-710304d7d30c?w=1600&q=80&auto=format&fit=crop",
       "caption": "Lighting upgrade"
     },
     {
-      "src": "https://images.unsplash.com/photo-1676630656246-3047520adfdf?w=1600&q=80&auto=format&fit=crop",
-      "caption": "Fixture install"
+      "src": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QJQzHmPB0XnoCfo8v-l20Wt2zbT1xGwTZ_mtaNDldx8QVnUGUx_Mm51Dr9HmCiJ_wMOihVZR3TSakugU__6TFDQbHrw3Pt6km2-RYOIod3VvITojYmCUl3dfU7XY6U9V47fcm_51xW4mg=w1200",
+      "caption": "Exterior lighting, McKinney"
     },
     {
-      "src": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QJQzHmPB0XnoCfo8v-l20Wt2zbT1xGwTZ_mtaNDldx8QVnUGUx_Mm51Dr9HmCiJ_wMOihVZR3TSakugU__6TFDQbHrw3Pt6km2-RYOIod3VvITojYmCUl3dfU7XY6U9V47fcm_51xW4mg=w1200",
-      "caption": "Exterior lighting"
+      "src": "https://images.unsplash.com/photo-1676630656246-3047520adfdf?w=1600&q=80&auto=format&fit=crop",
+      "caption": "Fixture install"
     }
   ],
   "reviews": {

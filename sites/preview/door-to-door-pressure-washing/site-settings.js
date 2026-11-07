@@ -31,8 +31,8 @@ window.SITE = {
   "hero": {
     "headline": "Bringing the sparkle right to your doorstep.",
     "subhead": "Driveways, patios, siding, decks and more across {city} and Birmingham. A friendly, locally owned husband-and-wife team with spotless results.",
-    "image": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QMMsYFtAip9mBKIUR-glG1zRyh5n_8GaZ1NgasuL-TRutScj8ye1rF3XyQK9K8-xp_jDj5UmaOP4wDabneL3k052YdNQLzRDTQBki96wdmXkc8hpp2krfOX58gjcNuv1ewi_coQQ=w1600",
-    "focus": "center 60%",
+    "image": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9StfuYF0qhQ3CPze919aXbnz3_mL572Pmj2cXpWLBEpp349p1omANhyNBeIO7ld4lgtiG5H8Y59SK0O6lpSw4jQC7CJYFdF_YzqfNVidS3fSOEGG1Bij-ZAUs0EHQDnz_CDsBiz_w=w2400",
+    "focus": "center 65%",
     "highlights": [
       "5.0 stars on Google",
       "Husband-and-wife team",
@@ -78,6 +78,10 @@ window.SITE = {
   ],
   "gallery": [
     {
+      "src": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Ryno4y4N85CzzdK6GI5vjlQ6g1QKjaWoDP4zb1ftfRaFKNkoF9xzzWf6mxHFG0RTEeNUf-7N7DX5p_scCwR_xkr4whP0uEnJrZ_-6Slz2Q6EYwR4RaO28rtfLdvoxiBQ_3jeHj=w1800",
+      "caption": "Driveway, finished"
+    },
+    {
       "src": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QFqqEL2BIIuKnj3dRuwCL4h2bf7Kqj1m3WzIzs5DGWd4qo4h3N_hq1YpH_GeZ0XzM_dV1KGrFo7GW5nVMssA3t3K6kWWjsyrmvLMhacsbkmuKzfmgVZhVANOESVEOxmBY-3_UmbQ=w1600",
       "caption": "Siding, before and after"
     },
@@ -86,12 +90,8 @@ window.SITE = {
       "caption": "Outdoor steps"
     },
     {
-      "src": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RIZ7BHd8fttUUxeUeDyvuZxfov1WyXnmC8rWVVLLVC3nbCwJYEFzj4UBzKOBlpfPdnXLqf7Vi1Jtu-jiR61CdYpKZO_M7xJ2ng1aX7P7nd97gs_PkNgZBDduolgzg-dA-mW523dw=w1200",
-      "caption": "Driveway in progress"
-    },
-    {
-      "src": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TAX1jJlE8VA1RPcBANjVGWPCPXMManrMgTdo0QHU6vwDt3Q97q1S--H53CdMGEfgRwQoM1WdlzHOwDBQiu2OCEyaBxlBjfWT3bVeL35znwyod-g11k5NmD-K8u82_cCFWhyCwA=w1600",
-      "caption": "Deck cleaning"
+      "src": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9R2FRR7jj6lITHKqIbJz2vAmSzpXD43mACbW0R9oqaPumCLzohWXcAV8gst0bFjj_R8gV8kCRc4NctTsAWKDq3uTVLNx4ilk78fNYIuW4cIiME1TXUEqpU_3_blCyGVcevC8Z1y=w2400",
+      "caption": "Steps and driveway"
     }
   ],
   "reviews": {
@@ -120,7 +120,7 @@ window.SITE = {
   "about": {
     "title": "Locally owned, always reliable",
     "text": "Door to Door is a husband-and-wife team based in Homewood. We specialize in making your home shine, from driveways and patios to siding and decks, with friendly service and spotless results.",
-    "photo": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RihPtNkmiuUwg2_PjAnzaG753S3_tlDAsvtbsvgX5uxn5rS8SvYr6MdiJEZ-w7lsxr5kRhzonz2ofA846JGFyFJ3zrileujql4dQ9PziQcY7Wi_sYa1XUDEWGxSlUO5WyZQC2r2A=w1200",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RrGhmS7QHc0stfS7GLqwBP_cpcha5Pyyg0xwxIgRnnvIQ5l9UgguvPPj0eZV9Ojaw9Pk1fEUwbwoExyHT5pxno6H3E4rr5MnRSzu84BkIScRhMWvUg__mfAd7z_VfEGOE3j4-5=w1600",
     "signature": "The Door to Door team"
   },
   "area": {
