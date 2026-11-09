@@ -175,7 +175,7 @@ section.block{padding:96px 0}
   .stains__grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 -20px;padding:0 20px 8px;scrollbar-width:none}
   .stains__grid::-webkit-scrollbar{display:none}
   .swatch{flex:0 0 78%;scroll-snap-align:start;aspect-ratio:4/5}
-  .stains .head p::after{content:' Swipe to see all four.';color:var(--gold)}
+  .stains .head p:not(.kicker)::after{content:' Swipe to see all four.';color:var(--gold)}
   .svc{grid-template-columns:1fr}
   .svc li,.svc li:nth-child(3n+2),.svc li:nth-child(3n){padding:24px 0;border-left:0}
   .why__grid,.area__grid,.quote__in{grid-template-columns:1fr}
