@@ -33,11 +33,11 @@ h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:700;line-height:1.08;let
 .btn svg{width:18px;height:18px}
 
 /* LOGO: script wordmark + tree emblem cropped from their business card */
-.logo{display:block;width:236px;height:52px;background:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9T1Meum2NcWWN7fPdvAjOcsQsw7jyjqo4TIwHzw8AbCFlvPZqGsoEnXlpgd5fnsmB80LYhA18J1rLlupkT8bgxHYZlwgoo-D932QqwFhxOAU5IpOOZGEd3WGaLMWiMzXoB8CzAV=s0) no-repeat;background-size:436px 292px;background-position:-107px -43px}
+.logo{display:block;width:236px;height:47px;background:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9T1Meum2NcWWN7fPdvAjOcsQsw7jyjqo4TIwHzw8AbCFlvPZqGsoEnXlpgd5fnsmB80LYhA18J1rLlupkT8bgxHYZlwgoo-D932QqwFhxOAU5IpOOZGEd3WGaLMWiMzXoB8CzAV=s0) no-repeat;background-size:436px 292px;background-position:-107px -44px}
 .emblem{display:block;width:48px;height:48px;border-radius:50%;background:#fff url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9T1Meum2NcWWN7fPdvAjOcsQsw7jyjqo4TIwHzw8AbCFlvPZqGsoEnXlpgd5fnsmB80LYhA18J1rLlupkT8bgxHYZlwgoo-D932QqwFhxOAU5IpOOZGEd3WGaLMWiMzXoB8CzAV=s0) no-repeat;background-size:521px 349px;background-position:-400px -211px;flex:none}
 
 /* HEADER */
-header{position:sticky;top:0;z-index:40;background:var(--white);border-bottom:1px solid #e4dfd0}
+header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid #e4dfd0}
 .hd{display:flex;align-items:center;justify-content:space-between;height:76px;gap:18px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
 nav{display:flex;gap:26px;align-items:center}
@@ -134,12 +134,12 @@ section{padding:96px 0}
 .rev .score{display:flex;align-items:center;gap:14px}
 .rev .score b{font-family:Fraunces,serif;font-size:54px;line-height:1;color:var(--sage-d)}
 .rev .score span{font-size:14px;color:var(--muted);line-height:1.3}
-.rgrid{columns:3;column-gap:18px}
-.r{break-inside:avoid;background:var(--white);border:1px solid #e4dfd0;border-radius:16px;padding:24px;margin-bottom:18px}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
+.r{background:var(--white);border:1px solid #e4dfd0;border-radius:16px;padding:24px}
 .r .stars{font-size:15px}
 .r p{margin:10px 0 14px}
 .r b{font-size:14.5px}
-.rev .more{text-align:center;margin-top:20px}
+.rev .more{text-align:center;margin-top:30px}
 .rev .more a{color:var(--sage-d);font-weight:700}
 
 /* AREA */
@@ -173,7 +173,7 @@ form .btn{justify-content:center;width:100%}
 /* FOOTER */
 footer{background:#141c11;color:#aeb7a2;padding:56px 0 110px;font-size:15px}
 .ft{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
-.ftlogo{background:var(--white);border-radius:12px;padding:10px 14px;display:inline-flex;align-items:center;gap:8px}
+.ftlogo{background:#fff;border-radius:12px;padding:10px 14px;display:inline-flex;align-items:center;gap:8px}
 footer h4{color:#fff;font-size:14px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
 footer a{color:#dfe6d2;text-decoration:none}
 footer p{margin-top:14px}
@@ -198,7 +198,7 @@ footer p{margin-top:14px}
   nav a:not(.btn){display:none}
   .split,.storm .wrap,.area .wrap,.est .wrap{grid-template-columns:1fr;gap:40px}
   .svcgrid{grid-template-columns:1fr 1fr}
-  .rgrid{columns:2}
+  .rgrid{grid-template-columns:1fr 1fr}
   .grid{grid-template-columns:repeat(2,1fr)}
   .ft{grid-template-columns:1fr 1fr}
 }
@@ -206,7 +206,7 @@ footer p{margin-top:14px}
   body{font-size:16px}
   section{padding:70px 0}
   .hd{height:66px}
-  .logo{width:190px;height:42px;background-size:351px 235px;background-position:-86px -35px}
+  .logo{width:190px;height:38px;background-size:351px 235px;background-position:-86px -35px}
   .hd .btn{display:none}
   .hero{min-height:560px;background-position:62% 62%}
   .hero::before{background:linear-gradient(0deg,rgba(18,26,15,.95) 10%,rgba(18,26,15,.55) 60%,rgba(18,26,15,.35))}
@@ -227,7 +227,7 @@ footer p{margin-top:14px}
   .step h3{margin-top:4px}
   .grid{grid-auto-rows:170px;gap:8px}
   .grid figure.wide{grid-column:span 2}
-  .rgrid{columns:1}
+  .rgrid{grid-template-columns:1fr}
   .map{height:280px}
   form{grid-template-columns:1fr;padding:22px}
   .ft{grid-template-columns:1fr}
@@ -379,6 +379,7 @@ footer p{margin-top:14px}
       <div class="r rv"><div class="stars">★★★★★</div><p>We had five trees removed in Greenacres Place and they did a fabulous job. The quality is exceptional and the price is great. Try them!</p><b>Marty C.</b></div>
       <div class="r rv"><div class="stars">★★★★★</div><p>They were hardworking, cleaned up afterwards, and reasonably priced. Will not hesitate to use agin in the future.</p><b>Leo H.</b></div>
       <div class="r rv"><div class="stars">★★★★★</div><p>Excellent customer service!! Great prices and leaves the job site very clean!! Highly recommend</p><b>Tracy G.</b></div>
+      <div class="r rv"><div class="stars">★★★★★</div><p>Fair pricing<br>Quick turn around<br>Will be calling for my next investment property</p><b>Christina C.</b></div>
     </div>
     <p class="more rv"><a href="https://www.google.com/maps?cid=16334825456213938222" target="_blank" rel="noopener">Read all 20 reviews on Google →</a></p>
   </div>
@@ -393,7 +394,7 @@ footer p{margin-top:14px}
       <div class="towns"><span>Shreveport</span><span>Bossier Parish</span><span>Benton</span><span>Plain Dealing</span><span>Vivian</span><span>Springhill</span></div>
       <a href="tel:+13183491505" class="btn btn--sage">Call (318) 349-1505</a>
     </div>
-    <div class="map rv"><iframe title="Map of the Shreveport–Bossier area" loading="lazy" src="https://maps.google.com/maps?q=Benton,%20LA&z=8&output=embed"></iframe></div>
+    <div class="map rv"><iframe title="Map of the Shreveport–Bossier area" loading="lazy" src="https://maps.google.com/maps?q=Bossier%20Parish,%20LA&z=8&output=embed"></iframe></div>
   </div>
 </section>
 
