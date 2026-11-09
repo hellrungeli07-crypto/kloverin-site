@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Keeps previews out of Google. Delete this line when the site goes live on the client's domain. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>R&amp;R Fence &amp; Stain | Fence Installation, Repair &amp; Staining in Huntsville, AL</title>
+<meta name="description" content="Wood privacy, shadowbox and chain-link fences, gates and staining across Huntsville and Madison, AL. Licensed and insured. Free quotes.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --char:#1c1c1a; --char2:#2a2926; --gold:#e5b425; --gold2:#f2cc4d; --cedar:#a8582a;
+  --cream:#f5efe4; --paper:#fbf8f2; --ink:#1c1c1a; --muted:#5f5a52; --line:#e3dacb;
+  --radius:4px; --head:'Oswald',Impact,sans-serif; --body:'Source Sans 3',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--head);font-weight:600;line-height:1.05;letter-spacing:.01em;text-transform:uppercase}
+.kicker{font-family:var(--head);font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--cedar);font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--head);text-transform:uppercase;letter-spacing:.06em;font-weight:600;font-size:17px;padding:15px 24px;border-radius:var(--radius);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn--gold{background:var(--gold);color:var(--char)}
+.btn--gold:hover{background:var(--gold2)}
+.btn--line{border-color:rgba(255,255,255,.6);color:#fff}
+.btn--line:hover{background:rgba(255,255,255,.1)}
+.i{width:18px;height:18px;flex:none}
+
+/* header */
+.top{position:absolute;top:0;left:0;right:0;z-index:20}
+.top__in{display:flex;align-items:center;justify-content:space-between;padding:18px 20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.brand__mark{display:grid;grid-template-columns:repeat(5,6px);gap:3px;align-items:end;height:30px}
+.brand__mark span{background:var(--gold);border-radius:2px 2px 0 0;clip-path:polygon(0 18%,50% 0,100% 18%,100% 100%,0 100%)}
+.brand__mark span:nth-child(1),.brand__mark span:nth-child(5){height:24px}.brand__mark span:nth-child(2),.brand__mark span:nth-child(4){height:28px}.brand__mark span:nth-child(3){height:30px}
+.brand__name{font-family:var(--head);font-weight:700;font-size:22px;letter-spacing:.04em;text-transform:uppercase;line-height:1}
+.brand__name small{display:block;font-size:11px;letter-spacing:.24em;color:var(--gold);font-weight:500;margin-top:3px}
+.top nav{display:flex;gap:26px}
+.top nav a{color:#fff;text-decoration:none;font-family:var(--head);text-transform:uppercase;letter-spacing:.1em;font-size:14px;opacity:.85}
+.top nav a:hover{opacity:1;color:var(--gold)}
+
+/* hero */
+.hero{position:relative;min-height:min(92vh,820px);display:flex;align-items:flex-end;color:#fff;background:var(--char);overflow:hidden}
+.hero__bg{position:absolute;inset:0;background-size:cover;background-position:center 55%;transform:scale(1.03)}
+.hero__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,20,18,.92) 0%,rgba(20,20,18,.7) 45%,rgba(20,20,18,.15) 100%),linear-gradient(0deg,rgba(20,20,18,.8),transparent 40%)}
+.hero__in{position:relative;padding:150px 20px 70px;max-width:1180px;margin:0 auto;width:100%}
+.hero__badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:7px 14px;border-radius:40px;font-size:15px;margin-bottom:22px;text-decoration:none}
+.stars{color:var(--gold);letter-spacing:2px}
+.hero h1{font-size:clamp(44px,7.4vw,92px);max-width:13ch;margin-bottom:22px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.sub{font-size:clamp(18px,2vw,21px);max-width:560px;color:#e9e3d8;margin-bottom:32px}
+.hero__ctas{display:flex;flex-wrap:wrap;gap:12px}
+
+/* proof */
+.proof{background:var(--gold);color:var(--char)}
+.proof ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr)}
+.proof li{padding:18px 16px;font-family:var(--head);text-transform:uppercase;letter-spacing:.06em;font-size:15px;font-weight:600;text-align:center;border-right:2px solid rgba(28,28,26,.15)}
+.proof li:last-child{border-right:0}
+.proof b{display:block;font-size:26px;font-weight:700;letter-spacing:.02em}
+
+section.block{padding:96px 0}
+.head{max-width:720px;margin-bottom:46px}
+.head h2{font-size:clamp(34px,4.6vw,54px);margin:10px 0 14px}
+.head p{color:var(--muted);font-size:19px}
+
+/* stain picker */
+.stains{background:var(--char);color:#fff}
+.stains .head p{color:#c9c2b5}
+.stains__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.swatch{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:3/4;background:#333}
+.swatch img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.swatch:hover img{transform:scale(1.05)}
+.swatch figcaption{position:absolute;left:0;right:0;bottom:0;padding:60px 18px 18px;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent)}
+.swatch .chip{display:inline-block;width:34px;height:10px;border-radius:2px;margin-bottom:10px;box-shadow:0 0 0 2px rgba(255,255,255,.4)}
+.swatch h3{font-size:24px}
+.swatch p{font-size:15px;color:#ddd5c8}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--char)}
+.svc li{list-style:none;padding:30px 26px 34px 0;border-bottom:1px solid var(--line)}
+.svc li:nth-child(3n+2),.svc li:nth-child(3n){padding-left:26px;border-left:1px solid var(--line)}
+.svc .n{font-family:var(--head);color:var(--cedar);font-size:15px;letter-spacing:.12em}
+.svc h3{font-size:26px;margin:6px 0 10px}
+.svc p{color:var(--muted)}
+
+/* why */
+.why{background:var(--cream)}
+.why__grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.why__photo{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5}
+.why__photo img{width:100%;height:100%;object-fit:cover}
+.pts{list-style:none;display:grid;gap:26px}
+.pts li{display:grid;grid-template-columns:54px 1fr;gap:18px}
+.pts .num{width:54px;height:54px;background:var(--char);color:var(--gold);display:grid;place-items:center;font-family:var(--head);font-size:24px;font-weight:700;border-radius:var(--radius)}
+.pts h3{font-size:24px;margin-bottom:6px}
+.pts blockquote{color:var(--muted);font-style:italic;border-left:3px solid var(--gold);padding-left:12px}
+.pts cite{display:block;font-style:normal;font-size:14px;margin-top:4px;color:var(--ink);font-weight:600}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:10px}
+.gal figure{border-radius:var(--radius);overflow:hidden;position:relative}
+.gal img{width:100%;height:100%;object-fit:cover}
+.gal figure:nth-child(1){grid-column:span 3;grid-row:span 3}
+.gal figure:nth-child(2){grid-column:span 3;grid-row:span 2}
+.gal figure:nth-child(3){grid-column:span 2;grid-row:span 2}
+.gal figure:nth-child(4){grid-column:span 1;grid-row:span 2}
+.gal figure:nth-child(5){grid-column:span 3;grid-row:span 2}
+.gal figure:nth-child(6){grid-column:span 3;grid-row:span 2}
+.gal figcaption{position:absolute;left:10px;bottom:10px;background:rgba(28,28,26,.85);color:#fff;font-family:var(--head);text-transform:uppercase;letter-spacing:.08em;font-size:13px;padding:5px 10px;border-radius:2px}
+
+/* reviews */
+.rev{background:var(--char);color:#fff}
+.rev .head p{color:#c9c2b5}
+.rev__top{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:40px}
+.score{display:flex;align-items:center;gap:16px}
+.score b{font-family:var(--head);font-size:72px;line-height:1;color:var(--gold)}
+.score span{font-size:15px;color:#c9c2b5}
+.rev__grid{columns:3 300px;column-gap:18px}
+.card{break-inside:avoid;background:var(--char2);border:1px solid #3a3833;border-radius:var(--radius);padding:24px;margin-bottom:18px}
+.card .stars{font-size:15px}
+.card p{margin:10px 0 14px;color:#ebe5da}
+.card cite{font-style:normal;font-family:var(--head);text-transform:uppercase;letter-spacing:.08em;font-size:14px;color:var(--gold)}
+
+/* area */
+.area__grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.towns{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}
+.towns li{border:2px solid var(--char);padding:8px 16px;font-family:var(--head);text-transform:uppercase;letter-spacing:.08em;font-size:15px;border-radius:var(--radius)}
+.map{border-radius:var(--radius);overflow:hidden;min-height:340px;background:var(--cream)}
+.map iframe{width:100%;height:100%;min-height:340px;border:0;display:block;filter:grayscale(.3)}
+
+/* quote */
+.quote{position:relative;background:var(--char);color:#fff;overflow:hidden}
+.quote__bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.18}
+.quote__in{position:relative;display:grid;grid-template-columns:1fr 1.1fr;gap:50px;padding:96px 20px}
+.quote h2{font-size:clamp(36px,4.6vw,56px);margin:10px 0 16px}
+.quote p{color:#d8d1c4;font-size:19px;margin-bottom:24px}
+.form{background:var(--paper);color:var(--ink);padding:30px;border-radius:var(--radius);display:grid;gap:14px;border-top:6px solid var(--gold)}
+.form .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form label{display:grid;gap:6px;font-weight:600;font-size:15px}
+.form input,.form select,.form textarea{font:inherit;font-weight:400;padding:12px 14px;border:1.5px solid var(--line);border-radius:var(--radius);background:#fff}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--cedar)}
+.form .btn{justify-content:center}
+.form__note{font-size:14px;color:var(--muted);text-align:center}
+.hp{display:none}
+
+.foot{background:#121211;color:#a59e92;padding:44px 0 110px;font-size:15px}
+.foot__in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-end}
+.foot .brand{color:#fff;margin-bottom:12px}
+.foot a{color:var(--gold)}
+
+.callbar{display:none}
+.chat{position:fixed;right:18px;bottom:18px;z-index:40}
+.chat__b{width:58px;height:58px;border-radius:50%;background:var(--gold);color:var(--char);border:0;box-shadow:0 8px 24px rgba(0,0,0,.3);display:grid;place-items:center;cursor:pointer}
+.chat__p{position:absolute;right:0;bottom:72px;width:300px;background:#fff;color:var(--ink);border-radius:10px;box-shadow:0 16px 40px rgba(0,0,0,.25);overflow:hidden}
+.chat__p header{background:var(--char);color:#fff;padding:14px 16px;font-family:var(--head);text-transform:uppercase;letter-spacing:.06em}
+.chat__p .msg{margin:14px 16px;background:var(--cream);padding:10px 12px;border-radius:10px 10px 10px 2px;font-size:15px}
+.chat__p .acts{display:grid;gap:8px;padding:0 16px 16px}
+.chat__p .acts a{display:block;text-align:center;padding:10px;border:1.5px solid var(--char);border-radius:var(--radius);text-decoration:none;font-weight:600;font-size:15px}
+.chat__p small{display:block;text-align:center;font-size:12px;color:var(--muted);padding-bottom:10px}
+
+@media (max-width:900px){
+  .top nav{display:none}
+  .proof ul{grid-template-columns:repeat(2,1fr)}
+  .proof li:nth-child(2){border-right:0}
+  .proof li:nth-child(-n+2){border-bottom:2px solid rgba(28,28,26,.15)}
+  .stains__grid{grid-template-columns:repeat(2,1fr)}
+  .svc{grid-template-columns:1fr}
+  .svc li,.svc li:nth-child(3n+2),.svc li:nth-child(3n){padding:24px 0;border-left:0}
+  .why__grid,.area__grid,.quote__in{grid-template-columns:1fr}
+  .why__photo{aspect-ratio:4/3}
+  .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}
+  .gal figure:nth-child(n){grid-column:span 1;grid-row:span 1}
+  .gal figure:nth-child(1){grid-column:span 2;grid-row:span 2}
+  section.block{padding:70px 0}
+  .form .two{grid-template-columns:1fr}
+  .callbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--char);padding:10px;gap:10px}
+  .callbar .btn{justify-content:center;padding:13px}
+  .chat{bottom:84px}
+  .top__call span{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="#top" aria-label="R&amp;R Fence &amp; Stain home">
+      <span class="brand__mark" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></span>
+      <span class="brand__name">R&amp;R Fence<small>&amp; Stain · Huntsville</small></span>
+    </a>
+    <nav aria-label="Sections"><a href="#stain">Stain colors</a><a href="#build">What we build</a><a href="#work">Our work</a><a href="#reviews">Reviews</a></nav>
+    <a class="btn btn--gold top__call" href="tel:+12567950344"><svg class="i" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><span>(256) 795-0344</span></a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero__bg" style="background-image:url('https://lh3.googleusercontent.com/gps-cs-s/ANWiy9T_Fz6pkluIcnHv-f2tTVytSR96J_zHERBQZmAx4mxG28oVcjLb4qRnN_W6XLQ1rMf8lOqXnW953JLzhqevYYgdFG6Vid2UyPKjDodY3Se5e2-lICNoTdKprIq3FybNo2ZszME=w2400')"></div>
+  <div class="hero__in">
+    <a class="hero__badge" href="#reviews"><span class="stars">★★★★★</span> 4.9 from 28 Google reviews</a>
+    <h1>Fences built <em>straight.</em> Yards left <em>spotless.</em></h1>
+    <p class="sub">Mark and his crew build, repair and stain wood privacy, shadowbox and chain-link fences across Huntsville and Madison. Licensed and insured, with free quotes.</p>
+    <div class="hero__ctas">
+      <a class="btn btn--gold" href="tel:+12567950344"><svg class="i" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call (256) 795-0344</a>
+      <a class="btn btn--line" href="#quote">Get a free quote</a>
+    </div>
+  </div>
+</section>
+
+<section class="proof" aria-label="At a glance">
+  <ul class="wrap">
+    <li><b>4.9 ★</b>28 Google reviews</li>
+    <li><b>Licensed</b>and insured</li>
+    <li><b>Free</b>quotes</li>
+    <li><b>Huntsville</b>&amp; Madison</li>
+  </ul>
+</section>
+
+<section class="block stains" id="stain">
+  <div class="wrap">
+    <div class="head">
+      <p class="kicker">The "Stain" in R&amp;R</p>
+      <h2>Pick your finish</h2>
+      <p>New fence or tired old one, we stain it to match your house. These are real R&amp;R jobs around Huntsville.</p>
+    </div>
+    <div class="stains__grid">
+      <figure class="swatch"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Tdsc3DnWO0HXFPOEo3hKgjF97I8crHT4AN1JJJSBVRNwzQgvYf3j-5M6CtTQcPVyiAOfaRsfJL-gJuRClNxrOMzL1XQPWZw2v0SZJbhNLEPU9gXsA6T1CCfsG-5ngYf8v9y7qCHLqSui0=w900" alt="New natural pine privacy fence" loading="lazy"><figcaption><span class="chip" style="background:#d9b98a"></span><h3>Natural</h3><p>Fresh pine, sealed and left to weather in.</p></figcaption></figure>
+      <figure class="swatch"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RDpH8-C5c9Yv7qMYbSmS0fc1xpb4k5PGY0GeZosoe959rGsF521_cnH-gI9k1d8k-y0hfMdH8eJb2RW3hNnqHY4a88bLRVYWp7l1yRIyONXMNfriDzEZdQO4HG_URiGDoByKPt=w900" alt="Cedar-tone stained board fence" loading="lazy"><figcaption><span class="chip" style="background:#b06a2e"></span><h3>Cedar tone</h3><p>Warm and classic. Hides wear well.</p></figcaption></figure>
+      <figure class="swatch"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TxSLCWMRHY34_RQ6Fs9Biymyz3SeNqUoWZaPz7G6eSrRgBXD9R0PmpiVg3BylWrNImqBn_JWSYv3WRk_SjSWDg4Mf3ZLBQOt0cd99YvJxjKYYOQeuORd1S443Itf3t7bHoMbyBWQ=w900" alt="Red stained privacy fence around a tree" loading="lazy"><figcaption><span class="chip" style="background:#8e3a26"></span><h3>Barn red</h3><p>Bold color that stands out from the street.</p></figcaption></figure>
+      <figure class="swatch"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9S5Npjp9zZBni5-LjGyIZdusSx74NX5Xxjre_uyp0bQR9w85IWMY9OqQ6thL4roMfUO8VSLbZfwEmvGoG6egDG0m-UJ11Juwa_R-v1rHV4UmZBIR5okPOi43yIn-ET27I8pkr3WONOdijQ=w900" alt="Charcoal stained shadowbox fence and gate" loading="lazy"><figcaption><span class="chip" style="background:#2e2e2c"></span><h3>Charcoal</h3><p>Modern and clean against new builds.</p></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="build">
+  <div class="wrap">
+    <div class="head">
+      <p class="kicker">What we build</p>
+      <h2>Fences, gates and repairs, done right the first time</h2>
+      <p>Residential and commercial. Not sure what you need? Call Mark and he'll tell you straight.</p>
+    </div>
+    <ul class="svc">
+      <li><span class="n">01</span><h3>Wood privacy fences</h3><p>New builds and full replacements, set straight and level, even on big lots.</p></li>
+      <li><span class="n">02</span><h3>Shadowbox &amp; board-on-board</h3><p>Good-looking from both sides, with no gaps for nosy neighbors or escaping dogs.</p></li>
+      <li><span class="n">03</span><h3>Fence staining</h3><p>Natural, cedar, red or charcoal. New fences or tired gray ones brought back to life.</p></li>
+      <li><span class="n">04</span><h3>Repairs &amp; storm damage</h3><p>Downed sections rebuilt stronger, and boards replaced while keeping the good posts.</p></li>
+      <li><span class="n">05</span><h3>Chain link &amp; gates</h3><p>Chain-link runs, double drive gates and walk gates that swing and latch right.</p></li>
+      <li><span class="n">06</span><h3>Arbors &amp; take-down/rebuild</h3><p>Garden arbors, plus fences taken down for construction and put back up.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="block why">
+  <div class="wrap why__grid">
+    <div class="why__photo"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TYk1oOqz6o3MsFj49hIzL_Y2uqNZlDPpg8IbtyvnqExnjOD_NZk6947wyMVO8gHy-BPXHTyWpI2nWHK8HCurQQhzbI8kVRSOLWw9bkwYKRtp06LD0ouak2UoGPA26LrbYpXBRnjQ=w1600" alt="R&amp;R privacy fence along a pond" loading="lazy"></div>
+    <div>
+      <p class="kicker">Why Huntsville calls Mark</p>
+      <h2 style="font-size:clamp(34px,4.4vw,50px);margin:10px 0 30px">What customers keep saying</h2>
+      <ul class="pts">
+        <li><span class="num">1</span><div><h3>Fast</h3><blockquote>"They got our fence up in record time!"<cite>Julia K.</cite></blockquote></div></li>
+        <li><span class="num">2</span><div><h3>Clean</h3><blockquote>"They did not leave any mess behind and were incredibly affordable."<cite>Julia K.</cite></blockquote></div></li>
+        <li><span class="num">3</span><div><h3>Built stronger</h3><blockquote>"They came and repaired our section and made it much stronger than the original."<cite>Julian S.</cite></blockquote></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="work">
+  <div class="wrap">
+    <div class="head">
+      <p class="kicker">Recent work</p>
+      <h2>Real fences, real yards</h2>
+      <p>A few jobs from around Huntsville and Madison.</p>
+    </div>
+    <div class="gal">
+      <figure><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RnkLSYcqQQKEByjGfseupcIsN91IfI7YCBnFCewBEiqNZtHwfARqCcNPz16QlYfbHOYpftR5rG4SPAdU6GgBaCLlnc2Usp4nLsUqZwKgUG30wgRRG-iK2FqIlQNdkWvo1yeIUIg0Zk4Xg=w1600" alt="Charcoal shadowbox fence beside a home" loading="lazy"><figcaption>Charcoal shadowbox</figcaption></figure>
+      <figure><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Rhr2GLAfM6AYt4qa34IoDCrcmSXZl8IJYAI3gjgP3O-ZVNEHcuDOPtzyBo1SwRkZki9JS7wl-JEDMAQ8kFlYrcFdmTspX3UMllUCgu3EiDHMAZ4PYHWY7G-Datzne8NIMEBttWIw=w1200" alt="Stained shadowbox fence line" loading="lazy"><figcaption>Board-on-board</figcaption></figure>
+      <figure><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9S9X53mJtcD3uKDZXLXrqBZxF-gQ1YanVRn0jk7yyiy1LCQqy-P0qBEBclnZMDBPZ_t6raa8YfKUsROo3AT4S0ne0uD7_N_Mclj4gpNs5vqU2oD7QlT79x-IbX0P6c6fOqzTfZN=w1000" alt="Wood garden arbor" loading="lazy"><figcaption>Garden arbor</figcaption></figure>
+      <figure><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TGggriQpTvQeUrN0NajvKJ58PAViOJzMKGvly67m8_yNLMRLJ8CVwc2qg8yD_3Vo-eU6558Jla--OiJ4A-rBcehGvrHM5WlzICwPinJ9hyCwzMXZD5Nzl7yOd6gUmE0gX-oxRw=w800" alt="Red stained wood gate with black hardware" loading="lazy"><figcaption>Custom gate</figcaption></figure>
+      <figure><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TCCHCovbs17SLS6M9cuNN6frqMyviBSazMVJVNN3ZaqA04noJJ4Hv3XYi0XUcccoL7GHod_ZRk1zs0BLhLGeGm9D6pqwjRl1injmyuFVn12nNYRRzBcu2luVJ5s_pjeuOjxiAvig=w1400" alt="Chain-link fence with double drive gate" loading="lazy"><figcaption>Chain link</figcaption></figure>
+      <figure><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TbiXm4Lkh7SL-t-2PciCNrAOqwnTpZyfINdVQ1eC-EOQqEh4bwR8oMtkeQ3Q6-QJAHsd4XcXg2d1QDGUZE8YV4L6jKJCENAzrwNIJhawt-9DAXFhEpZRki1CFR4_qYtTI_HrqX=w1400" alt="Shadowbox fence boards, top view" loading="lazy"><figcaption>Straight lines</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="block rev" id="reviews">
+  <div class="wrap">
+    <div class="rev__top">
+      <div class="head" style="margin:0"><p class="kicker" style="color:var(--gold)">Reviews</p><h2>Neighbors on R&amp;R</h2></div>
+      <div class="score"><b>4.9</b><div><span class="stars">★★★★★</span><br><span>28 reviews on Google</span></div></div>
+    </div>
+    <div class="rev__grid">
+      <div class="card"><span class="stars">★★★★★</span><p>Holy crap! Best service from a contractor I've seen in years! Great price, exceptional work and fast! I WILL have Mark and his crew listed as #1 for fencing needs if anyone asks! Included some before and after photos.</p><cite>Don R.</cite></div>
+      <div class="card"><span class="stars">★★★★★</span><p>We had R&amp;R stain our fence. They did a fantastic job. Pricing was very reasonable and they were easy to work with. We had a consultation on the weekend and the work was completed a few days later. We will work with them again in the future. Highly recommend!</p><cite>Katherine W.</cite></div>
+      <div class="card"><span class="stars">★★★★★</span><p>Mark did an excellent job replacing only the fencing. He was able to use most of the posts. He was easy to work with and most cooperative when I suggested minor changes. He worked on my fence during the hottest week of August.</p><cite>Chuck B.</cite></div>
+      <div class="card"><span class="stars">★★★★★</span><p>Awesome crew. Mark and team were super helpful taking down a fence for me for some construction and putting it back up with some reconfiguration. They were well prepared and did the job on time and right. Prices were fair for the job done. Would use again. Thanks!!</p><cite>Michael L.</cite></div>
+      <div class="card"><span class="stars">★★★★★</span><p>A storm knocked down a 24' section of our fence. I noticed R&amp;R Fence and Stain installing a wooden fence at a neighbor's home. I could tell they were building a quality fence on the property. They came and repaired our section and made it much stronger than the original. The completed section looks great.</p><cite>Julian S.</cite></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="area">
+  <div class="wrap area__grid">
+    <div>
+      <p class="kicker">Service area</p>
+      <h2 style="font-size:clamp(34px,4.4vw,50px);margin:10px 0 6px">Huntsville, Madison &amp; around</h2>
+      <p style="color:var(--muted)">Homes and businesses across Madison County.</p>
+      <ul class="towns"><li>Huntsville</li><li>Madison</li><li>Harvest</li><li>Meridianville</li><li>Hazel Green</li><li>Owens Cross Roads</li></ul>
+      <a class="btn btn--gold" href="tel:+12567950344">Call (256) 795-0344</a>
+    </div>
+    <div class="map"><iframe title="Map of Huntsville, AL" loading="lazy" src="https://www.google.com/maps?q=Huntsville,+AL&z=10&output=embed"></iframe></div>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="quote__bg" style="background-image:url('https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TYk1oOqz6o3MsFj49hIzL_Y2uqNZlDPpg8IbtyvnqExnjOD_NZk6947wyMVO8gHy-BPXHTyWpI2nWHK8HCurQQhzbI8kVRSOLWw9bkwYKRtp06LD0ouak2UoGPA26LrbYpXBRnjQ=w1600')"></div>
+  <div class="wrap quote__in">
+    <div>
+      <p class="kicker" style="color:var(--gold)">Free quotes</p>
+      <h2>Tell us about your fence</h2>
+      <p>New fence, repair or stain job. Send a few details and Mark will get back to you with a quote.</p>
+      <a class="btn btn--line" href="tel:+12567950344">Or call (256) 795-0344</a>
+    </div>
+    <form class="form" id="quoteForm" novalidate>
+      <div class="two"><label>Name<input name="name" autocomplete="name" required></label><label>Phone<input name="phone" type="tel" autocomplete="tel" required></label></div>
+      <div class="two">
+        <label>Project<select name="project"><option>New fence</option><option>Replace old fence</option><option>Repair / storm damage</option><option>Staining</option><option>Gate</option><option>Something else</option></select></label>
+        <label>About how many feet?<select name="feet"><option>Not sure</option><option>Under 100 ft</option><option>100 to 200 ft</option><option>200 to 300 ft</option><option>300+ ft</option></select></label>
+      </div>
+      <label>ZIP code<input name="zip" inputmode="numeric" maxlength="10"></label>
+      <label>Anything else?<textarea name="message" rows="3" placeholder="Wood type, height, stain color, pets, gates..."></textarea></label>
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
+      <button class="btn btn--gold" type="submit">Send my request</button>
+      <p class="form__note" id="formNote">Free quote. No pressure.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <a class="brand" href="#top"><span class="brand__mark" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></span><span class="brand__name">R&amp;R Fence<small>&amp; Stain LLC</small></span></a>
+      <p>Fence installation, repair &amp; staining · Huntsville &amp; Madison, AL · <a href="tel:+12567950344">(256) 795-0344</a><br>Licensed and insured</p>
+    </div>
+    <p>© <span id="yr"></span> R&amp;R Fence &amp; Stain LLC<br>Website by <a href="https://kloverin.com" target="_blank" rel="noopener">Kloverin</a></p>
+  </div>
+</footer>
+
+<div class="callbar"><a class="btn btn--gold" href="tel:+12567950344">Call now</a><a class="btn btn--line" href="#quote">Free quote</a></div>
+
+<div class="chat">
+  <div class="chat__p" id="chatP" hidden>
+    <header>R&amp;R Fence &amp; Stain</header>
+    <p class="msg">Hi! Thanks for stopping by. Need a new fence, a repair or a stain job?</p>
+    <div class="acts"><a href="tel:+12567950344">Call Mark</a><a href="#quote" id="chatQ">Get a free quote</a></div>
+    <small>AI assistant by Kloverin</small>
+  </div>
+  <button class="chat__b" id="chatB" aria-label="Chat with us"><svg class="i" style="width:26px;height:26px" viewBox="0 0 24 24"><path fill="currentColor" d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-4 3.5V17H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/></svg></button>
+</div>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+var p=document.getElementById('chatP');
+document.getElementById('chatB').onclick=function(){p.hidden=!p.hidden};
+document.getElementById('chatQ').onclick=function(){p.hidden=true};
+document.getElementById('quoteForm').addEventListener('submit',function(e){e.preventDefault();var n=document.getElementById('formNote');n.textContent='Preview only: once your site is live, this sends straight to your phone and email.';n.style.color='#a8582a';});
+</script>
+</body>
+</html>
