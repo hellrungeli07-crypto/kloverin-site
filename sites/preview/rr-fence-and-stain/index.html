@@ -147,7 +147,7 @@ section.block{padding:96px 0}
 .form input,.form select,.form textarea{font:inherit;font-weight:400;padding:12px 14px;border:1.5px solid var(--line);border-radius:var(--radius);background:#fff}
 .form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--cedar)}
 .form .btn{justify-content:center}
-.form__note{font-size:14px;color:var(--muted);text-align:center}
+.form__note{font-size:14px;color:#6b655c;text-align:center}
 .hp{display:none}
 
 .foot{background:#121211;color:#a59e92;padding:44px 0 110px;font-size:15px}
@@ -172,7 +172,10 @@ section.block{padding:96px 0}
   .proof ul{grid-template-columns:repeat(2,1fr)}
   .proof li:nth-child(2){border-right:0}
   .proof li:nth-child(-n+2){border-bottom:2px solid rgba(28,28,26,.15)}
-  .stains__grid{grid-template-columns:repeat(2,1fr)}
+  .stains__grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 -20px;padding:0 20px 8px;scrollbar-width:none}
+  .stains__grid::-webkit-scrollbar{display:none}
+  .swatch{flex:0 0 78%;scroll-snap-align:start;aspect-ratio:4/5}
+  .stains .head p::after{content:' Swipe to see all four.';color:var(--gold)}
   .svc{grid-template-columns:1fr}
   .svc li,.svc li:nth-child(3n+2),.svc li:nth-child(3n){padding:24px 0;border-left:0}
   .why__grid,.area__grid,.quote__in{grid-template-columns:1fr}
@@ -324,7 +327,7 @@ section.block{padding:96px 0}
       <p class="kicker" style="color:var(--gold)">Free quotes</p>
       <h2>Tell us about your fence</h2>
       <p>New fence, repair or stain job. Send a few details and Mark will get back to you with a quote.</p>
-      <ol class="next"><li><b>Send the details</b>Your project, roughly how many feet, and your ZIP.</li><li><b>Mark gets back to you</b>With questions or a quote, usually after a quick look.</li><li><b>Your fence goes up</b>Straight, clean, and no subcontractors.</li></ol>
+      <ol class="next"><li><b>Send the details</b>Your project, roughly how many feet, and your ZIP.</li><li><b>Mark gets back to you</b>With any questions and a quote for your project.</li><li><b>Your fence goes up</b>Straight, clean, and no subcontractors.</li></ol>
       <a class="btn btn--line" href="tel:+12567950344">Or call (256) 795-0344</a>
     </div>
     <form class="form" id="quoteForm" novalidate>
