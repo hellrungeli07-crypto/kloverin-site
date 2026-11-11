@@ -39,8 +39,8 @@ h1,h2,h3{font-family:Teko,Impact,sans-serif;font-weight:600;line-height:.95;lett
 .top24 .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:7px;padding-bottom:7px}
 .top24 b{color:#fff}
 header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:4px solid var(--blue)}
-.hd{display:flex;align-items:center;justify-content:space-between;height:84px;gap:18px}
-.logo{display:block;width:127px;height:64px;background:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SJCBRhJDNFr7NdBfY1wy1i0hReyayiES57A0v0QpB0hUrPPaDWya4V35XTsRMmyyPR2-CrLa68pEpG0jkosq31xkcJeDpbR10BjxfyJRR6WG_4ngjdJk-AB3jsXZIucHVfmao=s0) no-repeat;background-size:142.6px 81.4px;background-position:-8.4px -9.4px}
+.hd{display:flex;align-items:center;justify-content:space-between;height:94px;gap:18px}
+.logo{display:block;width:149px;height:75px;background:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SJCBRhJDNFr7NdBfY1wy1i0hReyayiES57A0v0QpB0hUrPPaDWya4V35XTsRMmyyPR2-CrLa68pEpG0jkosq31xkcJeDpbR10BjxfyJRR6WG_4ngjdJk-AB3jsXZIucHVfmao=s0) no-repeat;background-size:167.1px 95.4px;background-position:-9.8px -11.1px}
 nav{display:flex;gap:26px;align-items:center}
 nav a{text-decoration:none;font-weight:600;font-size:15px;color:var(--muted)}
 nav a:hover{color:var(--blue)}
@@ -97,7 +97,8 @@ section{padding:96px 0}
 .honest .lab::before{background:#ff6b6b}
 .nums{display:flex;justify-content:center;align-items:center;gap:30px;margin:30px 0 26px;flex-wrap:wrap}
 .nums div{font-family:Teko,sans-serif;font-size:76px;line-height:1;font-weight:600}
-.nums .old{color:#7f80b8;text-decoration:line-through;text-decoration-thickness:4px;text-decoration-color:var(--red)}
+.nums .old{color:#7f80b8}
+.nums .old s{text-decoration-thickness:4px;text-decoration-color:var(--red)}
 .nums .new{color:#fff}
 .nums small{display:block;font-family:Rubik,sans-serif;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#aeb0e0;text-decoration:none}
 .honest blockquote{max-width:760px;margin:0 auto;font-size:19px;color:#e2e3fb;font-style:italic}
@@ -105,7 +106,11 @@ section{padding:96px 0}
 
 /* ROOF */
 .roof .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.roof .ph{border-radius:6px;aspect-ratio:4/3;background:#ccd center/cover;box-shadow:-14px 14px 0 var(--red)}
+.roof .ph{border-radius:6px;background:var(--navy);color:#fff;padding:40px 36px;box-shadow:-14px 14px 0 var(--red)}
+.roof .ph p{font-family:Teko,sans-serif;font-size:40px;line-height:1.05;text-transform:uppercase}
+.roof .ph p span{color:#8f8fff}
+.roof .ph cite{display:block;margin-top:16px;font-style:normal;font-size:14px;font-weight:700;color:#ff8a8a}
+.roof .ph small{display:block;margin-top:18px;color:#c9caf0;font-size:16px;line-height:1.5}
 .qs{display:grid;gap:14px;margin-top:22px}
 .qs blockquote{border-left:4px solid var(--blue);padding:4px 0 4px 18px;font-style:italic}
 .qs cite{display:block;font-style:normal;font-size:13.5px;font-weight:700;color:var(--blue);margin-top:4px}
@@ -203,7 +208,7 @@ footer a{color:#fff;text-decoration:none}
   section{padding:70px 0}
   .top24 .wrap span:last-child{display:none}
   .hd{height:70px}
-  .logo{width:99px;height:50px;background-size:111.4px 63.6px;background-position:-6.5px -7.4px}
+  .logo{width:111px;height:56px;background-size:124.8px 71.2px;background-position:-7.4px -8.3px}
   .hd .btn{display:none}
   .hero .copy{padding:44px 0 34px}
   .hero .sub{font-size:17px}
@@ -297,14 +302,14 @@ footer a{color:#fff;text-decoration:none}
   <div class="wrap">
     <span class="lab rv">Honest diagnosis</span>
     <h2 class="h2 rv">They fix what's actually wrong.</h2>
-    <div class="nums rv"><div class="old">$6,500<small>first company's answer</small></div><div class="new">$150<small>Eagle's fix</small></div></div>
+    <div class="nums rv"><div class="old"><s>$6,500</s><small>first company's answer</small></div><div class="new">$150<small>Eagle's fix</small></div></div>
     <blockquote class="rv">“First company said I had to replace my A/C and spend $6500! Then Eagle A/C came out and ran diagnostics. They told me my drain backed up, added a float switch, and charged me $150. On top of that they came back and fixed my ceiling.”<cite>From Aaron O.'s Google review</cite></blockquote>
   </div>
 </section>
 
 <section class="roof" id="roofing">
   <div class="wrap">
-    <div class="ph rv" style="background-image:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TJ0-smy75JV8lMYpRn6TR8ES3dftJw31D8KUJ3r0WALR1MOC1FVy_sexHIBEgG4RxengRu1pScX9zjweL2wmQvMVKg4fURd-j5LhKQvUcdN_xbzh1Nu4aJ_fGSEaOR90K0i7dw=w1400)"></div>
+    <div class="ph rv"><p>“We were selling our home and the buyers' inspector found that the roof had hail damage and <span>needed to be replaced.</span>”</p><cite>From Ashley R.'s Google review</cite><small>Her review goes on: Jason returned her call right away, gave an excellent price, and came over at 11 pm when a nail hit a pipe during the install.</small></div>
     <div class="rv">
       <span class="lab">Roofing</span>
       <h2 class="h2">New roof? They'll deal with the adjuster too.</h2>
