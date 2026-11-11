@@ -92,17 +92,15 @@ section{padding:96px 0}
 .quoteline small{display:block;font-style:normal;color:var(--silver);font-size:14.5px;margin-top:6px}
 
 /* work gallery */
-.gal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:12px}
-.gal figure{position:relative;border-radius:6px;overflow:hidden;background:var(--mist)}
+.gal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:190px;gap:12px}
+.gal figure{position:relative;border-radius:6px;overflow:hidden;background:var(--mist);grid-column:span 2;grid-row:span 2}
 .gal img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
 .gal figure:hover img{transform:scale(1.04)}
 .gal figcaption{position:absolute;left:10px;bottom:10px;background:rgba(18,20,24,.78);color:#fff;font-size:13.5px;font-weight:600;padding:4px 10px;border-radius:3px}
-.g1{grid-column:span 3;grid-row:span 3}
-.g2{grid-column:span 3;grid-row:span 2}
-.g3,.g4,.g5{grid-column:span 2;grid-row:span 2}
-.g6,.g7{grid-column:span 3;grid-row:span 2}
-.g8{grid-column:span 2;grid-row:span 2}
-.g9{grid-column:span 4;grid-row:span 2}
+.gal .g1{grid-column:span 4}
+.gal .g2,.gal .g3{grid-row:span 1}
+.gal .g7,.gal .g9{grid-column:span 3}
+.gal .g8{display:none}
 .signnote{margin-top:22px;color:var(--steel);font-size:16.5px;display:flex;gap:10px;align-items:center}
 .signnote svg{width:22px;height:22px;color:var(--red);flex:none}
 
@@ -140,7 +138,7 @@ section{padding:96px 0}
 .quote .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
 .quote .info p{color:var(--steel);margin-bottom:24px}
 .contact{display:grid;gap:14px}
-.contact a,.contact div{display:flex;gap:14px;align-items:center;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:6px;padding:16px 18px}
+.contact>a,.contact>div{display:flex;gap:14px;align-items:center;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:6px;padding:16px 18px}
 .contact svg{width:24px;height:24px;color:var(--red);flex:none}
 .contact b{display:block;font-size:18px}
 .contact small{color:var(--steel);font-size:14.5px}
@@ -199,7 +197,7 @@ footer a{color:#fff;text-decoration:none}
   .strip .wrap{font-size:18px;justify-content:flex-start}
   section{padding:70px 0}
   .svc{grid-template-columns:1fr}
-  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:130px}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:140px}
   .gal figure{grid-column:span 1!important;grid-row:span 1!important}
   .gal .g1,.gal .g9{grid-column:span 2!important;grid-row:span 2!important}
   .rgrid{columns:1}
