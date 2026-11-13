@@ -441,11 +441,11 @@ document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 .fx-todo li{list-style:none;display:flex;gap:9px;align-items:center;padding:4px 0;color:var(--ink);font-weight:600;position:relative}
 .fx-todo li i{width:16px;height:16px;border:2px solid var(--ink);border-radius:3px;flex:none;position:relative}
 .fx-todo li i::after{content:'';position:absolute;inset:-4px -6px -2px -2px;background:var(--sea);clip-path:polygon(14% 44%,0 65%,50% 100%,100% 16%,80% 0,43% 62%);transform:scale(0);transition:transform .35s cubic-bezier(.3,1.8,.5,1)}
-.fx-todo li span{position:relative}
-.fx-todo li span::after{content:'';position:absolute;left:-2px;right:-2px;top:52%;height:2px;background:var(--rust);transform:scaleX(0);transform-origin:left;transition:transform .45s .1s}
+.fx-todo li em{position:relative;font-style:normal}
+.fx-todo li em::after{content:'';position:absolute;left:-2px;right:-2px;top:52%;height:2px;background:var(--rust);transform:scaleX(0);transform-origin:left;transition:transform .45s .1s}
 .fx-todo li.ok i::after{transform:scale(1)}
-.fx-todo li.ok span{color:var(--muted)}
-.fx-todo li.ok span::after{transform:scaleX(1)}
+.fx-todo li.ok em{color:var(--muted)}
+.fx-todo li.ok em::after{transform:scaleX(1)}
 .fx-todo .done{margin-top:8px;font:800 15px 'Bitter',serif;color:var(--brick);opacity:0;transform:translateY(6px);transition:.4s}
 .fx-todo.all .done{opacity:1;transform:none}
 @keyframes fxIn{from{opacity:0;transform:rotate(8deg) translateY(20px)}to{opacity:1;transform:rotate(2.5deg)}}
@@ -471,7 +471,7 @@ els.forEach(el=>io.observe(el));
 /* a to-do card on the hero photo that checks itself off */
 const pic=document.querySelector('.hero .pic');
 if(pic){const items=['Drywall patch','Paint touch-ups','Crown molding','Deck boards','Ceiling fan'];
-pic.insertAdjacentHTML('beforeend',`<div class="fx-todo" aria-hidden="true"><h4>The honey-do list</h4><ul>${items.map(t=>`<li><i></i><span>${t}</span></li>`).join('')}</ul><div class="done">All done, one visit.</div></div>`);
+pic.insertAdjacentHTML('beforeend',`<aside class="fx-todo" aria-hidden="true"><h4>The honey-do list</h4><ul>${items.map(t=>`<li><i></i><em>${t}</em></li>`).join('')}</ul><p class="done">All done, one visit.</p></aside>`);
 const card=pic.querySelector('.fx-todo'),lis=[...card.querySelectorAll('li')];
 const play=()=>{lis.forEach(l=>l.classList.remove('ok'));card.classList.remove('all');lis.forEach((l,i)=>setTimeout(()=>l.classList.add('ok'),1300+i*650));setTimeout(()=>card.classList.add('all'),1300+lis.length*650+200)};
 if(RM){lis.forEach(l=>l.classList.add('ok'));card.classList.add('all')}else{play();setInterval(play,11000)}}
