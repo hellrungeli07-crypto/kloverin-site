@@ -459,14 +459,14 @@ if(f){f.insertAdjacentHTML('afterbegin','<svg class="fx-flow" viewBox="0 0 1200 
 const hero=document.querySelector('.hero');if(!hero||RM)return;
 const c=document.createElement('canvas');c.className='fx-air';hero.prepend(c);const x=c.getContext('2d');
 let W,H,dpr=Math.min(2,devicePixelRatio||1);const fit=()=>{W=hero.clientWidth;H=hero.clientHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)};fit();addEventListener('resize',fit);
-const N=innerWidth<700?45:90;const P=[];for(let i=0;i<N;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:1+Math.random()*2.6,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.25,clean:0});
+const N=innerWidth<700?45:90;const P=[];for(let i=0;i<N;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:1.4+Math.random()*3,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.25,clean:0});
 let sx=-200,run=true;const SPD=Math.max(2.2,W/360);
 new IntersectionObserver(es=>{run=es[0].isIntersecting;if(run)requestAnimationFrame(draw)}).observe(hero);
 function draw(){if(!run)return;x.clearRect(0,0,W,H);sx+=SPD;if(sx>W+600){sx=-300;P.forEach(p=>p.clean=0)}
 /* the filter sweep */
 const g=x.createLinearGradient(sx-140,0,sx+6,0);g.addColorStop(0,'rgba(0,136,200,0)');g.addColorStop(1,'rgba(0,136,200,.10)');x.fillStyle=g;x.fillRect(sx-140,0,146,H);x.fillStyle='rgba(0,136,200,.28)';x.fillRect(sx,0,2,H);
 for(const p of P){if(p.x<sx&&p.clean<1)p.clean=Math.min(1,p.clean+.06);p.x+=p.vx+(p.clean*.9);p.y+=p.vy-(p.clean*.15);if(p.x>W+10)p.x=-10;if(p.x<-10)p.x=W+10;if(p.y>H+10)p.y=-10;if(p.y<-10)p.y=H+10;
-const k=p.clean;x.beginPath();x.arc(p.x,p.y,p.r*(1-k*.45),0,6.283);x.fillStyle=k<.5?`rgba(120,105,85,${.42-k*.3})`:`rgba(0,150,215,${.12+k*.28})`;x.fill()}
+const k=p.clean;x.beginPath();x.arc(p.x,p.y,p.r*(1-k*.45),0,6.283);x.fillStyle=k<.5?`rgba(110,95,75,${.6-k*.4})`:`rgba(0,150,215,${.12+k*.28})`;x.fill()}
 requestAnimationFrame(draw)}
 requestAnimationFrame(draw);
 })();
