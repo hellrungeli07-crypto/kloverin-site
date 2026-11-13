@@ -474,7 +474,7 @@ html.fx [data-fx-zoom]{animation:fxZoom 2.6s .25s cubic-bezier(.2,.7,.2,1) both}
 .fx-clock line.h,.fx-clock line.m{stroke:currentColor;stroke-linecap:round;transform-origin:22px 22px;transition:transform 1.8s cubic-bezier(.25,.9,.25,1)}
 .fx-clock line.h{stroke-width:3.2}.fx-clock line.m{stroke-width:2}
 @media (prefers-reduced-motion:reduce){.fx-clock line{transition:none}}
-.fx-mark{background:linear-gradient(transparent 64%,rgba(143,143,255,.30) 64% 90%,transparent 90%) no-repeat 0 0/0% 100%;-webkit-box-decoration-break:clone;box-decoration-break:clone;transition:background-size 1.1s 1.25s cubic-bezier(.7,0,.2,1)}
+.fx-mark{background:linear-gradient(transparent 90%,rgba(245,0,0,.95) 90% 96%,transparent 96%) no-repeat 0 0/0% 100%;-webkit-box-decoration-break:clone;box-decoration-break:clone;transition:background-size 1.1s 1.25s cubic-bezier(.7,0,.2,1)}
 html.fx-go .fx-mark,html:not(.fx) .fx-mark{background-size:100% 100%}
 .fx-bar{position:fixed;left:0;top:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--red),var(--blue));z-index:9999;pointer-events:none}
 .stars .fx-st{display:inline-block;opacity:.25;transform:scale(.6);transition:opacity .3s,transform .45s cubic-bezier(.3,1.8,.5,1)}
@@ -495,6 +495,7 @@ if(hero&&!RM){root.classList.add('fx');
  seq.forEach((e,i)=>{e.setAttribute('data-fx','');e.style.setProperty('--d',(.08+i*.12)+'s')});
  const p=hero.querySelector('.pic');if(p)p.setAttribute('data-fx-zoom','');
  requestAnimationFrame(()=>requestAnimationFrame(()=>root.classList.add('fx-go')));
+ setTimeout(()=>D.querySelectorAll('[data-fx-pic]').forEach(e=>e.removeAttribute('data-fx-pic')),1650);
  setTimeout(()=>seq.forEach(e=>{e.removeAttribute('data-fx');e.style.removeProperty('--d')}),3200)}
 /* stagger sibling reveals so grids cascade instead of popping at once */
 const groups=new Map();D.querySelectorAll('.rv').forEach(el=>{const p=el.parentElement;if(!groups.has(p))groups.set(p,[]);groups.get(p).push(el)});

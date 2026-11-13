@@ -470,6 +470,7 @@ if(hero&&!RM){root.classList.add('fx');
  seq.forEach((e,i)=>{e.setAttribute('data-fx','');e.style.setProperty('--d',(.08+i*.12)+'s')});
  const p=hero.querySelector('.pic>div');if(p)p.setAttribute('data-fx-pic','');
  requestAnimationFrame(()=>requestAnimationFrame(()=>root.classList.add('fx-go')));
+ setTimeout(()=>D.querySelectorAll('[data-fx-pic]').forEach(e=>e.removeAttribute('data-fx-pic')),1650);
  setTimeout(()=>seq.forEach(e=>{e.removeAttribute('data-fx');e.style.removeProperty('--d')}),3200)}
 /* stagger sibling reveals so grids cascade instead of popping at once */
 const groups=new Map();D.querySelectorAll('.rv').forEach(el=>{const p=el.parentElement;if(!groups.has(p))groups.set(p,[]);groups.get(p).push(el)});
