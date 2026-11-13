@@ -423,7 +423,7 @@ html.fx [data-fx-zoom]{animation:fxZoom 2.6s .25s cubic-bezier(.2,.7,.2,1) both}
 @keyframes fxShine{0%,70%{left:-60%}100%{left:140%}}
 @media (prefers-reduced-motion:reduce){html.fx .hero [data-fx],html.fx [data-fx-pic]{opacity:1!important;transform:none!important;filter:none!important;clip-path:none!important}html.fx [data-fx-zoom],.fx-shine::after{animation:none}}
 .track{position:relative}
-.fx-rail{position:absolute;left:31px;right:31px;top:31px;height:3px;background:rgba(239,228,207,.15);border-radius:3px;z-index:2;pointer-events:none}
+.fx-rail{display:none;position:absolute;left:31px;right:31px;top:31px;height:3px;background:rgba(239,228,207,.15);border-radius:3px;z-index:2;pointer-events:none}
 .fx-rail i{position:absolute;inset:0;background:var(--gold);transform-origin:0 50%;transform:scaleX(0);border-radius:3px}
 .track .n{z-index:3;transition:transform .45s cubic-bezier(.3,1.7,.5,1),background .3s,color .3s}
 .track figure:not(.fx-on) .n{background:var(--bark2);color:#8d826f;transform:scale(.85)}
