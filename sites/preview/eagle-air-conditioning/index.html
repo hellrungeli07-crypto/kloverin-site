@@ -510,7 +510,7 @@ document.querySelectorAll('.ck').forEach(ck=>{const t=ck.querySelector('.t');if(
 t.insertAdjacentHTML('afterbegin','<svg class="fx-clock" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19"/><line class="tick" x1="22" y1="5" x2="22" y2="8"/><line class="tick" x1="39" y1="22" x2="36" y2="22"/><line class="tick" x1="22" y1="39" x2="22" y2="36"/><line class="tick" x1="5" y1="22" x2="8" y2="22"/><line class="h" x1="22" y1="22" x2="22" y2="13"/><line class="m" x1="22" y1="22" x2="22" y2="8"/></svg>')});
 const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;co.unobserve(e.target);const s=e.target.querySelector('.fx-clock');if(!s)return;const h=e.target._h;s.querySelector('.m').style.transform='rotate('+(RM?0:720)+'deg)';s.querySelector('.h').style.transform='rotate('+(h*30+(RM?0:360))+'deg)'}),{threshold:.6});
 document.querySelectorAll('.ck').forEach(ck=>co.observe(ck));
-const mk=D.querySelector('.hero h1 span');if(mk)mk.classList.add('fx-mark');
+const mk=D.querySelector('.no-mark');if(mk)mk.classList.add('fx-mark');
 const bar=D.createElement('div');bar.className='fx-bar';D.body.appendChild(bar);const upd=()=>{const m=D.documentElement.scrollHeight-innerHeight;bar.style.transform='scaleX('+(m>0?scrollY/m:0)+')'};addEventListener('scroll',upd,{passive:true});upd();
 const sio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('fx-in');sio.unobserve(e.target)}}),{threshold:.8});
 D.querySelectorAll('.stars').forEach(s=>{const t=s.textContent.trim();if(!/^★+$/.test(t)||t.length<5)return;s.innerHTML=[...t].map((c,i)=>'<i class="fx-st" style="font-style:normal;transition-delay:'+(i*.08)+'s">'+c+'</i>').join('');sio.observe(s)});

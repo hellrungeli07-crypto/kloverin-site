@@ -482,7 +482,7 @@ const bar=D.createElement('div');bar.className='fx-bar';D.body.appendChild(bar);
 const sio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('fx-in');sio.unobserve(e.target)}}),{threshold:.8});
 D.querySelectorAll('.stars').forEach(s=>{const t=s.textContent.trim();if(!/^★+$/.test(t)||t.length<5)return;s.innerHTML=[...t].map((c,i)=>'<i class="fx-st" style="font-style:normal;transition-delay:'+(i*.08)+'s">'+c+'</i>').join('');sio.observe(s)});
 /* depth: the spider-lift photos drift at different speeds as you scroll */
-const mp=[...D.querySelectorAll('.mach .pics div')];if(mp.length&&!RM){const sp=[-28,22,40];const pr=()=>{mp.forEach((el,i)=>{const r=el.getBoundingClientRect();const c=(r.top+r.height/2-innerHeight/2)/innerHeight;el.style.transform='translateY('+(c*sp[i%3])+'px)'})};addEventListener('scroll',pr,{passive:true});pr()}
+const mp=[...D.querySelectorAll('.mach .pics div')];if(mp.length&&!RM){const sp=[-10,12,18];const pr=()=>{mp.forEach((el,i)=>{const r=el.getBoundingClientRect();const c=(r.top+r.height/2-innerHeight/2)/innerHeight;el.style.transform='translateY('+(c*sp[i%3])+'px)'})};addEventListener('scroll',pr,{passive:true});pr()}
 })();
 </script>
 </body>
