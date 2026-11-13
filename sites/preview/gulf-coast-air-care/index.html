@@ -436,7 +436,7 @@ html.fx [data-fx-zoom]{animation:fxZoom 2.6s .25s cubic-bezier(.2,.7,.2,1) both}
 .hero .tagq{animation:fxBadge .7s 1.4s cubic-bezier(.2,.8,.2,1) both}@keyframes fxBadge{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}@media (prefers-reduced-motion:reduce){.fx-mark{transition:none;background-size:100% 100%}.fx-bar{display:none}.stars .fx-st{opacity:1;transform:none;transition:none}}
 .hero::before{animation:fxAir 14s linear infinite}
 @keyframes fxAir{from{background-position:0 0}to{background-position:200px 0}}
-.filter .big span{background:linear-gradient(transparent 64%,rgba(255,180,0,.45) 64% 90%,transparent 90%) no-repeat 0 0/0% 100%;transition:background-size 1s .3s cubic-bezier(.7,0,.2,1)}
+.filter .big span{white-space:nowrap;background:linear-gradient(transparent 64%,rgba(255,180,0,.45) 64% 90%,transparent 90%) no-repeat 0 0/0% 100%;transition:background-size 1s .3s cubic-bezier(.7,0,.2,1)}
 .filter .big.fx-in span{background-size:100% 100%}
 .see .pics>div{transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s}
 .see .pics>div:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 22px 40px -18px rgba(0,0,0,.6)}
