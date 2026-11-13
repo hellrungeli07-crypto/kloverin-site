@@ -450,6 +450,16 @@ html.fx [data-fx-zoom]{animation:fxZoom 2.6s .25s cubic-bezier(.2,.7,.2,1) both}
 .stripes{transform-origin:left;transform:scaleX(0);transition:transform 1.2s cubic-bezier(.7,0,.2,1)}
 .stripes.fx-in{transform:none}
 @media (prefers-reduced-motion:reduce){.col li::before,.stripes{transform:none;transition:none}}
+.fx-mark{background:linear-gradient(transparent 64%,rgba(253,176,8,.30) 64% 90%,transparent 90%) no-repeat 0 0/0% 100%;-webkit-box-decoration-break:clone;box-decoration-break:clone;transition:background-size 1.1s 1.25s cubic-bezier(.7,0,.2,1)}
+html.fx-go .fx-mark,html:not(.fx) .fx-mark{background-size:100% 100%}
+.fx-bar{position:fixed;left:0;top:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--sea) 0 25%,var(--brick) 25% 50%,var(--rust) 50% 75%,var(--amber) 75%);z-index:9999;pointer-events:none}
+.stars .fx-st{display:inline-block;opacity:.25;transform:scale(.6);transition:opacity .3s,transform .45s cubic-bezier(.3,1.8,.5,1)}
+.stars.fx-in .fx-st{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.fx-mark{transition:none;background-size:100% 100%}.fx-bar{display:none}.stars .fx-st{opacity:1;transform:none;transition:none}}
+html.fx .hero .pic>div{box-shadow:0 0 0 var(--amber)}
+html.fx.fx-go .hero .pic>div{box-shadow:16px 16px 0 var(--amber);transition:clip-path 1.3s .25s cubic-bezier(.7,0,.2,1),box-shadow .8s 1.4s cubic-bezier(.3,1.5,.5,1)}
+.bagrid figure{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.bagrid figure:hover{transform:translateY(-5px);box-shadow:8px 8px 0 var(--amber)}
 </style>
 <script id="fx-js">
 (()=>{const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;const D=document,root=D.documentElement;
@@ -474,6 +484,10 @@ const lo=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return
 document.querySelectorAll('.col').forEach(c=>lo.observe(c));
 const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('fx-in');so.unobserve(e.target)}}),{threshold:.1});
 document.querySelectorAll('.stripes').forEach(s=>so.observe(s));
+const mk=D.querySelector('.hero h1 i');if(mk)mk.classList.add('fx-mark');
+const bar=D.createElement('div');bar.className='fx-bar';D.body.appendChild(bar);const upd=()=>{const m=D.documentElement.scrollHeight-innerHeight;bar.style.transform='scaleX('+(m>0?scrollY/m:0)+')'};addEventListener('scroll',upd,{passive:true});upd();
+const sio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('fx-in');sio.unobserve(e.target)}}),{threshold:.8});
+D.querySelectorAll('.stars').forEach(s=>{const t=s.textContent.trim();if(!/^★+$/.test(t)||t.length<5)return;s.innerHTML=[...t].map((c,i)=>'<i class="fx-st" style="font-style:normal;transition-delay:'+(i*.08)+'s">'+c+'</i>').join('');sio.observe(s)});
 })();
 </script>
 </body>
