@@ -456,46 +456,48 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 </script>
 <style id="fx-css">
-/* Eagle: an eagle gliding across the hero, clocks that spin to the late-night call times */
-.hero .fx-sky{position:absolute;inset:0;pointer-events:none;z-index:2;overflow:hidden}
-.fx-eagle{position:absolute;left:0;top:0;width:110px;height:50px;offset-path:path('M -160 210 C 200 80, 520 260, 820 120 S 1300 40, 1700 170');offset-rotate:auto 0deg;animation:fxGlide 16s linear infinite;opacity:.9}
-.fx-eagle svg{width:100%;height:100%;overflow:visible}
-.fx-eagle .wl,.fx-eagle .wr{transform-box:fill-box;animation:fxFlap 3.2s ease-in-out infinite}
-.fx-eagle .wl{transform-origin:100% 60%}.fx-eagle .wr{transform-origin:0% 60%}
-@keyframes fxGlide{0%{offset-distance:0%}100%{offset-distance:100%}}
-@keyframes fxFlap{0%,55%,100%{transform:none}65%{transform:scaleY(-.45)}75%{transform:none}82%{transform:scaleY(-.35)}}
-.hero h1{animation:fxRise .9s cubic-bezier(.2,.8,.2,1) both}
-.hero h1 span{display:inline-block;animation:fxRise .9s .25s cubic-bezier(.2,.8,.2,1) both}
-@keyframes fxRise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+/* Kloverin motion layer: calm, premium entrance + scroll reveals */
+html.fx .hero [data-fx]{opacity:0;transform:translateY(22px);filter:blur(6px)}
+html.fx.fx-go .hero [data-fx]{opacity:1;transform:none;filter:none;transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1),filter .9s;transition-delay:var(--d,0s)}
+html.fx [data-fx-pic]{clip-path:inset(0 0 100% 0 round 0);}
+html.fx.fx-go [data-fx-pic]{clip-path:inset(0 0 0 0 round 0);transition:clip-path 1.3s .25s cubic-bezier(.7,0,.2,1)}
+html.fx [data-fx-zoom]{animation:fxZoom 2.6s .25s cubic-bezier(.2,.7,.2,1) both}
+@keyframes fxZoom{from{transform:scale(1.12)}to{transform:scale(1)}}
+.fx-shine{position:relative;overflow:hidden}
+.fx-shine::after{content:'';position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-18deg);animation:fxShine 5s 2.2s ease-in-out infinite}
+@keyframes fxShine{0%,70%{left:-60%}100%{left:140%}}
+@media (prefers-reduced-motion:reduce){html.fx .hero [data-fx],html.fx [data-fx-pic]{opacity:1!important;transform:none!important;filter:none!important;clip-path:none!important}html.fx [data-fx-zoom],.fx-shine::after{animation:none}}
 .ck .t{position:relative}
-.fx-clock{display:block;width:46px;height:46px;margin-bottom:8px}
-.fx-clock circle{fill:#fff;stroke:currentColor;stroke-width:3}
-.fx-clock line{stroke:currentColor;stroke-width:3;stroke-linecap:round;transform-origin:23px 23px;transition:transform 1.6s cubic-bezier(.3,.9,.3,1)}
-.fx-clock .m{stroke-width:2}
-.fx-ring{display:block;width:40px;height:40px;margin-bottom:8px;transform-origin:50% 50%}
-.ck.fx-in .fx-ring{animation:fxRing 1.2s .3s 2}
-@keyframes fxRing{0%,100%{transform:rotate(0)}10%,30%,50%,70%{transform:rotate(-14deg)}20%,40%,60%,80%{transform:rotate(14deg)}90%{transform:rotate(0)}}
-@media (prefers-reduced-motion:reduce){.hero .fx-sky{display:none}.hero h1,.hero h1 span{animation:none}.fx-clock line{transition:none}.ck.fx-in .fx-ring{animation:none}}
-@media (max-width:900px){.fx-eagle{width:80px;height:36px;offset-path:path('M -120 120 C 100 40, 260 160, 420 70 S 700 30, 900 110');animation-duration:12s}}
+.fx-clock{display:block;width:44px;height:44px;margin-bottom:10px}
+.fx-clock circle{fill:none;stroke:currentColor;stroke-width:2.5}
+.fx-clock .tick{stroke:currentColor;stroke-width:2;opacity:.5}
+.fx-clock line.h,.fx-clock line.m{stroke:currentColor;stroke-linecap:round;transform-origin:22px 22px;transition:transform 1.8s cubic-bezier(.25,.9,.25,1)}
+.fx-clock line.h{stroke-width:3.2}.fx-clock line.m{stroke-width:2}
+@media (prefers-reduced-motion:reduce){.fx-clock line{transition:none}}
 </style>
 <script id="fx-js">
-(()=>{const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;window.__RM=RM;
-/* count-up numbers in stat strips */
-const sel='.chev>div, .chev b';
-const els=[...document.querySelectorAll(sel)];
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io.unobserve(e.target);const el=e.target;const tn=[...el.childNodes].find(n=>n.nodeType===3&&/\d/.test(n.textContent));if(!tn||RM)return;const m=tn.textContent.match(/(\d[\d,]*\.?\d*)/);if(!m)return;const raw=m[1],end=parseFloat(raw.replace(/,/g,'')),dec=(raw.split('.')[1]||'').length,pre=tn.textContent.slice(0,m.index),post=tn.textContent.slice(m.index+raw.length);const t0=performance.now(),D=1400;const step=t=>{const p=Math.min(1,(t-t0)/D),v=end*(1-Math.pow(1-p,3));tn.textContent=pre+(dec?v.toFixed(dec):Math.round(v).toLocaleString())+post;if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step)}),{threshold:.6});
+(()=>{const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;const D=document,root=D.documentElement;
+/* hero entrance */
+const hero=D.querySelector('.hero');
+if(hero&&!RM){root.classList.add('fx');
+ const seq=[...hero.querySelectorAll('.kick,.tag,.eye,.lab,h1,.sub,.ctas,.signs,.facts,.chev')].filter(e=>!e.closest('.pic'));
+ seq.forEach((e,i)=>{e.setAttribute('data-fx','');e.style.setProperty('--d',(.08+i*.12)+'s')});
+ const p=hero.querySelector('.pic');if(p)p.setAttribute('data-fx-zoom','');
+ requestAnimationFrame(()=>requestAnimationFrame(()=>root.classList.add('fx-go')));
+ setTimeout(()=>seq.forEach(e=>{e.removeAttribute('data-fx');e.style.removeProperty('--d')}),3200)}
+/* stagger sibling reveals so grids cascade instead of popping at once */
+const groups=new Map();D.querySelectorAll('.rv').forEach(el=>{const p=el.parentElement;if(!groups.has(p))groups.set(p,[]);groups.get(p).push(el)});
+groups.forEach(list=>{if(list.length>1)list.forEach((el,i)=>{el.style.transitionDelay=(i*.09)+'s';el.addEventListener('transitionend',()=>{el.style.transitionDelay=''},{once:true})})});
+/* count-up on stat numbers */
+const els=[...D.querySelectorAll('.chev>div, .chev b')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io.unobserve(e.target);const el=e.target;const tn=[...el.childNodes].find(n=>n.nodeType===3&&/\d/.test(n.textContent));if(!tn||RM)return;const m=tn.textContent.match(/(\d[\d,]*\.?\d*)/);if(!m)return;const raw=m[1],end=parseFloat(raw.replace(/,/g,'')),dec=(raw.split('.')[1]||'').length,pre=tn.textContent.slice(0,m.index),post=tn.textContent.slice(m.index+raw.length);const t0=performance.now(),T=1500;const step=t=>{const p=Math.min(1,(t-t0)/T),v=end*(1-Math.pow(1-p,3));tn.textContent=pre+(dec?v.toFixed(dec):Math.round(v).toLocaleString())+post;if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step)}),{threshold:.6});
 els.forEach(el=>io.observe(el));
-})();
-
-(()=>{const RM=window.__RM;
-const hero=document.querySelector('.hero');
-if(hero&&!RM){hero.insertAdjacentHTML('beforeend','<div class="fx-sky" aria-hidden="true"><div class="fx-eagle"><svg viewBox="-55 -25 110 50"><g fill="#fff" fill-opacity=".92"><path class="wl" d="M-4 0 C-14 -10 -30 -16 -54 -14 C-44 -10 -40 -6 -38 -3 C-46 -2 -50 2 -52 5 C-36 4 -20 4 -4 6 Z"/><path class="wr" d="M4 0 C14 -10 30 -16 54 -14 C44 -10 40 -6 38 -3 C46 -2 50 2 52 5 C36 4 20 4 4 6 Z"/><path d="M-6 2 C-6 -3 6 -3 6 2 L4 12 L0 18 L-4 12 Z"/><path d="M0 -5 C3 -5 5 -3 5 -1 L10 1 L4 1 L0 1 L-4 0 C-4 -3 -2 -5 0 -5 Z" fill="#ffd34d"/></g></svg></div></div>')}
-/* clocks spin to the time each customer called; days get a ringing phone */
-document.querySelectorAll('.ck').forEach(ck=>{const t=ck.querySelector('.t');if(!t)return;const m=t.textContent.match(/(\d{1,2})\s*(AM|PM)/i);
-if(m){const hr=+m[1]%12;t.insertAdjacentHTML('afterbegin',`<svg class="fx-clock" viewBox="0 0 46 46" aria-hidden="true"><circle cx="23" cy="23" r="20"/><line class="h" x1="23" y1="23" x2="23" y2="12"/><line class="m" x1="23" y1="23" x2="23" y2="7"/></svg>`);ck._h=hr}
-else{t.insertAdjacentHTML('afterbegin','<svg class="fx-ring" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>')}});
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const ck=e.target;io.unobserve(ck);ck.classList.add('fx-in');const s=ck.querySelector('.fx-clock');if(s){const h=ck._h;const turns=RM?0:2;s.querySelector('.m').style.transform=`rotate(${(turns+1)*360}deg)`;s.querySelector('.h').style.transform=`rotate(${h*30+turns*180}deg)`}}),{threshold:.5});
-document.querySelectorAll('.ck').forEach(ck=>io.observe(ck));
+/* soft shine on the main call button */
+const cta=hero&&hero.querySelector('.ctas .btn');if(cta&&!RM)cta.classList.add('fx-shine');
+document.querySelectorAll('.ck').forEach(ck=>{const t=ck.querySelector('.t');if(!t)return;const m=t.textContent.match(/(\d{1,2})\s*(AM|PM)/i);if(!m)return;ck._h=+m[1]%12;
+t.insertAdjacentHTML('afterbegin','<svg class="fx-clock" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19"/><line class="tick" x1="22" y1="5" x2="22" y2="8"/><line class="tick" x1="39" y1="22" x2="36" y2="22"/><line class="tick" x1="22" y1="39" x2="22" y2="36"/><line class="tick" x1="5" y1="22" x2="8" y2="22"/><line class="h" x1="22" y1="22" x2="22" y2="13"/><line class="m" x1="22" y1="22" x2="22" y2="8"/></svg>')});
+const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;co.unobserve(e.target);const s=e.target.querySelector('.fx-clock');if(!s)return;const h=e.target._h;s.querySelector('.m').style.transform='rotate('+(RM?0:720)+'deg)';s.querySelector('.h').style.transform='rotate('+(h*30+(RM?0:360))+'deg)'}),{threshold:.6});
+document.querySelectorAll('.ck').forEach(ck=>co.observe(ck));
 })();
 </script>
 </body>

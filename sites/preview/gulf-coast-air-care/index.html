@@ -422,53 +422,39 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 </script>
 <style id="fx-css">
-/* Gulf Coast Air Care: dusty air that a filter sweep cleans, airflow behind Todd's rule */
-.hero canvas.fx-air{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
-.hero .wrap{z-index:1}
-.hero h1 b{background:linear-gradient(90deg,var(--blue) 0 50%,#9aa7b0 50% 100%);background-size:200% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent;animation:fxClean 1.6s .5s cubic-bezier(.7,0,.2,1) forwards}
-@keyframes fxClean{to{background-position:0 0}}
-.filter{position:relative;overflow:hidden}
-.filter .wrap{position:relative;z-index:1}
-.filter svg.fx-flow{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
-.fx-flow path{fill:none;stroke:var(--blue);stroke-width:2;stroke-linecap:round;opacity:.16;stroke-dasharray:120 260;animation:fxWind 6s linear infinite}
-.fx-flow path:nth-child(2){animation-duration:8s;animation-delay:-2s;opacity:.12}
-.fx-flow path:nth-child(3){animation-duration:7s;animation-delay:-4s;opacity:.1}
-.fx-flow path:nth-child(4){animation-duration:9s;animation-delay:-1s;opacity:.14}
-@keyframes fxWind{from{stroke-dashoffset:380}to{stroke-dashoffset:-380}}
-.filter .big span{display:inline-block}
-.filter .big.fx-in span{animation:fxPuff .7s .3s cubic-bezier(.3,1.6,.5,1) both}
-@keyframes fxPuff{0%{transform:scale(.6);opacity:0;filter:blur(6px)}100%{transform:none;opacity:1;filter:none}}
-.see .pics>div{transition:transform .5s,box-shadow .5s}
-.see .pics>div:hover{transform:scale(1.03);box-shadow:0 20px 40px -20px rgba(0,0,0,.6)}
-@media (prefers-reduced-motion:reduce){.hero canvas.fx-air{display:none}.hero h1 b{animation:none;background:none;color:var(--blue)}.fx-flow path,.filter .big.fx-in span{animation:none}}
+/* Kloverin motion layer: calm, premium entrance + scroll reveals */
+html.fx .hero [data-fx]{opacity:0;transform:translateY(22px);filter:blur(6px)}
+html.fx.fx-go .hero [data-fx]{opacity:1;transform:none;filter:none;transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1),filter .9s;transition-delay:var(--d,0s)}
+html.fx [data-fx-pic]{clip-path:inset(0 0 100% 0 round 0);}
+html.fx.fx-go [data-fx-pic]{clip-path:inset(0 0 0 0 round 0);transition:clip-path 1.3s .25s cubic-bezier(.7,0,.2,1)}
+html.fx [data-fx-zoom]{animation:fxZoom 2.6s .25s cubic-bezier(.2,.7,.2,1) both}
+@keyframes fxZoom{from{transform:scale(1.12)}to{transform:scale(1)}}
+.fx-shine{position:relative;overflow:hidden}
+.fx-shine::after{content:'';position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-18deg);animation:fxShine 5s 2.2s ease-in-out infinite}
+@keyframes fxShine{0%,70%{left:-60%}100%{left:140%}}
+@media (prefers-reduced-motion:reduce){html.fx .hero [data-fx],html.fx [data-fx-pic]{opacity:1!important;transform:none!important;filter:none!important;clip-path:none!important}html.fx [data-fx-zoom],.fx-shine::after{animation:none}}
+.hero .tagq{animation:fxBadge .7s 1.4s cubic-bezier(.2,.8,.2,1) both}@keyframes fxBadge{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 </style>
 <script id="fx-js">
-(()=>{const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;window.__RM=RM;
-/* count-up numbers in stat strips */
-const sel='.facts .wrap>div, .facts b';
-const els=[...document.querySelectorAll(sel)];
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io.unobserve(e.target);const el=e.target;const tn=[...el.childNodes].find(n=>n.nodeType===3&&/\d/.test(n.textContent));if(!tn||RM)return;const m=tn.textContent.match(/(\d[\d,]*\.?\d*)/);if(!m)return;const raw=m[1],end=parseFloat(raw.replace(/,/g,'')),dec=(raw.split('.')[1]||'').length,pre=tn.textContent.slice(0,m.index),post=tn.textContent.slice(m.index+raw.length);const t0=performance.now(),D=1400;const step=t=>{const p=Math.min(1,(t-t0)/D),v=end*(1-Math.pow(1-p,3));tn.textContent=pre+(dec?v.toFixed(dec):Math.round(v).toLocaleString())+post;if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step)}),{threshold:.6});
+(()=>{const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;const D=document,root=D.documentElement;
+/* hero entrance */
+const hero=D.querySelector('.hero');
+if(hero&&!RM){root.classList.add('fx');
+ const seq=[...hero.querySelectorAll('.kick,.tag,.eye,.lab,h1,.sub,.ctas,.signs,.facts,.chev')].filter(e=>!e.closest('.pic'));
+ seq.forEach((e,i)=>{e.setAttribute('data-fx','');e.style.setProperty('--d',(.08+i*.12)+'s')});
+ const p=hero.querySelector('.pic>div');if(p)p.setAttribute('data-fx-pic','');
+ requestAnimationFrame(()=>requestAnimationFrame(()=>root.classList.add('fx-go')));
+ setTimeout(()=>seq.forEach(e=>{e.removeAttribute('data-fx');e.style.removeProperty('--d')}),3200)}
+/* stagger sibling reveals so grids cascade instead of popping at once */
+const groups=new Map();D.querySelectorAll('.rv').forEach(el=>{const p=el.parentElement;if(!groups.has(p))groups.set(p,[]);groups.get(p).push(el)});
+groups.forEach(list=>{if(list.length>1)list.forEach((el,i)=>{el.style.transitionDelay=(i*.09)+'s';el.addEventListener('transitionend',()=>{el.style.transitionDelay=''},{once:true})})});
+/* count-up on stat numbers */
+const els=[...D.querySelectorAll('.facts .wrap>div, .facts b')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io.unobserve(e.target);const el=e.target;const tn=[...el.childNodes].find(n=>n.nodeType===3&&/\d/.test(n.textContent));if(!tn||RM)return;const m=tn.textContent.match(/(\d[\d,]*\.?\d*)/);if(!m)return;const raw=m[1],end=parseFloat(raw.replace(/,/g,'')),dec=(raw.split('.')[1]||'').length,pre=tn.textContent.slice(0,m.index),post=tn.textContent.slice(m.index+raw.length);const t0=performance.now(),T=1500;const step=t=>{const p=Math.min(1,(t-t0)/T),v=end*(1-Math.pow(1-p,3));tn.textContent=pre+(dec?v.toFixed(dec):Math.round(v).toLocaleString())+post;if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step)}),{threshold:.6});
 els.forEach(el=>io.observe(el));
-})();
+/* soft shine on the main call button */
+const cta=hero&&hero.querySelector('.ctas .btn');if(cta&&!RM)cta.classList.add('fx-shine');
 
-(()=>{const RM=window.__RM;
-/* airflow lines behind Todd's rule + the punchline pops */
-const f=document.querySelector('.filter');
-if(f){f.insertAdjacentHTML('afterbegin','<svg class="fx-flow" viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true"><path d="M-50 80 C200 20 400 140 650 80 S1000 20 1250 90"/><path d="M-50 150 C250 100 450 210 700 150 S1050 90 1250 160"/><path d="M-50 220 C200 170 420 270 680 215 S1020 170 1250 230"/><path d="M-50 40 C300 90 500 10 760 50 S1080 100 1250 40"/></svg>');const big=f.querySelector('.big');if(big)new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){big.classList.add('fx-in');o.disconnect()}}),{threshold:.6}).observe(big)}
-/* hero: dust floating in the air, a filter line sweeps through and cleans it */
-const hero=document.querySelector('.hero');if(!hero||RM)return;
-const c=document.createElement('canvas');c.className='fx-air';hero.prepend(c);const x=c.getContext('2d');
-let W,H,dpr=Math.min(2,devicePixelRatio||1);const fit=()=>{W=hero.clientWidth;H=hero.clientHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)};fit();addEventListener('resize',fit);
-const N=innerWidth<700?45:90;const P=[];for(let i=0;i<N;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:1.4+Math.random()*3,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.25,clean:0});
-let sx=-200,run=true;const SPD=Math.max(2.2,W/360);
-new IntersectionObserver(es=>{run=es[0].isIntersecting;if(run)requestAnimationFrame(draw)}).observe(hero);
-function draw(){if(!run)return;x.clearRect(0,0,W,H);sx+=SPD;if(sx>W+600){sx=-300;P.forEach(p=>p.clean=0)}
-/* the filter sweep */
-const g=x.createLinearGradient(sx-140,0,sx+6,0);g.addColorStop(0,'rgba(0,136,200,0)');g.addColorStop(1,'rgba(0,136,200,.10)');x.fillStyle=g;x.fillRect(sx-140,0,146,H);x.fillStyle='rgba(0,136,200,.28)';x.fillRect(sx,0,2,H);
-for(const p of P){if(p.x<sx&&p.clean<1)p.clean=Math.min(1,p.clean+.06);p.x+=p.vx+(p.clean*.9);p.y+=p.vy-(p.clean*.15);if(p.x>W+10)p.x=-10;if(p.x<-10)p.x=W+10;if(p.y>H+10)p.y=-10;if(p.y<-10)p.y=H+10;
-const k=p.clean;x.beginPath();x.arc(p.x,p.y,p.r*(1-k*.45),0,6.283);x.fillStyle=k<.5?`rgba(110,95,75,${.6-k*.4})`:`rgba(0,150,215,${.12+k*.28})`;x.fill()}
-requestAnimationFrame(draw)}
-requestAnimationFrame(draw);
 })();
 </script>
 </body>

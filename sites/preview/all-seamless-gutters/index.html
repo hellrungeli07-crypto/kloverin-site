@@ -432,52 +432,39 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 </script>
 <style id="fx-css">
-/* All Seamless: rain on the photo, a gutter + downspout that carries the water, typing bubble */
-.hero .pic .fx-rain{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1}
-.hero .pic .fx-rain i{position:absolute;top:-40px;width:2px;height:34px;border-radius:2px;background:linear-gradient(180deg,transparent,rgba(255,255,255,.75));animation:fxDrop linear infinite}
-@keyframes fxDrop{to{transform:translate(-30px,calc(var(--h,600px) + 60px))}}
-.hero .pic .badge{z-index:2}
-.fx-gutter{display:block;width:100%;max-width:520px;height:70px;margin:6px 0 4px;overflow:visible}
-.fx-gutter .g{fill:none;stroke:var(--teal);stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
-.fx-gutter .g2{fill:none;stroke:var(--teal-dd);stroke-width:2;opacity:.35}
-.fx-gutter .w{fill:none;stroke:var(--mint);stroke-width:3;stroke-linecap:round;stroke-dasharray:10 16;animation:fxFlow 1.1s linear infinite}
-@keyframes fxFlow{to{stroke-dashoffset:-26}}
-.fx-gutter .d{fill:var(--mint);animation:fxDrip 1.6s ease-in infinite}
-.fx-gutter .d.b{animation-delay:.8s}
-@keyframes fxDrip{0%{transform:translateY(0) scale(.4);opacity:0}15%{opacity:1;transform:translateY(0) scale(1)}100%{transform:translateY(26px) scale(.7);opacity:0}}
-.fx-gutter .draw{stroke-dasharray:700;stroke-dashoffset:700;animation:fxDraw 1.4s .3s cubic-bezier(.6,0,.2,1) forwards}
-@keyframes fxDraw{to{stroke-dashoffset:0}}
-.fx-typing{position:absolute;right:18px;top:18px;z-index:2;background:#fff;border-radius:18px 18px 4px 18px;padding:12px 14px;display:flex;gap:10px;align-items:center;box-shadow:0 10px 30px rgba(0,0,0,.18);font:700 13px 'Red Hat Text',sans-serif;color:var(--teal-dd);opacity:0;animation:fxPop .5s 1.4s forwards}
-.fx-typing b{display:flex;gap:4px}
-.fx-typing b i{width:7px;height:7px;border-radius:50%;background:var(--teal);animation:fxDot 1.2s infinite}
-.fx-typing b i:nth-child(2){animation-delay:.15s}.fx-typing b i:nth-child(3){animation-delay:.3s}
-@keyframes fxDot{0%,60%,100%{transform:none;opacity:.4}30%{transform:translateY(-4px);opacity:1}}
-@keyframes fxPop{from{opacity:0;transform:translateY(10px) scale(.9)}to{opacity:1;transform:none}}
-.trio.fx-st>div{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
-.trio.fx-st.fx-in>div{opacity:1;transform:none}
-.trio.fx-st>div:nth-child(2){transition-delay:.15s}.trio.fx-st>div:nth-child(3){transition-delay:.3s}
-@media (prefers-reduced-motion:reduce){.fx-rain,.fx-gutter .w,.fx-gutter .d,.fx-typing b i{animation:none!important}.fx-gutter .draw{animation:none;stroke-dashoffset:0}.fx-typing{opacity:1;animation:none}.trio.fx-st>div{opacity:1;transform:none}}
+/* Kloverin motion layer: calm, premium entrance + scroll reveals */
+html.fx .hero [data-fx]{opacity:0;transform:translateY(22px);filter:blur(6px)}
+html.fx.fx-go .hero [data-fx]{opacity:1;transform:none;filter:none;transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1),filter .9s;transition-delay:var(--d,0s)}
+html.fx [data-fx-pic]{clip-path:inset(0 0 100% 0 round 0);}
+html.fx.fx-go [data-fx-pic]{clip-path:inset(0 0 0 0 round 0);transition:clip-path 1.3s .25s cubic-bezier(.7,0,.2,1)}
+html.fx [data-fx-zoom]{animation:fxZoom 2.6s .25s cubic-bezier(.2,.7,.2,1) both}
+@keyframes fxZoom{from{transform:scale(1.12)}to{transform:scale(1)}}
+.fx-shine{position:relative;overflow:hidden}
+.fx-shine::after{content:'';position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-18deg);animation:fxShine 5s 2.2s ease-in-out infinite}
+@keyframes fxShine{0%,70%{left:-60%}100%{left:140%}}
+@media (prefers-reduced-motion:reduce){html.fx .hero [data-fx],html.fx [data-fx-pic]{opacity:1!important;transform:none!important;filter:none!important;clip-path:none!important}html.fx [data-fx-zoom],.fx-shine::after{animation:none}}
+.hero .pic .badge{animation:fxBadge .7s 1.4s cubic-bezier(.2,.8,.2,1) both}@keyframes fxBadge{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 </style>
 <script id="fx-js">
-(()=>{const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;window.__RM=RM;
-/* count-up numbers in stat strips */
-const sel='.hero .badge b, .hero .badge small';
-const els=[...document.querySelectorAll(sel)];
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io.unobserve(e.target);const el=e.target;const tn=[...el.childNodes].find(n=>n.nodeType===3&&/\d/.test(n.textContent));if(!tn||RM)return;const m=tn.textContent.match(/(\d[\d,]*\.?\d*)/);if(!m)return;const raw=m[1],end=parseFloat(raw.replace(/,/g,'')),dec=(raw.split('.')[1]||'').length,pre=tn.textContent.slice(0,m.index),post=tn.textContent.slice(m.index+raw.length);const t0=performance.now(),D=1400;const step=t=>{const p=Math.min(1,(t-t0)/D),v=end*(1-Math.pow(1-p,3));tn.textContent=pre+(dec?v.toFixed(dec):Math.round(v).toLocaleString())+post;if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step)}),{threshold:.6});
+(()=>{const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;const D=document,root=D.documentElement;
+/* hero entrance */
+const hero=D.querySelector('.hero');
+if(hero&&!RM){root.classList.add('fx');
+ const seq=[...hero.querySelectorAll('.kick,.tag,.eye,.lab,h1,.sub,.ctas,.signs,.facts,.chev')].filter(e=>!e.closest('.pic'));
+ seq.forEach((e,i)=>{e.setAttribute('data-fx','');e.style.setProperty('--d',(.08+i*.12)+'s')});
+ const p=hero.querySelector('.pic');if(p)p.setAttribute('data-fx-pic','');
+ requestAnimationFrame(()=>requestAnimationFrame(()=>root.classList.add('fx-go')));
+ setTimeout(()=>seq.forEach(e=>{e.removeAttribute('data-fx');e.style.removeProperty('--d')}),3200)}
+/* stagger sibling reveals so grids cascade instead of popping at once */
+const groups=new Map();D.querySelectorAll('.rv').forEach(el=>{const p=el.parentElement;if(!groups.has(p))groups.set(p,[]);groups.get(p).push(el)});
+groups.forEach(list=>{if(list.length>1)list.forEach((el,i)=>{el.style.transitionDelay=(i*.09)+'s';el.addEventListener('transitionend',()=>{el.style.transitionDelay=''},{once:true})})});
+/* count-up on stat numbers */
+const els=[...D.querySelectorAll('.hero .badge b, .hero .badge small')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io.unobserve(e.target);const el=e.target;const tn=[...el.childNodes].find(n=>n.nodeType===3&&/\d/.test(n.textContent));if(!tn||RM)return;const m=tn.textContent.match(/(\d[\d,]*\.?\d*)/);if(!m)return;const raw=m[1],end=parseFloat(raw.replace(/,/g,'')),dec=(raw.split('.')[1]||'').length,pre=tn.textContent.slice(0,m.index),post=tn.textContent.slice(m.index+raw.length);const t0=performance.now(),T=1500;const step=t=>{const p=Math.min(1,(t-t0)/T),v=end*(1-Math.pow(1-p,3));tn.textContent=pre+(dec?v.toFixed(dec):Math.round(v).toLocaleString())+post;if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step)}),{threshold:.6});
 els.forEach(el=>io.observe(el));
-})();
+/* soft shine on the main call button */
+const cta=hero&&hero.querySelector('.ctas .btn');if(cta&&!RM)cta.classList.add('fx-shine');
 
-(()=>{const RM=window.__RM;
-/* gutter + downspout drawn under the headline, water running through it */
-const h1=document.querySelector('.hero h1');
-if(h1){h1.insertAdjacentHTML('afterend','<svg class="fx-gutter" viewBox="0 0 520 70" aria-hidden="true"><path class="g draw" d="M6 14 H470 Q490 14 490 34 V56"/><path class="g2" d="M6 20 H468"/><path class="w" d="M10 14 H470 Q486 14 486 34 V56"/><circle class="d" cx="490" cy="62" r="4"/><circle class="d b" cx="490" cy="62" r="3"/></svg>')}
-/* rain on the hero photo */
-const pic=document.querySelector('.hero .pic');
-if(pic&&!RM){const r=document.createElement('div');r.className='fx-rain';const n=innerWidth<700?22:40;for(let i=0;i<n;i++){const d=document.createElement('i');d.style.left=(Math.random()*110)+'%';d.style.animationDuration=(.55+Math.random()*.5)+'s';d.style.animationDelay=(-Math.random()*2)+'s';d.style.opacity=.35+Math.random()*.5;r.appendChild(d)}pic.appendChild(r);const fit=()=>r.style.setProperty('--h',pic.clientHeight+'px');fit();addEventListener('resize',fit)}
-/* "call or text" typing bubble */
-if(pic){pic.insertAdjacentHTML('beforeend','<a class="fx-typing" href="sms:+12514639292" aria-label="Text All Seamless Gutters">Text us <b><i></i><i></i><i></i></b></a>');pic.querySelector('.fx-typing').style.textDecoration='none'}
-/* color-matching photos slide in one after another */
-const t=document.querySelector('.trio');if(t){t.classList.add('fx-st');new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){t.classList.add('fx-in');o.disconnect()}}),{threshold:.3}).observe(t)}
 })();
 </script>
 </body>
