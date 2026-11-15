@@ -219,6 +219,19 @@ footer a{color:#e6ebef;text-decoration:none}
   .chat{bottom:86px;right:14px}
   .chat>button{width:52px;height:52px}
 }
+/* split hero: copy on solid ink, van photo on the right */
+.hero .ph{left:34%;background-position:50% 60%}
+.hero::before{background:linear-gradient(90deg,#14202b 0%,#14202b 34%,rgba(20,32,43,.75) 44%,rgba(20,32,43,.1) 62%,transparent 80%),linear-gradient(180deg,rgba(20,32,43,.35) 0%,transparent 22%,transparent 62%,rgba(20,32,43,.8) 100%)}
+.hero h1{max-width:11ch}
+.hero .sub{max-width:440px}
+.hero-row{grid-template-columns:1fr}
+.hero .proof{border-left:0;padding-left:0;grid-template-columns:repeat(3,auto);justify-content:start;gap:36px;margin-top:34px;padding-top:24px;border-top:1px solid rgba(255,255,255,.18);max-width:460px}
+.hero .proof b{font-size:28px}
+@media (max-width:1000px){
+  .hero .ph{left:0;background-position:62% 50%}
+  .hero::before{background:linear-gradient(180deg,rgba(20,32,43,.5) 0%,rgba(20,32,43,.25) 30%,rgba(20,32,43,.8) 60%,rgba(20,32,43,.97) 100%)}
+}
+@media (max-width:640px){.hero .proof{grid-template-columns:repeat(3,auto);gap:22px}.hero .proof b{font-size:22px}}
 </style>
 </head>
 <body>
