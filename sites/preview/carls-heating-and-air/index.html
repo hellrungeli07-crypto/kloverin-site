@@ -234,6 +234,12 @@ footer a{color:#e6ebef;text-decoration:none}
   .hero .ph{left:0;background-position:62% 50%}
   .hero::before{background:linear-gradient(180deg,rgba(20,32,43,.5) 0%,rgba(20,32,43,.25) 30%,rgba(20,32,43,.8) 60%,rgba(20,32,43,.97) 100%)}
 }
+@media (max-width:640px){
+  .hero{min-height:0}
+  .hero .ph{left:0;bottom:auto;height:360px;background-size:cover;background-position:58% 60%}
+  .hero::before{background:linear-gradient(180deg,rgba(20,32,43,.55) 0,rgba(20,32,43,0) 90px,rgba(20,32,43,0) 230px,#14202b 360px,#14202b 100%)}
+  .hero .wrap{padding-top:300px;padding-bottom:48px}
+}
 @media (max-width:640px){.hero .proof{grid-template-columns:repeat(3,auto);gap:22px}.hero .proof b{font-size:22px}}
 </style>
 </head>
