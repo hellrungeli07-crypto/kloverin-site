@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>GR Automotive | Honest Auto Repair &amp; Tires | Louisiana Ave, New Orleans</title>
+<meta name="description" content="Honest auto repair, tires, brakes and A/C on Louisiana Ave in New Orleans. Rick and his team fix what's broken and nothing that isn't. 4.7 stars on Google. Call (504) 894-8777.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kloverin.com/sites/preview/gr-automotive/">
+<meta property="og:title" content="GR Automotive | Honest Auto Repair | New Orleans">
+<meta property="og:description" content="Rick and his team fix what's broken, and nothing that isn't.">
+<meta name="theme-color" content="#1b1d20">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23c8202f'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='26' fill='%23fff'%3EGR%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400;62..125,500;62..125,600;62..125,700;62..125,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#fbfaf7; --stucco:#f1eee7; --red:#c8202f; --red-d:#a11825; --char:#1b1d20; --char2:#26292e;
+  --text:#2a2c30; --muted:#6c6f75; --line:#e2ddd3;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Archivo',system-ui,sans-serif;font-stretch:100%;color:var(--text);background:var(--white);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+h1,h2,h3{font-family:'Archivo',sans-serif;font-stretch:125%;font-weight:800;line-height:.98;letter-spacing:-.01em;text-transform:uppercase;color:var(--char)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 30px}
+.kick{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--red)}
+.kick::before{content:'';width:8px;height:8px;background:currentColor;transform:rotate(45deg)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:17px 28px;font-weight:700;text-decoration:none;font-size:15px;letter-spacing:.08em;text-transform:uppercase;border:0;cursor:pointer;font-family:inherit;white-space:nowrap;transition:background .2s,color .2s}
+.btn svg{width:17px;height:17px;flex:none}
+.btn--red{background:var(--red);color:#fff}
+.btn--red:hover{background:var(--red-d)}
+.btn--line{border:2px solid var(--char);color:var(--char)}
+.btn--line:hover{background:var(--char);color:#fff}
+.btn--light{border:2px solid rgba(255,255,255,.6);color:#fff}
+.btn--light:hover{background:#fff;color:var(--char)}
+
+header{position:sticky;top:0;z-index:40;background:var(--char);color:#fff}
+.hd{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.mark{display:flex;align-items:center;gap:14px;text-decoration:none}
+.badge{background:var(--red);color:#fff;font-stretch:125%;font-weight:800;font-size:19px;letter-spacing:.04em;padding:6px 10px;line-height:1}
+.mark b{font-stretch:125%;font-weight:800;font-size:19px;letter-spacing:.08em;text-transform:uppercase}
+nav{display:flex;align-items:center;gap:28px}
+nav a{text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;opacity:.85}
+nav a:hover{opacity:1;color:#ff8b94}
+.hd .btn{padding:12px 18px;font-size:14px}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#c9cbcf}
+.status i{width:8px;height:8px;border-radius:50%;background:#8b8e94}
+.status.open i{background:#3ccf6e;box-shadow:0 0 0 4px rgba(60,207,110,.18)}
+
+/* HERO */
+.hero{background:var(--stucco);padding:70px 0 0;overflow:hidden;border-bottom:6px solid var(--red)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:end}
+.hero .copy{padding-bottom:80px}
+.hero h1{font-size:clamp(46px,6.4vw,92px);margin:22px 0 22px}
+.hero h1 span{color:var(--red)}
+.hero p.sub{font-size:19px;color:var(--muted);max-width:31em}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.proof{display:flex;gap:34px;flex-wrap:wrap;margin-top:40px;font-size:14px;color:var(--muted)}
+.proof b{display:block;font-stretch:125%;font-weight:800;font-size:30px;color:var(--char);line-height:1}
+.proof b span{color:var(--red);font-size:22px}
+.facade{width:100%;max-width:560px;justify-self:end;display:block}
+.facade .ln{fill:none;stroke:var(--char);stroke-width:2.2;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.2s cubic-bezier(.65,0,.25,1) .2s forwards}
+.facade .fill{opacity:0;animation:fade .9s ease 1.9s forwards}
+.facade .sign{font-family:'Archivo',sans-serif;font-stretch:125%;font-weight:800;font-size:26px;letter-spacing:2px}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fade{to{opacity:1}}
+
+/* PROMISE */
+.promise{background:var(--char);color:#d9dadd;padding:110px 0}
+.promise .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.promise h2{color:#fff;font-size:clamp(40px,4.8vw,66px)}
+.promise h2 span{color:#ff6b77}
+.promise .q{font-size:clamp(24px,2.4vw,31px);line-height:1.35;color:#fff;font-weight:500}
+.promise .q::before{content:'“';display:block;font-stretch:125%;font-weight:800;font-size:90px;line-height:.6;color:var(--red);margin-bottom:12px}
+.promise cite{display:block;margin-top:16px;font-style:normal;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#9a9da3}
+.pts{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:40px;border-top:1px solid #3a3d43}
+.pts div{padding:20px 18px 0 0}
+.pts b{display:block;color:#fff;font-stretch:125%;font-weight:700;font-size:17px;text-transform:uppercase;letter-spacing:.02em;margin-bottom:4px}
+.pts span{font-size:14.5px;color:#a3a6ab}
+
+/* SERVICES */
+.svc{padding:110px 0}
+.svc .top{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:46px}
+.h2{font-size:clamp(40px,5vw,68px);margin-top:16px}
+.lede{color:var(--muted);font-size:18px;max-width:30em}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--char);border-left:1px solid var(--line)}
+.cell{padding:30px 26px 34px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .25s}
+.cell:hover{background:var(--stucco)}
+.cell .n{font-stretch:125%;font-weight:800;font-size:14px;color:var(--red);letter-spacing:.1em}
+.cell h3{font-size:22px;margin:14px 0 8px;line-height:1.05}
+.cell p{font-size:15px;color:var(--muted)}
+
+/* TRAVELERS */
+.trip{background:var(--red);color:#fff;padding:90px 0}
+.trip .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.trip h2{color:#fff;font-size:clamp(38px,4.6vw,62px)}
+.trip p{font-size:18px;color:#ffe3e5;margin-top:18px;max-width:32em}
+.trip blockquote{background:rgba(0,0,0,.16);padding:28px 30px;font-size:19px;line-height:1.5}
+.trip cite{display:block;margin-top:12px;font-style:normal;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#ffc9ce}
+
+/* HOW */
+.how{padding:110px 0;background:var(--stucco)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:50px;counter-reset:s}
+.step{counter-increment:s;background:#fff;padding:30px 26px;border-top:4px solid var(--char)}
+.step::before{content:'0' counter(s);font-stretch:125%;font-weight:800;font-size:40px;color:var(--red);line-height:1}
+.step h3{font-size:20px;margin:16px 0 8px}
+.step p{font-size:15px;color:var(--muted)}
+
+/* REVIEWS */
+.rev{padding:110px 0}
+.rev .top{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:46px}
+.score{display:flex;align-items:center;gap:16px}
+.score b{font-stretch:125%;font-weight:800;font-size:64px;line-height:1;color:var(--char)}
+.score small{display:block;color:var(--muted);font-size:14px}
+.stars{color:var(--red);letter-spacing:3px;font-size:14px}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.r{border:1px solid var(--line);padding:30px 28px;display:flex;flex-direction:column;background:#fff}
+.r p{flex:1;margin:14px 0 18px;font-size:16px}
+.r cite{font-style:normal;font-weight:700;font-size:14.5px;color:var(--char)}
+.r small{display:block;font-weight:400;color:var(--muted);font-size:13px}
+.r.wide{grid-column:span 2;background:var(--char);color:#e3e4e6;border-color:var(--char)}
+.r.wide p{font-size:20px;line-height:1.5;color:#fff}
+.r.wide cite{color:#fff}
+.r.wide small{color:#9a9da3}
+.more{text-align:center;margin-top:36px}
+
+/* VISIT */
+.visit{background:var(--char);color:#d9dadd;padding:100px 0}
+.visit .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:stretch}
+.visit h2{color:#fff}
+.info{display:grid;gap:24px;margin-top:34px}
+.info h4{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#ff6b77;margin-bottom:6px}
+.info a{text-decoration:none;color:#fff}
+.info .tel{font-stretch:125%;font-weight:800;font-size:38px;line-height:1}
+.hours{display:grid;grid-template-columns:auto 1fr;gap:3px 26px}
+.hours span:nth-child(odd){color:#9a9da3}
+.map{min-height:440px}
+.map iframe{width:100%;height:100%;min-height:440px;border:0;filter:grayscale(.8) contrast(1.05)}
+
+/* FORM */
+.est{padding:110px 0}
+.est .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start}
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+form label{display:grid;gap:8px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+form .full{grid-column:1/-1}
+input,select,textarea{font:inherit;font-size:16.5px;text-transform:none;letter-spacing:0;color:var(--text);padding:14px 14px;border:1px solid #d3cdc1;background:#fff;width:100%;border-radius:0}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--red);outline-offset:-1px;border-color:var(--red)}
+textarea{min-height:100px;resize:vertical}
+form .btn{justify-self:start}
+.note{font-size:14px;color:var(--muted)}
+
+footer{background:#121315;color:#9a9da3;padding:56px 0 110px;font-size:14.5px}
+.ft{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+footer h4{color:#fff;font-size:12px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px}
+footer a{color:#e3e4e6;text-decoration:none}
+footer .mark{color:#fff;margin-bottom:16px}
+.legal{margin-top:40px;padding-top:20px;border-top:1px solid #2a2c30;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px}
+.legal a{color:#ff8b94}
+
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--char);padding:10px;gap:10px}
+.mbar .btn{flex:1;padding:14px 10px}
+.chat{position:fixed;right:22px;bottom:22px;z-index:60}
+.chat>button{width:58px;height:58px;border-radius:50%;background:var(--red);color:#fff;border:0;cursor:pointer;box-shadow:0 14px 30px -8px rgba(0,0,0,.4);display:grid;place-items:center}
+.chat>button svg{width:24px;height:24px}
+.chat .cp{display:none;position:absolute;right:0;bottom:74px;width:300px;background:#fff;box-shadow:0 22px 48px -14px rgba(0,0,0,.4);padding:22px;color:var(--text);border-top:4px solid var(--red)}
+.chat.open .cp{display:grid;gap:10px}
+.chat .cp p{font-size:15px;margin-bottom:4px}
+.chat .cp .btn{width:100%}
+.chat .cp small{color:var(--muted);text-align:center;font-size:12px}
+
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  .facade .ln{animation:none;stroke-dashoffset:0}
+  .facade .fill{animation:none;opacity:1}
+}
+@media (max-width:1000px){
+  nav a:not(.btn){display:none}
+  .hero .wrap,.promise .wrap,.trip .wrap,.visit .wrap,.est .wrap{grid-template-columns:1fr;gap:44px}
+  .hero .copy{padding-bottom:0}
+  .facade{justify-self:start}
+  .grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .rgrid{grid-template-columns:1fr 1fr}
+  .ft{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{font-size:16.5px}
+  .wrap{padding:0 20px}
+  .hd{height:66px}
+  .mark b{font-size:15px}
+  .badge{font-size:16px}
+  .hd .btn,.hd .status{display:none}
+  .hero{padding-top:44px}
+  .hero p.sub{font-size:17.5px}
+  .ctas{flex-direction:column}
+  .ctas .btn{width:100%}
+  .promise,.svc,.how,.rev,.est{padding:80px 0}
+  .trip,.visit{padding:76px 0}
+  .pts{grid-template-columns:1fr}
+  .pts div{padding:16px 0 0}
+  .svc .top,.rev .top{flex-direction:column;align-items:start}
+  .grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .rgrid{grid-template-columns:1fr}
+  .r.wide{grid-column:auto}
+  .map,.map iframe{min-height:300px}
+  form{grid-template-columns:1fr}
+  .ft{grid-template-columns:1fr}
+  .mbar{display:flex}
+  .chat{bottom:86px;right:14px}
+  .chat>button{width:52px;height:52px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <a href="#top" class="mark" aria-label="GR Automotive home"><span class="badge">G.R.</span><b>Automotive</b></a>
+    <nav>
+      <span class="status" id="status"><i></i><span>Mon–Fri 8–3</span></span>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+      <a href="tel:+15048948777" class="btn btn--red"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>(504) 894-8777</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="copy">
+      <span class="kick">Louisiana Ave · New Orleans</span>
+      <h1>We fix what's broken. <span>Nothing that isn't.</span></h1>
+      <p class="sub">Honest auto repair, tires, brakes and A/C from Rick and his team. A straight diagnosis, a clear estimate before any work, and your car back fast.</p>
+      <div class="ctas">
+        <a href="tel:+15048948777" class="btn btn--red"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Call (504) 894-8777</a>
+        <a href="#estimate" class="btn btn--line">Request a repair</a>
+      </div>
+      <div class="proof">
+        <div><b>4.7 <span>★</span></b>120 Google reviews</div>
+        <div><b>Mon–Fri</b>8 AM – 3 PM</div>
+        <div><b>Since Katrina</b>“my place to go”</div>
+      </div>
+    </div>
+    <svg class="facade" viewBox="0 0 560 400" role="img" aria-label="Line drawing of the G.R. Automotive storefront on Louisiana Avenue">
+      <path class="ln" pathLength="1" d="M20 398 V150 H120 V120 H200 V96 H240 L280 70 L320 96 H360 V120 H440 V150 H540 V398"/>
+      <path class="ln" pathLength="1" d="M60 398 V250 H500 V398 M60 250 V226 H500 V250 M120 150 V226 M440 150 V226 M200 226 V120 M360 226 V120"/>
+      <path class="ln" pathLength="1" d="M100 398 V270 M140 398 V270 M180 398 V270 M220 398 V270 M260 398 V270 M300 398 V270 M340 398 V270 M380 398 V270 M420 398 V270 M460 398 V270 M60 300 H500 M60 340 H500"/>
+      <path class="ln" pathLength="1" d="M280 84 L292 96 L280 108 L268 96 Z"/>
+      <rect class="fill" x="140" y="166" width="280" height="44" fill="#fff" stroke="#c8202f" stroke-width="2.2"/>
+      <text class="fill sign" x="280" y="197" text-anchor="middle" fill="#c8202f">G.R. AUTOMOTIVE</text>
+      <rect class="fill" x="60" y="226" width="440" height="24" fill="#c8202f"/>
+      <path class="fill" d="M280 84 L292 96 L280 108 L268 96 Z" fill="#c8202f"/>
+    </svg>
+  </div>
+</section>
+
+<section class="promise">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kick" style="color:#ff6b77">The GR way</span>
+      <h2 style="margin-top:16px">No upsell. <span>No runaround.</span></h2>
+      <div class="pts">
+        <div><b>Estimate first</b><span>He'll run it by you and get your OK before any work.</span></div>
+        <div><b>Only what's needed</b><span>Reviewers say they're never sold work they don't need.</span></div>
+        <div><b>Kept in the loop</b><span>Status calls without you having to chase them.</span></div>
+      </div>
+    </div>
+    <div class="rv">
+      <p class="q">I've come in thinking that I'm going to need a lot of work done, it turns out that it's nothing, and I'm not charged anything. Rick is always honest and won't do anything that isn't need to be done.</p>
+      <cite>Jessica M., customer for years</cite>
+    </div>
+  </div>
+</section>
+
+<section class="svc" id="services">
+  <div class="wrap">
+    <div class="top">
+      <div class="rv"><span class="kick">Services</span><h2 class="h2">What we work on</h2></div>
+      <p class="lede rv">From a nail in your tire to the problem three other shops couldn't find. Call for an estimate.</p>
+    </div>
+    <div class="grid">
+      <div class="cell rv"><span class="n">01</span><h3>Diagnostics</h3><p>Noises, rattles and the problems other shops couldn't find.</p></div>
+      <div class="cell rv"><span class="n">02</span><h3>Tires</h3><p>Plugs, patches, mounting and ordering the exact tire you need.</p></div>
+      <div class="cell rv"><span class="n">03</span><h3>Brakes</h3><p>Brake repair, including road-trip emergencies.</p></div>
+      <div class="cell rv"><span class="n">04</span><h3>A/C</h3><p>A/C compressors and cooling repairs, critical in a New Orleans summer.</p></div>
+      <div class="cell rv"><span class="n">05</span><h3>Starting &amp; charging</h3><p>Starters, alternators and fuel pumps.</p></div>
+      <div class="cell rv"><span class="n">06</span><h3>Steering &amp; suspension</h3><p>Wheel bearings, axles and the cause behind uneven tire wear.</p></div>
+      <div class="cell rv"><span class="n">07</span><h3>Maintenance</h3><p>Oil changes, belts and keeping older cars running for years.</p></div>
+      <div class="cell rv"><span class="n">08</span><h3>Any make</h3><p>Minis to Range Rovers, Subarus to Jeeps and Lexus.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="trip">
+  <div class="wrap">
+    <div class="rv">
+      <h2>Car trouble on a New Orleans trip?</h2>
+      <p>Visitors break down here too. GR has gotten plenty of road-trippers back on the highway the same day, or first thing the next morning.</p>
+      <div class="ctas"><a href="tel:+15048948777" class="btn btn--light">Call (504) 894-8777</a></div>
+    </div>
+    <blockquote class="rv">“Had major brake trouble while on a road trip and Rick (the owner) fixed our car in a flash at a great price. I was worried we'd have to extend our New Orleans trip but Rick had the truck fixed before lunch.”<cite>Chris, road-tripper</cite></blockquote>
+  </div>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <div class="rv" style="max-width:640px"><span class="kick">How it works</span><h2 class="h2">Simple, start to finish</h2></div>
+    <div class="steps">
+      <div class="step rv"><h3>Call Rick</h3><p>Tell the shop what the car is doing and get it on the schedule.</p></div>
+      <div class="step rv"><h3>Drop it off</h3><p>Bring the car by. Can't make it during the day? Ask about the key drop.</p></div>
+      <div class="step rv"><h3>Get the estimate</h3><p>Parts and labor broken down, and your OK before any work starts.</p></div>
+      <div class="step rv"><h3>Drive away</h3><p>Often same or next day, unless you're waiting on parts.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="rev" id="reviews">
+  <div class="wrap">
+    <div class="top">
+      <div class="rv"><span class="kick">Reviews</span><h2 class="h2">Trusted for years</h2></div>
+      <div class="score rv"><b>4.7</b><div><div class="stars">★★★★★</div><small>120 Google reviews</small></div></div>
+    </div>
+    <div class="rgrid">
+      <div class="r wide rv"><div class="stars">★★★★★</div><p>“My previous car had a broken back axle that the dealership shop and six other tire shops failed to find. … Took it to GR and they immediately knew what the problem was. They are fast, trustworthy, and great at what they do.”</p><cite>Stephanie H.<small>Google review</small></cite></div>
+      <div class="r rv"><div class="stars">★★★★★</div><p>“They were upfront with the cost and broke down labor and parts. I really appreciate this shop and would highly recommend it.”</p><cite>AmbyrShae C.<small>Google review</small></cite></div>
+      <div class="r rv"><div class="stars">★★★★★</div><p>“They even offer ways to save money by waiting to fix something or doing multiple things at once to pay less in labor cost.”</p><cite>Katy G.<small>Jeep Wrangler owner</small></cite></div>
+      <div class="r rv"><div class="stars">★★★★★</div><p>“By 11:00 AM the next day, they called and told me the car was ready. Very fast and friendly, they kept me in the loop throughout the entire process.”</p><cite>Matthew E.<small>Subaru starter</small></cite></div>
+      <div class="r rv"><div class="stars">★★★★★</div><p>“Rick has worked on three cars I've owned through the years … always honest and upfront with a fast turnaround.”</p><cite>Erika R.<small>Customer for years</small></cite></div>
+      <div class="r rv"><div class="stars">★★★★★</div><p>“We were very worried about driving 10 hours back home … They found the issue and gave us a solution very quickly.”</p><cite>Elizabeth O.<small>Visiting from Florida</small></cite></div>
+    </div>
+    <div class="more rv"><a class="btn btn--line" href="https://www.google.com/maps?cid=16460512278408761163" target="_blank" rel="noopener">Read all reviews on Google</a></div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kick" style="color:#ff6b77">Visit the shop</span>
+      <h2 class="h2">1004 Louisiana Ave</h2>
+      <div class="info">
+        <div><h4>Call</h4><a class="tel" href="tel:+15048948777">(504) 894-8777</a></div>
+        <div><h4>Shop</h4>1004 Louisiana Ave<br>New Orleans, LA 70115</div>
+        <div><h4>Hours</h4><div class="hours"><span>Monday – Friday</span><span>8 AM – 3 PM</span><span>Saturday – Sunday</span><span>Closed</span></div></div>
+        <div><h4>Facebook</h4><a href="https://www.facebook.com/pages/GR-Automotive/480326505328367" target="_blank" rel="noopener">GR Automotive on Facebook</a></div>
+      </div>
+    </div>
+    <div class="map rv"><iframe title="Map to GR Automotive" loading="lazy" src="https://maps.google.com/maps?q=1004%20Louisiana%20Ave,%20New%20Orleans,%20LA%2070115&z=15&output=embed"></iframe></div>
+  </div>
+</section>
+
+<section class="est" id="estimate">
+  <div class="wrap">
+    <div class="rv">
+      <span class="kick">Request a repair</span>
+      <h2 class="h2">Tell Rick what it's doing.</h2>
+      <p class="lede" style="margin-top:18px">Send the details any time, even after 3 PM. The shop will call you back with next steps.</p>
+    </div>
+    <form class="rv" onsubmit="event.preventDefault();this.querySelector('.note').textContent='This is a preview, so the form isn\'t connected yet. On the live site this goes straight to the shop.';">
+      <label>Vehicle<input type="text" placeholder="Year, make, model"></label>
+      <label>What's going on?<select><option>Noise or rattle</option><option>Tire / flat</option><option>Brakes</option><option>A/C</option><option>Won't start</option><option>Warning light</option><option>Maintenance</option><option>Something else</option></select></label>
+      <label>Name<input type="text" autocomplete="name" placeholder="Your name"></label>
+      <label>Phone<input type="tel" autocomplete="tel" placeholder="(504) 555-0123"></label>
+      <label class="full">Details<textarea placeholder="When it started, what you hear or feel, whether you're in town or passing through…"></textarea></label>
+      <div class="full"><button class="btn btn--red" type="submit">Send request</button></div>
+      <p class="note full">Or call (504) 894-8777, Mon–Fri 8 AM–3 PM</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <a href="#top" class="mark"><span class="badge">G.R.</span><b>Automotive</b></a>
+        <p>Honest auto repair and tires on Louisiana Ave, New Orleans.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+15048948777">(504) 894-8777</a><br>
+        1004 Louisiana Ave<br>New Orleans, LA 70115
+      </div>
+      <div>
+        <h4>Hours</h4>
+        Mon–Fri 8 AM–3 PM<br>
+        <a href="https://www.google.com/maps?cid=16460512278408761163" target="_blank" rel="noopener">GR on Google</a>
+      </div>
+    </div>
+    <div class="legal"><span>© GR Automotive</span><span>Website by <a href="https://kloverin.com">Kloverin</a></span></div>
+  </div>
+</footer>
+
+<div class="mbar"><a href="tel:+15048948777" class="btn btn--red">Call</a><a href="#estimate" class="btn btn--light">Request</a></div>
+
+<!-- Kloverin chat widget slot: swap this placeholder for the live AI chat embed -->
+<div class="chat" id="chat">
+  <div class="cp">
+    <p><b>After 3 PM? Still need help?</b><br>Leave the details and the shop will call you back.</p>
+    <a href="#estimate" class="btn btn--red" onclick="document.getElementById('chat').classList.remove('open')">Request a repair</a>
+    <a href="tel:+15048948777" class="btn btn--line">Call (504) 894-8777</a>
+    <small>AI assistant by Kloverin</small>
+  </div>
+  <button aria-label="Open chat" onclick="this.parentNode.classList.toggle('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></button>
+</div>
+
+<script>
+/* 1. storefront line drawing draws itself  2. live open/closed status in New Orleans time  3. calm staggered reveals */
+(function(){
+  const el=document.getElementById('status');if(!el)return;
+  try{
+    const p=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'numeric',hour12:false}).formatToParts(new Date());
+    const d=p.find(x=>x.type==='weekday').value, h=+p.find(x=>x.type==='hour').value;
+    const open=!['Sat','Sun'].includes(d)&&h>=8&&h<15;
+    el.classList.toggle('open',open);
+    el.querySelector('span').textContent=open?'Open now · till 3 PM':'Closed · leave a request';
+  }catch(e){}
+})();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+const groups=new Map();
+document.querySelectorAll('.rv').forEach(el=>{const p=el.parentElement;if(!groups.has(p))groups.set(p,[]);groups.get(p).push(el);io.observe(el)});
+groups.forEach(l=>{if(l.length>1)l.forEach((el,i)=>{el.style.transitionDelay=Math.min(i*.07,.5)+'s'})});
+</script>
+</body>
+</html>
