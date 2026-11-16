@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Repair or Replace Your AC? | San Angelo, TX</title>
+<meta name="description" content="Free repair-or-replace calculator for San Angelo homeowners, plus the factors that tip the decision.">
+<link rel="canonical" href="https://sanangeloacrepair.com/ac-replacement/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1B2430; --cool:#1E9C95; --cool-d:#167A74; --ice:#E1F1EF; --ember:#E8663D; --page:#F5F7F8;
+  --muted:#566270; --line:rgba(27,36,48,.12); --f:"Manrope",system-ui,sans-serif;
+  --t:0; /* 0 hot -> 1 cool */
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--f);color:var(--ink);background:var(--page);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cool);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-weight:800;letter-spacing:-.04em;line-height:1.02;margin:0}
+.sample{display:none;background:var(--ink);color:#9aa6b2;font-size:13px;text-align:center;padding:7px 16px}
+.nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:30px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:-.03em;text-decoration:none}
+.brand svg{width:32px;height:32px}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0 0 0 auto;padding:0;font-size:15px;color:var(--muted)}
+.nav ul a{text-decoration:none}.nav ul a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:12px;font:700 16px var(--f);text-decoration:none;border:0;cursor:pointer;transition:background .2s}
+.btn-cool{background:var(--cool);color:#fff}.btn-cool:hover{background:var(--cool-d)}
+.btn-ink{background:var(--ink);color:#fff}.btn-ink:hover{background:#000}
+.btn-line{box-shadow:inset 0 0 0 1.5px var(--ink);background:transparent}.btn-line:hover{background:var(--ink);color:#fff}
+.nav .btn{padding:10px 16px;font-size:15px}
+
+.hero{position:relative;overflow:hidden;padding:70px 0 90px;background:linear-gradient(135deg,rgba(232,102,61,calc(.16*(1 - var(--t)))) 0%,rgba(30,156,149,calc(.16*var(--t))) 100%),var(--page)}
+.hero .wrap{display:grid;grid-template-columns:6fr 5fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(46px,6.6vw,88px)}
+.hero p{font-size:20px;color:var(--muted);max-width:40ch;margin:22px 0 30px}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero ul{display:flex;gap:22px;flex-wrap:wrap;list-style:none;padding:0;margin:30px 0 0;font-size:15px;color:var(--muted)}
+.hero li::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--cool);margin-right:8px;vertical-align:1px}
+.thermo{position:relative;justify-self:center;width:min(400px,80vw);aspect-ratio:1}
+.thermo svg{width:100%;height:100%}
+.face{position:absolute;inset:16%;border-radius:50%;background:#fff;box-shadow:0 30px 70px rgba(27,36,48,.16),inset 0 -6px 18px rgba(27,36,48,.06);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.face .temp{font-size:clamp(64px,9vw,104px);font-weight:800;letter-spacing:-.06em;line-height:1;color:var(--ink)}
+.face .temp sup{font-size:.4em;vertical-align:.95em}
+.face small{font-size:14px;color:var(--muted);font-weight:600}
+.face .mode{margin-top:8px;font-size:13px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--ice);color:var(--cool-d)}
+.ctrl{display:flex;gap:10px;justify-content:center;margin-top:-8px}
+.ctrl button{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--line);background:#fff;font:700 22px var(--f);cursor:pointer;color:var(--ink)}
+.ctrl button:hover{border-color:var(--ink)}
+
+.strip{background:var(--ink);color:#fff}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.strip div{padding:24px 20px 26px 0}
+.strip b{display:block;font-size:24px;letter-spacing:-.03em}
+.strip span{font-size:14px;color:#9aa6b2}
+
+section{padding:100px 0}
+.h2{font-size:clamp(36px,4.6vw,60px);margin-bottom:16px}
+.lede{color:var(--muted);font-size:19px;max-width:46ch;margin:0}
+
+.rr .wrap{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:start}
+.calc{background:#fff;border-radius:22px;padding:32px;border:1px solid var(--line)}
+.calc label{display:block;font-weight:700;font-size:15px;margin-bottom:6px}
+.calc output{float:right;font-weight:800}
+.calc input[type=range]{width:100%;accent-color:var(--cool);margin:0 0 22px}
+.verdict{border-radius:16px;padding:22px 24px;margin-top:4px;transition:background .3s}
+.verdict.fix{background:var(--ice)}
+.verdict.replace{background:#FCE8E1}
+.verdict b{display:block;font-size:22px;letter-spacing:-.02em;margin-bottom:6px}
+.verdict p{margin:0;color:var(--muted);font-size:15.5px}
+.rule{margin-top:26px;font-size:15px;color:var(--muted);border-left:3px solid var(--cool);padding-left:16px}
+
+.svc{background:#fff}
+.svc .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.svc article{border-radius:20px;overflow:hidden;background:var(--page)}
+.svc img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.svc div{padding:22px 24px 26px}
+.svc h3{font-size:22px;margin-bottom:6px}
+.svc p{margin:0;color:var(--muted);font-size:16px}
+.svc em{font-style:normal;display:inline-block;margin-top:12px;font-weight:700;font-size:14px;color:var(--cool-d)}
+
+.club{background:var(--cool);color:#fff}
+.club .wrap{display:grid;grid-template-columns:6fr 5fr;gap:56px;align-items:center}
+.club .lede{color:#d9f1ef}
+.club ul{list-style:none;padding:0;margin:0;background:rgba(255,255,255,.12);border-radius:20px;padding:10px 26px}
+.club li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+.club li:last-child{border:0}
+.club .price{font-size:54px;font-weight:800;letter-spacing:-.05em;line-height:1;margin:26px 0 18px}
+.club .price small{font-size:17px;font-weight:600;letter-spacing:0}
+
+.rv{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.rv figure{margin:0;background:#fff;border-radius:20px;padding:28px;border:1px solid var(--line)}
+.rv blockquote{margin:0 0 16px;font-size:17.5px}
+.rv figcaption{font-size:15px;color:var(--muted)}
+.rv figcaption b{color:var(--ink)}
+.two{display:grid;grid-template-columns:5fr 7fr;gap:72px}
+.towns{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:22px 0 0}
+.towns li{padding:7px 14px;border-radius:10px;background:#fff;border:1px solid var(--line);font-size:15px}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-weight:700;font-size:18px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:24px;color:var(--cool);transition:transform .2s}
+details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+details p{margin:0 0 20px;color:var(--muted)}
+.quote{background:var(--ink);color:#fff}
+.quote .wrap{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:start}
+.quote .lede{color:#9aa6b2}
+.phone{display:block;margin-top:28px;font-size:clamp(32px,3.6vw,46px);font-weight:800;letter-spacing:-.04em;text-decoration:none;color:#7FDCD6}
+.phone small{display:block;font-size:15px;font-weight:500;letter-spacing:0;color:#9aa6b2}
+form.q{background:#fff;color:var(--ink);border-radius:22px;padding:32px}
+form.q h3{font-size:26px;margin-bottom:18px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form.q label{display:block;font-size:14px;font-weight:700;margin-bottom:14px}
+form.q input,form.q select,form.q textarea{display:block;width:100%;margin-top:6px;padding:12px 14px;font:inherit;font-size:16px;border:1.5px solid #d4dbe1;border-radius:12px;color:var(--ink);background:#fff}
+form.q input:focus,form.q select:focus,form.q textarea:focus{outline:none;border-color:var(--cool)}
+form.q textarea{min-height:80px;resize:vertical}
+form.q .btn{width:100%;justify-content:center}
+.sent{display:none;margin:14px 0 0;padding:12px 14px;border-radius:12px;background:var(--ice);font-size:15px}
+footer{background:#10161E;color:#9aa6b2;padding:48px 0 40px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer .brand{color:#fff;margin-bottom:10px}
+footer a{text-decoration:none}footer a:hover{color:#fff}
+.callbar{display:none}
+@media (max-width:900px){
+  .nav ul{display:none}.nav .btn{margin-left:auto}
+  .hero .wrap,.rr .wrap,.club .wrap,.two,.quote .wrap{grid-template-columns:1fr;gap:40px}
+  .strip .wrap{grid-template-columns:1fr 1fr}
+  .svc .grid,.rv,.f2{grid-template-columns:1fr}
+  section{padding:76px 0}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;gap:8px}
+  .callbar a{flex:1;justify-content:center;box-shadow:0 8px 24px rgba(27,36,48,.3)}
+  footer{padding-bottom:100px}
+}
+@media (max-width:480px){.nav .btn{display:none}} /* nav-phone-hide: the bottom call bar covers this on phones */
+
+.prob{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.prob article{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px}
+.prob h3{font-size:21px;margin-bottom:8px}.prob p{margin:0;color:var(--muted);font-size:16px}
+.how{counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px;padding:0;list-style:none}
+.how li{counter-increment:s;background:#fff;border-radius:20px;padding:26px;border:1px solid var(--line)}
+.how li::before{content:counter(s);display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--ice);color:var(--cool-d);font-weight:800;margin-bottom:14px}
+.how h3{font-size:20px;margin-bottom:6px}.how p{margin:0;color:var(--muted);font-size:16px}
+.steps{max-width:760px;padding-left:22px}.steps li{margin-bottom:14px}.steps b{display:block}
+.disc{font-size:13px;color:#7d8996;max-width:70ch;margin-top:14px}
+.navl a[aria-current]{color:var(--ink);font-weight:700}
+.page-hero{padding:64px 0 70px;background:var(--page)}
+.page-hero h1{font-size:clamp(40px,5.6vw,72px);max-width:16ch}
+.page-hero p{font-size:20px;color:var(--muted);max-width:52ch;margin:20px 0 28px}
+@media (max-width:900px){.prob,.how{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="10" fill="#1B2430"/><path d="M16 6v20M7.3 11l17.4 10M7.3 21l17.4-10" stroke="#7FDCD6" stroke-width="2.4" stroke-linecap="round"/><circle cx="16" cy="16" r="3.2" fill="#E8663D"/></svg>San Angelo AC Repair</a>
+    <ul class="navl"><li><a href="../">AC repair</a></li><li><a href="../heating-repair/">Heating repair</a></li><li><a href="../ac-replacement/" aria-current="page">Repair or replace</a></li><li><a href="../emergency-ac-repair/">Emergency help</a></li></ul>
+    <a class="btn btn-cool" href="tel:+13250000000">(325) 000-0000</a>
+  </div>
+</header>
+<main id="top">
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Repair or replace your AC?</h1>
+    <p>Before you spend money on an older system, run the numbers. Then get a local tech to quote both options.</p>
+  </div>
+</section>
+<section class="rr" id="replace" style="padding-top:20px">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Do the math</h2>
+      <p class="lede">Move the sliders to match your system's age and the repair quote.</p>
+      <p class="rule">The $5,000 rule: system age × repair cost. Under $5,000, repair. Over $5,000, put the money toward a new system.</p>
+    </div>
+    <form class="calc" id="rr" onsubmit="return false">
+      <label for="age">System age <output id="ageO">12 years</output></label>
+      <input type="range" id="age" min="1" max="25" value="12">
+      <label for="cost">Repair quote <output id="costO">$450</output></label>
+      <input type="range" id="cost" min="100" max="2500" step="50" value="450">
+      <div class="verdict" id="v" aria-live="polite"><b id="vT"></b><p id="vP"></p></div>
+    </form>
+  </div>
+</section>
+<section style="background:#fff">
+  <div class="wrap two">
+    <div><h2 class="h2">Other things that tip the scale</h2><p class="lede">The rule of thumb is a starting point, not the whole answer.</p></div>
+    <div>
+      <details open><summary>Your system uses R-22 refrigerant</summary><p>Systems installed before about 2010 often use R-22, which is no longer made. Recharging one is expensive, which pushes many owners toward replacing.</p></details>
+      <details><summary>Your summer bills keep climbing</summary><p>Older, lower-efficiency systems cost more to run every month. In a long San Angelo summer, a newer high-efficiency system can cut cooling costs noticeably.</p></details>
+      <details><summary>It's needed several repairs lately</summary><p>One repair on an older system is normal. Repeated breakdowns usually mean more are coming.</p></details>
+      <details><summary>Some rooms never get comfortable</summary><p>That can be a sizing or duct problem rather than a broken part. A good tech will check the ducts before selling you a new unit.</p></details>
+    </div>
+  </div>
+</section>
+<section class="quote" id="call">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Talk to a San Angelo HVAC tech</h2>
+      <p class="lede">Call and you'll be connected with a licensed local heating and air company. They'll ask what's going on, give you the next open time and tell you the price before any work starts.</p>
+    </div>
+    <div>
+      <a class="phone" href="tel:+13250000000"><small>Call or text, 7 days a week</small>(325) 000-0000</a>
+      <ul class="towns" style="margin-top:26px"><li style="background:transparent;color:#cfd6dd;border-color:rgba(255,255,255,.18)">San Angelo</li><li style="background:transparent;color:#cfd6dd;border-color:rgba(255,255,255,.18)">Grape Creek</li><li style="background:transparent;color:#cfd6dd;border-color:rgba(255,255,255,.18)">Wall</li><li style="background:transparent;color:#cfd6dd;border-color:rgba(255,255,255,.18)">Christoval</li><li style="background:transparent;color:#cfd6dd;border-color:rgba(255,255,255,.18)">Miles</li><li style="background:transparent;color:#cfd6dd;border-color:rgba(255,255,255,.18)">Veribest</li><li style="background:transparent;color:#cfd6dd;border-color:rgba(255,255,255,.18)">Water Valley</li><li style="background:transparent;color:#cfd6dd;border-color:rgba(255,255,255,.18)">Carlsbad</li><li style="background:transparent;color:#cfd6dd;border-color:rgba(255,255,255,.18)">Mertzon</li><li style="background:transparent;color:#cfd6dd;border-color:rgba(255,255,255,.18)">Eola</li></ul>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div><div class="brand">San Angelo AC Repair</div><a href="tel:+13250000000">(325) 000-0000</a><br>Serving San Angelo and the Concho Valley
+      <p class="disc">San Angelo AC Repair is a free referral service. We don't do repairs ourselves: your call is connected to an independent, licensed HVAC contractor serving San Angelo, who quotes and performs the work. Licensed HVAC contractors in Texas are regulated by the Texas Department of Licensing and Regulation (TDLR).</p></div>
+    <div style="text-align:right">© <span id="yr"></span> San Angelo AC Repair</div>
+  </div>
+</footer>
+<div class="callbar"><a class="btn btn-cool" href="tel:+13250000000">Call now</a><a class="btn" style="background:#fff;color:var(--ink)" href="sms:+13250000000">Text</a></div>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+(function(){
+  var a=document.getElementById('age'),c=document.getElementById('cost');
+  function upd(){var s=a.value*c.value,v=document.getElementById('v');
+    document.getElementById('ageO').textContent=a.value+' years';document.getElementById('costO').textContent='$'+(+c.value).toLocaleString();
+    if(s>5000){v.className='verdict replace';document.getElementById('vT').textContent='Replacing likely makes sense.';document.getElementById('vP').textContent=a.value+' × $'+(+c.value).toLocaleString()+' = $'+s.toLocaleString()+'. Put that money toward a new, more efficient system instead. Ask the tech to quote both so you can compare.'}
+    else{v.className='verdict fix';document.getElementById('vT').textContent='Repair it.';document.getElementById('vP').textContent=a.value+' × $'+(+c.value).toLocaleString()+' = $'+s.toLocaleString()+'. Your system has good life left, and the repair is the smart spend.'}}
+  a.oninput=c.oninput=upd;upd();
+})();
+</script>
+</body>
+</html>
