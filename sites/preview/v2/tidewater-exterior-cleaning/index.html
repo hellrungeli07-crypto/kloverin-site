@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Tidewater Exterior Cleaning | Pressure washing in Tampa, FL</title>
+<meta name="description" content="House soft washing, driveway and roof cleaning in Tampa Bay. Instant prices, insured crews, and a spotless guarantee.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#08343D; --teal:#0F5E6B; --aqua:#2EC4D0; --aqua-l:#DDF5F6; --foam:#F2F7F6;
+  --muted:#4E6A6F; --line:rgba(8,52,61,.13); --f:"Sora",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--f);color:var(--deep);background:var(--foam);font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--aqua);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-weight:700;letter-spacing:-.04em;line-height:1.02;margin:0}
+.sample{background:var(--deep);color:#9cc0c5;font-size:13px;text-align:center;padding:7px 16px}
+.nav{position:absolute;left:0;right:0;z-index:20;color:#fff}
+.nav .wrap{display:flex;align-items:center;gap:30px;height:76px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;letter-spacing:-.03em;text-decoration:none}
+.brand svg{width:34px;height:34px}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0 0 0 auto;padding:0;font-size:14.5px}
+.nav ul a{text-decoration:none;opacity:.85}.nav ul a:hover{opacity:1}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;font:600 15.5px var(--f);text-decoration:none;border:0;cursor:pointer;transition:background .2s,color .2s}
+.btn-aqua{background:var(--aqua);color:var(--deep)}.btn-aqua:hover{background:#fff}
+.btn-deep{background:var(--deep);color:#fff}.btn-deep:hover{background:var(--teal)}
+.btn-glass{background:rgba(255,255,255,.16);color:#fff;backdrop-filter:blur(6px)}.btn-glass:hover{background:rgba(255,255,255,.28)}
+.nav .btn{padding:10px 18px;font-size:14.5px}
+
+/* scrub hero */
+.hero{position:relative;height:min(92vh,820px);min-height:600px;color:#fff;overflow:hidden;background:#3a4440}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:pan-y;cursor:crosshair}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,52,61,.55) 0%,rgba(8,52,61,0) 30%,rgba(8,52,61,0) 50%,rgba(8,52,61,.85) 100%);pointer-events:none}
+.hero .wrap{position:absolute;left:0;right:0;bottom:56px;pointer-events:none}
+.hero h1{font-size:clamp(46px,7.4vw,104px);max-width:12ch;font-weight:800}
+.hero .row{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;flex-wrap:wrap;margin-top:24px}
+.hero p{margin:0;font-size:19px;max-width:40ch;color:#e3f2f3}
+.hero .actions{display:flex;gap:10px;flex-wrap:wrap;pointer-events:auto}
+.hint{position:absolute;top:96px;right:28px;z-index:3;background:rgba(8,52,61,.7);backdrop-filter:blur(6px);padding:9px 15px;border-radius:999px;font-size:14px;display:flex;gap:8px;align-items:center;pointer-events:none;transition:opacity .4s}
+.hint svg{width:18px;height:18px}
+
+/* price */
+.price{padding:100px 0}
+.price .wrap{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:start}
+.h2{font-size:clamp(36px,4.6vw,60px);margin-bottom:16px}
+.lede{color:var(--muted);font-size:18px;max-width:46ch;margin:0}
+.calc{background:#fff;border-radius:24px;padding:32px;box-shadow:0 24px 60px rgba(8,52,61,.1)}
+.calc fieldset{border:0;padding:0;margin:0 0 22px}
+.calc legend{font-weight:600;font-size:15px;margin-bottom:10px}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.seg label{position:relative}
+.seg input{position:absolute;opacity:0}
+.seg span{display:block;text-align:center;padding:12px 8px;border-radius:12px;border:1.5px solid var(--line);font-size:14.5px;cursor:pointer;transition:all .15s}
+.seg input:checked+span{background:var(--deep);border-color:var(--deep);color:#fff}
+.seg input:focus-visible+span{outline:3px solid var(--aqua);outline-offset:2px}
+.adds{display:grid;gap:8px}
+.adds label{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 16px;border-radius:12px;border:1.5px solid var(--line);cursor:pointer;font-size:15px}
+.adds label:has(input:checked){border-color:var(--aqua);background:var(--aqua-l)}
+.adds input{width:20px;height:20px;accent-color:var(--teal);margin:0}
+.adds b{font-weight:600;color:var(--muted)}
+.out{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:22px;margin-top:6px}
+.out b{display:block;font-size:44px;letter-spacing:-.05em;line-height:1}
+.out small{color:var(--muted);font-size:14px}
+.save{display:inline-block;margin-top:6px;font-size:13px;font-weight:600;color:var(--teal);background:var(--aqua-l);padding:3px 9px;border-radius:999px}
+
+/* services */
+.svc{background:var(--deep);color:#fff;padding:100px 0}
+.svc .lede{color:#9cc0c5}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+.cards article{border-radius:20px;overflow:hidden;background:var(--teal)}
+.cards img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.cards div{padding:20px 22px 24px}
+.cards h3{font-size:20px;letter-spacing:-.03em;margin-bottom:6px}
+.cards p{margin:0;font-size:14.5px;color:#c6e0e3}
+
+.soft{padding:100px 0}
+.soft .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.soft img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:24px}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+.cmp div{background:#fff;border-radius:16px;padding:20px}
+.cmp div:last-child{background:var(--aqua-l)}
+.cmp h3{font-size:18px;margin-bottom:8px;letter-spacing:-.02em}
+.cmp p{margin:0;font-size:15px;color:var(--muted)}
+
+.rv{padding:0 0 100px}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.quotes figure{margin:0;background:#fff;border-radius:20px;padding:28px}
+.quotes blockquote{margin:0 0 16px;font-size:17px}
+.quotes figcaption{font-size:14px;color:var(--muted)}
+.quotes figcaption b{color:var(--deep)}
+.stars{color:#F2A900;letter-spacing:2px;margin-bottom:10px}
+
+.two{display:grid;grid-template-columns:5fr 7fr;gap:72px;padding-bottom:100px}
+.towns{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:22px 0 0}
+.towns li{padding:7px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:14.5px}
+details{background:#fff;border-radius:16px;margin-bottom:10px}
+summary{list-style:none;cursor:pointer;padding:20px 54px 20px 22px;font-weight:600;font-size:17px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:22px;top:50%;width:10px;height:10px;margin-top:-7px;border-right:2px solid var(--deep);border-bottom:2px solid var(--deep);transform:rotate(45deg);transition:transform .2s}
+details[open] summary::after{transform:rotate(-135deg);margin-top:-1px}
+details p{margin:0;padding:0 22px 20px;color:var(--muted)}
+
+.quote{background:linear-gradient(140deg,var(--teal),var(--deep));color:#fff;padding:96px 0}
+.quote .wrap{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:start}
+.quote .lede{color:#c6e0e3}
+.phone{display:block;margin-top:28px;font-size:clamp(30px,3.4vw,44px);font-weight:700;letter-spacing:-.04em;text-decoration:none}
+.phone small{display:block;font-size:14px;font-weight:400;letter-spacing:0;color:#9cc0c5}
+form{background:#fff;color:var(--deep);border-radius:24px;padding:32px}
+form h3{font-size:24px;margin-bottom:18px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form>label,.f2 label{display:block;font-size:14px;font-weight:600;margin-bottom:14px}
+form input,form textarea{display:block;width:100%;margin-top:6px;padding:12px 14px;font:inherit;font-size:15.5px;border:1.5px solid #d2e0e1;border-radius:12px;color:var(--deep)}
+form input:focus,form textarea:focus{outline:none;border-color:var(--aqua)}
+form textarea{min-height:80px;resize:vertical}
+form .btn{width:100%;justify-content:center}
+.sent{display:none;margin:14px 0 0;padding:12px 14px;border-radius:12px;background:var(--aqua-l);font-size:15px}
+footer{background:var(--deep);color:#9cc0c5;padding:48px 0 40px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer .brand{color:#fff;margin-bottom:10px}
+footer a{text-decoration:none}footer a:hover{color:#fff}
+.callbar{display:none}
+@media (max-width:900px){
+  .nav ul{display:none}.nav .btn{margin-left:auto}
+  .price .wrap,.soft .wrap,.two,.quote .wrap{grid-template-columns:1fr;gap:40px}
+  .cards{grid-template-columns:1fr 1fr}
+  .quotes{grid-template-columns:1fr}
+  .cmp,.f2{grid-template-columns:1fr}
+  .hint{top:90px;right:14px;font-size:13px}
+  .price,.svc,.soft,.quote{padding:76px 0}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;gap:8px}
+  .callbar a{flex:1;justify-content:center;box-shadow:0 8px 24px rgba(8,52,61,.3)}
+  footer{padding-bottom:100px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="sample">Example site. The business, photos and reviews are samples.</div>
+<main id="top">
+<section class="hero" id="hero">
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="Tidewater Exterior Cleaning home"><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#2EC4D0"/><path d="M7 19c3-3 5-3 7 0s5 3 7 0 5-3 6 0M7 13c3-3 5-3 7 0s5 3 7 0 5-3 6 0" stroke="#08343D" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>Tidewater</a>
+      <ul><li><a href="#price">Instant price</a></li><li><a href="#services">Services</a></li><li><a href="#soft">Soft washing</a></li><li><a href="#reviews">Reviews</a></li></ul>
+      <a class="btn btn-aqua" href="tel:+15550105520">(555) 010-5520</a>
+    </div>
+  </header>
+  <img src="https://images.unsplash.com/photo-1782594700873-bbeefef37e11?w=2400&q=80&auto=format&fit=crop" alt="A clean two-story house with a bright driveway">
+  <canvas id="grime" aria-hidden="true"></canvas>
+  <div class="shade"></div>
+  <div class="hint" id="hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>Drag across the photo to wash it</div>
+  <div class="wrap">
+    <h1>Years of grime, gone by lunch.</h1>
+    <div class="row">
+      <p>Soft washing for houses, roofs, driveways and pool cages across Tampa Bay. Safe for paint, screens and plants.</p>
+      <div class="actions"><a class="btn btn-aqua" href="#price">Get my price in 30 seconds</a><a class="btn btn-glass" href="tel:+15550105520">Call (555) 010-5520</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="price" id="price">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Your price, right now.</h2>
+      <p class="lede">Pick your home size and what you want cleaned. This is the real price, not a teaser, and bundles save you more.</p>
+      <p class="lede" style="margin-top:20px"><b style="color:var(--deep)">5.0 stars</b> from 211 Google reviews. Fully insured, and if anything's missed we come back free.</p>
+    </div>
+    <form class="calc" id="calc" onsubmit="return false">
+      <fieldset><legend>Home size</legend>
+        <div class="seg">
+          <label><input type="radio" name="size" value="0"><span>Under 2,000 sq ft</span></label>
+          <label><input type="radio" name="size" value="1" checked><span>2,000 to 3,000</span></label>
+          <label><input type="radio" name="size" value="2"><span>Over 3,000</span></label>
+        </div>
+      </fieldset>
+      <fieldset><legend>What should we clean?</legend>
+        <div class="adds">
+          <label><span><input type="checkbox" name="s" value="house" checked> House soft wash</span><b data-p="house"></b></label>
+          <label><span><input type="checkbox" name="s" value="drive" checked> Driveway and walkways</span><b data-p="drive"></b></label>
+          <label><span><input type="checkbox" name="s" value="roof"> Roof soft wash</span><b data-p="roof"></b></label>
+          <label><span><input type="checkbox" name="s" value="cage"> Pool cage and patio</span><b data-p="cage"></b></label>
+        </div>
+      </fieldset>
+      <div class="out" aria-live="polite">
+        <div><b id="total">$0</b><small id="note"></small><br><span class="save" id="save" hidden></span></div>
+        <a class="btn btn-deep" href="#quote">Book this price</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="svc" id="services">
+  <div class="wrap">
+    <h2 class="h2">What we wash</h2>
+    <p class="lede">Low pressure where it should be gentle, hot water where it needs to bite.</p>
+    <div class="cards">
+      <article><img loading="lazy" src="https://images.unsplash.com/photo-1786295866836-2949bbd847cd?w=700&q=75&auto=format&fit=crop" alt="Technician cleaning the siding of a house"><div><h3>House washing</h3><p>Mildew and algae off siding, stucco, soffits and gutters.</p></div></article>
+      <article><img loading="lazy" src="https://images.unsplash.com/photo-1779517226302-029fb0f68ba1?w=700&q=75&auto=format&fit=crop" alt="Pressure washer spraying concrete steps"><div><h3>Concrete</h3><p>Driveways, walks and pool decks, surface-cleaned in even passes.</p></div></article>
+      <article><img loading="lazy" src="https://images.unsplash.com/photo-1718152521364-b9655b8a7926?w=700&q=75&auto=format&fit=crop" alt="Worker using a surface cleaner on a patio"><div><h3>Patios and pavers</h3><p>Pavers cleaned, re-sanded and sealed so weeds stay out.</p></div></article>
+      <article><img loading="lazy" src="https://images.unsplash.com/photo-1777126958347-ed3cabf2667b?w=700&q=75&auto=format&fit=crop" alt="Worker washing a white building wall"><div><h3>Storefronts</h3><p>Early-morning washes for shops and offices, before you open.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="soft">
+  <div class="wrap">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1588111817213-1a12f73fbf20?w=1200&q=80&auto=format&fit=crop" alt="Bright white house with a clean driveway and lawn">
+    <div>
+      <h2 class="h2">Why we soft wash your house</h2>
+      <p class="lede">Florida mildew grows back fast when it's only blasted off the surface. Soft washing kills it at the root, at a pressure that won't strip paint or tear screens.</p>
+      <div class="cmp">
+        <div><h3>Pressure washing</h3><p>Great for concrete. On siding it can etch paint, force water behind panels and leave the roots behind.</p></div>
+        <div><h3>Soft washing</h3><p>Gentle rinse plus a cleaning solution that kills mildew, so your house stays clean up to twice as long.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rv" id="reviews">
+  <div class="wrap">
+    <h2 class="h2">5.0 from 211 neighbors</h2>
+    <div class="quotes">
+      <figure><div class="stars" aria-label="5 stars">★★★★★</div><blockquote>Our driveway looked brand new. The black streaks on the roof that we thought were permanent are just gone.</blockquote><figcaption><b>Melissa G.</b>, South Tampa</figcaption></figure>
+      <figure><div class="stars" aria-label="5 stars">★★★★★</div><blockquote>The online price was exactly what we paid. They covered the plants and the screen enclosure looks perfect.</blockquote><figcaption><b>Carlos D.</b>, Brandon</figcaption></figure>
+      <figure><div class="stars" aria-label="5 stars">★★★★★</div><blockquote>HOA letter on Monday, clean house on Wednesday. Booked them twice a year now.</blockquote><figcaption><b>Dana W.</b>, Riverview</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<div class="wrap two">
+  <div>
+    <h2 class="h2">Where we work</h2>
+    <p class="lede">All of Tampa Bay, six days a week.</p>
+    <ul class="towns"><li>Tampa</li><li>Brandon</li><li>Riverview</li><li>Wesley Chapel</li><li>Lutz</li><li>Carrollwood</li><li>Valrico</li><li>Apollo Beach</li></ul>
+  </div>
+  <div>
+    <details open><summary>Do I need to be home?</summary><p>No. We just need an outdoor water spigot. We'll text before-and-after photos when we're done.</p></details>
+    <details><summary>Is it safe for my plants and pets?</summary><p>Yes. We pre-wet and rinse plants, and the solution is safe once dry. Keep pets inside while we work.</p></details>
+    <details><summary>How long does it last?</summary><p>Most Tampa homes stay clean 12 to 18 months after a soft wash. Driveways depend on shade and sprinklers.</p></details>
+    <details><summary>Will it help with my HOA notice?</summary><p>Yes. We can usually come within the week and send you photos to forward to your HOA.</p></details>
+  </div>
+</div>
+
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Book your wash</h2>
+      <p class="lede">Send your address and what you picked above. We'll confirm a day within a few hours.</p>
+      <a class="phone" href="tel:+15550105520"><small>Or call or text</small>(555) 010-5520</a>
+    </div>
+    <form id="qf" novalidate>
+      <h3>Request a wash date</h3>
+      <div class="f2"><label>Name<input name="name" autocomplete="name"></label><label>Phone<input name="phone" type="tel" autocomplete="tel"></label></div>
+      <label>Address<input name="addr" autocomplete="street-address"></label>
+      <label>What you'd like cleaned<textarea name="msg" id="msg"></textarea></label>
+      <button class="btn btn-deep" type="submit">Request my date</button>
+      <p class="sent" id="sent" role="status">Request sent. This is an example site, so nothing was actually sent.</p>
+    </form>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div><div class="brand">Tidewater Exterior Cleaning</div><a href="tel:+15550105520">(555) 010-5520</a> &nbsp;/&nbsp; book@tidewaterclean.example<br>Licensed and insured in Florida</div>
+    <div style="text-align:right">© <span id="yr"></span> Tidewater Exterior Cleaning<br>Website by <a href="https://kloverin.com" target="_blank" rel="noopener">Kloverin</a></div>
+  </div>
+</footer>
+<div class="callbar"><a class="btn btn-deep" href="tel:+15550105520">Call or text</a><a class="btn btn-aqua" href="#price">Instant price</a></div>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+/* grime scrub */
+(function(){
+  var hero=document.getElementById('hero'),c=document.getElementById('grime'),x=c.getContext('2d'),hint=document.getElementById('hint'),dpr=Math.min(devicePixelRatio||1,2),scrubbed=0;
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function paint(){
+    var w=hero.clientWidth,h=hero.clientHeight;c.width=w*dpr;c.height=h*dpr;x.setTransform(dpr,0,0,dpr,0,0);
+    x.globalCompositeOperation='source-over';
+    var g=x.createLinearGradient(0,0,0,h);g.addColorStop(0,'rgba(78,84,58,.55)');g.addColorStop(1,'rgba(52,56,38,.72)');
+    x.fillStyle=g;x.fillRect(0,0,w,h);
+    for(var i=0;i<1400;i++){x.fillStyle='rgba('+(40+Math.random()*40|0)+','+(48+Math.random()*30|0)+',30,'+(Math.random()*.18)+')';var r=Math.random()*26+4;x.beginPath();x.arc(Math.random()*w,Math.random()*h,r,0,7);x.fill()}
+  }
+  function wash(px,py,px2,py2){
+    x.globalCompositeOperation='destination-out';x.lineCap='round';x.lineWidth=Math.max(90,hero.clientWidth*.09);
+    x.strokeStyle='rgba(0,0,0,1)';x.beginPath();x.moveTo(px,py);x.lineTo(px2,py2);x.stroke();
+    if(++scrubbed>6)hint.style.opacity=0;
+  }
+  paint();
+  var last=null;
+  function pos(e){var r=c.getBoundingClientRect();return[e.clientX-r.left,e.clientY-r.top]}
+  c.addEventListener('pointermove',function(e){var p=pos(e);if(last)wash(last[0],last[1],p[0],p[1]);last=p});
+  c.addEventListener('pointerleave',function(){last=null});
+  addEventListener('resize',function(){if(scrubbed<6)paint()});
+  if(reduce){x.clearRect(0,0,c.width,c.height);hint.hidden=true;return}
+  /* one demo stroke */
+  var w=hero.clientWidth,h=hero.clientHeight,t0=null,from=[w*.12,h*.42],to=[w*.88,h*.3];
+  function step(t){if(!t0)t0=t;var k=Math.min((t-t0)/1300,1),e=1-Math.pow(1-k,3);
+    var a=[from[0]+(to[0]-from[0])*e,from[1]+(to[1]-from[1])*e];
+    if(step.p)wash(step.p[0],step.p[1],a[0],a[1]);step.p=a;scrubbed=0;if(k<1)requestAnimationFrame(step)}
+  setTimeout(function(){requestAnimationFrame(step)},700);
+})();
+/* price */
+(function(){
+  var P={house:[249,299,379],drive:[129,159,199],roof:[379,449,549],cage:[149,179,219]},f=document.getElementById('calc');
+  function upd(){
+    var s=+f.querySelector('[name=size]:checked').value,sum=0,n=0,names=[];
+    Object.keys(P).forEach(function(k){f.querySelector('[data-p='+k+']').textContent='$'+P[k][s]});
+    f.querySelectorAll('[name=s]:checked').forEach(function(b){sum+=P[b.value][s];n++;names.push(b.parentNode.textContent.trim())});
+    var off=n>=3?.15:n===2?.1:0,save=Math.round(sum*off),tot=sum-save;
+    document.getElementById('total').textContent='$'+tot;
+    document.getElementById('note').textContent=n?' for '+n+(n>1?' services':' service'):' pick a service';
+    var sv=document.getElementById('save');sv.hidden=!save;sv.textContent='Bundle saves $'+save;
+    document.getElementById('msg').value=names.join(', ')+(n?' ($'+tot+')':'');
+  }
+  f.addEventListener('change',upd);upd();
+})();
+document.getElementById('qf').addEventListener('submit',function(e){
+  e.preventDefault();
+  var n=e.target.elements['name'],p=e.target.elements['phone'];
+  if(!n.value.trim()||!p.value.trim()){(n.value.trim()?p:n).focus();return}
+  document.getElementById('sent').style.display='block';
+});
+</script>
+</body>
+</html>

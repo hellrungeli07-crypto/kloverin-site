@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cedar Lane Home Repair | Handyman in Baton Rouge, LA</title>
+<meta name="description" content="Handyman services in Baton Rouge. Bring your whole to-do list: repairs, carpentry, doors, drywall and more, in one visit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#1F2A22; --sage:#5E7257; --sage-l:#E6EBE1; --paper:#F8F8F4; --mustard:#D9A12B; --mustard-d:#B9851A;
+  --muted:#56614F; --line:rgba(31,42,34,.14); --pad:#FFFDF6;
+  --f:"Instrument Sans",system-ui,sans-serif; --hand:"Kalam",cursive;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--f);color:var(--forest);background:var(--paper);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--mustard);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-weight:700;letter-spacing:-.035em;line-height:1.02;margin:0}
+.sample{background:var(--forest);color:#a9b5a6;font-size:13px;text-align:center;padding:7px 16px}
+.nav{position:sticky;top:0;z-index:20;background:rgba(248,248,244,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:30px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;letter-spacing:-.02em;text-decoration:none}
+.brand svg{width:34px;height:34px}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0 0 0 auto;padding:0;font-size:15px;color:var(--muted)}
+.nav ul a{text-decoration:none}.nav ul a:hover{color:var(--forest)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:10px;font:600 16px var(--f);text-decoration:none;border:0;cursor:pointer;transition:background .2s}
+.btn svg{width:18px;height:18px}
+.btn-mustard{background:var(--mustard);color:var(--forest)}.btn-mustard:hover{background:var(--mustard-d)}
+.btn-forest{background:var(--forest);color:#fff}.btn-forest:hover{background:#0f1611}
+.btn-line{box-shadow:inset 0 0 0 1.5px var(--forest);background:transparent}.btn-line:hover{background:var(--forest);color:#fff}
+.nav .btn{padding:10px 16px;font-size:15px}
+
+.hero{padding:64px 0 90px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(48px,6.8vw,92px)}
+.hero h1 .hand{font-family:var(--hand);font-weight:700;color:var(--sage);letter-spacing:0;font-size:.62em;display:block;margin-bottom:8px;transform:rotate(-2deg);transform-origin:left}
+.hero p{font-size:20px;color:var(--muted);max-width:40ch;margin:24px 0 30px}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero .meta{margin-top:28px;font-size:15px;color:var(--muted)}
+.hero .meta b{color:var(--forest)}
+.stack{position:relative;height:540px}
+.stack img{position:absolute;object-fit:cover;border-radius:14px;box-shadow:0 22px 50px rgba(31,42,34,.18)}
+.stack .a{right:0;top:0;width:78%;height:72%}
+.stack .b{left:0;bottom:0;width:52%;height:52%;border:8px solid var(--paper)}
+
+/* list builder */
+.list{background:var(--sage-l);padding:100px 0}
+.list .wrap{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:start}
+.list h2{font-size:clamp(38px,4.6vw,62px);margin-bottom:18px}
+.list .lede{color:var(--muted);margin:0 0 26px;max-width:38ch}
+.rates{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.rates div{background:#fff;border-radius:12px;padding:16px}
+.rates b{display:block;font-size:24px;letter-spacing:-.02em}
+.rates span{font-size:14px;color:var(--muted)}
+.pad{background:var(--pad);border-radius:6px;padding:34px 34px 30px 64px;position:relative;box-shadow:0 2px 0 #e6e0cc,0 24px 50px rgba(31,42,34,.14);background-image:repeating-linear-gradient(transparent 0 41px,#dfe8f1 41px 42px);background-position:0 72px}
+.pad::before{content:"";position:absolute;left:44px;top:0;bottom:0;width:2px;background:#f0b7ad}
+.pad h3{font-family:var(--hand);font-size:30px;font-weight:700;letter-spacing:0;margin:0 0 6px;line-height:1.3}
+.pad label{display:flex;align-items:center;gap:14px;height:42px;font-family:var(--hand);font-size:21px;cursor:pointer}
+.pad input{appearance:none;flex:none;width:22px;height:22px;border:2px solid var(--forest);border-radius:4px;margin:0;cursor:pointer;display:grid;place-items:center;background:#fff}
+.pad input:checked{background:var(--forest)}
+.pad input:checked::after{content:"";width:6px;height:11px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.pad label span{flex:1}
+.pad label small{font-family:var(--f);font-size:13px;color:var(--muted)}
+.pad input:checked + span{text-decoration:line-through;text-decoration-color:var(--mustard);text-decoration-thickness:2px}
+.total{margin-top:22px;padding-top:20px;border-top:2px dashed #cfc7ad;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-family:var(--f)}
+.total b{display:block;font-size:26px;letter-spacing:-.02em}
+.total span{font-size:15px;color:var(--muted)}
+
+section{padding:100px 0}
+.h2{font-size:clamp(36px,4.4vw,58px);margin-bottom:16px}
+.lede{color:var(--muted);font-size:19px;max-width:48ch;margin:0}
+
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.svc article{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px}
+.svc article:nth-child(1){grid-column:span 2;background:var(--forest);color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:0;overflow:hidden;border:0}
+.svc article:nth-child(1) div{padding:30px}
+.svc article:nth-child(1) p{color:#c4cec1}
+.svc article:nth-child(1) img{width:100%;height:100%;object-fit:cover}
+.svc h3{font-size:24px;margin-bottom:8px}
+.svc p{margin:0;color:var(--muted);font-size:16px}
+.svc .tag{display:inline-block;margin-top:14px;font-size:14px;font-weight:600;color:var(--sage)}
+.svc article:nth-child(1) .tag{color:var(--mustard)}
+
+.work{background:var(--forest);color:#fff}
+.work .lede{color:#a9b5a6}
+.ba-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.ba-row figure{margin:0}
+.ba-row img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px}
+.ba-row figcaption{margin-top:12px;font-size:15px;color:#c4cec1}
+.ba-row figcaption b{display:block;color:#fff;font-size:17px}
+
+.rv{display:grid;grid-template-columns:7fr 5fr;gap:56px;align-items:start}
+.note{font-family:var(--hand);font-size:clamp(24px,2.6vw,32px);line-height:1.35;margin:0;background:var(--pad);padding:34px;border-radius:6px;transform:rotate(-1deg);box-shadow:0 18px 40px rgba(31,42,34,.12)}
+.note small{display:block;font-family:var(--f);font-size:15px;color:var(--muted);margin-top:16px}
+.small-q{border-top:1px solid var(--line);padding:22px 0}
+.small-q p{margin:0 0 8px}
+.small-q span{font-size:14px;color:var(--muted)}
+
+.two{display:grid;grid-template-columns:5fr 7fr;gap:72px}
+.towns{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:22px 0 0}
+.towns li{padding:7px 14px;border-radius:8px;background:var(--sage-l);font-size:15px}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-weight:600;font-size:18px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:26px;font-weight:400;color:var(--sage);transition:transform .2s}
+details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+details p{margin:0 0 20px;color:var(--muted)}
+
+.quote{background:var(--sage);color:#fff}
+.quote .wrap{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:start}
+.quote .lede{color:#e3eadf}
+.phone{display:block;margin-top:30px;font-size:clamp(32px,3.6vw,46px);font-weight:700;letter-spacing:-.03em;text-decoration:none}
+.phone small{display:block;font-size:15px;font-weight:500;letter-spacing:0;color:#e3eadf}
+form{background:#fff;color:var(--forest);border-radius:16px;padding:32px}
+form h3{font-size:26px;margin-bottom:18px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form label{display:block;font-size:14px;font-weight:600;margin-bottom:14px}
+form input,form textarea{display:block;width:100%;margin-top:6px;padding:12px 13px;font:inherit;font-size:16px;border:1.5px solid #d4dacf;border-radius:10px;color:var(--forest)}
+form input:focus,form textarea:focus{outline:none;border-color:var(--sage)}
+form textarea{min-height:110px;resize:vertical}
+form .btn{width:100%;justify-content:center}
+.sent{display:none;margin:14px 0 0;padding:12px 14px;border-radius:10px;background:var(--sage-l);font-size:15px}
+
+footer{background:var(--forest);color:#a9b5a6;padding:48px 0 40px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer .brand{color:#fff;margin-bottom:10px}
+footer a{text-decoration:none}footer a:hover{color:#fff}
+.callbar{display:none}
+@media (max-width:900px){
+  .nav ul{display:none}.nav .btn{margin-left:auto}
+  .hero .wrap,.list .wrap,.rv,.two,.quote .wrap{grid-template-columns:1fr;gap:40px}
+  .stack{height:380px}
+  .svc,.ba-row{grid-template-columns:1fr}
+  .svc article:nth-child(1){grid-column:auto;grid-template-columns:1fr}
+  .svc article:nth-child(1) img{height:220px}
+  .pad{padding:28px 20px 24px 52px}.pad::before{left:36px}
+  .rates{grid-template-columns:1fr 1fr 1fr}
+  .f2{grid-template-columns:1fr}
+  section,.list{padding:76px 0}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;gap:8px}
+  .callbar a{flex:1;justify-content:center;box-shadow:0 8px 24px rgba(31,42,34,.3)}
+  footer{padding-bottom:100px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="sample">Example site. The business, photos and reviews are samples.</div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Cedar Lane Home Repair home"><svg viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="9" fill="#5E7257"/><path d="M17 6l8 12h-5l5 8H9l5-8H9z" fill="#F8F8F4"/><rect x="15.5" y="26" width="3" height="4" fill="#D9A12B"/></svg>Cedar Lane Home Repair</a>
+    <ul><li><a href="#list">Build your list</a></li><li><a href="#services">Services</a></li><li><a href="#work">Our work</a></li><li><a href="#reviews">Reviews</a></li></ul>
+    <a class="btn btn-forest" href="tel:+15550102264">(555) 010-2264</a>
+  </div>
+</header>
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1><span class="hand">That list on your fridge?</span>We'll knock it out in one visit.</h1>
+      <p>Repairs, carpentry, doors, drywall and all the small jobs that never get done. One handyman, one visit, one clear price for Baton Rouge homes.</p>
+      <div class="actions"><a class="btn btn-mustard" href="#list">Build my to-do list</a><a class="btn btn-line" href="tel:+15550102264">Call (555) 010-2264</a></div>
+      <p class="meta"><b>5.0 stars</b> from 128 Google reviews. Insured, background-checked, and on time.</p>
+    </div>
+    <div class="stack" aria-hidden="true">
+      <img class="a" src="https://images.unsplash.com/photo-1645651964715-d200ce0939cc?w=1100&q=80&auto=format&fit=crop" alt="">
+      <img class="b" src="https://images.unsplash.com/photo-1505798577917-a65157d3320a?w=800&q=80&auto=format&fit=crop" alt="">
+    </div>
+  </div>
+</section>
+
+<section class="list" id="list">
+  <div class="wrap">
+    <div>
+      <h2>Check off what you need. We'll tell you how long.</h2>
+      <p class="lede">Most lists fit in a half-day or full-day visit, and you pay for the visit, not by the job.</p>
+      <div class="rates">
+        <div><b>$95</b><span>first hour</span></div>
+        <div><b>$340</b><span>half day, 4 hours</span></div>
+        <div><b>$640</b><span>full day, 8 hours</span></div>
+      </div>
+    </div>
+    <div class="pad" id="pad">
+      <h3>Honey-do list</h3>
+      <label><input type="checkbox" data-h="1"><span>Fix the door that sticks</span><small>1 hr</small></label>
+      <label><input type="checkbox" data-h="1.5"><span>Patch drywall holes</span><small>1.5 hr</small></label>
+      <label><input type="checkbox" data-h="1"><span>Hang TV and shelves</span><small>1 hr</small></label>
+      <label><input type="checkbox" data-h="0.5"><span>Swap a light fixture</span><small>30 min</small></label>
+      <label><input type="checkbox" data-h="2"><span>Replace rotted deck boards</span><small>2 hr</small></label>
+      <label><input type="checkbox" data-h="1"><span>Caulk tub and windows</span><small>1 hr</small></label>
+      <label><input type="checkbox" data-h="0.5"><span>Install a ceiling fan</span><small>30 min*</small></label>
+      <label><input type="checkbox" data-h="1"><span>Assemble furniture</span><small>1 hr</small></label>
+      <div class="total" aria-live="polite">
+        <div><b id="tH">Pick a few jobs</b><span id="tP">We'll size the visit for you.</span></div>
+        <a class="btn btn-forest" href="#quote" id="tBtn">Send my list</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <h2 class="h2">The jobs we do every week</h2>
+    <p class="lede">If it's in your house and it's broken, loose or half-finished, we can probably fix it.</p>
+    <div class="svc">
+      <article><div><h3>Carpentry and decks</h3><p>New decks, rotted boards, railings, trim, built-ins and the little gaps where the baseboard meets the floor.</p><span class="tag">Our most-booked work</span></div><img loading="lazy" src="https://images.unsplash.com/photo-1787491581050-46697aa48ab6?w=900&q=80&auto=format&fit=crop" alt="Finished wooden deck on a modern home"></article>
+      <article><h3>Doors and windows</h3><p>Sticking doors, new hardware, storm doors, weatherstripping and window repairs.</p><span class="tag">Usually under an hour each</span></article>
+      <article><h3>Drywall and paint</h3><p>Holes, cracks and water stains patched, textured to match and painted.</p><span class="tag">Matched to your texture</span></article>
+      <article><h3>Mounting and hanging</h3><p>TVs, mirrors, shelves, curtain rods and art, level and anchored into studs.</p><span class="tag">Wires hidden on request</span></article>
+      <article><h3>Fixtures and fans</h3><p>Light fixtures, fans, faucets and toilets swapped with the parts you already bought.</p><span class="tag">Bring your own parts</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <h2 class="h2">Recent visits</h2>
+    <p class="lede">A few jobs from the last month around Baton Rouge.</p>
+    <div class="ba-row">
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1766603636772-52b1273c655d?w=900&q=80&auto=format&fit=crop" alt="Covered back porch with new wood ceiling and furniture"><figcaption><b>Porch ceiling and trim</b>Prairieville, two days</figcaption></figure>
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1773430272653-375174373c4f?w=900&q=80&auto=format&fit=crop" alt="Crew framing a new deck beside a house"><figcaption><b>New deck framing</b>Denham Springs, three days</figcaption></figure>
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=900&q=80&auto=format&fit=crop" alt="Handyman tightening a screw with a screwdriver"><figcaption><b>Seven-item list</b>Mid City, one full day</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap rv">
+    <p class="note">“Gave him a list of 11 things that had been bugging us for two years. He finished all of them before 3 and swept up after himself.”<small><b>Renee T.</b>, Baton Rouge</small></p>
+    <div>
+      <div class="small-q"><p>Showed up when he said he would, which honestly is rare. Fair price for a full day of work.</p><span><b>Marcus L.</b>, Zachary</span></div>
+      <div class="small-q"><p>Fixed our sliding door and three cabinet hinges, then pointed out a soft spot on the deck we hadn't noticed.</p><span><b>Ann B.</b>, Central</span></div>
+      <div class="small-q"><p>Hung six pieces of art and a TV perfectly level. Already booked him again.</p><span><b>Jordan K.</b>, Gonzales</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap two">
+    <div>
+      <h2 class="h2">Where we work</h2>
+      <p class="lede">Baton Rouge and the towns around it, Monday through Saturday.</p>
+      <ul class="towns"><li>Baton Rouge</li><li>Prairieville</li><li>Denham Springs</li><li>Zachary</li><li>Central</li><li>Gonzales</li></ul>
+    </div>
+    <div>
+      <details open><summary>Do I need to buy the parts?</summary><p>Either way works. Buy them yourself, or we'll pick them up and add the receipt to your bill with no markup.</p></details>
+      <details><summary>What if my list runs over?</summary><p>We'll tell you before we hit the time you booked, and you decide whether to keep going or save the rest for next visit.</p></details>
+      <details><summary>Are you insured?</summary><p>Yes, with general liability insurance. We can send a certificate to your HOA or landlord.</p></details>
+      <details><summary>Is there anything you won't do?</summary><p>Big electrical, plumbing and roofing jobs go to licensed trades. We'll tell you straight and point you to someone good.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Send us your list</h2>
+      <p class="lede">Paste in your to-do list and we'll text back with a time estimate and the next open day.</p>
+      <a class="phone" href="tel:+15550102264"><small>Or call or text</small>(555) 010-2264</a>
+    </div>
+    <form id="qf" novalidate>
+      <h3>Book a visit</h3>
+      <div class="f2"><label>Name<input name="name" autocomplete="name"></label><label>Phone<input name="phone" type="tel" autocomplete="tel"></label></div>
+      <label>Your to-do list<textarea name="msg" id="msg" placeholder="Sticky back door, two drywall holes, mount the TV..."></textarea></label>
+      <button class="btn btn-mustard" type="submit">Send my list</button>
+      <p class="sent" id="sent" role="status">List sent. This is an example site, so nothing was actually sent.</p>
+    </form>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div><div class="brand">Cedar Lane Home Repair</div><a href="tel:+15550102264">(555) 010-2264</a> &nbsp;/&nbsp; hello@cedarlanerepair.example<br>Insured in Louisiana</div>
+    <div style="text-align:right">© <span id="yr"></span> Cedar Lane Home Repair<br>Website by <a href="https://kloverin.com" target="_blank" rel="noopener">Kloverin</a></div>
+  </div>
+</footer>
+<div class="callbar"><a class="btn btn-forest" href="tel:+15550102264">Call or text</a><a class="btn btn-mustard" href="#list">Build my list</a></div>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  var boxes=[].slice.call(document.querySelectorAll('#pad input')),H=document.getElementById('tH'),P=document.getElementById('tP');
+  function fmt(h){return h%1?h.toFixed(1)+' hours':h+(h===1?' hour':' hours')}
+  function upd(){
+    var h=0,items=[];
+    boxes.forEach(function(b){if(b.checked){h+=+b.dataset.h;items.push(b.nextElementSibling.textContent)}});
+    if(!h){H.textContent='Pick a few jobs';P.textContent='We’ll size the visit for you.';return}
+    H.textContent='About '+fmt(h);
+    P.textContent=h<=1?'One quick visit, about $95':h<=4?'Fits in a half-day visit, $340':h<=8?'Fits in a full-day visit, $640':'About '+Math.ceil(h/8)+' full days, we’ll quote it';
+    document.getElementById('msg').value=items.join(', ');
+  }
+  boxes.forEach(function(b){b.addEventListener('change',upd)});
+})();
+document.getElementById('qf').addEventListener('submit',function(e){
+  e.preventDefault();
+  var n=e.target.elements['name'],p=e.target.elements['phone'];
+  if(!n.value.trim()||!p.value.trim()){(n.value.trim()?p:n).focus();return}
+  document.getElementById('sent').style.display='block';
+});
+</script>
+</body>
+</html>

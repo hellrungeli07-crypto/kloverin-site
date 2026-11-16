@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Greenway Lawn Co. | Lawn care in McKinney, TX</title>
+<meta name="description" content="Weekly mowing, fertilization and weed control in McKinney, Allen and Frisco. Pick a plan and see your price.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#12261A; --grass:#2F6B3A; --grass-d:#245430; --lime:#C9E265; --leaf:#EEF4E3; --white:#FDFEFB;
+  --muted:#4F6153; --line:rgba(18,38,26,.13);
+  --serif:"Fraunces",Georgia,serif; --sans:"Figtree",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--white);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:var(--serif);font-variation-settings:"opsz" 144;font-weight:700;letter-spacing:-.02em;line-height:1;margin:0}
+.sample{background:var(--ink);color:#a8b8a8;font-size:13px;text-align:center;padding:7px 16px}
+.nav{position:sticky;top:0;z-index:20;background:var(--grass);color:#fff}
+.nav .wrap{display:flex;align-items:center;gap:30px;height:66px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:700;font-size:22px;text-decoration:none}
+.brand svg{width:30px;height:30px}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0 0 0 auto;padding:0;font-size:15px}
+.nav ul a{text-decoration:none;opacity:.85}.nav ul a:hover{opacity:1}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;font:600 16px var(--sans);text-decoration:none;border:0;cursor:pointer;transition:background .2s}
+.btn-lime{background:var(--lime);color:var(--ink)}.btn-lime:hover{background:#b7d24f}
+.btn-grass{background:var(--grass);color:#fff}.btn-grass:hover{background:var(--grass-d)}
+.btn-white{background:#fff;color:var(--ink)}.btn-white:hover{background:var(--leaf)}
+.nav .btn{padding:9px 18px;font-size:15px}
+
+.hero{position:relative;color:#fff;text-align:center;min-height:min(86vh,780px);display:flex;align-items:center;overflow:hidden;background:var(--grass)}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(18,38,26,.55) 0%,rgba(18,38,26,.25) 60%,rgba(18,38,26,.45) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero h1{font-size:clamp(54px,9vw,132px);font-weight:900;max-width:10ch;margin:0 auto}
+.hero p{font-size:20px;max-width:44ch;margin:24px auto 32px;color:#eef4e3}
+.hero .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.hero .stars{margin-top:30px;font-size:15px;color:#eef4e3}
+.hero .stars span{color:var(--lime);letter-spacing:2px;margin-right:8px}
+
+section{padding:100px 0}
+.h2{font-size:clamp(40px,5vw,68px);margin-bottom:16px}
+.lede{color:var(--muted);font-size:19px;max-width:46ch;margin:0}
+
+/* plan builder */
+.plan{background:var(--leaf)}
+.plan .wrap{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:center}
+.builder{background:#fff;border-radius:28px;padding:34px;box-shadow:0 24px 60px rgba(18,38,26,.1)}
+.builder h3{font-family:var(--sans);font-weight:600;font-size:15px;letter-spacing:0;margin:0 0 12px}
+.pills{display:flex;gap:8px;margin-bottom:28px;flex-wrap:wrap}
+.pills label{position:relative}
+.pills input{position:absolute;opacity:0}
+.pills span{display:block;padding:10px 18px;border-radius:999px;border:1.5px solid var(--line);cursor:pointer;font-size:15px;font-weight:500}
+.pills input:checked+span{background:var(--ink);color:#fff;border-color:var(--ink)}
+.pills input:focus-visible+span{outline:3px solid var(--lime);outline-offset:2px}
+.lot{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.lot b{font-family:var(--serif);font-size:26px}
+input[type=range]{width:100%;accent-color:var(--grass);margin:0 0 6px}
+.ticks{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:28px}
+.extras{display:grid;gap:8px;margin-bottom:26px}
+.extras label{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px;border-radius:14px;border:1.5px solid var(--line);cursor:pointer;font-size:15.5px}
+.extras label:has(input:checked){border-color:var(--grass);background:var(--leaf)}
+.extras input{accent-color:var(--grass);width:19px;height:19px;margin:0 10px 0 0;vertical-align:-3px}
+.extras b{font-weight:600;color:var(--muted);font-size:14.5px}
+.sum{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:22px}
+.sum b{display:block;font-family:var(--serif);font-size:52px;line-height:1;font-weight:900}
+.sum small{color:var(--muted)}
+
+/* seasons */
+.seasons{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;border-top:2px solid var(--ink)}
+.seasons li{list-style:none;padding:26px 26px 30px 0;border-right:1px solid var(--line)}
+.seasons li+li{padding-left:26px}
+.seasons li:last-child{border-right:0}
+.seasons span{display:block;font-size:14px;color:var(--grass);font-weight:600;margin-bottom:8px}
+.seasons h3{font-size:28px;margin-bottom:10px}
+.seasons p{margin:0;color:var(--muted);font-size:16px}
+.seasons{padding:0}
+
+/* gallery */
+.yards{background:var(--ink);color:#fff}
+.yards .lede{color:#a8b8a8}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:220px;gap:12px;margin-top:44px}
+.grid figure{margin:0;border-radius:18px;overflow:hidden;position:relative}
+.grid img{width:100%;height:100%;object-fit:cover}
+.grid figcaption{position:absolute;left:14px;bottom:12px;background:rgba(18,38,26,.75);padding:5px 12px;border-radius:999px;font-size:14px}
+.g1{grid-column:span 7;grid-row:span 2}.g2{grid-column:span 5}.g3{grid-column:span 5}.g4{grid-column:span 4}.g5{grid-column:span 8}
+
+.rv{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.rv figure{margin:0;background:var(--leaf);border-radius:20px;padding:30px}
+.rv blockquote{margin:0 0 16px;font-family:var(--serif);font-size:21px;line-height:1.35;font-weight:500}
+.rv figcaption{color:var(--muted);font-size:15px}
+.rv figcaption b{color:var(--ink)}
+
+.two{display:grid;grid-template-columns:5fr 7fr;gap:72px}
+.towns{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:22px 0 0}
+.towns li{padding:7px 14px;border-radius:999px;background:var(--leaf);font-size:15px}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:2px solid var(--ink)}
+summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-weight:600;font-size:18px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:26px;color:var(--grass);transition:transform .2s}
+details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+details p{margin:0 0 20px;color:var(--muted)}
+
+.quote{background:var(--grass);color:#fff}
+.quote .wrap{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:start}
+.quote .lede{color:#d6e6c8}
+.phone{display:block;margin-top:28px;font-family:var(--serif);font-size:clamp(34px,3.8vw,50px);font-weight:900;text-decoration:none}
+.phone small{display:block;font-family:var(--sans);font-size:15px;font-weight:500;color:#d6e6c8}
+form{background:#fff;color:var(--ink);border-radius:24px;padding:32px}
+form h3{font-size:30px;margin-bottom:18px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form label{display:block;font-size:14px;font-weight:600;margin-bottom:14px}
+form input,form textarea{display:block;width:100%;margin-top:6px;padding:12px 14px;font:inherit;font-size:16px;border:1.5px solid #d3ddcf;border-radius:12px;color:var(--ink)}
+form input:focus,form textarea:focus{outline:none;border-color:var(--grass)}
+form textarea{min-height:80px;resize:vertical}
+form .btn{width:100%;justify-content:center}
+.sent{display:none;margin:14px 0 0;padding:12px 14px;border-radius:12px;background:var(--leaf);font-size:15px}
+footer{background:var(--ink);color:#a8b8a8;padding:48px 0 40px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer .brand{color:#fff;margin-bottom:10px}
+footer a{text-decoration:none}footer a:hover{color:#fff}
+.callbar{display:none}
+@media (max-width:900px){
+  .nav ul{display:none}.nav .btn{margin-left:auto}
+  .plan .wrap,.two,.quote .wrap{grid-template-columns:1fr;gap:40px}
+  .seasons{grid-template-columns:1fr 1fr}
+  .seasons li{border-right:0!important;padding:22px 0!important;border-bottom:1px solid var(--line)}
+  .grid{grid-template-columns:1fr 1fr;grid-auto-rows:180px}
+  .g1{grid-column:span 2;grid-row:span 1}.g2,.g3,.g4{grid-column:span 1}.g5{grid-column:span 2}
+  .rv,.f2{grid-template-columns:1fr}
+  .builder{padding:24px}
+  section{padding:76px 0}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;gap:8px}
+  .callbar a{flex:1;justify-content:center;box-shadow:0 8px 24px rgba(18,38,26,.3)}
+  footer{padding-bottom:100px}
+}
+</style>
+</head>
+<body>
+<div class="sample">Example site. The business, photos and reviews are samples.</div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Greenway Lawn Co. home"><svg viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="15" fill="#C9E265"/><path d="M8 22c1-6 3-9 7-12M15 22c0-5 1-8 4-11M21 22c-1-4-1-7 1-10" stroke="#12261A" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg>Greenway Lawn Co.</a>
+    <ul><li><a href="#plan">Plans and prices</a></li><li><a href="#year">Your lawn year</a></li><li><a href="#yards">Yards we cut</a></li><li><a href="#reviews">Reviews</a></li></ul>
+    <a class="btn btn-lime" href="tel:+15550106614">(555) 010-6614</a>
+  </div>
+</header>
+<main id="top">
+<section class="hero" style="padding:0">
+  <img src="https://images.unsplash.com/photo-1501520158826-76df880863a3?w=2400&q=80&auto=format&fit=crop" alt="Freshly mowed lawn with crisp stripes">
+  <div class="wrap">
+    <h1>The best lawn on the block.</h1>
+    <p>Weekly mowing, feeding and weed control for McKinney and Allen homes. Same crew, same day, every week.</p>
+    <div class="actions"><a class="btn btn-lime" href="#plan">See my weekly price</a><a class="btn btn-white" href="tel:+15550106614">Call (555) 010-6614</a></div>
+    <p class="stars"><span aria-hidden="true">★★★★★</span>4.9 from 167 Google reviews</p>
+  </div>
+</section>
+
+<section class="plan" id="plan">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Build your plan.</h2>
+      <p class="lede">Slide to your yard size and add what you want. No contracts. Skip a week or cancel with a text.</p>
+    </div>
+    <form class="builder" id="pb" onsubmit="return false">
+      <h3>How often?</h3>
+      <div class="pills">
+        <label><input type="radio" name="freq" value="weekly" checked><span>Weekly</span></label>
+        <label><input type="radio" name="freq" value="biweekly"><span>Every 2 weeks</span></label>
+      </div>
+      <div class="lot"><h3 style="margin:0">Yard size</h3><b id="lotOut">Typical</b></div>
+      <input type="range" id="lot" min="0" max="3" step="1" value="1" aria-label="Yard size">
+      <div class="ticks"><span>Small</span><span>Typical</span><span>Large</span><span>Half acre</span></div>
+      <h3>Add to every visit</h3>
+      <div class="extras">
+        <label><span><input type="checkbox" name="x" value="feed" checked>Fertilize and weed control</span><b>+$18</b></label>
+        <label><span><input type="checkbox" name="x" value="hedge">Hedge and shrub trimming</span><b>+$15</b></label>
+        <label><span><input type="checkbox" name="x" value="leaf">Leaf cleanup in fall</span><b>+$10</b></label>
+      </div>
+      <div class="sum" aria-live="polite">
+        <div><b id="per">$0</b><small id="perNote">per visit</small></div>
+        <a class="btn btn-grass" href="#quote">Start this plan</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section id="year">
+  <div class="wrap">
+    <h2 class="h2">Your lawn's year</h2>
+    <p class="lede">What we do through the seasons, so your yard stays green from the first warm week in March.</p>
+    <ol class="seasons">
+      <li><span>March to May</span><h3>Wake up</h3><p>Pre-emergent before crabgrass sprouts, first feed and the season's first cut.</p></li>
+      <li><span>June to August</span><h3>Beat the heat</h3><p>Taller cuts to shade the roots, grub control and sprinkler checks.</p></li>
+      <li><span>September to November</span><h3>Recover</h3><p>Aeration, overseeding where it's thin, and leaf cleanup.</p></li>
+      <li><span>December to February</span><h3>Rest</h3><p>Winter weed control and a mow when it needs it. You only pay when we come.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="yards" id="yards">
+  <div class="wrap">
+    <h2 class="h2">Yards we cut every week</h2>
+    <p class="lede">Clean stripes, sharp edges and a blown-off driveway, every visit.</p>
+    <div class="grid">
+      <figure class="g1"><img loading="lazy" src="https://images.unsplash.com/photo-1734303023491-db8037a21f09?w=1300&q=80&auto=format&fit=crop" alt="Crew mowing a large striped lawn"><figcaption>Stonebridge Ranch</figcaption></figure>
+      <figure class="g2"><img loading="lazy" src="https://images.unsplash.com/photo-1681853108586-f29b4ef5c0fb?w=900&q=80&auto=format&fit=crop" alt="Wide green backyard lawn"><figcaption>Craig Ranch</figcaption></figure>
+      <figure class="g3"><img loading="lazy" src="https://images.unsplash.com/photo-1780419748459-075ce111534a?w=900&q=80&auto=format&fit=crop" alt="Crew member mowing beside a house"><figcaption>Twin Creeks</figcaption></figure>
+      <figure class="g4"><img loading="lazy" src="https://images.unsplash.com/photo-1690068023694-053da714f95f?w=800&q=80&auto=format&fit=crop" alt="Lawn mower on thick green grass"><figcaption>Adriatica</figcaption></figure>
+      <figure class="g5"><img loading="lazy" src="https://images.unsplash.com/photo-1792628953846-c6101b841068?w=1300&q=80&auto=format&fit=crop" alt="Fenced backyard with a neat green lawn"><figcaption>Allen</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <h2 class="h2">4.9 from 167 neighbors</h2>
+    <div class="rv">
+      <figure><blockquote>Same guys every Thursday, and they actually edge along the sidewalk. Our HOA put us in the yard-of-the-month post.</blockquote><figcaption><b>Kevin A.</b>, McKinney</figcaption></figure>
+      <figure><blockquote>They brought our St. Augustine back after a brutal August. The weed control alone was worth it.</blockquote><figcaption><b>Rachel F.</b>, Allen</figcaption></figure>
+      <figure><blockquote>I like that I can text to skip a week when we're traveling. Billing is automatic and simple.</blockquote><figcaption><b>Omar N.</b>, Fairview</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap two">
+    <div>
+      <h2 class="h2">Where we mow</h2>
+      <p class="lede">Routes through these neighborhoods every week.</p>
+      <ul class="towns"><li>McKinney</li><li>Allen</li><li>Fairview</li><li>Frisco</li><li>Prosper</li><li>Melissa</li><li>Princeton</li></ul>
+    </div>
+    <div>
+      <details open><summary>Is there a contract?</summary><p>No. Plans run week to week. Text us to skip a visit or cancel any time.</p></details>
+      <details><summary>Do I need to be home?</summary><p>No. Just leave the gate unlocked, or give us the code. We'll text when we're done.</p></details>
+      <details><summary>What if it rains on my day?</summary><p>We come the next dry day and let you know by text.</p></details>
+      <details><summary>Are your products safe for kids and pets?</summary><p>Yes, once dry. We leave a small flag after treatments so you know when it's been applied.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Start your plan</h2>
+      <p class="lede">Send your address and we'll confirm your price and first mow day, usually within the week.</p>
+      <a class="phone" href="tel:+15550106614"><small>Or call or text</small>(555) 010-6614</a>
+    </div>
+    <form id="qf" novalidate>
+      <h3>Get started</h3>
+      <div class="f2"><label>Name<input name="name" autocomplete="name"></label><label>Phone<input name="phone" type="tel" autocomplete="tel"></label></div>
+      <label>Address<input name="addr" autocomplete="street-address"></label>
+      <label>Your plan<textarea name="msg" id="msg"></textarea></label>
+      <button class="btn btn-grass" type="submit">Start my plan</button>
+      <p class="sent" id="sent" role="status">Request sent. This is an example site, so nothing was actually sent.</p>
+    </form>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div><div class="brand">Greenway Lawn Co.</div><a href="tel:+15550106614">(555) 010-6614</a> &nbsp;/&nbsp; hello@greenwaylawn.example<br>Licensed and insured in Texas</div>
+    <div style="text-align:right">© <span id="yr"></span> Greenway Lawn Co.<br>Website by <a href="https://kloverin.com" target="_blank" rel="noopener">Kloverin</a></div>
+  </div>
+</footer>
+<div class="callbar"><a class="btn btn-grass" href="tel:+15550106614">Call or text</a><a class="btn btn-lime" href="#plan">See my price</a></div>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  var f=document.getElementById('pb'),base=[35,45,60,85],names=['Small','Typical','Large','Half acre'],add={feed:18,hedge:15,leaf:10};
+  function upd(){
+    var l=+document.getElementById('lot').value,wk=f.querySelector('[name=freq]:checked').value==='weekly',p=base[l]+(wk?0:10),xs=[];
+    f.querySelectorAll('[name=x]:checked').forEach(function(b){p+=add[b.value];xs.push(b.parentNode.textContent.trim())});
+    document.getElementById('lotOut').textContent=names[l];
+    document.getElementById('per').textContent='$'+p;
+    var mo=Math.round(p*(wk?4.33:2.17));
+    document.getElementById('perNote').textContent='per visit, about $'+mo+' a month';
+    document.getElementById('msg').value=(wk?'Weekly':'Every 2 weeks')+', '+names[l].toLowerCase()+' yard'+(xs.length?', plus '+xs.join(', ').toLowerCase():'')+' ($'+p+' per visit)';
+  }
+  f.addEventListener('input',upd);upd();
+})();
+document.getElementById('qf').addEventListener('submit',function(e){
+  e.preventDefault();
+  var n=e.target.elements['name'],p=e.target.elements['phone'];
+  if(!n.value.trim()||!p.value.trim()){(n.value.trim()?p:n).focus();return}
+  document.getElementById('sent').style.display='block';
+});
+</script>
+</body>
+</html>
