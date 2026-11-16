@@ -42,19 +42,20 @@ h1,h2,h3{font-family:var(--head);font-weight:700;line-height:.95;letter-spacing:
 /* hero with switch */
 .hero{position:relative;background:#000;color:#fff;overflow:hidden}
 .stage{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);aspect-ratio:800/651}
+.stage.lights{z-index:1;pointer-events:none}
 .stage img{position:absolute;inset:0;width:100%;height:100%;filter:brightness(.2) saturate(.55);transition:filter 1.4s ease .25s}
 .hero.on .stage img{filter:brightness(.92) saturate(1)}
 .bulb{position:absolute;width:calc(7% * var(--s,1));aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;opacity:0;transition:opacity .18s;pointer-events:none;
-  background:radial-gradient(circle,rgba(255,252,242,1) 0 33%,rgba(255,232,186,.9) 40%,rgba(255,206,130,.38) 54%,rgba(255,186,100,.12) 64%,rgba(255,180,90,0) 72%);mix-blend-mode:screen}
+  background:radial-gradient(circle,rgba(255,252,242,1) 0 33%,rgba(255,232,186,.9) 40%,rgba(255,206,130,.38) 54%,rgba(255,186,100,.12) 64%,rgba(255,180,90,0) 72%)}
 .hero.on .bulb{opacity:1;animation:flick .5s steps(1) var(--d) both}
 @keyframes flick{0%{opacity:0}30%{opacity:.9}45%{opacity:.25}60%{opacity:1}100%{opacity:1}}
-.spill{position:absolute;pointer-events:none;opacity:0;transition:opacity 1.2s ease .3s;mix-blend-mode:screen;border-radius:50%}
-.spill.halo{left:25%;top:9%;width:50%;height:30%;background:radial-gradient(closest-side,rgba(255,214,150,.45),rgba(255,200,120,.12) 60%,transparent)}
+.spill{position:absolute;pointer-events:none;opacity:0;transition:opacity 1.2s ease .3s;border-radius:50%}
+.spill.halo{left:25%;top:9%;width:50%;height:30%;background:radial-gradient(closest-side,rgba(255,214,150,.22),rgba(255,200,120,.06) 60%,transparent)}
 .spill.table{left:22%;top:48%;width:58%;height:22%;background:radial-gradient(closest-side,rgba(255,206,140,.32),rgba(255,190,110,.08) 65%,transparent)}
 .spill.strip{left:21.5%;top:40.6%;width:51%;height:3.2%;border-radius:2px;background:linear-gradient(180deg,rgba(255,232,190,.95),rgba(255,214,150,.35) 40%,transparent);filter:blur(1px);transition-delay:.9s}
 .hero.on .spill{opacity:1}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.1) 100%);pointer-events:none}
-.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:7fr 3fr;align-items:center;gap:40px;min-height:min(84vh,760px);padding-top:64px;padding-bottom:64px}
+.hero .wrap{position:relative;z-index:3;display:grid;grid-template-columns:7fr 3fr;align-items:center;gap:40px;min-height:min(84vh,760px);padding-top:64px;padding-bottom:64px}
 .hero h1{font-size:clamp(56px,8.6vw,124px);text-transform:none;max-width:9ch}
 .hero p{font-size:20px;color:#d6dbe0;max-width:42ch;margin:24px 0 32px}
 .hero .actions{display:flex;gap:12px;flex-wrap:wrap}
@@ -188,8 +189,9 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
 <section class="hero" id="hero" style="padding:0">
   <div class="stage" id="stage">
     <img src="https://images.unsplash.com/photo-1656402887556-e727ffe1f6d7?w=2400&q=80&auto=format" alt="Dark kitchen and dining room with a modern globe chandelier over the table">
-    <span class="spill halo"></span><span class="spill strip"></span><span class="spill table"></span>
+    <span class="spill strip"></span><span class="spill table"></span>
   </div>
+  <div class="stage lights" id="lights"><span class="spill halo"></span></div>
   <div class="wrap">
     <div>
       <h1>Wired right. Lit right.</h1>
@@ -330,10 +332,10 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
 <script>
 document.getElementById('yr').textContent=new Date().getFullYear();
 (function(){
-  var hero=document.getElementById('hero'),sw=document.getElementById('sw'),t=document.getElementById('swText'),st=document.getElementById('stage');
+  var hero=document.getElementById('hero'),sw=document.getElementById('sw'),t=document.getElementById('swText'),st=document.getElementById('stage'),li=document.getElementById('lights');
   [[282.7,144],[340.8,144],[466.2,144],[254.9,169.3],[311.5,165.7],[355.5,165.7],[452,165.7],[517.7,169.3],[295.8,193.5],[375.2,193.5],[435.8,193.5],[475.8,193.5],[330.7,174.8,.8],[382.8,174.3,.8],[418.7,174.3,.8],[492,174.3,.8]].forEach(function(b,i){
-    var s=document.createElement('span');s.className='bulb';s.style.left=(b[0]/8)+'%';s.style.top=(b[1]/6.51)+'%';s.style.setProperty('--d',(i*37%11)*45+'ms');if(b[2])s.style.setProperty('--s',b[2]);st.appendChild(s)});
-  function fit(){var w=hero.clientWidth,h=hero.clientHeight,r=800/651;if(w/h>r){st.style.width=w+'px';st.style.height=w/r+'px'}else{st.style.height=h+'px';st.style.width=h*r+'px'}}
+    var s=document.createElement('span');s.className='bulb';s.style.left=(b[0]/8)+'%';s.style.top=(b[1]/6.51)+'%';s.style.setProperty('--d',(i*37%11)*45+'ms');if(b[2])s.style.setProperty('--s',b[2]);li.appendChild(s)});
+  function fit(){var w=hero.clientWidth,h=hero.clientHeight,r=800/651,W,H;if(w/h>r){W=w;H=w/r}else{H=h;W=h*r}[st,li].forEach(function(e){e.style.width=W+'px';e.style.height=H+'px'})}
   fit();addEventListener('resize',fit);
   function set(on){hero.classList.toggle('on',on);sw.setAttribute('aria-pressed',on);sw.setAttribute('aria-label',on?'Turn the lights off':'Turn the lights on');t.textContent=on?'That’s more like it':'Flip the switch'}
   sw.addEventListener('click',function(){set(!hero.classList.contains('on'))});
