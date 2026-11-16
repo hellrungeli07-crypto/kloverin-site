@@ -136,8 +136,8 @@
       <div id="planLocked" class="plan-locked" hidden></div>
       <select id="plan" data-req>
         <option value="">Choose what you paid for</option>
-        <option>Website ($500)</option>
-        <option>Website ($500) + Care plan ($49/mo)</option>
+        <option>Website</option>
+        <option>Website + Care plan ($49/mo)</option>
         <option>Care plan ($49/mo)</option>
       </select>
       <label for="preview">Your preview link <span class="opt">(optional)</span><span class="hint">It's in the email or text we sent you, like kloverin.com/sites/preview/your-business</span></label>
@@ -202,7 +202,7 @@
   var MAILER_URL = "https://script.google.com/macros/s/AKfycbyIpijDNGLss8lk0WcwYQkXudbL7jiMqvlshgHIs_4VTTsmyF7WYE2bUrKYy-w2dE-I4A/exec";
   var BACKUP_URL = "https://frontdesk-ai-chatbot.onrender.com/onboarding";
   var $ = function(id){ return document.getElementById(id); };
-  var PLANS = { "site": "Website ($500)", "site-care": "Website ($500) + Care plan ($49/mo)", "care": "Care plan ($49/mo)" };
+  var PLANS = { "site": "Website", "site-care": "Website + Care plan ($49/mo)", "care": "Care plan ($49/mo)" };
   var qp = new URLSearchParams(location.search);
   var planParam = PLANS[(qp.get("plan") || "").toLowerCase()];
   if (planParam) { $("plan").value = planParam; $("plan").hidden = true; var pl = $("planLocked"); pl.hidden = false; pl.textContent = "✓ " + planParam; }

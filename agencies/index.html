@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Kloverin for agencies | White-label websites for home-services clients</title>
+<meta name="description" content="We build custom websites for your home-services clients under your brand. Flat price per site, delivered in 5 to 7 days, and we never contact your clients.">
+<meta name="theme-color" content="#07090a">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#07090a; --bg-2:#0c1011;
+    --card:rgba(255,255,255,0.035); --card-hi:rgba(255,255,255,0.06);
+    --line:rgba(255,255,255,0.09); --line-hi:rgba(255,255,255,0.16);
+    --text:#f4f1ea; --muted:#9aa5a1; --dim:#6b7672;
+    --green:#10b981; --green-hi:#34d399; --green-glow:rgba(16,185,129,0.35);
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding-inline:24px}
+  @media (max-width:560px){.wrap{padding-inline:16px}}
+  h1,h2,h3{font-family:'Inter Tight',sans-serif;margin:0;letter-spacing:-0.02em;line-height:1.05;text-wrap:balance}
+  .bg-fx{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+  .bg-fx::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;opacity:.3;mask-image:radial-gradient(ellipse at 50% 0%,#000 0%,transparent 70%)}
+  .bg-fx::after{content:"";position:absolute;width:900px;height:600px;left:50%;top:-260px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(16,185,129,0.22),transparent);filter:blur(20px)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Inter Tight',sans-serif;font-weight:600;font-size:15px;padding:13px 22px;border-radius:999px;border:1px solid transparent;cursor:pointer;transition:background .2s,transform .2s,border-color .2s}
+  .btn:focus-visible{outline:2px solid var(--green-hi);outline-offset:3px}
+  .btn-primary{background:var(--green);color:#03140a;box-shadow:0 0 0 1px rgba(52,211,153,.4),0 8px 30px -8px var(--green-glow)}
+  .btn-primary:hover{background:var(--green-hi);transform:translateY(-1px)}
+  .btn-ghost{background:var(--card);color:var(--text);border-color:var(--line-hi)}
+  .btn-ghost:hover{background:var(--card-hi);border-color:rgba(255,255,255,.28)}
+  header.top{position:sticky;top:0;z-index:30;padding-top:env(safe-area-inset-top);background:rgba(7,9,10,0.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .top-inner{display:flex;align-items:center;gap:28px;height:68px}
+  .logo{display:flex;align-items:center;gap:14px;font-family:'Inter Tight',sans-serif;font-weight:600;font-size:17px;letter-spacing:0.3em;line-height:1;margin-right:auto}
+  .logo .txt{color:#F2F7F4;margin-right:-0.3em}
+  .logo-mark{width:31px;height:36px;flex:none}
+  .logo small{font-size:12px;letter-spacing:0;color:var(--green-hi);font-weight:600;border:1px solid rgba(52,211,153,.35);padding:3px 8px;border-radius:999px}
+  nav.main{display:flex;gap:24px;font-size:14px;color:var(--muted)}
+  nav.main a:hover{color:var(--text)}
+  .top .btn{padding:10px 18px;font-size:14px}
+  @media (max-width:700px){nav.main{display:none}}
+  section{padding-block:84px}
+  .hero{padding-block:90px 50px;text-align:center}
+  .hero h1{font-size:clamp(40px,6.4vw,74px);font-weight:800;max-width:17ch;margin:0 auto}
+  .lede{font-size:19px;color:var(--muted);max-width:58ch;margin:22px auto 0}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:34px}
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-top:60px}
+  .facts div{background:var(--bg-2);padding:22px}
+  .facts b{display:block;font-family:'Inter Tight',sans-serif;font-size:26px;letter-spacing:-.02em}
+  .facts span{font-size:14px;color:var(--muted)}
+  .h2{font-size:clamp(32px,4.2vw,50px);font-weight:800;margin-bottom:14px}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:36px}
+  .head p{color:var(--muted);max-width:46ch;margin:0}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .card{display:block;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card);transition:border-color .2s,transform .2s}
+  .card:hover{border-color:rgba(52,211,153,.45);transform:translateY(-2px)}
+  .thumb{position:relative;aspect-ratio:16/10;overflow:hidden;background:#111;pointer-events:none}
+  .thumb iframe{position:absolute;left:0;top:0;width:1440px;height:900px;border:0;transform-origin:0 0}
+  .card .meta{padding:16px 18px 18px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+  .card b{font-family:'Inter Tight',sans-serif;font-size:17px}
+  .card span{font-size:13.5px;color:var(--muted)}
+  .card em{font-style:normal;font-size:13px;color:var(--green-hi);white-space:nowrap}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:0;margin:0;counter-reset:s}
+  .steps li{list-style:none;counter-increment:s;border:1px solid var(--line);border-radius:18px;padding:24px;background:var(--card)}
+  .steps li::before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:rgba(16,185,129,.14);color:var(--green-hi);font-family:'Inter Tight',sans-serif;font-weight:700;margin-bottom:16px}
+  .steps h3{font-size:19px;margin-bottom:8px}
+  .steps p{margin:0;color:var(--muted);font-size:15px}
+  .price{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .tier{border:1px solid var(--line);border-radius:20px;padding:28px;background:var(--card);display:flex;flex-direction:column}
+  .tier.pop{border-color:rgba(52,211,153,.5);background:linear-gradient(180deg,rgba(16,185,129,.09),var(--card) 60%)}
+  .tier h3{font-size:20px}
+  .tier .amt{font-family:'Inter Tight',sans-serif;font-size:46px;font-weight:800;letter-spacing:-.03em;margin:14px 0 2px}
+  .tier .amt small{font-size:15px;font-weight:600;color:var(--muted);letter-spacing:0}
+  .tier p{color:var(--muted);margin:0 0 18px;font-size:15px}
+  .tier ul{list-style:none;padding:0;margin:0 0 24px;flex:1}
+  .tier li{display:flex;gap:10px;padding:8px 0;border-top:1px solid var(--line);font-size:15px}
+  .tier li svg{flex:none;width:16px;height:16px;color:var(--green-hi);margin-top:4px}
+  .addons{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:15px}
+  .addons span{border:1px solid var(--line);border-radius:999px;padding:8px 14px}
+  .addons b{color:var(--text);font-weight:600}
+  .promise{display:grid;grid-template-columns:5fr 6fr;gap:48px;align-items:center;border:1px solid rgba(52,211,153,.3);border-radius:24px;padding:44px;background:rgba(16,185,129,.05)}
+  .promise ul{list-style:none;padding:0;margin:0}
+  .promise li{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+  .promise li:last-child{border:0}
+  .promise svg{flex:none;width:18px;height:18px;color:var(--green-hi);margin-top:4px}
+  details{border:1px solid var(--line);border-radius:14px;margin-bottom:10px;background:var(--card)}
+  summary{list-style:none;cursor:pointer;padding:18px 50px 18px 20px;font-weight:600;position:relative}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);color:var(--green-hi);font-size:22px;transition:transform .2s}
+  details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+  details p{margin:0;padding:0 20px 18px;color:var(--muted)}
+  .cta{text-align:center;border:1px solid var(--line);border-radius:24px;padding:60px 24px;background:var(--bg-2)}
+  .cta p{color:var(--muted);max-width:50ch;margin:16px auto 0}
+  footer{border-top:1px solid var(--line);padding-block:36px 48px}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--dim)}
+  .foot a{color:var(--muted)}.foot a:hover{color:var(--text)}
+  .foot .links{display:flex;gap:22px;flex-wrap:wrap}
+  @media (max-width:900px){
+    .grid,.price{grid-template-columns:1fr 1fr}
+    .steps{grid-template-columns:1fr 1fr}
+    .facts{grid-template-columns:1fr 1fr}
+    .promise{grid-template-columns:1fr;padding:30px}
+  }
+  @media (max-width:600px){.grid,.price,.steps{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="mark" viewBox="-52 -52 104 118"><g fill="none" stroke="#A7E8C3" stroke-width="6" stroke-linejoin="round"><path d="M5 5H24A19 19 0 0 1 43 24A19 19 0 0 1 24 43A19 19 0 0 1 5 24Z" transform="rotate(0)"/><path d="M5 5H24A19 19 0 0 1 43 24A19 19 0 0 1 24 43A19 19 0 0 1 5 24Z" transform="rotate(90)"/><path d="M5 5H24A19 19 0 0 1 43 24A19 19 0 0 1 24 43A19 19 0 0 1 5 24Z" transform="rotate(180)"/><path d="M5 5H24A19 19 0 0 1 43 24A19 19 0 0 1 24 43A19 19 0 0 1 5 24Z" transform="rotate(270)"/></g><path d="M0 0C0 30 8 50 20 60" fill="none" stroke="#A7E8C3" stroke-width="6" stroke-linecap="round"/></symbol>
+  <symbol id="check" viewBox="0 0 16 16"><path d="M3 8.5 6.5 12 13 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs></svg>
+<div class="bg-fx" aria-hidden="true"></div>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="logo" href="/agencies/" aria-label="Kloverin for agencies"><svg class="logo-mark"><use href="#mark"/></svg><span class="txt">KLOVERIN</span><small>for agencies</small></a>
+    <nav class="main" aria-label="Main"><a href="#samples">Samples</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">Questions</a></nav>
+    <a class="btn btn-primary js-mail" href="#">Send a project</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <h1>Custom websites for your home-services clients. Your name on them.</h1>
+    <p class="lede">You sell the website. We design and build it, fully custom for that trade, in 5 to 7 days. Flat price per site, your branding everywhere, and your client never hears from us.</p>
+    <div class="ctas"><a class="btn btn-primary js-mail" href="#">Send your first project</a><a class="btn btn-ghost" href="#samples">See sample sites</a></div>
+    <div class="facts">
+      <div><b>5 to 7 days</b><span>from brief to finished site</span></div>
+      <div><b>From $397</b><span>flat, per site</span></div>
+      <div><b>2 rounds</b><span>of revisions included</span></div>
+      <div><b>Zero</b><span>contact with your clients</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="samples" style="padding-top:20px">
+  <div class="wrap">
+    <div class="head"><h2 class="h2">Sample sites</h2><p>Nine trades, nine different designs. Each one is built around how that trade's customers actually decide. Click any to open the full site.</p></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="head"><h2 class="h2">How it works</h2><p>You stay the agency. We're the build team behind you.</p></div>
+    <ol class="steps">
+      <li><h3>Send the brief</h3><p>Business name, trade, area, logo, photos if they have them, and anything the client cares about.</p></li>
+      <li><h3>We build it</h3><p>Custom design, real copy, mobile layout and a quote form, ready in 5 to 7 days.</p></li>
+      <li><h3>You review</h3><p>Two rounds of changes included. You show the client whenever you're ready.</p></li>
+      <li><h3>Hand off or host</h3><p>Get the files for your own hosting, or we host it under your name for $25 a month.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="head"><h2 class="h2">Flat pricing</h2><p>No hourly billing and no surprises. Most agencies resell these for $1,000 to $2,500.</p></div>
+    <div class="price">
+      <div class="tier"><h3>Standard</h3><div class="amt">$397<small> per site</small></div><p>The right fit for most local trades.</p>
+        <ul><li><svg><use href="#check"/></svg>Up to 5 pages, custom design</li><li><svg><use href="#check"/></svg>Mobile layout and sticky call button</li><li><svg><use href="#check"/></svg>Quote form wired to your client's inbox</li><li><svg><use href="#check"/></svg>Basic on-page SEO</li></ul>
+        <a class="btn btn-ghost js-mail" data-s="Standard site" href="#">Order a Standard site</a></div>
+      <div class="tier pop"><h3>Premium</h3><div class="amt">$597<small> per site</small></div><p>For clients who want to look like the biggest company in town.</p>
+        <ul><li><svg><use href="#check"/></svg>Up to 8 pages</li><li><svg><use href="#check"/></svg>A custom interactive feature, like the samples</li><li><svg><use href="#check"/></svg>Custom animations matched to the brand</li><li><svg><use href="#check"/></svg>Everything in Standard</li></ul>
+        <a class="btn btn-primary js-mail" data-s="Premium site" href="#">Order a Premium site</a></div>
+      <div class="tier"><h3>5-site pack</h3><div class="amt">$1,750<small> prepaid</small></div><p>$350 per Standard site, used within 90 days.</p>
+        <ul><li><svg><use href="#check"/></svg>Five Standard builds</li><li><svg><use href="#check"/></svg>Upgrade any one to Premium for $150</li><li><svg><use href="#check"/></svg>Priority in our build queue</li></ul>
+        <a class="btn btn-ghost js-mail" data-s="5-site pack" href="#">Get the 5-site pack</a></div>
+    </div>
+    <div class="addons"><span><b>Rush</b> in 72 hours, +$100</span><span><b>Hosting and care</b> under your name, $25 per month</span><span><b>Extra page</b>, $49</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="promise">
+      <div><h2 class="h2">Your clients stay yours.</h2><p style="color:var(--muted);margin:0">We also work with home-services businesses directly, so here's our promise in writing.</p></div>
+      <ul>
+        <li><svg><use href="#check"/></svg><span>We never contact, pitch or sell to any business you send us, now or later.</span></li>
+        <li><svg><use href="#check"/></svg><span>No Kloverin name, link or credit anywhere on your sites, in the code included.</span></li>
+        <li><svg><use href="#check"/></svg><span>Your client list stays private, and we'll sign your NDA.</span></li>
+        <li><svg><use href="#check"/></svg><span>You own every site you pay for, files and all.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap" style="max-width:820px">
+    <h2 class="h2" style="margin-bottom:30px">Questions</h2>
+    <details open><summary>What do you need from us to start?</summary><p>The business name, trade, service area, phone, logo, and any photos or reviews they have. If they have nothing, we'll work from their Google Business profile.</p></details>
+    <details><summary>What platform are the sites built on?</summary><p>Fast, hand-built pages that load in under two seconds and can be hosted anywhere. Need it on WordPress? Ask, and we'll quote it.</p></details>
+    <details><summary>How do payment and turnaround work?</summary><p>Pay when you send the brief and we start right away. Most sites are ready for your review in 5 to 7 days, or 72 hours with rush.</p></details>
+    <details><summary>Can we see a site before we pay?</summary><p>For your first project, yes. Send a brief and we'll build the homepage first. If you don't like it, you owe nothing.</p></details>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="cta">
+      <h2 class="h2">Send your first project.</h2>
+      <p>Email a client brief and we'll build the homepage first so you can judge the quality before paying a cent.</p>
+      <div class="ctas"><a class="btn btn-primary js-mail" href="#">Email contact@kloverin.com</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="logo" href="/agencies/" style="font-size:15px;color:var(--text)"><svg class="logo-mark" style="width:27px;height:31px"><use href="#mark"/></svg><span class="txt">KLOVERIN</span></a>
+    <div class="links"><a href="mailto:contact@kloverin.com">contact@kloverin.com</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><span>© <span id="yr">2026</span> Kloverin</span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var EMAIL='contact@kloverin.com';
+  [].forEach.call(document.querySelectorAll('.js-mail'),function(a){
+    var s=a.getAttribute('data-s');
+    a.href='mailto:'+EMAIL+'?subject='+encodeURIComponent('Agency project'+(s?': '+s:''))+'&body='+encodeURIComponent('Agency name:\nClient business name:\nTrade:\nService area:\nPhone:\nLogo and photos (links or attach):\nAnything else:\n');
+  });
+  var S=[['summit-plumbing','Summit Plumbing','Plumbing','Problem helper'],['ridgeline-roofing','Ridgeline Roofing','Roofing','Before/after slider'],['brightline-electric','Brightline Electric','Electrical','Lights switch on'],['bluebonnet-heating-air','Bluebonnet Heating & Air','HVAC','Repair-or-replace calculator'],['cedar-lane-handyman','Cedar Lane Home Repair','Handyman','To-do list pricer'],['magnolia-painting','Magnolia Painting','Painting','Live color picker'],['tidewater-exterior-cleaning','Tidewater Exterior Cleaning','Pressure washing','Instant price'],['greenway-lawn-co','Greenway Lawn Co.','Lawn care','Plan builder'],['shieldline-pest-control','Shieldline Pest Control','Pest control','Pest calendar']];
+  var g=document.getElementById('grid');
+  S.forEach(function(s){
+    var a=document.createElement('a');a.className='card';a.href='/agencies/samples/'+s[0]+'/';a.target='_blank';a.rel='noopener';
+    a.innerHTML='<div class="thumb"><iframe loading="lazy" tabindex="-1" title="'+s[1]+' sample" src="/agencies/samples/'+s[0]+'/"></iframe></div><div class="meta"><div><b></b><br><span></span></div><em></em></div>';
+    a.querySelector('b').textContent=s[1];a.querySelector('span').textContent=s[2];a.querySelector('em').textContent=s[3];
+    g.appendChild(a);
+  });
+  function fit(){[].forEach.call(document.querySelectorAll('.thumb'),function(t){t.firstChild.style.transform='scale('+(t.clientWidth/1440)+')'})}
+  fit();addEventListener('resize',fit);
+})();
+</script>
+</body>
+</html>

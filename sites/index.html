@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kloverin Sites | Websites for contractors and home services</title>
-<meta name="description" content="A fast, professional website for your trade business. We build it first and show you the finished site. $500 one time, live on your own domain.">
+<meta name="description" content="A fast, professional website for your trade business. We build it first and show you the finished site, then price it on a free consultation.">
 <meta name="theme-color" content="#07090a">
 <meta property="og:title" content="Kloverin Sites | Websites for contractors">
-<meta property="og:description" content="We build your website first. You only pay if you love it. $500 one time.">
+<meta property="og:description" content="We build your website first. You only pay if you love it.">
 <meta property="og:image" content="https://kloverin.com/og-image.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -172,7 +172,7 @@
   <section class="hero wrap">
     <span class="kick">Kloverin Sites</span>
     <h1>A website that gets your phone ringing.</h1>
-    <p class="lede">We build a fast, professional site for your trade business and show you the finished version before you pay a cent. Love it, and it goes live on your own domain for $500, one time.</p>
+    <p class="lede">We build a fast, professional site for your trade business and show you the finished version before you pay a cent. Love it, and we’ll price it on a free consultation and put it live on your own domain.</p>
     <div class="ctas">
       <a class="btn btn-primary" href="#pricing">Get my site</a>
       <a class="btn btn-ghost" href="#examples">See example sites</a>
@@ -223,13 +223,13 @@
   <section class="wrap" id="pricing">
     <div class="head">
       <h2>Simple pricing</h2>
-      <p>One payment for the site. Hosting and updates are optional.</p>
+      <p>Every site is quoted on a free consultation. Hosting and updates are optional.</p>
     </div>
     <div class="plans">
       <div class="plan hl">
         <h3>Your website</h3>
-        <div class="price">$500 <small>one time</small></div>
-        <p class="note">You own it. No contracts.</p>
+        <div class="price">Free <small>consultation</small></div>
+        <p class="note">We’ll talk through your business and quote your site. You own it. No contracts.</p>
         <ul>
           <li><svg><use href="#check"/></svg>Custom design in your colors with your logo, photos and reviews</li>
           <li><svg><use href="#check"/></svg>Click-to-call, quote request form and service area map</li>
@@ -237,7 +237,7 @@
           <li><svg><use href="#check"/></svg>Rounds of changes until you're happy</li>
           <li><svg><use href="#check"/></svg>Kloverin AI chat on a free trial</li>
         </ul>
-        <a class="btn btn-primary js-buy" data-link="site" href="#">Get my site</a>
+        <a class="btn btn-primary js-consult" data-s="Website consultation" href="#">Book my consultation</a>
       </div>
       <div class="plan">
         <h3>Care plan <span style="font-weight:500;color:var(--muted);font-size:15px">(optional)</span></h3>
@@ -250,7 +250,7 @@
           <li><svg><use href="#check"/></svg>Uptime checks and updates</li>
           <li><svg><use href="#check"/></svg>Cancel anytime</li>
         </ul>
-        <a class="btn btn-ghost js-buy" data-link="bundle" href="#">Get my site + care plan</a>
+        <a class="btn btn-ghost js-consult" data-s="Care plan" href="#">Add it to my site</a>
       </div>
     </div>
     <p class="bundle"><b>Using Kloverin's AI front desk?</b> On the Growth or Pro plan, the website fee is waived. <a href="/#pricing">See AI front desk plans</a></p>
@@ -295,8 +295,8 @@
 <script>
 (function(){
   var LINKS = {
-    site: "https://buy.stripe.com/dRm28t3RP06Hgz85CKc7u0l",    // $500 website
-    bundle: "https://buy.stripe.com/fZu4gBewt5r196G0iqc7u0n",  // $500 website + $49/mo care plan
+    site: "https://buy.stripe.com/dRm28t3RP06Hgz85CKc7u0l",    // old $500 website link (no longer used on this page)
+    bundle: "https://buy.stripe.com/fZu4gBewt5r196G0iqc7u0n",  // old $500 + care bundle (no longer used on this page)
     care: "https://buy.stripe.com/9B6bJ30FD6v51Ee4yGc7u0m"     // $49/mo care plan on its own
   };
   var EMAIL = "contact@kloverin.com";
@@ -318,6 +318,10 @@
     var url = LINKS[a.getAttribute("data-link")];
     if (url) a.href = url;
     else { a.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent("Kloverin Sites"); }
+  });
+  [].forEach.call(document.querySelectorAll(".js-consult"), function(a){
+    a.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent(a.getAttribute("data-s") || "Website consultation") +
+      "&body=" + encodeURIComponent("Business name:\nCity:\nPhone:\nBest time for a quick call:\n");
   });
   [].forEach.call(document.querySelectorAll(".js-email"), function(a){
     a.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent("Free website preview") +

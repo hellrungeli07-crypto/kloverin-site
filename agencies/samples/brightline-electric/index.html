@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Brightline Electric | Electricians in Frisco, TX</title>
+<meta name="description" content="Licensed electricians in Frisco. Panel upgrades, lighting, EV chargers and repairs, done to code with permits handled.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --graphite:#1C2128; --steel:#2C333C; --grey:#EEF1F4; --white:#fff;
+  --volt:#F5C400; --volt-d:#D9AD00; --muted:#59636E; --line:rgba(28,33,40,.14);
+  --head:"Barlow Condensed",system-ui,sans-serif; --body:"Barlow",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);color:var(--graphite);background:var(--grey);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--volt);outline-offset:3px}
+.wrap{max-width:1220px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:var(--head);font-weight:700;line-height:.95;letter-spacing:-.005em;margin:0}
+.sample{background:#000;color:#9aa3ad;font-size:13px;text-align:center;padding:7px 16px}
+
+.nav{position:sticky;top:0;z-index:20;background:var(--graphite);color:#fff}
+.nav .wrap{display:flex;align-items:center;gap:30px;height:66px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--head);font-weight:800;font-size:24px;text-decoration:none;letter-spacing:.01em}
+.brand i{display:grid;place-items:center;width:34px;height:34px;background:var(--volt);color:var(--graphite);border-radius:6px}
+.brand svg{width:20px;height:20px}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0 0 0 auto;padding:0;font-size:15px;color:#b9c1ca}
+.nav ul a{text-decoration:none}.nav ul a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:6px;font:600 16px var(--body);text-decoration:none;border:0;cursor:pointer;transition:background .2s}
+.btn svg{width:18px;height:18px}
+.btn-volt{background:var(--volt);color:var(--graphite)}.btn-volt:hover{background:var(--volt-d)}
+.btn-dark{background:var(--graphite);color:#fff}.btn-dark:hover{background:#000}
+.btn-out{color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.5);background:transparent}.btn-out:hover{background:rgba(255,255,255,.1)}
+.nav .btn{padding:9px 16px;font-size:15px}
+
+/* hero with switch */
+.hero{position:relative;background:#000;color:#fff;overflow:hidden}
+.stage{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);aspect-ratio:800/651}
+.stage.lights{z-index:1;pointer-events:none}
+.stage img{position:absolute;inset:0;width:100%;height:100%;filter:brightness(.3) saturate(.6);transition:filter .9s ease .35s}
+.hero.on .stage img{filter:brightness(1) saturate(1)}
+.bulb{position:absolute;width:calc(3.5% * var(--s,1));aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none}
+.bulb i{position:absolute;inset:0;border-radius:50%}
+.bulb .cap{background:radial-gradient(circle at 38% 34%,#5d5c58 0,#3a3936 46%,#232221 100%);box-shadow:inset 0 -2px 3px rgba(0,0,0,.4);transition:opacity .12s}
+.bulb .core{opacity:0;background:radial-gradient(circle at 42% 38%,#fffefa 0,#fff7e6 45%,#fbe7c2 78%,#f0d6a6 100%);box-shadow:0 0 6px 1px rgba(255,236,200,.55)}
+.bulb .bloom{inset:-55%;opacity:0;background:radial-gradient(circle,rgba(255,236,200,.32) 0,rgba(255,220,170,.12) 38%,rgba(255,210,150,0) 66%)}
+.hero.on .bulb .cap{opacity:0;transition-delay:var(--d)}
+.hero.on .bulb .core,.hero.on .bulb .bloom{animation:flick .45s steps(1) var(--d) both}
+@keyframes flick{0%{opacity:0}35%{opacity:1}50%{opacity:.3}65%{opacity:1}100%{opacity:1}}
+.spill{position:absolute;pointer-events:none;opacity:0;transition:opacity 1.2s ease .3s;border-radius:50%}
+.spill.halo{left:25%;top:9%;width:50%;height:30%;background:radial-gradient(closest-side,rgba(255,214,150,.22),rgba(255,200,120,.06) 60%,transparent)}
+.spill.table{left:22%;top:48%;width:58%;height:22%;background:radial-gradient(closest-side,rgba(255,206,140,.32),rgba(255,190,110,.08) 65%,transparent)}
+.spill.strip{left:21.5%;top:40.6%;width:51%;height:3.2%;border-radius:2px;background:linear-gradient(180deg,rgba(255,232,190,.95),rgba(255,214,150,.35) 40%,transparent);filter:blur(1px);transition-delay:.9s}
+.hero.on .spill{opacity:1}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.8) 0%,rgba(0,0,0,.5) 34%,rgba(0,0,0,.08) 62%,rgba(0,0,0,0) 100%);pointer-events:none}
+.hero .wrap{position:relative;z-index:3;display:grid;grid-template-columns:7fr 3fr;align-items:center;gap:40px;min-height:min(84vh,760px);padding-top:64px;padding-bottom:64px}
+.hero h1{font-size:clamp(56px,8.6vw,124px);text-transform:none;max-width:9ch}
+.hero p{font-size:20px;color:#d6dbe0;max-width:42ch;margin:24px 0 32px}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+.plate{justify-self:end;display:flex;flex-direction:column;align-items:center;gap:16px}
+.switch{appearance:none;border:0;cursor:pointer;width:118px;height:178px;border-radius:16px;background:linear-gradient(160deg,#f7f7f5,#d9dbdc);box-shadow:0 20px 60px rgba(0,0,0,.5),inset 0 1px 0 #fff;position:relative;padding:0}
+.switch::before,.switch::after{content:"";position:absolute;left:50%;width:7px;height:7px;margin-left:-3.5px;border-radius:50%;background:#b9bcbe;box-shadow:inset 0 1px 1px rgba(0,0,0,.25)}
+.switch::before{top:14px}.switch::after{bottom:14px}
+.toggle{position:absolute;left:50%;top:50%;width:44px;height:78px;margin:-39px 0 0 -22px;border-radius:9px;background:linear-gradient(#fff,#e4e6e7);box-shadow:0 2px 0 #c4c7c9,0 6px 12px rgba(0,0,0,.18);transition:transform .25s}
+.toggle::after{content:"";position:absolute;left:8px;right:8px;height:26px;border-radius:6px;background:linear-gradient(#e9ebec,#fff);bottom:8px;transition:all .25s}
+.hero.on .toggle::after{bottom:auto;top:8px;background:linear-gradient(#fff,#e9ebec)}
+.plate small{font-size:14px;color:#b9c1ca;text-align:center}
+
+/* strip */
+.strip{background:var(--volt)}
+.strip .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-top:18px;padding-bottom:18px;font-family:var(--head);font-size:22px;font-weight:700}
+.strip span{display:flex;align-items:center;gap:10px}
+.strip svg{width:20px;height:20px}
+
+section{padding:104px 0}
+.h2{font-size:clamp(44px,5.4vw,76px);margin-bottom:18px}
+.lede{color:var(--muted);font-size:19px;margin:0;max-width:48ch}
+
+/* panel */
+.panel .wrap{display:grid;grid-template-columns:6fr 5fr;gap:64px;align-items:center}
+.panel figure{margin:0;position:relative}
+.panel img{width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:10px}
+.panel figcaption{position:absolute;right:-18px;bottom:28px;background:var(--graphite);color:#fff;padding:18px 20px;border-radius:8px;max-width:250px;font-size:15px}
+.panel figcaption b{display:block;font-family:var(--head);font-size:30px;color:var(--volt);line-height:1}
+.check{margin:30px 0;padding:0;list-style:none;background:#fff;border-radius:10px;border:1px solid var(--line)}
+.check li{display:flex;gap:14px;padding:16px 20px;border-bottom:1px solid var(--line)}
+.check li:last-child{border:0}
+.check svg{flex:none;width:22px;height:22px;color:#C4372B;margin-top:2px}
+
+/* specs */
+.specs{background:var(--white)}
+.spec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;margin-bottom:48px}
+.spec{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
+.item{display:grid;grid-template-columns:60px 1fr;gap:18px;padding:26px 0;border-top:1px solid var(--line)}
+.item i{display:grid;place-items:center;width:52px;height:52px;border-radius:8px;background:var(--grey)}
+.item svg{width:26px;height:26px}
+.item h3{font-size:30px;margin-bottom:6px}
+.item p{margin:0;color:var(--muted)}
+.item em{display:inline-block;margin-top:10px;font-style:normal;font-weight:600;font-size:14px;background:var(--volt);padding:2px 9px;border-radius:4px}
+
+/* ev band */
+.ev{background:var(--graphite);color:#fff;padding:0}
+.ev .wrap{display:grid;grid-template-columns:1fr 1fr;gap:0;max-width:none;padding:0}
+.ev img{width:100%;height:100%;min-height:440px;object-fit:cover}
+.ev .txt{padding:90px 8vw 90px 72px}
+.ev .lede{color:#b9c1ca;margin-bottom:28px}
+.ev ul{list-style:none;padding:0;margin:0 0 30px}
+.ev li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:16px}
+.ev li b{font-family:var(--head);font-size:22px;color:var(--volt)}
+
+/* reviews */
+.rv{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.rv figure{margin:0;background:#fff;border-radius:10px;padding:28px;border-top:5px solid var(--volt)}
+.rv blockquote{margin:0 0 18px;font-size:18px}
+.rv figcaption{color:var(--muted);font-size:15px}
+.rv figcaption b{color:var(--graphite)}
+
+/* faq */
+.two{display:grid;grid-template-columns:5fr 7fr;gap:72px}
+.towns{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:24px 0 0}
+.towns li{padding:7px 14px;border-radius:5px;background:#fff;border:1px solid var(--line);font-size:15px}
+details{background:#fff;border-radius:8px;margin-bottom:10px;border:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:20px 54px 20px 22px;font-weight:600;font-size:18px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:22px;top:50%;width:12px;height:12px;margin-top:-8px;border-right:2.5px solid var(--graphite);border-bottom:2.5px solid var(--graphite);transform:rotate(45deg);transition:transform .2s}
+details[open] summary::after{transform:rotate(-135deg);margin-top:-2px}
+details p{margin:0;padding:0 22px 20px;color:var(--muted)}
+
+/* quote */
+.quote{background:var(--graphite);color:#fff}
+.quote .wrap{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:start}
+.quote .lede{color:#b9c1ca}
+.phone{display:block;margin-top:30px;font-family:var(--head);font-size:clamp(40px,4.6vw,60px);font-weight:800;color:var(--volt);text-decoration:none;line-height:1}
+.phone small{display:block;font-family:var(--body);font-size:15px;font-weight:500;color:#b9c1ca;margin-bottom:6px}
+form{background:#fff;color:var(--graphite);border-radius:10px;padding:32px}
+form h3{font-size:34px;margin-bottom:18px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-size:14px;font-weight:600;margin-bottom:14px}
+input,select,textarea{display:block;width:100%;margin-top:6px;padding:12px 13px;font:inherit;font-size:16px;border:1.5px solid #d3d8de;border-radius:6px;background:#fff;color:var(--graphite)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--graphite)}
+textarea{min-height:90px;resize:vertical}
+form .btn{width:100%;justify-content:center}
+.sent{display:none;margin:14px 0 0;padding:12px 14px;border-radius:6px;background:#FFF6CC;font-size:15px}
+
+footer{background:#000;color:#9aa3ad;padding:48px 0 40px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer .brand{color:#fff;margin-bottom:10px}
+footer a{text-decoration:none}footer a:hover{color:#fff}
+.callbar{display:none}
+
+@media (max-width:900px){
+  .nav ul{display:none}.nav .btn{margin-left:auto}
+  .hero .wrap{grid-template-columns:1fr;min-height:auto;padding-top:56px}
+  .plate{justify-self:start;flex-direction:row;gap:18px}
+  .switch{width:84px;height:126px}
+  .toggle{width:34px;height:58px;margin:-29px 0 0 -17px}.toggle::after{height:20px}
+  .panel .wrap,.two,.quote .wrap{grid-template-columns:1fr;gap:40px}
+  .panel figcaption{right:12px}
+  .spec,.rv{grid-template-columns:1fr}
+  .ev .wrap{grid-template-columns:1fr}.ev img{min-height:260px}.ev .txt{padding:60px 28px}
+  .f2{grid-template-columns:1fr}
+  section{padding:76px 0}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;gap:8px}
+  .callbar a{flex:1;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+  footer{padding-bottom:100px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
+@media (max-width:480px){.nav .btn{display:none}} /* nav-phone-hide: the bottom call bar covers this on phones */
+</style>
+</head>
+<body>
+<div class="sample">Sample site. The business name, photos and reviews are placeholders.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Brightline Electric home"><i><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></i>Brightline Electric</a>
+    <ul>
+      <li><a href="#panels">Panel upgrades</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#ev">EV chargers</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+    </ul>
+    <a class="btn btn-volt" href="tel:+15550107730"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>(555) 010-7730</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" id="hero" style="padding:0">
+  <div class="stage" id="stage">
+    <img src="https://images.unsplash.com/photo-1656402887556-e727ffe1f6d7?w=2400&q=80&auto=format" alt="Dark kitchen and dining room with a modern globe chandelier over the table">
+    <span class="spill strip"></span><span class="spill table"></span>
+  </div>
+  <div class="stage lights" id="lights"></div>
+  <div class="wrap">
+    <div>
+      <h1>Wired right. Lit right.</h1>
+      <p>Licensed electricians for Frisco homes. Panels, lighting and EV chargers, done to code with the permit handled for you.</p>
+      <div class="actions">
+        <a class="btn btn-volt" href="#quote">Get a free estimate</a>
+        <a class="btn btn-out" href="tel:+15550107730">Call (555) 010-7730</a>
+      </div>
+    </div>
+    <div class="plate">
+      <button class="switch" id="sw" aria-pressed="false" aria-label="Turn the lights on"><span class="toggle"></span></button>
+      <small id="swText">Flip the switch</small>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Master electricians</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Permits pulled for you</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>5.0 from 74 reviews</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>2-year labor warranty</span>
+  </div>
+</div>
+
+<section class="panel" id="panels">
+  <div class="wrap">
+    <figure>
+      <img loading="lazy" src="https://images.unsplash.com/photo-1576446470246-499c738d1c8e?w=1300&q=80&auto=format&fit=crop" alt="Neatly wired residential breaker panel">
+      <figcaption><b>1 day</b>for most 200-amp panel upgrades, inspection included</figcaption>
+    </figure>
+    <div>
+      <h2 class="h2">Is your panel keeping up?</h2>
+      <p class="lede">Homes built before 2000 often run today's kitchens, AC and chargers on panels made for half the load. Call us if any of these sound familiar.</p>
+      <ul class="check">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01M10.3 3.9L1.8 18a2 2 0 001.7 3h17a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>Breakers trip when the AC and dryer run together</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01M10.3 3.9L1.8 18a2 2 0 001.7 3h17a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>The panel is warm to the touch or buzzes</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01M10.3 3.9L1.8 18a2 2 0 001.7 3h17a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>The label says Federal Pacific or Zinsco</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M12 17h.01M10.3 3.9L1.8 18a2 2 0 001.7 3h17a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>You're adding an EV charger, hot tub or new room</li>
+      </ul>
+      <a class="btn btn-dark" href="#quote">Book a panel check</a>
+    </div>
+  </div>
+</section>
+
+<section class="specs" id="services">
+  <div class="wrap">
+    <div class="spec-head">
+      <h2 class="h2" style="margin:0">What we wire</h2>
+      <p class="lede">Every job gets a written price first, and we leave your home the way we found it.</p>
+    </div>
+    <div class="spec">
+      <div class="item"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h6"/></svg></i><div><h3>Panel upgrades</h3><p>100 to 200-amp upgrades, panel swaps and whole-home surge protection.</p><em>from $2,400</em></div></div>
+      <div class="item"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-4 10.5c.7.6 1 1.4 1 2.3V16h6v-.2c0-.9.3-1.7 1-2.3A6 6 0 0012 3z"/></svg></i><div><h3>Lighting</h3><p>Recessed cans, pendants, under-cabinet strips and landscape lighting.</p><em>from $185 per fixture</em></div></div>
+      <div class="item"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M10 9v2M14 9v2M10 15h4"/></svg></i><div><h3>Outlets and switches</h3><p>New circuits, GFCI protection, USB outlets and smart dimmers.</p><em>from $145</em></div></div>
+      <div class="item"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></i><div><h3>Troubleshooting</h3><p>Dead outlets, flickering lights and breakers that won't stay on.</p><em>$119 diagnosis</em></div></div>
+      <div class="item"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></i><div><h3>Generators</h3><p>Standby generators and transfer switches sized to what you need to keep running.</p><em>quoted per home</em></div></div>
+      <div class="item"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></i><div><h3>Ceiling fans</h3><p>Fans installed or swapped, braced boxes and remote or wall controls.</p><em>from $165</em></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="ev" id="ev">
+  <div class="wrap">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1660330589693-99889d60181e?w=1400&q=80&auto=format&fit=crop" alt="Electrician working inside an electrical cabinet">
+    <div class="txt">
+      <h2 class="h2">Charge at home overnight.</h2>
+      <p class="lede">A Level 2 charger adds around 30 miles of range an hour. We check your panel, run the circuit and handle the permit.</p>
+      <ul>
+        <li><span>Charger install, panel nearby</span><b>$950</b></li>
+        <li><span>Long runs or detached garage</span><b>$1,400+</b></li>
+        <li><span>Tesla, ChargePoint, Emporia</span><b>All brands</b></li>
+      </ul>
+      <a class="btn btn-volt" href="#quote">Price my charger</a>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <h2 class="h2">5.0 from 74 reviews</h2>
+    <p class="lede">A few from homeowners around Frisco.</p>
+    <div class="rv">
+      <figure><blockquote>Swapped our old Federal Pacific panel in one day and had the city inspection done before dinner. Clean, quiet and on time.</blockquote><figcaption><b>Derek W.</b>, Frisco</figcaption></figure>
+      <figure><blockquote>Installed eight recessed lights in our living room without a single hole they didn't patch. Looks like it came with the house.</blockquote><figcaption><b>Priya S.</b>, Little Elm</figcaption></figure>
+      <figure><blockquote>Our EV charger quote was clear, the install took three hours, and they walked me through the app before leaving.</blockquote><figcaption><b>Tom H.</b>, The Colony</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap two">
+    <div>
+      <h2 class="h2">Where we work</h2>
+      <p class="lede">Based in Frisco and on jobs across Collin and Denton County every day.</p>
+      <ul class="towns"><li>Frisco</li><li>Prosper</li><li>Little Elm</li><li>The Colony</li><li>Plano</li><li>McKinney</li><li>Allen</li><li>Celina</li></ul>
+    </div>
+    <div>
+      <details open><summary>Do you pull permits?</summary><p>Yes, for every job that needs one. We schedule the city inspection and meet the inspector so you don't have to.</p></details>
+      <details><summary>Are your electricians licensed?</summary><p>Every job is run by a Texas-licensed master electrician, and our crews are licensed journeymen.</p></details>
+      <details><summary>How fast can you come out?</summary><p>Usually the same or next business day. Sparking, burning smells or no power go to the front of the line.</p></details>
+      <details><summary>What warranty do you offer?</summary><p>Two years on our labor, plus the manufacturer's warranty on every part we install.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Get a free estimate</h2>
+      <p class="lede">Send a few details and a photo if you have one. We'll call back today with a price range and a time.</p>
+      <a class="phone" href="tel:+15550107730"><small>Or call us now</small>(555) 010-7730</a>
+    </div>
+    <form id="qf" novalidate>
+      <h3>Request an estimate</h3>
+      <div class="f2">
+        <label>Name<input name="name" autocomplete="name"></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
+      </div>
+      <label>What do you need?<select name="need"><option>Panel upgrade</option><option>Lighting</option><option>EV charger</option><option>Something isn't working</option><option>Other</option></select></label>
+      <label>Details (optional)<textarea name="msg"></textarea></label>
+      <button class="btn btn-volt" type="submit">Request my estimate</button>
+      <p class="sent" id="sent" role="status">Request sent. This is an example site, so nothing was actually sent.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><div class="brand">Brightline Electric</div><a href="tel:+15550107730">(555) 010-7730</a> &nbsp;/&nbsp; hello@brightlineelectric.example<br>Texas master electrician license on file</div>
+    <div style="text-align:right">© <span id="yr"></span> Brightline Electric</div>
+  </div>
+</footer>
+
+<div class="callbar"><a class="btn btn-volt" href="tel:+15550107730">Call now</a><a class="btn" style="background:#fff;color:var(--graphite)" href="#quote">Free estimate</a></div>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  var hero=document.getElementById('hero'),sw=document.getElementById('sw'),t=document.getElementById('swText'),st=document.getElementById('stage'),li=document.getElementById('lights');
+  [[282.7,144],[340.8,144],[466.2,144],[254.9,169.3],[311.5,165.7],[355.5,165.7],[452,165.7],[517.7,169.3],[295.8,193.5],[375.2,193.5],[435.8,193.5],[475.8,193.5],[330.7,174.8,.8],[382.8,174.3,.8],[418.7,174.3,.8],[492,174.3,.8]].forEach(function(b,i){
+    var s=document.createElement('span');s.className='bulb';s.innerHTML='<i class="bloom"></i><i class="cap"></i><i class="core"></i>';s.style.left=(b[0]/8)+'%';s.style.top=(b[1]/6.51)+'%';s.style.setProperty('--d',(i*37%11)*45+'ms');if(b[2])s.style.setProperty('--s',b[2]);li.appendChild(s)});
+  function fit(){var w=hero.clientWidth,h=hero.clientHeight,r=800/651,W,H;if(w/h>r){W=w;H=w/r}else{H=h;W=h*r}[st,li].forEach(function(e){e.style.width=W+'px';e.style.height=H+'px'})}
+  fit();addEventListener('resize',fit);
+  function set(on){hero.classList.toggle('on',on);sw.setAttribute('aria-pressed',on);sw.setAttribute('aria-label',on?'Turn the lights off':'Turn the lights on');t.textContent=on?'That’s more like it':'Flip the switch'}
+  sw.addEventListener('click',function(){set(!hero.classList.contains('on'))});
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches) setTimeout(function(){if(!hero.dataset.touched)set(true)},1400);
+  sw.addEventListener('click',function(){hero.dataset.touched=1});
+})();
+document.getElementById('qf').addEventListener('submit',function(e){
+  e.preventDefault();
+  var n=e.target.elements['name'],p=e.target.elements['phone'];
+  if(!n.value.trim()||!p.value.trim()){(n.value.trim()?p:n).focus();return}
+  document.getElementById('sent').style.display='block';
+});
+</script>
+</body>
+</html>

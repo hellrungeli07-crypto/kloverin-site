@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Summit Plumbing Co. | Plumbers in Prosper, TX</title>
+<meta name="description" content="Licensed plumbers in Prosper, Frisco and Celina. Same-day leak repair, water heaters and drain cleaning with upfront prices.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0C1F2E; --blue:#1769C2; --blue-d:#0F4F96; --mist:#E7F0F8; --paper:#FBFCFD;
+  --red:#D7372B; --muted:#4D5E6C; --line:rgba(12,31,46,.12);
+  --f:"Bricolage Grotesque",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--f);color:var(--ink);background:var(--paper);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-variation-settings:"opsz" 96;letter-spacing:-.03em;line-height:1.02;margin:0}
+.sample{background:var(--ink);color:#9fb2c2;font-size:13px;text-align:center;padding:7px 16px}
+
+.nav{position:sticky;top:0;z-index:20;background:rgba(251,252,253,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:30px;height:70px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:-.02em;text-decoration:none}
+.brand svg{width:32px;height:32px}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0 0 0 auto;padding:0;font-size:15px;color:var(--muted)}
+.nav ul a{text-decoration:none}.nav ul a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;font:inherit;font-weight:650;font-size:16px;text-decoration:none;border:0;cursor:pointer;transition:background .2s,transform .2s}
+.btn svg{width:18px;height:18px}
+.btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:var(--blue-d)}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:#b52a20}
+.btn-line{background:transparent;box-shadow:inset 0 0 0 1.5px var(--ink)}.btn-line:hover{background:var(--ink);color:#fff}
+.nav .btn{padding:10px 18px;font-size:15px}
+
+/* hero */
+.hero{padding:56px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:6fr 5fr;gap:56px;align-items:center}
+.avail{display:inline-flex;align-items:center;gap:10px;background:var(--mist);color:var(--blue-d);font-weight:600;font-size:15px;padding:7px 14px 7px 12px;border-radius:999px}
+.dot{width:9px;height:9px;border-radius:50%;background:#1FA45B;box-shadow:0 0 0 0 rgba(31,164,91,.5);animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 9px rgba(31,164,91,0)}100%{box-shadow:0 0 0 0 rgba(31,164,91,0)}}
+.hero h1{font-size:clamp(46px,6.6vw,90px);font-weight:750;margin:22px 0 22px}
+.hero p{font-size:20px;color:var(--muted);max-width:40ch;margin:0 0 30px}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+.trust{display:flex;gap:28px;flex-wrap:wrap;margin-top:34px;padding-top:26px;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+.trust b{display:block;color:var(--ink);font-size:20px;font-weight:700}
+.photo{position:relative}
+.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:28px}
+.photo .card{position:absolute;left:-34px;bottom:36px;background:#fff;border-radius:18px;padding:16px 18px;box-shadow:0 18px 50px rgba(12,31,46,.18);display:flex;gap:14px;align-items:center;max-width:280px}
+.card .ic{flex:none;width:44px;height:44px;border-radius:12px;background:var(--mist);display:grid;place-items:center;color:var(--blue)}
+.card .ic svg{width:24px;height:24px}
+.card b{display:block;font-size:16px}
+.card span{font-size:14px;color:var(--muted)}
+
+/* triage */
+.triage{background:var(--ink);color:#fff;padding:96px 0}
+.triage h2{font-size:clamp(36px,4.4vw,58px);font-weight:700}
+.triage .intro{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;margin-bottom:40px}
+.triage .intro p{margin:0;color:#9fb2c2;max-width:40ch}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tab{appearance:none;font:inherit;text-align:left;background:#132C40;color:#fff;border:1.5px solid transparent;border-radius:18px;padding:22px;cursor:pointer;transition:background .2s,border-color .2s}
+.tab:hover{background:#18364E}
+.tab[aria-selected="true"]{background:#fff;color:var(--ink);border-color:#fff}
+.tab svg{width:30px;height:30px;color:var(--blue);margin-bottom:14px;display:block}
+.tab[data-k="leak"] svg{color:#FF6B5E}
+.tab b{display:block;font-size:19px;font-weight:650;letter-spacing:-.01em}
+.tab span{font-size:14px;opacity:.7}
+.answer{margin-top:14px;background:#fff;color:var(--ink);border-radius:22px;padding:36px;display:grid;grid-template-columns:7fr 4fr;gap:40px}
+.answer h3{font-size:28px;font-weight:700;margin-bottom:16px}
+.answer ol{margin:0;padding-left:22px}
+.answer li{margin-bottom:10px;padding-left:4px}
+.facts{border-left:1px solid var(--line);padding-left:32px;display:flex;flex-direction:column;gap:18px;justify-content:center}
+.facts div span{display:block;font-size:14px;color:var(--muted)}
+.facts div b{font-size:24px;font-weight:700;letter-spacing:-.02em}
+.facts .btn{align-self:flex-start;margin-top:4px}
+.answer[data-urgent="true"] .facts b.eta{color:var(--red)}
+
+/* prices */
+.prices{padding:110px 0}
+.prices .wrap{display:grid;grid-template-columns:4fr 7fr;gap:72px;align-items:start}
+.prices h2{font-size:clamp(36px,4.2vw,56px);font-weight:700;margin-bottom:18px}
+.prices .lede{color:var(--muted);margin:0 0 26px;max-width:36ch}
+.menu{border-top:2px solid var(--ink)}
+.row{display:grid;grid-template-columns:1fr auto;gap:8px 28px;padding:22px 0;border-bottom:1px solid var(--line)}
+.row h3{font-size:21px;font-weight:650;letter-spacing:-.015em}
+.row p{grid-column:1;margin:0;color:var(--muted);font-size:16px}
+.row .p{grid-column:2;grid-row:1/span 2;align-self:center;font-weight:700;font-size:19px;color:var(--blue-d);white-space:nowrap}
+
+/* remodel */
+.remodel{background:var(--mist);padding:100px 0}
+.remodel .top{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;margin-bottom:40px}
+.remodel h2{font-size:clamp(34px,4vw,54px);font-weight:700;max-width:16ch}
+.remodel .top p{margin:0;color:var(--muted);max-width:38ch}
+.strip{display:grid;grid-template-columns:5fr 4fr 4fr;gap:14px}
+.strip figure{margin:0}
+.strip img{width:100%;height:380px;object-fit:cover;border-radius:22px}
+.strip figcaption{margin-top:12px;font-size:15px;color:var(--muted)}
+.strip figcaption b{color:var(--ink);font-weight:650}
+
+/* reviews */
+.reviews{padding:110px 0}
+.reviews h2{font-size:clamp(34px,4vw,54px);font-weight:700;margin-bottom:44px}
+.rv{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rv figure{margin:0;padding:30px;border-radius:22px;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column}
+.rv blockquote{margin:0 0 22px;font-size:18px;line-height:1.5;flex:1}
+.rv figcaption{font-size:15px;color:var(--muted)}
+.rv figcaption b{color:var(--ink)}
+.stars{color:#F2A900;letter-spacing:2px;margin-bottom:14px}
+.score{display:flex;align-items:center;gap:14px;margin-bottom:44px}
+.score b{font-size:56px;font-weight:750;letter-spacing:-.04em;line-height:1}
+.score span{color:var(--muted);font-size:15px}
+
+/* area/faq */
+.more{padding:0 0 110px}
+.more .wrap{display:grid;grid-template-columns:5fr 7fr;gap:72px}
+.more h2{font-size:clamp(30px,3.4vw,44px);font-weight:700;margin-bottom:16px}
+.towns{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:22px 0 0;list-style:none}
+.towns li{padding:8px 15px;border-radius:999px;background:var(--mist);font-size:15px}
+.towns li:first-child{background:var(--blue);color:#fff}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:20px 44px 20px 0;font-weight:650;font-size:19px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:var(--mist);color:var(--blue);display:grid;place-items:center;font-size:20px;font-weight:500;transition:transform .25s}
+details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+details p{margin:0 0 20px;color:var(--muted)}
+
+/* quote */
+.quote{background:var(--blue);color:#fff;padding:100px 0;border-radius:36px 36px 0 0}
+.quote .wrap{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:start}
+.quote h2{font-size:clamp(36px,4.4vw,60px);font-weight:750;margin-bottom:18px}
+.quote .lede{color:#d4e5f7;margin:0 0 30px;max-width:36ch}
+.big-phone{display:inline-block;font-size:clamp(30px,3.4vw,44px);font-weight:750;letter-spacing:-.03em;text-decoration:none}
+.big-phone small{display:block;font-size:15px;font-weight:500;letter-spacing:0;color:#d4e5f7}
+form{background:#fff;color:var(--ink);border-radius:26px;padding:34px}
+form h3{font-size:24px;font-weight:700;margin-bottom:20px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-size:14px;font-weight:600;margin-bottom:14px}
+input,select,textarea{display:block;width:100%;margin-top:6px;padding:12px 14px;font:inherit;font-size:16px;border:1.5px solid #d3dde6;border-radius:12px;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue)}
+textarea{min-height:90px;resize:vertical}
+form .btn{width:100%;justify-content:center}
+.sent{display:none;margin:14px 0 0;padding:12px 14px;border-radius:12px;background:#E5F4EB;color:#17603A;font-size:15px}
+
+footer{background:var(--ink);color:#9fb2c2;padding:50px 0 40px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer .brand{color:#fff;margin-bottom:10px}
+footer a{text-decoration:none}footer a:hover{color:#fff}
+.callbar{display:none}
+
+@media (max-width:900px){
+  .nav ul{display:none}.nav .btn{margin-left:auto}
+  .hero{padding:36px 0 56px}
+  .hero .wrap,.prices .wrap,.more .wrap,.quote .wrap{grid-template-columns:1fr;gap:40px}
+  .photo .card{left:14px;bottom:14px}
+  .photo img{aspect-ratio:4/3.4}
+  .tabs{grid-template-columns:1fr 1fr}
+  .answer{grid-template-columns:1fr;padding:26px}
+  .facts{border-left:0;border-top:1px solid var(--line);padding:24px 0 0}
+  .strip{grid-template-columns:1fr}.strip img{height:260px}
+  .rv{grid-template-columns:1fr}
+  .f2{grid-template-columns:1fr}
+  .triage,.prices,.remodel,.reviews,.quote{padding:76px 0}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;gap:8px}
+  .callbar a{flex:1;justify-content:center;box-shadow:0 8px 24px rgba(12,31,46,.3)}
+  footer{padding-bottom:100px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+@media (max-width:480px){.nav .btn{display:none}} /* nav-phone-hide: the bottom call bar covers this on phones */
+</style>
+</head>
+<body>
+<div class="sample">Sample site. The business name, photos and reviews are placeholders.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Summit Plumbing Co. home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#1769C2"/><path d="M16 7c-4 5.2-6 8.7-6 11.3a6 6 0 0012 0C22 15.7 20 12.2 16 7z" fill="#fff"/></svg>
+      Summit Plumbing Co.
+    </a>
+    <ul>
+      <li><a href="#help">Get help now</a></li>
+      <li><a href="#prices">Prices</a></li>
+      <li><a href="#remodels">Bathrooms</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+    </ul>
+    <a class="btn btn-blue" href="tel:+15550104821"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>(555) 010-4821</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="avail"><span class="dot" aria-hidden="true"></span><span id="availText">A plumber is available today</span></span>
+      <h1>Plumbing fixed the same day you call.</h1>
+      <p>Licensed plumbers for Prosper, Frisco and Celina. You get the price before we start, and a real person answers the phone.</p>
+      <div class="actions">
+        <a class="btn btn-blue" href="tel:+15550104821">Call (555) 010-4821</a>
+        <a class="btn btn-line" href="#help">What's wrong? Start here</a>
+      </div>
+      <div class="trust">
+        <div><b>4.9 stars</b>186 Google reviews</div>
+        <div><b>12 years</b>serving Collin County</div>
+        <div><b>1-year</b>warranty on every job</div>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="https://images.unsplash.com/photo-1676210134188-4c05dd172f89?w=1200&q=80&auto=format&fit=crop" alt="Plumber repairing the pipes under a kitchen sink">
+      <div class="card">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+        <div><b>Average arrival: 92 minutes</b><span>for same-day calls this month</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="triage" id="help">
+  <div class="wrap">
+    <div class="intro">
+      <h2>What's going on?</h2>
+      <p>Tap your problem. We'll tell you what to do right now and what it usually costs.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Choose your plumbing problem">
+      <button class="tab" role="tab" data-k="leak" aria-selected="true" aria-controls="answer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c-3.5 4.6-5.3 7.6-5.3 9.9a5.3 5.3 0 0010.6 0C17.3 10.6 15.5 7.6 12 3z"/></svg><b>Water where it shouldn't be</b><span>Leak or burst pipe</span></button>
+      <button class="tab" role="tab" data-k="heat" aria-selected="false" aria-controls="answer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3c0 2 2 2.5 2 4.5S8 9 8 11M14 3c0 2 2 2.5 2 4.5S14 9 14 11"/><rect x="4" y="13" width="16" height="8" rx="2"/></svg><b>No hot water</b><span>Water heater trouble</span></button>
+      <button class="tab" role="tab" data-k="drain" aria-selected="false" aria-controls="answer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M8.5 12h7M12 8.5v7"/></svg><b>Slow or clogged drain</b><span>Sinks, tubs, main line</span></button>
+      <button class="tab" role="tab" data-k="toilet" aria-selected="false" aria-controls="answer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8v6H6zM4 11h16a6 6 0 01-6 6h-1l1 4H8l1-4H8a6 6 0 01-4-6z"/></svg><b>Toilet trouble</b><span>Running, leaking, clogged</span></button>
+    </div>
+    <div class="answer" id="answer" role="tabpanel" aria-live="polite">
+      <div>
+        <h3 id="aT"></h3>
+        <ol id="aSteps"></ol>
+      </div>
+      <div class="facts">
+        <div><span>We can usually be there</span><b class="eta" id="aEta"></b></div>
+        <div><span>Most jobs like this cost</span><b id="aCost"></b></div>
+        <a class="btn" id="aBtn" href="tel:+15550104821"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="prices" id="prices">
+  <div class="wrap">
+    <div>
+      <h2>Prices, up front.</h2>
+      <p class="lede">These are our real starting prices. You'll get an exact number before any work begins, and it won't change.</p>
+      <a class="btn btn-blue" href="#quote">Get my exact price</a>
+    </div>
+    <div class="menu">
+      <div class="row"><h3>Service call and diagnosis</h3><p>Waived when you go ahead with the repair.</p><span class="p">$89</span></div>
+      <div class="row"><h3>Leak repair</h3><p>Faucets, supply lines and pipes under sinks, found and fixed.</p><span class="p">from $175</span></div>
+      <div class="row"><h3>Drain cleaning</h3><p>Sinks, tubs and showers cleared. Main line with camera inspection.</p><span class="p">from $149</span></div>
+      <div class="row"><h3>Water heater replacement</h3><p>40 or 50-gallon gas or electric, hauled away and installed the same day.</p><span class="p">from $1,450</span></div>
+      <div class="row"><h3>Tankless water heater</h3><p>Endless hot water and a smaller utility bill. Installed and permitted.</p><span class="p">from $3,200</span></div>
+      <div class="row"><h3>Slab leak detection</h3><p>Electronic detection that finds the leak without tearing up your floors.</p><span class="p">from $375</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="remodel" id="remodels">
+  <div class="wrap">
+    <div class="top">
+      <h2>Bathrooms we've reworked</h2>
+      <p>New showers, freestanding tubs and vanities, plumbed right and finished clean.</p>
+    </div>
+    <div class="strip">
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=1100&q=80&auto=format&fit=crop" alt="Bright bathroom with a freestanding tub and walk-in shower"><figcaption><b>Primary bath</b>, Frisco. Tub moved, new shower valve.</figcaption></figure>
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1576698483491-8c43f0862543?w=900&q=80&auto=format&fit=crop" alt="Marble bathroom with a round mirror and vessel sink"><figcaption><b>Guest bath</b>, Prosper. Vessel sink and wall faucet.</figcaption></figure>
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1696987007764-7f8b85dd3033?w=900&q=80&auto=format&fit=crop" alt="Warm bathroom with a double vanity and glass shower"><figcaption><b>Double vanity</b>, Celina. Repiped in PEX.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <h2>What neighbors say</h2>
+    <div class="score"><b>4.9</b><span><span class="stars" aria-hidden="true">★★★★★</span><br>from 186 Google reviews</span></div>
+    <div class="rv">
+      <figure><div class="stars" aria-label="5 stars">★★★★★</div><blockquote>Called at 8 a.m. with a leak under the sink and they were here by 10. Fair price, explained everything, and cleaned up after.</blockquote><figcaption><b>Sarah M.</b>, Prosper</figcaption></figure>
+      <figure><div class="stars" aria-label="5 stars">★★★★★</div><blockquote>Our water heater died on a Sunday. New one was in by Monday afternoon, and the price matched the quote to the dollar.</blockquote><figcaption><b>James R.</b>, Frisco</figcaption></figure>
+      <figure><div class="stars" aria-label="5 stars">★★★★★</div><blockquote>Honest and on time. They told me I didn't need the expensive fix another company quoted me.</blockquote><figcaption><b>Linda P.</b>, Celina</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="more">
+  <div class="wrap">
+    <div>
+      <h2>Where we work</h2>
+      <p style="color:var(--muted);margin:0">Trucks out of Prosper every morning, covering most of Collin and Denton County.</p>
+      <ul class="towns"><li>Prosper</li><li>Frisco</li><li>Celina</li><li>McKinney</li><li>Allen</li><li>Little Elm</li><li>Aubrey</li><li>Plano</li></ul>
+    </div>
+    <div>
+      <details open><summary>Do you charge extra for evenings or weekends?</summary><p>Evenings are standard price. Weekend and overnight emergencies add a flat $75, and we tell you before we roll.</p></details>
+      <details><summary>Are you licensed and insured?</summary><p>Yes. Every plumber is licensed in Texas, and we carry liability insurance on every job.</p></details>
+      <details><summary>Will the price change once you start?</summary><p>No. You approve a fixed price before we begin. If we find something else, we stop and ask first.</p></details>
+      <details><summary>Is your work guaranteed?</summary><p>Every job comes with a 1-year workmanship warranty, plus the manufacturer's warranty on parts.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div>
+      <h2>Tell us what's going on.</h2>
+      <p class="lede">We'll call back within the hour with a time and a price. For anything leaking right now, call instead.</p>
+      <a class="big-phone" href="tel:+15550104821"><small>Fastest way to reach us</small>(555) 010-4821</a>
+    </div>
+    <form id="qf" novalidate>
+      <h3>Request a plumber</h3>
+      <div class="f2">
+        <label>Name<input name="name" autocomplete="name"></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
+      </div>
+      <label>What do you need?<select name="need"><option>Leak or burst pipe</option><option>No hot water</option><option>Clogged drain</option><option>Toilet repair</option><option>Bathroom remodel</option><option>Something else</option></select></label>
+      <label>Details (optional)<textarea name="msg"></textarea></label>
+      <button class="btn btn-blue" type="submit">Request a call back</button>
+      <p class="sent" id="sent" role="status">Request sent. This is an example site, so nothing was actually sent.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><div class="brand">Summit Plumbing Co.</div><a href="tel:+15550104821">(555) 010-4821</a> &nbsp;/&nbsp; office@summitplumbing.example<br>Licensed in Texas</div>
+    <div style="text-align:right">© <span id="yr"></span> Summit Plumbing Co.</div>
+  </div>
+</footer>
+
+<div class="callbar"><a class="btn btn-blue" href="tel:+15550104821">Call now</a><a class="btn" style="background:#fff;color:var(--ink)" href="#help">What's wrong?</a></div>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  var h=new Date().getHours(),t=document.getElementById('availText');
+  if(h>=18||h<7) t.textContent='Emergency line open tonight';
+  var A={
+    leak:{t:'Turn off the water first.',s:['Find your main shut-off. In most Prosper homes it is in the garage or by the water heater.','Turn it clockwise until it stops, then open a faucet to drain pressure.','Move anything valuable away from the water and take a few photos for insurance.','Call us. A burst pipe goes to the front of the line.'],e:'Within 60 minutes',c:'$175 to $650',b:'Call now about a leak',u:true},
+    heat:{t:'Check the easy things first.',s:['Gas heater: look through the window at the bottom for a small blue pilot flame.','Electric heater: check the breaker marked water heater and reset it once.','Water pooling under the tank? Turn the cold supply valve above it off.','Still nothing? Most heaters we can repair or replace the same day.'],e:'Same day',c:'$225 to $1,450',b:'Book a water heater visit',u:false},
+    drain:{t:'Put the chemical cleaner down.',s:['Store-bought drain cleaners can eat old pipes and burn whoever opens the trap next.','One slow sink usually means a local clog. A plunger may clear it.','Several drains slow at once, or gurgling toilets, usually means the main line.','Stop running water to that drain until we take a look.'],e:'Today or tomorrow morning',c:'$149 to $425',b:'Book drain cleaning',u:false},
+    toilet:{t:'Stop it from wasting water.',s:['Running toilet: lift the lid and check that the flapper is seated.','Leaking at the base: turn the valve behind the toilet clockwise to shut it off.','Clogged: plunge with a flange plunger, and do not flush again until it drains.','Most toilet repairs are done in one short visit.'],e:'Same day',c:'$125 to $395',b:'Book a toilet repair',u:false}
+  };
+  var tabs=[].slice.call(document.querySelectorAll('.tab')),ans=document.getElementById('answer');
+  function show(k){
+    var a=A[k];
+    tabs.forEach(function(b){b.setAttribute('aria-selected',b.dataset.k===k?'true':'false')});
+    document.getElementById('aT').textContent=a.t;
+    document.getElementById('aSteps').innerHTML=a.s.map(function(x){return '<li>'+x+'</li>'}).join('');
+    document.getElementById('aEta').textContent=a.e;
+    document.getElementById('aCost').textContent=a.c;
+    var b=document.getElementById('aBtn');b.textContent=a.b;b.className='btn '+(a.u?'btn-red':'btn-blue');
+    ans.dataset.urgent=a.u;
+  }
+  tabs.forEach(function(b){b.addEventListener('click',function(){show(b.dataset.k)})});
+  show('leak');
+})();
+document.getElementById('qf').addEventListener('submit',function(e){
+  e.preventDefault();
+  var n=e.target.elements['name'],p=e.target.elements['phone'];
+  if(!n.value.trim()||!p.value.trim()){(n.value.trim()?p:n).focus();return}
+  document.getElementById('sent').style.display='block';
+});
+</script>
+</body>
+</html>

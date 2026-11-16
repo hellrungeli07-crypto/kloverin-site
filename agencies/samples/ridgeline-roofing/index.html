@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ridgeline Roofing | Roof replacement and storm repair in Denton, TX</title>
+<meta name="description" content="Roof replacement, hail and storm repair, and insurance claim help for homeowners in Denton County.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#15181B; --slate:#252B31; --stone:#C7CAC4; --fog:#EDEEEA; --paper:#F7F7F4;
+  --copper:#B06A2C; --copper-lite:#D99A5E; --line:rgba(21,24,27,.14);
+  --wide:"Archivo",system-ui,sans-serif;
+  --max:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--wide);font-variation-settings:"wdth" 100;color:var(--ink);background:var(--paper);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--copper-lite);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+.display{font-variation-settings:"wdth" 125;font-weight:800;letter-spacing:-.025em;line-height:.98}
+
+/* sample bar */
+.sample{background:var(--ink);color:#9aa1a7;font-size:13px;text-align:center;padding:7px 16px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(21,24,27,.92);backdrop-filter:blur(10px);color:#fff}
+.nav .wrap{display:flex;align-items:center;gap:32px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-variation-settings:"wdth" 125;font-weight:800;font-size:19px;letter-spacing:-.01em}
+.brand svg{width:30px;height:30px}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0 0 0 auto;padding:0;font-size:15px;color:#c9ced2}
+.nav ul a{text-decoration:none}.nav ul a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:4px;font-weight:650;font-size:16px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;transition:background .2s,color .2s}
+.btn svg{width:18px;height:18px}
+.btn-copper{background:var(--copper);color:#fff}.btn-copper:hover{background:#97591f}
+.btn-ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55)}.btn-ghost:hover{background:#fff;color:var(--ink)}
+.nav .btn{padding:10px 16px;font-size:15px}
+
+/* hero */
+.hero{position:relative;min-height:min(88vh,820px);color:#fff;display:flex;align-items:flex-end;overflow:hidden;background:var(--ink)}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 62%;transform:scale(1.06);animation:settle 2.4s cubic-bezier(.2,.7,.2,1) forwards}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,24,27,.25) 0%,rgba(21,24,27,.15) 35%,rgba(21,24,27,.88) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-bottom:72px}
+.hero h1{font-size:clamp(48px,8.4vw,118px);margin:0 0 26px;max-width:11ch}
+.hero h1 span{display:block;opacity:0;transform:translateY(28px);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
+.hero h1 span:nth-child(2){animation-delay:.12s}.hero h1 span:nth-child(3){animation-delay:.24s}
+.hero-row{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:28px;opacity:0;animation:fade .8s .55s forwards}
+.hero p{max-width:46ch;margin:0;font-size:19px;color:#dfe3e6}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+.rating{display:flex;align-items:center;gap:10px;margin-top:22px;font-size:15px;color:#c9ced2}
+.stars{color:var(--copper-lite);letter-spacing:2px}
+@keyframes settle{to{transform:scale(1)}}
+@keyframes rise{to{opacity:1;transform:none}}
+@keyframes fade{to{opacity:1}}
+
+/* proof strip */
+.proof{background:var(--ink);color:#fff;border-top:1px solid rgba(255,255,255,.08)}
+.proof .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.proof div{padding:26px 22px 28px 0;border-right:1px solid rgba(255,255,255,.08);margin-right:22px}
+.proof div:last-child{border:0}
+.proof b{display:block;font-variation-settings:"wdth" 125;font-weight:750;font-size:22px}
+.proof span{font-size:14px;color:#9aa1a7}
+
+/* sections */
+section{padding:112px 0}
+.h2{font-size:clamp(36px,4.6vw,62px);margin:0 0 18px}
+.lede{font-size:19px;color:#4a5157;max-width:52ch;margin:0}
+
+/* before / after */
+.storm{background:var(--fog)}
+.storm-grid{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:center}
+.ba{position:relative;aspect-ratio:4/3;border-radius:6px;overflow:hidden;user-select:none;touch-action:pan-y;background:#333;cursor:ew-resize}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ba .after{clip-path:inset(0 0 0 var(--pos,50%))}
+.ba .handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:#fff;transform:translateX(-1px);pointer-events:none}
+.ba .handle::after{content:"";position:absolute;top:50%;left:50%;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2315181B' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l-6 6 6 6M15 6l6 6-6 6'/%3E%3C/svg%3E") center/22px no-repeat;box-shadow:0 2px 12px rgba(0,0,0,.35)}
+.ba .tag{position:absolute;bottom:14px;padding:6px 11px;border-radius:3px;font-size:13px;font-weight:650;background:rgba(21,24,27,.78);color:#fff}
+.ba .tag.l{left:14px}.ba .tag.r{right:14px}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.storm ul{list-style:none;padding:0;margin:32px 0 0;border-top:1px solid var(--line)}
+.storm li{padding:16px 0;border-bottom:1px solid var(--line);display:flex;gap:14px}
+.storm li svg{flex:none;width:22px;height:22px;color:var(--copper);margin-top:3px}
+
+/* services */
+.svc-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:56px;flex-wrap:wrap}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--ink)}
+.svc article{padding:30px 30px 34px 0;border-bottom:1px solid var(--line)}
+.svc article:not(:nth-child(3n)){border-right:1px solid var(--line);margin-right:0}
+.svc article:not(:nth-child(3n+1)){padding-left:30px}
+.svc h3{font-variation-settings:"wdth" 112;font-weight:700;font-size:22px;margin:0 0 10px;letter-spacing:-.01em}
+.svc p{margin:0;color:#4a5157;font-size:16px}
+.svc .price{display:block;margin-top:14px;font-size:14px;color:var(--copper);font-weight:650}
+
+/* work */
+.work{background:var(--ink);color:#fff}
+.work .lede{color:#9aa1a7}
+.gallery{display:grid;grid-template-columns:7fr 5fr;grid-template-rows:300px 300px;gap:12px;margin-top:56px}
+.gallery figure{margin:0;position:relative;overflow:hidden;border-radius:5px;background:var(--slate)}
+.gallery figure:first-child{grid-row:span 2}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.gallery figure:hover img{transform:scale(1.04)}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 16px;background:linear-gradient(transparent,rgba(0,0,0,.7));font-size:15px}
+.gallery figcaption b{display:block;font-size:17px}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:56px;counter-reset:s}
+.steps li{list-style:none;counter-increment:s;border-top:2px solid var(--ink);padding-top:22px}
+.steps li::before{content:counter(s);display:block;font-variation-settings:"wdth" 125;font-weight:800;font-size:54px;line-height:1;color:var(--copper);margin-bottom:16px}
+.steps h3{font-size:22px;margin:0 0 8px;font-variation-settings:"wdth" 112;font-weight:700}
+.steps p{margin:0;color:#4a5157}
+.steps{padding:0}
+
+/* reviews */
+.reviews{background:var(--fog)}
+.rv-grid{display:grid;grid-template-columns:7fr 5fr;gap:56px;align-items:start}
+.big-quote{font-variation-settings:"wdth" 108;font-weight:500;font-size:clamp(26px,2.8vw,38px);line-height:1.25;letter-spacing:-.015em;margin:0}
+.who{margin-top:24px;font-size:15px;color:#4a5157}
+.who b{color:var(--ink)}
+.small-q{border-top:1px solid var(--line);padding:24px 0}
+.small-q p{margin:0 0 10px}
+.small-q span{font-size:14px;color:#6b7278}
+
+/* insurance band */
+.claim{background:var(--copper);color:#fff;padding:80px 0}
+.claim .wrap{display:grid;grid-template-columns:7fr 5fr;gap:48px;align-items:center}
+.claim h2{font-size:clamp(32px,3.8vw,52px);margin:0}
+.claim p{margin:0 0 22px;font-size:18px;color:#fbe9da}
+.claim .btn{background:var(--ink);color:#fff}.claim .btn:hover{background:#000}
+
+/* area + faq */
+.two{display:grid;grid-template-columns:5fr 7fr;gap:72px}
+.cities{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px;padding:0;list-style:none}
+.cities li{padding:7px 13px;border:1px solid var(--line);border-radius:30px;font-size:15px}
+.cities li:first-child{background:var(--ink);color:#fff;border-color:var(--ink)}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:2px solid var(--ink)}
+summary{list-style:none;cursor:pointer;padding:22px 40px 22px 0;font-weight:650;font-size:19px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:6px;top:50%;width:14px;height:14px;margin-top:-9px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(45deg);transition:transform .25s}
+details[open] summary::after{transform:rotate(-135deg);margin-top:-2px}
+details p{margin:0 0 22px;color:#4a5157;max-width:60ch}
+
+/* quote */
+.quote{position:relative;color:#fff;background:var(--ink);overflow:hidden}
+.quote>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.28}
+.quote .wrap{position:relative;display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:start}
+.quote .lede{color:#c9ced2}
+.phone{display:block;margin-top:34px;font-variation-settings:"wdth" 125;font-weight:800;font-size:clamp(30px,3.4vw,44px);text-decoration:none;letter-spacing:-.02em}
+.phone small{display:block;font-size:14px;font-weight:500;font-variation-settings:"wdth" 100;color:#9aa1a7;letter-spacing:0;margin-bottom:4px}
+form{background:var(--paper);color:var(--ink);padding:34px;border-radius:6px}
+form h3{margin:0 0 20px;font-size:24px;font-variation-settings:"wdth" 112;font-weight:750}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-size:14px;font-weight:600;margin-bottom:14px}
+input,select,textarea{display:block;width:100%;margin-top:6px;padding:12px 13px;font:inherit;font-size:16px;border:1.5px solid #cfd2cd;border-radius:4px;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{border-color:var(--copper);outline:none}
+textarea{min-height:96px;resize:vertical}
+form .btn{width:100%;justify-content:center;margin-top:6px}
+.sent{display:none;padding:14px;border-radius:4px;background:#e7f0e5;color:#1f4d22;font-size:15px;margin-top:14px}
+
+/* footer */
+footer{background:#0e1012;color:#9aa1a7;padding:56px 0 40px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer .brand{color:#fff;margin-bottom:12px}
+footer a{text-decoration:none}footer a:hover{color:#fff}
+
+/* mobile call bar */
+.callbar{display:none}
+
+@media (max-width:900px){
+  section{padding:80px 0}
+  .nav ul{display:none}.nav .btn{margin-left:auto}
+  .storm-grid,.rv-grid,.claim .wrap,.two,.quote .wrap{grid-template-columns:1fr;gap:40px}
+  .svc{grid-template-columns:1fr}
+  .svc article{border-right:0!important;padding:26px 0!important}
+  .gallery{grid-template-columns:1fr 1fr;grid-template-rows:240px 180px 180px}
+  .gallery figure:first-child{grid-column:span 2;grid-row:auto}
+  .steps{grid-template-columns:1fr;gap:28px}
+  .proof .wrap{grid-template-columns:1fr 1fr}
+  .proof div{border-right:0;margin-right:0}
+  .hero-row{flex-direction:column;align-items:flex-start}
+  .f2{grid-template-columns:1fr}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;gap:8px}
+  .callbar a{flex:1;justify-content:center;box-shadow:0 6px 24px rgba(0,0,0,.3)}
+  footer{padding-bottom:100px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .hero h1 span,.hero-row{opacity:1;transform:none}
+  .hero img{transform:none}
+}
+@media (max-width:480px){.nav .btn{display:none}} /* nav-phone-hide: the bottom call bar covers this on phones */
+</style>
+</head>
+<body>
+
+<div class="sample">Sample site. The business name, photos and reviews are placeholders.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Ridgeline Roofing home">
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M3 20L16 8l13 12" stroke="#D99A5E" stroke-width="3" stroke-linejoin="round"/><path d="M8 24l8-7.4 8 7.4" stroke="#fff" stroke-width="3" stroke-linejoin="round"/></svg>
+      Ridgeline Roofing
+    </a>
+    <ul>
+      <li><a href="#storm">Storm repair</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Our work</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+    </ul>
+    <a class="btn btn-copper" href="tel:+15550103390"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>(555) 010-3390</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <img src="https://images.unsplash.com/photo-1724931420584-d360afc3e1f8?w=2400&q=80&auto=format&fit=crop" alt="A dark-roofed house at dusk with its windows lit">
+  <div class="wrap">
+    <h1 class="display"><span>A roof built</span><span>for North Texas</span><span>weather.</span></h1>
+    <div class="hero-row">
+      <div>
+        <p>Replacements, hail repair and insurance claims for homes across Denton County. One crew and one point of contact, from inspection to final cleanup.</p>
+        <div class="rating"><span class="stars" aria-hidden="true">★★★★★</span>Rated 4.9 from 312 Google reviews</div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-copper" href="#quote">Book a free inspection</a>
+        <a class="btn btn-ghost" href="tel:+15550103390">Call (555) 010-3390</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="proof">
+  <div class="wrap">
+    <div><b>18 years</b><span>on Denton County roofs</span></div>
+    <div><b>1 day</b><span>for most full replacements</span></div>
+    <div><b>10-year</b><span>workmanship warranty</span></div>
+    <div><b>Licensed</b><span>and insured in Texas</span></div>
+  </div>
+</div>
+
+<section class="storm" id="storm">
+  <div class="wrap storm-grid">
+    <div>
+      <h2 class="display h2">Hail did this. We fixed it in a day.</h2>
+      <p class="lede">Drag the slider to see a storm-damaged roof next to the replacement our crew finished the following week.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Emergency tarping within 24 hours of a storm</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Every soft spot photographed for your insurer</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>We meet your adjuster on the roof, not over the phone</span></li>
+      </ul>
+    </div>
+    <div class="ba" id="ba" style="--pos:50%">
+      <img src="https://images.unsplash.com/photo-1782274951165-b88199bde548?w=1400&q=80&auto=format&fit=crop" alt="Asphalt roof with missing and damaged shingles after a storm">
+      <img class="after" src="https://images.unsplash.com/photo-1791955455643-26813110f80e?w=1400&q=80&auto=format&fit=crop" alt="Newly installed asphalt shingles, evenly laid">
+      <div class="handle"></div>
+      <span class="tag l">Before</span><span class="tag r">After</span>
+      <input type="range" min="0" max="100" value="50" aria-label="Compare the roof before and after repair">
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="svc-head">
+      <h2 class="display h2" style="margin:0">What we take care of</h2>
+      <p class="lede">Not sure what you need? We'll get on the roof and tell you straight, even when the answer is a small repair.</p>
+    </div>
+    <div class="svc">
+      <article><h3>Roof replacement</h3><p>Architectural shingle and standing-seam metal, torn off, installed and cleaned up in as little as a day.</p><span class="price">Most homes from $9,800</span></article>
+      <article><h3>Hail and wind repair</h3><p>Lifted tabs, cracked shingles and torn flashing repaired before the next rain finds them.</p><span class="price">Repairs from $350</span></article>
+      <article><h3>Insurance claims</h3><p>We document the damage, write the scope and meet your adjuster so the claim covers the whole job.</p><span class="price">No cost to you</span></article>
+      <article><h3>Leak tracing</h3><p>Valleys, vents, chimneys and skylights checked until we find where the water is really coming in.</p><span class="price">Diagnosis from $149</span></article>
+      <article><h3>Metal roofing</h3><p>Standing-seam panels for homes, porches and shops, built to shrug off hail for decades.</p><span class="price">Quoted per project</span></article>
+      <article><h3>Gutters</h3><p>Seamless six-inch gutters and guards sized for a North Texas downpour.</p><span class="price">From $12 per foot</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <h2 class="display h2">Recent roofs</h2>
+    <p class="lede">A few of the 140 roofs we finished this year, all within 30 minutes of Denton.</p>
+    <div class="gallery">
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1761013320045-d29e4f10bcbc?w=1600&q=80&auto=format&fit=crop" alt="Large white farmhouse with a new dark shingle roof"><figcaption><b>Full replacement</b>Argyle, 41 squares in one day</figcaption></figure>
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1789045844961-8a18f524a8ce?w=1000&q=80&auto=format&fit=crop" alt="White farmhouse with a black standing-seam metal roof"><figcaption><b>Standing-seam metal</b>Krum</figcaption></figure>
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1778164909438-c27c813cb480?w=1000&q=80&auto=format&fit=crop" alt="New home with a freshly installed dark roof"><figcaption><b>New construction</b>Flower Mound</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="display h2">How a replacement goes</h2>
+    <p class="lede">Three steps, and you'll talk to the same person through all of them.</p>
+    <ol class="steps">
+      <li><h3>Free inspection</h3><p>We get on the roof, photograph everything we find and walk you through it at the kitchen table.</p></li>
+      <li><h3>Written proposal</h3><p>One price, one timeline, and help with the insurance claim if storm damage is part of it.</p></li>
+      <li><h3>Install and cleanup</h3><p>Our own crew installs, runs a magnet over the yard for nails, and checks every detail before we leave.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap rv-grid">
+    <div>
+      <p class="big-quote">“After the April hail they handled everything with our insurance and had a new roof on in one day. The yard was cleaner when they left than when they got here.”</p>
+      <p class="who"><b>Karen D.</b>, Corinth</p>
+    </div>
+    <div>
+      <div class="small-q"><p>Honest inspection. They told us we only needed a repair, not a whole roof, and that's why they'll get our business when we do.</p><span><b>Mike T.</b>, Denton</span></div>
+      <div class="small-q"><p>On time, on budget, and the crew was respectful of our home and our neighbors.</p><span><b>Alicia R.</b>, Lake Dallas</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="claim">
+  <div class="wrap">
+    <h2 class="display">Storm hit your street? Your roof may already be paid for.</h2>
+    <div>
+      <p>Most hail claims in Denton County cover a full replacement. We'll inspect for free and tell you honestly whether yours is worth filing.</p>
+      <a class="btn" href="#quote">Check my roof for free</a>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap two">
+    <div>
+      <h2 class="display h2">Where we work</h2>
+      <p class="lede">Based in Denton and on roofs across the county every week.</p>
+      <ul class="cities"><li>Denton</li><li>Argyle</li><li>Corinth</li><li>Flower Mound</li><li>Lake Dallas</li><li>Aubrey</li><li>Krum</li><li>Sanger</li><li>Highland Village</li></ul>
+    </div>
+    <div>
+      <details open><summary>Is the inspection really free?</summary><p>Yes. We inspect, photograph and explain what we find with no obligation, and we won't push a replacement you don't need.</p></details>
+      <details><summary>Will insurance cover a new roof?</summary><p>If we find hail or wind damage, it often does. We document everything and can meet your adjuster on site.</p></details>
+      <details><summary>How long does a replacement take?</summary><p>Most homes are done in one day. Larger or steeper roofs take two.</p></details>
+      <details><summary>What warranty do you offer?</summary><p>A 10-year workmanship warranty from us, on top of the manufacturer's shingle warranty.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <img src="https://images.unsplash.com/photo-1643225523483-e2c434191bba?w=2000&q=70&auto=format&fit=crop" alt="" aria-hidden="true">
+  <div class="wrap">
+    <div>
+      <h2 class="display h2">Book a free roof inspection</h2>
+      <p class="lede">Tell us a little about your roof and we'll call within one business day to set a time.</p>
+      <a class="phone" href="tel:+15550103390"><small>Rather talk now?</small>(555) 010-3390</a>
+    </div>
+    <form id="qf" novalidate>
+      <h3>Request an inspection</h3>
+      <div class="f2">
+        <label>Name<input name="name" autocomplete="name" required></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+      </div>
+      <label>Address<input name="address" autocomplete="street-address"></label>
+      <label>What's going on?<select name="need"><option>Storm or hail damage</option><option>Leak</option><option>Thinking about a replacement</option><option>Something else</option></select></label>
+      <label>Anything else we should know?<textarea name="msg"></textarea></label>
+      <button class="btn btn-copper" type="submit">Request my inspection</button>
+      <p class="sent" id="sent" role="status">Request sent. This is an example site, so nothing was actually sent.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand">Ridgeline Roofing</div>
+      <div><a href="tel:+15550103390">(555) 010-3390</a> &nbsp;/&nbsp; office@ridgelineroofing.example</div>
+      <div>Licensed and insured in Texas</div>
+    </div>
+    <div style="text-align:right">© <span id="yr"></span> Ridgeline Roofing</div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-copper" href="tel:+15550103390">Call now</a>
+  <a class="btn" style="background:#fff;color:var(--ink)" href="#quote">Free inspection</a>
+</div>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  var ba=document.getElementById('ba'),r=ba.querySelector('input');
+  function set(v){ba.style.setProperty('--pos',v+'%')}
+  r.addEventListener('input',function(){set(r.value)});
+})();
+document.getElementById('qf').addEventListener('submit',function(e){
+  e.preventDefault();
+  var n=e.target.elements['name'],p=e.target.elements['phone'];
+  if(!n.value.trim()||!p.value.trim()){(n.value.trim()?p:n).focus();return}
+  document.getElementById('sent').style.display='block';
+});
+</script>
+</body>
+</html>
