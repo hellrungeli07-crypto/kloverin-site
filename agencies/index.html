@@ -88,6 +88,8 @@
   .addons{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:15px}
   .addons span{border:1px solid var(--line);border-radius:999px;padding:8px 14px}
   .addons b{color:var(--text);font-weight:600}
+  .price.two{grid-template-columns:1fr 1fr}
+  .tier .resell{font-size:14px;color:var(--green-hi);margin:-10px 0 18px}
   .promise{display:grid;grid-template-columns:5fr 6fr;gap:48px;align-items:center;border:1px solid rgba(52,211,153,.3);border-radius:24px;padding:44px;background:rgba(16,185,129,.05)}
   .promise ul{list-style:none;padding:0;margin:0}
   .promise li{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
@@ -124,7 +126,7 @@
 <header class="top">
   <div class="wrap top-inner">
     <a class="logo" href="/agencies/" aria-label="Kloverin for agencies"><svg class="logo-mark"><use href="#mark"/></svg><span class="txt">KLOVERIN</span><small>for agencies</small></a>
-    <nav class="main" aria-label="Main"><a href="#samples">Samples</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">Questions</a></nav>
+    <nav class="main" aria-label="Main"><a href="#samples">Samples</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#monthly">Add-ons</a><a href="#faq">Questions</a></nav>
     <a class="btn btn-primary js-mail" href="#">Send a project</a>
   </div>
 </header>
@@ -181,6 +183,20 @@
   </div>
 </section>
 
+<section id="monthly">
+  <div class="wrap">
+    <div class="head"><h2 class="h2">Monthly add-ons you can resell</h2><p>Recurring revenue for you on every client, whether we built their site or not. Your name on everything, month to month, cancel anytime.</p></div>
+    <div class="price two">
+      <div class="tier"><h3>Interactive tools</h3><div class="amt">$29<small> per tool, per month</small></div><p class="resell">Agencies resell these for $79 to $149 a month.</p><p>Put any feature from the samples on a client's existing site: the hail damage slider, repair-or-replace calculator, instant pressure washing price, pest calendar and more.</p>
+        <ul><li><svg><use href="#check"/></svg>Works on WordPress, Wix, Squarespace or any site with one line of code</li><li><svg><use href="#check"/></svg>Set up with your client's prices, colors and services</li><li><svg><use href="#check"/></svg>Every lead goes straight to your client's inbox</li><li><svg><use href="#check"/></svg>Included free on Premium sites for the first 3 months</li></ul>
+        <a class="btn btn-ghost js-mail" data-s="Interactive tool" href="#">Add a tool to a client site</a></div>
+      <div class="tier pop"><h3>AI phone answering</h3><div class="amt">$149<small> per client, per month</small></div><p class="resell">Agencies resell this for $300 to $600 a month.</p><p>An AI receptionist that answers your client's calls 24/7 in their business name, so no lead goes to voicemail.</p>
+        <ul><li><svg><use href="#check"/></svg>Answers calls, takes job details and books appointments</li><li><svg><use href="#check"/></svg>Texts back every missed call within seconds</li><li><svg><use href="#check"/></svg>Sends review requests after finished jobs</li><li><svg><use href="#check"/></svg>Up to 500 minutes a month, then $0.15 a minute</li></ul>
+        <a class="btn btn-primary js-mail" data-s="AI phone answering" href="#">Set up AI phone answering</a></div>
+    </div>
+  </div>
+</section>
+
 <section>
   <div class="wrap">
     <div class="promise">
@@ -201,6 +217,7 @@
     <details open><summary>What do you need from us to start?</summary><p>The business name, trade, service area, phone, logo, and any photos or reviews they have. If they have nothing, we'll work from their Google Business profile.</p></details>
     <details><summary>What platform are the sites built on?</summary><p>Fast, hand-built pages that load in under two seconds and can be hosted anywhere. Need it on WordPress? Ask, and we'll quote it.</p></details>
     <details><summary>How do payment and turnaround work?</summary><p>Pay when you send the brief and we start right away. Most sites are ready for your review in 5 to 7 days, or 72 hours with rush.</p></details>
+    <details><summary>Can we add tools or AI phone answering for clients whose sites you didn't build?</summary><p>Yes. Tools drop into any existing site, and phone answering works with your client's current number through simple call forwarding. Neither one mentions Kloverin anywhere.</p></details>
     <details><summary>Can we see a site before we pay?</summary><p>For your first project, yes. Send a brief and we'll build the homepage first. If you don't like it, you owe nothing.</p></details>
   </div>
 </section>
