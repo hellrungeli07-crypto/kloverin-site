@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Shieldline Pest Control | Exterminators in Fort Worth, TX</title>
+<meta name="description" content="Pest control in Fort Worth for ants, roaches, scorpions, termites, mosquitoes and rodents. Quarterly plans with free re-treats.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --indigo:#2B2A5C; --indigo-d:#1C1B40; --amber:#F2A541; --amber-d:#D98A22; --page:#F6F6F9; --white:#fff;
+  --muted:#5B5A72; --line:rgba(43,42,92,.13); --f:"Schibsted Grotesk",system-ui,sans-serif;
+  --h0:#EDEDF4; --h1:#F8DDB5; --h2:#F2B66A; --h3:#D9731E;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--f);color:var(--indigo-d);background:var(--page);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1220px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-weight:800;letter-spacing:-.035em;line-height:1;margin:0}
+.sample{background:var(--indigo-d);color:#a3a2c2;font-size:13px;text-align:center;padding:7px 16px}
+.nav{position:sticky;top:0;z-index:20;background:var(--indigo);color:#fff}
+.nav .wrap{display:flex;align-items:center;gap:30px;height:66px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:-.03em;text-decoration:none}
+.brand svg{width:30px;height:32px}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0 0 0 auto;padding:0;font-size:15px;color:#c9c8e4}
+.nav ul a{text-decoration:none}.nav ul a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:8px;font:700 16px var(--f);text-decoration:none;border:0;cursor:pointer;transition:background .2s}
+.btn-amber{background:var(--amber);color:var(--indigo-d)}.btn-amber:hover{background:var(--amber-d)}
+.btn-indigo{background:var(--indigo);color:#fff}.btn-indigo:hover{background:var(--indigo-d)}
+.btn-line{box-shadow:inset 0 0 0 1.5px currentColor;background:transparent}
+.nav .btn{padding:9px 16px;font-size:15px}
+
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:min(84vh,760px);background:var(--white)}
+.hero .copy{padding:80px 56px 80px max(28px,calc((100vw - 1220px)/2 + 28px));display:flex;flex-direction:column;justify-content:center}
+.hero h1{font-size:clamp(50px,6.4vw,96px);font-weight:900}
+.hero p{font-size:20px;color:var(--muted);max-width:36ch;margin:24px 0 30px}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero .actions .btn-line{color:var(--indigo)}
+.guar{margin-top:34px;display:flex;gap:14px;align-items:center;padding:16px 18px;border-radius:12px;background:var(--page);max-width:440px;font-size:15px;color:var(--muted)}
+.guar svg{flex:none;width:34px;height:34px;color:var(--amber-d)}
+.guar b{color:var(--indigo-d)}
+.hero .pic{position:relative;overflow:hidden}
+.hero .pic img{width:100%;height:100%;object-fit:cover}
+
+section{padding:100px 0}
+.h2{font-size:clamp(38px,4.8vw,64px);margin-bottom:16px}
+.lede{color:var(--muted);font-size:19px;max-width:48ch;margin:0}
+
+/* calendar */
+.cal{background:var(--indigo);color:#fff}
+.cal .lede{color:#c9c8e4}
+.board{margin-top:44px;background:var(--indigo-d);border-radius:18px;padding:24px;overflow-x:auto}
+table{border-collapse:separate;border-spacing:4px;width:100%;min-width:720px}
+th{font-size:13px;font-weight:600;color:#a3a2c2;text-align:center;padding:0 0 6px}
+th:first-child{text-align:left}
+td{height:38px;border-radius:6px}
+td.n{background:none;padding:0}
+td.n button{appearance:none;width:100%;text-align:left;font:600 15px var(--f);color:#fff;background:none;border:0;padding:8px 10px;border-radius:6px;cursor:pointer;white-space:nowrap}
+td.n button:hover{background:rgba(255,255,255,.08)}
+tr.sel td.n button{background:var(--amber);color:var(--indigo-d)}
+td.l0{background:rgba(255,255,255,.06)}td.l1{background:var(--h1)}td.l2{background:var(--h2)}td.l3{background:var(--h3)}
+td.now{box-shadow:inset 0 0 0 2px #fff}
+.legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:16px;font-size:14px;color:#a3a2c2;align-items:center}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:3px;margin-right:6px;vertical-align:-2px}
+.detail{margin-top:20px;display:grid;grid-template-columns:5fr 4fr;gap:32px;background:#fff;color:var(--indigo-d);border-radius:18px;padding:30px}
+.detail h3{font-size:30px;margin-bottom:10px}
+.detail p{margin:0 0 14px;color:var(--muted)}
+.detail ul{margin:0;padding-left:20px;color:var(--muted)}
+.detail .side{border-left:1px solid var(--line);padding-left:28px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.detail .side span{font-size:14px;color:var(--muted)}
+.detail .side b{display:block;font-size:22px;letter-spacing:-.02em}
+
+/* plans */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.plan{background:#fff;border-radius:18px;padding:30px;border:1.5px solid var(--line);display:flex;flex-direction:column}
+.plan.pop{border-color:var(--indigo);box-shadow:0 20px 50px rgba(43,42,92,.14);position:relative}
+.plan.pop::before{content:"Most homes pick this";position:absolute;top:-13px;left:24px;background:var(--amber);color:var(--indigo-d);font-size:13px;font-weight:700;padding:3px 11px;border-radius:999px}
+.plan h3{font-size:24px;margin-bottom:6px}
+.plan .p{font-size:46px;font-weight:900;letter-spacing:-.05em;margin:10px 0 2px}
+.plan .p small{font-size:16px;font-weight:600;letter-spacing:0;color:var(--muted)}
+.plan ul{list-style:none;padding:0;margin:18px 0 24px;flex:1}
+.plan li{padding:9px 0;border-top:1px solid var(--line);font-size:15.5px;display:flex;gap:10px}
+.plan li svg{flex:none;width:18px;height:18px;color:var(--amber-d);margin-top:3px}
+.plan .btn{justify-content:center}
+
+.proof{background:#fff}
+.proof .wrap{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:center}
+.proof img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px}
+.rv figure{margin:0 0 18px;padding:22px 24px;border-radius:14px;background:var(--page)}
+.rv blockquote{margin:0 0 10px;font-size:17px}
+.rv figcaption{font-size:14.5px;color:var(--muted)}
+.rv figcaption b{color:var(--indigo-d)}
+
+.two{display:grid;grid-template-columns:5fr 7fr;gap:72px}
+.towns{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:22px 0 0}
+.towns li{padding:7px 14px;border-radius:8px;background:#fff;border:1px solid var(--line);font-size:15px}
+details{background:#fff;border-radius:12px;margin-bottom:10px;border:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:20px 54px 20px 22px;font-weight:700;font-size:17.5px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);font-size:24px;color:var(--amber-d);transition:transform .2s}
+details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+details p{margin:0;padding:0 22px 20px;color:var(--muted)}
+.quote{background:var(--amber)}
+.quote .wrap{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:start}
+.quote .lede{color:#5a3a12}
+.phone{display:block;margin-top:26px;font-size:clamp(34px,3.8vw,50px);font-weight:900;letter-spacing:-.04em;text-decoration:none}
+.phone small{display:block;font-size:15px;font-weight:500;letter-spacing:0;color:#5a3a12}
+form.q{background:#fff;border-radius:18px;padding:32px}
+form.q h3{font-size:26px;margin-bottom:18px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form.q label{display:block;font-size:14px;font-weight:700;margin-bottom:14px}
+form.q input,form.q select,form.q textarea{display:block;width:100%;margin-top:6px;padding:12px 14px;font:inherit;font-size:16px;border:1.5px solid #d7d6e4;border-radius:10px;background:#fff;color:var(--indigo-d)}
+form.q input:focus,form.q select:focus,form.q textarea:focus{outline:none;border-color:var(--indigo)}
+form.q textarea{min-height:80px;resize:vertical}
+form.q .btn{width:100%;justify-content:center}
+.sent{display:none;margin:14px 0 0;padding:12px 14px;border-radius:10px;background:var(--page);font-size:15px}
+footer{background:var(--indigo-d);color:#a3a2c2;padding:48px 0 40px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer .brand{color:#fff;margin-bottom:10px}
+footer a{text-decoration:none}footer a:hover{color:#fff}
+.callbar{display:none}
+@media (max-width:900px){
+  .nav ul{display:none}.nav .btn{margin-left:auto}
+  .hero{grid-template-columns:1fr}
+  .hero .copy{padding:56px 28px}
+  .hero .pic{height:300px;order:-1}
+  .detail,.proof .wrap,.two,.quote .wrap{grid-template-columns:1fr;gap:28px}
+  .detail .side{border-left:0;border-top:1px solid var(--line);padding:22px 0 0}
+  .plans,.f2{grid-template-columns:1fr}
+  section{padding:76px 0}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;gap:8px}
+  .callbar a{flex:1;justify-content:center;box-shadow:0 8px 24px rgba(28,27,64,.3)}
+  footer{padding-bottom:100px}
+}
+</style>
+</head>
+<body>
+<div class="sample">Example site. The business, photos and reviews are samples.</div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Shieldline Pest Control home"><svg viewBox="0 0 30 32" aria-hidden="true"><path d="M15 1l13 5v9c0 8-5.6 13.6-13 16C7.6 28.6 2 23 2 15V6z" fill="#F2A541"/><path d="M9 16l4 4 8-9" stroke="#1C1B40" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Shieldline Pest Control</a>
+    <ul><li><a href="#calendar">Pest calendar</a></li><li><a href="#plans">Plans</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#faq">Questions</a></li></ul>
+    <a class="btn btn-amber" href="tel:+15550104477">(555) 010-4477</a>
+  </div>
+</header>
+<main id="top">
+<section class="hero" style="padding:0">
+  <div class="copy">
+    <h1>Bugs out. Kids and pets safe.</h1>
+    <p>Pest control for Fort Worth homes. We treat outside first, so most bugs never make it through the door.</p>
+    <div class="actions"><a class="btn btn-indigo" href="#quote">Get a free inspection</a><a class="btn btn-line" href="#calendar">What's active right now?</a></div>
+    <div class="guar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V5z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><span><b>Bugs come back, so do we.</b> Free re-treats between visits on every plan.</span></div>
+  </div>
+  <div class="pic"><img src="https://images.unsplash.com/photo-1581578017093-cd30fce4eeb7?w=1400&q=80&auto=format&fit=crop" alt="Pest control technician treating the edge of a backyard"></div>
+</section>
+
+<section class="cal" id="calendar">
+  <div class="wrap">
+    <h2 class="h2">What's crawling, month by month.</h2>
+    <p class="lede">North Texas pest season, from our own service records. Tap a pest to see the signs and what we do about it.</p>
+    <div class="board">
+      <table id="tbl"><thead><tr><th scope="col">Pest</th></tr></thead><tbody></tbody></table>
+      <div class="legend"><span><i style="background:rgba(255,255,255,.12)"></i>Quiet</span><span><i style="background:var(--h1)"></i>Some</span><span><i style="background:var(--h2)"></i>Busy</span><span><i style="background:var(--h3)"></i>Peak</span><span><i style="box-shadow:inset 0 0 0 2px #fff"></i>This month</span></div>
+    </div>
+    <div class="detail" aria-live="polite">
+      <div><h3 id="dT"></h3><p id="dP"></p><ul id="dL"></ul></div>
+      <div class="side"><div><span>Right now in Fort Worth</span><b id="dNow"></b></div><div><span>Covered on</span><b id="dPlan"></b></div><a class="btn btn-indigo" href="#quote" style="align-self:flex-start">Book a treatment</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="plans">
+  <div class="wrap">
+    <h2 class="h2">Pick your protection</h2>
+    <p class="lede">Every plan starts with a full inspection and an inside-and-out first treatment. No long contracts.</p>
+    <div class="plans">
+      <div class="plan"><h3>Essential</h3><p class="lede" style="font-size:16px">The everyday bugs, handled.</p><div class="p">$49<small> per quarter</small></div>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Ants, roaches, spiders, crickets</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Outside barrier every 3 months</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Free re-treats</li></ul>
+        <a class="btn btn-line" style="color:var(--indigo)" href="#quote">Choose Essential</a></div>
+      <div class="plan pop"><h3>Home Shield</h3><p class="lede" style="font-size:16px">Adds the Texas troublemakers.</p><div class="p">$69<small> per quarter</small></div>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Everything in Essential</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Scorpions and fire ants</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Rodent entry checks</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Wasp and hornet nest removal</li></ul>
+        <a class="btn btn-amber" href="#quote">Choose Home Shield</a></div>
+      <div class="plan"><h3>Total Shield</h3><p class="lede" style="font-size:16px">Termites and mosquitoes too.</p><div class="p">$109<small> per quarter</small></div>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Everything in Home Shield</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Termite monitoring stations</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Monthly mosquito treatments, April to October</li></ul>
+        <a class="btn btn-line" style="color:var(--indigo)" href="#quote">Choose Total Shield</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="proof" id="reviews">
+  <div class="wrap">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1670989292166-8b20b9530438?w=1100&q=80&auto=format&fit=crop" alt="Technician treating the shrubs along a brick home">
+    <div class="rv">
+      <h2 class="h2">4.8 from 241 reviews</h2>
+      <figure><blockquote>We were finding a scorpion a week. After the first Home Shield visit we haven't seen one in four months.</blockquote><figcaption><b>Brittany C.</b>, Benbrook</figcaption></figure>
+      <figure><blockquote>Ants came back after a big rain and they re-treated two days later for free, no arguing.</blockquote><figcaption><b>Daniel V.</b>, Keller</figcaption></figure>
+      <figure><blockquote>Our tech explains what he's spraying and where, and keeps it away from the kids' play area.</blockquote><figcaption><b>Monica R.</b>, Fort Worth</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap two">
+    <div><h2 class="h2">Where we treat</h2><p class="lede">Tarrant County, with routes every weekday.</p>
+      <ul class="towns"><li>Fort Worth</li><li>Benbrook</li><li>Keller</li><li>Southlake</li><li>Burleson</li><li>Aledo</li><li>Haltom City</li></ul></div>
+    <div>
+      <details open><summary>Is it safe for kids and pets?</summary><p>Yes. We use EPA-registered products at label rates, mostly outside. Keep pets off treated areas until dry, usually about 30 minutes.</p></details>
+      <details><summary>Do I need to be home?</summary><p>Only for the first visit, which includes the inside. Quarterly visits are outside unless you ask us in.</p></details>
+      <details><summary>What if bugs come back between visits?</summary><p>Call or text and we come back free, usually within two business days.</p></details>
+      <details><summary>Is there a contract?</summary><p>No long-term contract. Cancel any time with a text.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Get a free inspection</h2>
+      <p class="lede">Tell us what you're seeing. We'll call to set a time, often this week.</p>
+      <a class="phone" href="tel:+15550104477"><small>Or call or text</small>(555) 010-4477</a>
+    </div>
+    <form class="q" id="qf" novalidate>
+      <h3>Request an inspection</h3>
+      <div class="f2"><label>Name<input name="name" autocomplete="name"></label><label>Phone<input name="phone" type="tel" autocomplete="tel"></label></div>
+      <label>What are you seeing?<select name="need" id="need"><option>Ants</option><option>Roaches</option><option>Scorpions</option><option>Termites</option><option>Mosquitoes</option><option>Rodents</option><option>Not sure</option></select></label>
+      <label>Details (optional)<textarea name="msg"></textarea></label>
+      <button class="btn btn-indigo" type="submit">Request my inspection</button>
+      <p class="sent" id="sent" role="status">Request sent. This is an example site, so nothing was actually sent.</p>
+    </form>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div><div class="brand">Shieldline Pest Control</div><a href="tel:+15550104477">(555) 010-4477</a> &nbsp;/&nbsp; help@shieldlinepest.example<br>Texas Department of Agriculture license on file</div>
+    <div style="text-align:right">© <span id="yr"></span> Shieldline Pest Control<br>Website by <a href="https://kloverin.com" target="_blank" rel="noopener">Kloverin</a></div>
+  </div>
+</footer>
+<div class="callbar"><a class="btn btn-indigo" href="tel:+15550104477">Call or text</a><a class="btn btn-amber" href="#quote">Free inspection</a></div>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  var M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],now=new Date().getMonth();
+  var P=[
+    {n:'Ants',a:[0,1,2,3,3,3,3,3,2,2,1,0],p:'Fire ants and odorous house ants explode after spring rains and stay busy all summer.',l:['Mounds in the lawn after rain','Trails along baseboards and counters','Ants around pet bowls'],plan:'Every plan'},
+    {n:'Roaches',a:[1,1,1,2,2,3,3,3,3,2,1,1],p:'American roaches move in from mulch and sewers when Texas heat peaks.',l:['Droppings like coffee grounds','Musty smell under sinks','Roaches at night near drains'],plan:'Every plan'},
+    {n:'Scorpions',a:[0,0,1,2,3,3,3,3,2,1,0,0],p:'Striped bark scorpions hunt at night and slip under doors in Fort Worth neighborhoods.',l:['Sightings on walls at night','Found in shoes or towels','Near rock beds and woodpiles'],plan:'Home Shield and up'},
+    {n:'Termites',a:[0,1,3,3,2,1,1,1,1,1,0,0],p:'Subterranean termites swarm on warm spring days after rain, then feed quietly year-round.',l:['Swarms of winged bugs in spring','Mud tubes on the foundation','Hollow-sounding baseboards'],plan:'Total Shield'},
+    {n:'Mosquitoes',a:[0,0,1,2,3,3,3,3,3,2,1,0],p:'Standing water after storms turns any backyard into a breeding ground within a week.',l:['Bites at dusk and dawn','Clouds near shrubs and shade','Water in pots, gutters and toys'],plan:'Total Shield'},
+    {n:'Rodents',a:[3,3,2,1,0,0,0,0,1,2,3,3],p:'Mice and roof rats look for warm attics as soon as the first cold front blows through.',l:['Scratching in the attic at night','Chewed boxes or wires','Droppings in the garage'],plan:'Home Shield and up'}
+  ];
+  var lv=['quiet','some activity','busy','peak season'];
+  var thr=document.querySelector('#tbl thead tr'),tb=document.querySelector('#tbl tbody');
+  M.forEach(function(m,i){var th=document.createElement('th');th.scope='col';th.textContent=m;if(i===now)th.style.color='#fff';thr.appendChild(th)});
+  P.forEach(function(p,i){var tr=document.createElement('tr');var td=document.createElement('td');td.className='n';var b=document.createElement('button');b.type='button';b.textContent=p.n;b.onclick=function(){sel(i)};td.appendChild(b);tr.appendChild(td);
+    p.a.forEach(function(a,mi){var c=document.createElement('td');c.className='l'+a+(mi===now?' now':'');c.title=p.n+' in '+M[mi]+': '+lv[a];tr.appendChild(c)});tb.appendChild(tr)});
+  function sel(i){var p=P[i];[].forEach.call(tb.rows,function(r,ri){r.classList.toggle('sel',ri===i)});
+    document.getElementById('dT').textContent=p.n;document.getElementById('dP').textContent=p.p;
+    document.getElementById('dL').innerHTML=p.l.map(function(x){return '<li>'+x+'</li>'}).join('');
+    var l=p.a[now];document.getElementById('dNow').textContent=l===3?'Peak season':l===2?'Busy':l===1?'Some activity':'Quiet';
+    document.getElementById('dPlan').textContent=p.plan;document.getElementById('need').selectedIndex=i}
+  var best=0;P.forEach(function(p,i){if(p.a[now]>P[best].a[now])best=i});sel(best);
+})();
+document.getElementById('qf').addEventListener('submit',function(e){
+  e.preventDefault();var n=e.target.elements['name'],p=e.target.elements['phone'];
+  if(!n.value.trim()||!p.value.trim()){(n.value.trim()?p:n).focus();return}
+  document.getElementById('sent').style.display='block';
+});
+</script>
+</body>
+</html>

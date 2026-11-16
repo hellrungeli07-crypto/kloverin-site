@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Magnolia Painting Co. | House painters in Houston, TX</title>
+<meta name="description" content="Exterior and interior house painting in Houston. Try colors on a house before you commit, then get a fixed written quote.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#23201F; --page:#F4F4F2; --white:#fff; --muted:#5C5752; --line:rgba(35,32,31,.13);
+  --siding:#5B7186; --trim:#F7F6F2; --door:#B5413A;
+  --serif:"DM Serif Display",Georgia,serif; --sans:"DM Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--page);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--door);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;line-height:1.02;margin:0}
+.sample{background:var(--ink);color:#aaa49e;font-size:13px;text-align:center;padding:7px 16px}
+.nav{position:sticky;top:0;z-index:20;background:rgba(244,244,242,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:30px;height:68px}
+.brand{font-family:var(--serif);font-size:25px;text-decoration:none;display:flex;align-items:center;gap:10px}
+.brand i{width:14px;height:30px;border-radius:3px;background:linear-gradient(var(--door) 0 33%,var(--siding) 33% 66%,var(--trim) 66%);box-shadow:inset 0 0 0 1px var(--line);transition:background .4s}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0 0 0 auto;padding:0;font-size:15px;color:var(--muted)}
+.nav ul a{text-decoration:none}.nav ul a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:4px;font:600 16px var(--sans);text-decoration:none;border:0;cursor:pointer;transition:background .2s,filter .2s}
+.btn-ink{background:var(--ink);color:#fff}.btn-ink:hover{background:#000}
+.btn-door{background:var(--door);color:#fff;transition:background .4s}.btn-door:hover{filter:brightness(.9)}
+.btn-line{box-shadow:inset 0 0 0 1.5px var(--ink);background:transparent}.btn-line:hover{background:var(--ink);color:#fff}
+.nav .btn{padding:10px 18px;font-size:15px}
+
+/* hero / visualizer */
+.hero{padding:56px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(50px,6.4vw,92px)}
+.hero p{font-size:19px;color:var(--muted);max-width:38ch;margin:22px 0 28px}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+.viz{background:var(--white);border-radius:6px;padding:26px;box-shadow:0 30px 70px rgba(35,32,31,.12)}
+.viz svg{width:100%;height:auto;display:block;border-radius:3px}
+.viz .s{transition:fill .5s ease}
+.pickers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}
+.pickers h3{font-family:var(--sans);font-size:13px;font-weight:600;color:var(--muted);margin:0 0 8px}
+.sw{display:flex;flex-wrap:wrap;gap:7px}
+.sw button{width:30px;height:30px;border-radius:50%;border:0;cursor:pointer;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);padding:0;position:relative}
+.sw button[aria-pressed="true"]::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--ink)}
+.combo{margin-top:16px;padding-top:16px;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+.combo b{color:var(--ink)}
+
+section{padding:100px 0}
+.h2{font-size:clamp(40px,5vw,66px);margin-bottom:16px}
+.lede{color:var(--muted);font-size:19px;max-width:46ch;margin:0}
+
+.prep{background:var(--ink);color:#fff}
+.prep .lede{color:#aaa49e}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:48px;padding:0;counter-reset:s}
+.steps li{list-style:none;counter-increment:s;border-top:1px solid rgba(255,255,255,.2);padding-top:20px}
+.steps li::before{content:counter(s);font-family:var(--serif);font-size:44px;line-height:1;display:block;margin-bottom:14px;color:var(--door);transition:color .4s}
+.steps h3{font-size:26px;margin-bottom:8px}
+.steps p{margin:0;color:#c8c2bc;font-size:16px}
+
+.work .grid{display:grid;grid-template-columns:7fr 5fr;grid-template-rows:280px 280px;gap:14px;margin-top:44px}
+.work figure{margin:0;position:relative;overflow:hidden;border-radius:4px}
+.work figure:first-child{grid-row:span 2}
+.work img{width:100%;height:100%;object-fit:cover}
+.work figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 14px;background:linear-gradient(transparent,rgba(0,0,0,.65));color:#fff;font-size:15px}
+.work figcaption b{display:block;font-family:var(--serif);font-weight:400;font-size:22px}
+
+.svc{background:var(--white)}
+.svc .list{display:grid;grid-template-columns:repeat(3,1fr);gap:0 40px;margin-top:40px}
+.svc article{padding:24px 0;border-top:1px solid var(--line)}
+.svc h3{font-size:28px;margin-bottom:6px}
+.svc p{margin:0;color:var(--muted);font-size:16px}
+
+.rv .wrap{display:grid;grid-template-columns:7fr 5fr;gap:56px;align-items:start}
+.big{font-family:var(--serif);font-size:clamp(28px,3vw,40px);line-height:1.2;margin:0}
+.who{margin-top:20px;color:var(--muted);font-size:15px}
+.who b{color:var(--ink)}
+.small{border-top:1px solid var(--line);padding:22px 0}
+.small p{margin:0 0 8px}
+.small span{font-size:14px;color:var(--muted)}
+
+.two{display:grid;grid-template-columns:5fr 7fr;gap:72px}
+.towns{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:22px 0 0}
+.towns li{padding:7px 14px;border-radius:4px;background:var(--white);border:1px solid var(--line);font-size:15px}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--ink)}
+summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-weight:600;font-size:18px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:24px;transition:transform .2s}
+details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+details p{margin:0 0 20px;color:var(--muted)}
+
+.quote{background:var(--white);border-top:6px solid var(--door);transition:border-color .4s}
+.quote .wrap{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:start}
+.phone{display:block;margin-top:26px;font-family:var(--serif);font-size:clamp(34px,3.8vw,50px);text-decoration:none}
+.phone small{display:block;font-family:var(--sans);font-size:15px;color:var(--muted)}
+form.q{background:var(--page);border-radius:6px;padding:32px}
+form.q h3{font-size:30px;margin-bottom:18px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form.q label{display:block;font-size:14px;font-weight:600;margin-bottom:14px}
+form.q input,form.q textarea,form.q select{display:block;width:100%;margin-top:6px;padding:12px 14px;font:inherit;font-size:16px;border:1.5px solid #d6d2cd;border-radius:4px;background:#fff;color:var(--ink)}
+form.q input:focus,form.q textarea:focus,form.q select:focus{outline:none;border-color:var(--ink)}
+form.q textarea{min-height:80px;resize:vertical}
+form.q .btn{width:100%;justify-content:center}
+.sent{display:none;margin:14px 0 0;padding:12px 14px;border-radius:4px;background:#fff;font-size:15px}
+footer{background:var(--ink);color:#aaa49e;padding:48px 0 40px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer .brand{color:#fff;margin-bottom:10px}
+footer a{text-decoration:none}footer a:hover{color:#fff}
+.callbar{display:none}
+@media (max-width:900px){
+  .nav ul{display:none}.nav .btn{margin-left:auto}
+  .hero .wrap,.rv .wrap,.two,.quote .wrap{grid-template-columns:1fr;gap:40px}
+  .viz{padding:16px}
+  .pickers{grid-template-columns:1fr;gap:12px}
+  .steps,.svc .list{grid-template-columns:1fr 1fr}
+  .work .grid{grid-template-columns:1fr;grid-template-rows:260px 200px 200px}
+  .work figure:first-child{grid-row:auto}
+  .f2{grid-template-columns:1fr}
+  section{padding:76px 0}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;gap:8px}
+  .callbar a{flex:1;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+  footer{padding-bottom:100px}
+}
+@media (max-width:560px){.steps,.svc .list{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="sample">Example site. The business, photos and reviews are samples.</div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Magnolia Painting Co. home"><i aria-hidden="true"></i>Magnolia Painting Co.</a>
+    <ul><li><a href="#try">Try colors</a></li><li><a href="#prep">Our process</a></li><li><a href="#work">Recent homes</a></li><li><a href="#reviews">Reviews</a></li></ul>
+    <a class="btn btn-ink" href="tel:+15550109310">(555) 010-9310</a>
+  </div>
+</header>
+<main id="top">
+<section class="hero" id="try">
+  <div class="wrap">
+    <div>
+      <h1>See your house in a new color, before we open a can.</h1>
+      <p>Exterior and interior painting for Houston homes. Try a combination here, then we'll bring real samples to your door.</p>
+      <div class="actions"><a class="btn btn-door" href="#quote">Get a free color visit</a><a class="btn btn-line" href="tel:+15550109310">Call (555) 010-9310</a></div>
+    </div>
+    <div class="viz">
+      <svg viewBox="0 0 640 400" role="img" aria-label="Illustration of a two-story house in the colors you choose">
+        <rect width="640" height="400" fill="#DCE6EC"/>
+        <rect y="330" width="640" height="70" fill="#7FA36B"/>
+        <rect x="0" y="352" width="640" height="48" fill="#6C9159"/>
+        <path d="M120 170L320 60l200 110z" fill="#3E3B39"/>
+        <rect class="s" data-c="siding" x="140" y="170" width="360" height="165" style="fill:var(--siding)"/>
+        <g opacity=".12" stroke="#000" stroke-width="1.2">
+          <path d="M140 190h360M140 210h360M140 230h360M140 250h360M140 270h360M140 290h360M140 310h360"/>
+        </g>
+        <path class="s" d="M118 172L320 60l202 112" fill="none" style="stroke:var(--trim)" stroke-width="10" stroke-linejoin="round"/>
+        <rect class="s" x="136" y="166" width="368" height="10" style="fill:var(--trim)"/>
+        <rect class="s" x="136" y="330" width="368" height="8" style="fill:var(--trim)"/>
+        <circle class="s" cx="320" cy="120" r="22" style="fill:var(--trim)"/><circle cx="320" cy="120" r="15" fill="#2F3B45"/>
+        <g class="win"><rect class="s" x="172" y="196" width="64" height="70" style="fill:var(--trim)"/><rect x="179" y="203" width="50" height="56" fill="#2F3B45"/><path d="M204 203v56M179 231h50" style="stroke:var(--trim)" stroke-width="4" class="s"/></g>
+        <g><rect class="s" x="404" y="196" width="64" height="70" style="fill:var(--trim)"/><rect x="411" y="203" width="50" height="56" fill="#2F3B45"/><path d="M436 203v56M411 231h50" style="stroke:var(--trim)" stroke-width="4" class="s"/></g>
+        <rect class="s" x="281" y="232" width="78" height="103" style="fill:var(--trim)"/>
+        <rect class="s" data-c="door" x="289" y="240" width="62" height="95" style="fill:var(--door)"/>
+        <rect x="297" y="250" width="46" height="34" fill="rgba(0,0,0,.14)"/>
+        <rect x="297" y="292" width="46" height="34" fill="rgba(0,0,0,.14)"/>
+        <circle cx="342" cy="290" r="3.5" fill="#D9B45A"/>
+        <rect x="262" y="335" width="116" height="8" fill="#8E8A85"/><rect x="250" y="343" width="140" height="8" fill="#A29E99"/>
+        <ellipse cx="160" cy="336" rx="34" ry="18" fill="#56804A"/><ellipse cx="480" cy="336" rx="34" ry="18" fill="#56804A"/>
+        <ellipse cx="200" cy="340" rx="24" ry="13" fill="#4C7442"/><ellipse cx="440" cy="340" rx="24" ry="13" fill="#4C7442"/>
+      </svg>
+      <div class="pickers">
+        <div><h3>Siding</h3><div class="sw" data-v="siding"></div></div>
+        <div><h3>Trim</h3><div class="sw" data-v="trim"></div></div>
+        <div><h3>Front door</h3><div class="sw" data-v="door"></div></div>
+      </div>
+      <p class="combo" id="combo"></p>
+    </div>
+  </div>
+</section>
+
+<section class="prep" id="prep">
+  <div class="wrap">
+    <h2 class="h2">Paint lasts as long as the prep.</h2>
+    <p class="lede">Houston humidity eats cheap paint jobs in two summers. This is how ours last ten.</p>
+    <ol class="steps">
+      <li><h3>Wash</h3><p>Soft wash to kill mildew so the new coat bonds to clean wood, not dirt.</p></li>
+      <li><h3>Repair</h3><p>Rotted trim replaced, cracks filled, nail pops set and spot-primed.</p></li>
+      <li><h3>Protect</h3><p>Plants, windows, floors and furniture covered before a single brush comes out.</p></li>
+      <li><h3>Two coats</h3><p>Two full coats of premium paint, cut in by hand, and a walk-through when we finish.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <h2 class="h2">Recent homes</h2>
+    <p class="lede">A few exteriors we finished this season around Houston.</p>
+    <div class="grid">
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1625603736199-775425d2890a?w=1300&q=80&auto=format&fit=crop" alt="Blue two-story house with white trim and a front porch"><figcaption><b>Heights bungalow</b>Navy siding, bright white trim</figcaption></figure>
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1609757754057-8a8e17eb73b2?w=900&q=80&auto=format&fit=crop" alt="Traditional house with a red front door and spring flowers"><figcaption><b>Meyerland traditional</b>Fresh trim and a new red door</figcaption></figure>
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1574359411659-15573a27fd0c?w=900&q=80&auto=format&fit=crop" alt="Painters on ladders painting a lavender house"><figcaption><b>Montrose cottage</b>Full exterior in four days</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="svc">
+  <div class="wrap">
+    <h2 class="h2">What we paint</h2>
+    <div class="list">
+      <article><h3>Exteriors</h3><p>Siding, trim, soffits, shutters and fences, with rot repair included.</p></article>
+      <article><h3>Interiors</h3><p>Walls, ceilings and trim, with furniture moved and floors covered.</p></article>
+      <article><h3>Cabinets</h3><p>Kitchen cabinets sprayed smooth in a hard, washable finish.</p></article>
+      <article><h3>Front doors</h3><p>A one-day refresh that changes the whole look of the house.</p></article>
+      <article><h3>Decks and fences</h3><p>Stained or painted, with boards replaced where they need it.</p></article>
+      <article><h3>Color consults</h3><p>Real samples on your walls, in your light, before you choose.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="rv" id="reviews">
+  <div class="wrap">
+    <div><p class="big">“They painted two big swatches on the house so we could see them in the afternoon sun. We changed our mind, and they were happy to.”</p><p class="who"><b>Lauren B.</b>, The Heights</p></div>
+    <div>
+      <div class="small"><p>Replaced six rotten boards we didn't know about and didn't charge extra. The house looks new.</p><span><b>Victor M.</b>, Bellaire</span></div>
+      <div class="small"><p>Our cabinets look factory-finished. The crew covered everything and cleaned every day.</p><span><b>Sandra K.</b>, Katy</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap two">
+    <div><h2 class="h2">Where we paint</h2><p class="lede">Inside the Loop and the neighborhoods around it.</p>
+      <ul class="towns"><li>The Heights</li><li>Montrose</li><li>Bellaire</li><li>Meyerland</li><li>West University</li><li>Katy</li><li>Pearland</li></ul></div>
+    <div>
+      <details open><summary>Is the quote fixed?</summary><p>Yes. You get one written price covering prep, paint and labor. It only changes if you add to the job.</p></details>
+      <details><summary>Which paint do you use?</summary><p>Sherwin-Williams and Benjamin Moore premium lines, matched to what each surface needs.</p></details>
+      <details><summary>How long does an exterior take?</summary><p>Most single-family homes take three to five days, depending on prep and weather.</p></details>
+      <details><summary>What's your warranty?</summary><p>Five years on exterior workmanship against peeling and blistering.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Book a free color visit</h2>
+      <p class="lede">We'll bring samples, measure, and leave a written quote the same day.</p>
+      <a class="phone" href="tel:+15550109310"><small>Or call us</small>(555) 010-9310</a>
+    </div>
+    <form class="q" id="qf" novalidate>
+      <h3>Request a visit</h3>
+      <div class="f2"><label>Name<input name="name" autocomplete="name"></label><label>Phone<input name="phone" type="tel" autocomplete="tel"></label></div>
+      <label>Project<select name="need"><option>Exterior</option><option>Interior</option><option>Cabinets</option><option>Not sure yet</option></select></label>
+      <label>Colors you liked<textarea name="msg" id="msg"></textarea></label>
+      <button class="btn btn-door" type="submit">Request my visit</button>
+      <p class="sent" id="sent" role="status">Request sent. This is an example site, so nothing was actually sent.</p>
+    </form>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div><div class="brand">Magnolia Painting Co.</div><a href="tel:+15550109310">(555) 010-9310</a> &nbsp;/&nbsp; hello@magnoliapainting.example<br>Insured in Texas</div>
+    <div style="text-align:right">© <span id="yr"></span> Magnolia Painting Co.<br>Website by <a href="https://kloverin.com" target="_blank" rel="noopener">Kloverin</a></div>
+  </div>
+</footer>
+<div class="callbar"><a class="btn btn-ink" href="tel:+15550109310">Call now</a><a class="btn btn-door" href="#try">Try colors</a></div>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  var C={
+    siding:[['Harbor Blue','#5B7186'],['Sage','#8A9A7B'],['Greige','#B7AFA3'],['Charcoal','#3F4246'],['Soft White','#ECEAE4'],['Butter','#E5CF8F']],
+    trim:[['Bright White','#F7F6F2'],['Cream','#EFE6CF'],['Black','#2A2A2A']],
+    door:[['Brick Red','#B5413A'],['Navy','#1F3550'],['Forest','#2F5A3F'],['Black','#232323'],['Mustard','#D5A23A'],['Teal','#2C7A7B']]
+  },cur={siding:0,trim:0,door:0},root=document.documentElement;
+  function apply(){
+    Object.keys(cur).forEach(function(k){root.style.setProperty('--'+k,C[k][cur[k]][1])});
+    var t=C.siding[cur.siding][0]+' siding, '+C.trim[cur.trim][0].toLowerCase()+' trim and a '+C.door[cur.door][0].toLowerCase()+' door';
+    document.getElementById('combo').innerHTML='<b>Your combination:</b> '+t;
+    document.getElementById('msg').value=t;
+    document.querySelectorAll('.sw button').forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.i===cur[b.parentNode.dataset.v]?'true':'false')});
+  }
+  document.querySelectorAll('.sw').forEach(function(box){
+    var k=box.dataset.v;
+    C[k].forEach(function(c,i){var b=document.createElement('button');b.type='button';b.style.background=c[1];b.dataset.i=i;b.setAttribute('aria-label',c[0]);b.title=c[0];b.onclick=function(){cur[k]=i;apply()};box.appendChild(b)});
+  });
+  apply();
+})();
+document.getElementById('qf').addEventListener('submit',function(e){
+  e.preventDefault();var n=e.target.elements['name'],p=e.target.elements['phone'];
+  if(!n.value.trim()||!p.value.trim()){(n.value.trim()?p:n).focus();return}
+  document.getElementById('sent').style.display='block';
+});
+</script>
+</body>
+</html>

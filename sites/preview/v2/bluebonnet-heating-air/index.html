@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bluebonnet Heating &amp; Air | AC repair in Allen, TX</title>
+<meta name="description" content="AC and heating repair, replacement and maintenance in Allen, McKinney and Plano. Same-day service and honest repair-or-replace advice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1B2430; --cool:#1E9C95; --cool-d:#167A74; --ice:#E1F1EF; --ember:#E8663D; --page:#F5F7F8;
+  --muted:#566270; --line:rgba(27,36,48,.12); --f:"Manrope",system-ui,sans-serif;
+  --t:0; /* 0 hot -> 1 cool */
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--f);color:var(--ink);background:var(--page);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cool);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-weight:800;letter-spacing:-.04em;line-height:1.02;margin:0}
+.sample{background:var(--ink);color:#9aa6b2;font-size:13px;text-align:center;padding:7px 16px}
+.nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:30px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:-.03em;text-decoration:none}
+.brand svg{width:32px;height:32px}
+.nav ul{display:flex;gap:26px;list-style:none;margin:0 0 0 auto;padding:0;font-size:15px;color:var(--muted)}
+.nav ul a{text-decoration:none}.nav ul a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:12px;font:700 16px var(--f);text-decoration:none;border:0;cursor:pointer;transition:background .2s}
+.btn-cool{background:var(--cool);color:#fff}.btn-cool:hover{background:var(--cool-d)}
+.btn-ink{background:var(--ink);color:#fff}.btn-ink:hover{background:#000}
+.btn-line{box-shadow:inset 0 0 0 1.5px var(--ink);background:transparent}.btn-line:hover{background:var(--ink);color:#fff}
+.nav .btn{padding:10px 16px;font-size:15px}
+
+.hero{position:relative;overflow:hidden;padding:70px 0 90px;background:linear-gradient(135deg,rgba(232,102,61,calc(.16*(1 - var(--t)))) 0%,rgba(30,156,149,calc(.16*var(--t))) 100%),var(--page)}
+.hero .wrap{display:grid;grid-template-columns:6fr 5fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(46px,6.6vw,88px)}
+.hero p{font-size:20px;color:var(--muted);max-width:40ch;margin:22px 0 30px}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero ul{display:flex;gap:22px;flex-wrap:wrap;list-style:none;padding:0;margin:30px 0 0;font-size:15px;color:var(--muted)}
+.hero li::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--cool);margin-right:8px;vertical-align:1px}
+.thermo{position:relative;justify-self:center;width:min(400px,80vw);aspect-ratio:1}
+.thermo svg{width:100%;height:100%}
+.face{position:absolute;inset:16%;border-radius:50%;background:#fff;box-shadow:0 30px 70px rgba(27,36,48,.16),inset 0 -6px 18px rgba(27,36,48,.06);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.face .temp{font-size:clamp(64px,9vw,104px);font-weight:800;letter-spacing:-.06em;line-height:1;color:var(--ink)}
+.face .temp sup{font-size:.4em;vertical-align:.95em}
+.face small{font-size:14px;color:var(--muted);font-weight:600}
+.face .mode{margin-top:8px;font-size:13px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--ice);color:var(--cool-d)}
+.ctrl{display:flex;gap:10px;justify-content:center;margin-top:-8px}
+.ctrl button{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--line);background:#fff;font:700 22px var(--f);cursor:pointer;color:var(--ink)}
+.ctrl button:hover{border-color:var(--ink)}
+
+.strip{background:var(--ink);color:#fff}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.strip div{padding:24px 20px 26px 0}
+.strip b{display:block;font-size:24px;letter-spacing:-.03em}
+.strip span{font-size:14px;color:#9aa6b2}
+
+section{padding:100px 0}
+.h2{font-size:clamp(36px,4.6vw,60px);margin-bottom:16px}
+.lede{color:var(--muted);font-size:19px;max-width:46ch;margin:0}
+
+.rr .wrap{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:start}
+.calc{background:#fff;border-radius:22px;padding:32px;border:1px solid var(--line)}
+.calc label{display:block;font-weight:700;font-size:15px;margin-bottom:6px}
+.calc output{float:right;font-weight:800}
+.calc input[type=range]{width:100%;accent-color:var(--cool);margin:0 0 22px}
+.verdict{border-radius:16px;padding:22px 24px;margin-top:4px;transition:background .3s}
+.verdict.fix{background:var(--ice)}
+.verdict.replace{background:#FCE8E1}
+.verdict b{display:block;font-size:22px;letter-spacing:-.02em;margin-bottom:6px}
+.verdict p{margin:0;color:var(--muted);font-size:15.5px}
+.rule{margin-top:26px;font-size:15px;color:var(--muted);border-left:3px solid var(--cool);padding-left:16px}
+
+.svc{background:#fff}
+.svc .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.svc article{border-radius:20px;overflow:hidden;background:var(--page)}
+.svc img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.svc div{padding:22px 24px 26px}
+.svc h3{font-size:22px;margin-bottom:6px}
+.svc p{margin:0;color:var(--muted);font-size:16px}
+.svc em{font-style:normal;display:inline-block;margin-top:12px;font-weight:700;font-size:14px;color:var(--cool-d)}
+
+.club{background:var(--cool);color:#fff}
+.club .wrap{display:grid;grid-template-columns:6fr 5fr;gap:56px;align-items:center}
+.club .lede{color:#d9f1ef}
+.club ul{list-style:none;padding:0;margin:0;background:rgba(255,255,255,.12);border-radius:20px;padding:10px 26px}
+.club li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+.club li:last-child{border:0}
+.club .price{font-size:54px;font-weight:800;letter-spacing:-.05em;line-height:1;margin:26px 0 18px}
+.club .price small{font-size:17px;font-weight:600;letter-spacing:0}
+
+.rv{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.rv figure{margin:0;background:#fff;border-radius:20px;padding:28px;border:1px solid var(--line)}
+.rv blockquote{margin:0 0 16px;font-size:17.5px}
+.rv figcaption{font-size:15px;color:var(--muted)}
+.rv figcaption b{color:var(--ink)}
+.two{display:grid;grid-template-columns:5fr 7fr;gap:72px}
+.towns{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:22px 0 0}
+.towns li{padding:7px 14px;border-radius:10px;background:#fff;border:1px solid var(--line);font-size:15px}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-weight:700;font-size:18px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:24px;color:var(--cool);transition:transform .2s}
+details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+details p{margin:0 0 20px;color:var(--muted)}
+.quote{background:var(--ink);color:#fff}
+.quote .wrap{display:grid;grid-template-columns:5fr 6fr;gap:64px;align-items:start}
+.quote .lede{color:#9aa6b2}
+.phone{display:block;margin-top:28px;font-size:clamp(32px,3.6vw,46px);font-weight:800;letter-spacing:-.04em;text-decoration:none;color:#7FDCD6}
+.phone small{display:block;font-size:15px;font-weight:500;letter-spacing:0;color:#9aa6b2}
+form.q{background:#fff;color:var(--ink);border-radius:22px;padding:32px}
+form.q h3{font-size:26px;margin-bottom:18px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form.q label{display:block;font-size:14px;font-weight:700;margin-bottom:14px}
+form.q input,form.q select,form.q textarea{display:block;width:100%;margin-top:6px;padding:12px 14px;font:inherit;font-size:16px;border:1.5px solid #d4dbe1;border-radius:12px;color:var(--ink);background:#fff}
+form.q input:focus,form.q select:focus,form.q textarea:focus{outline:none;border-color:var(--cool)}
+form.q textarea{min-height:80px;resize:vertical}
+form.q .btn{width:100%;justify-content:center}
+.sent{display:none;margin:14px 0 0;padding:12px 14px;border-radius:12px;background:var(--ice);font-size:15px}
+footer{background:#10161E;color:#9aa6b2;padding:48px 0 40px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer .brand{color:#fff;margin-bottom:10px}
+footer a{text-decoration:none}footer a:hover{color:#fff}
+.callbar{display:none}
+@media (max-width:900px){
+  .nav ul{display:none}.nav .btn{margin-left:auto}
+  .hero .wrap,.rr .wrap,.club .wrap,.two,.quote .wrap{grid-template-columns:1fr;gap:40px}
+  .strip .wrap{grid-template-columns:1fr 1fr}
+  .svc .grid,.rv,.f2{grid-template-columns:1fr}
+  section{padding:76px 0}
+  .callbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;gap:8px}
+  .callbar a{flex:1;justify-content:center;box-shadow:0 8px 24px rgba(27,36,48,.3)}
+  footer{padding-bottom:100px}
+}
+</style>
+</head>
+<body>
+<div class="sample">Example site. The business, photos and reviews are samples.</div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Bluebonnet Heating and Air home"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="10" fill="#1B2430"/><path d="M16 6v20M7.3 11l17.4 10M7.3 21l17.4-10" stroke="#7FDCD6" stroke-width="2.4" stroke-linecap="round"/><circle cx="16" cy="16" r="3.2" fill="#E8663D"/></svg>Bluebonnet Heating &amp; Air</a>
+    <ul><li><a href="#replace">Repair or replace?</a></li><li><a href="#services">Services</a></li><li><a href="#club">Comfort Club</a></li><li><a href="#reviews">Reviews</a></li></ul>
+    <a class="btn btn-cool" href="tel:+15550108844">(555) 010-8844</a>
+  </div>
+</header>
+<main id="top">
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div>
+      <h1>From 88° to 72° by tonight.</h1>
+      <p>Same-day AC and heating repair for Allen, McKinney and Plano. We'll tell you straight whether it's worth fixing.</p>
+      <div class="actions"><a class="btn btn-cool" href="#quote">Book same-day service</a><a class="btn btn-line" href="#replace">Repair or replace?</a></div>
+      <ul><li>No overtime charges</li><li>Upfront pricing</li><li>NATE-certified techs</li></ul>
+    </div>
+    <div>
+      <div class="thermo" aria-hidden="true">
+        <svg viewBox="0 0 200 200"><defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#1E9C95"/><stop offset="1" stop-color="#E8663D"/></linearGradient></defs>
+          <circle cx="100" cy="100" r="92" fill="none" stroke="#E4E9ED" stroke-width="7" stroke-dasharray="434 145" transform="rotate(130 100 100)" stroke-linecap="round"/>
+          <circle id="arc" cx="100" cy="100" r="92" fill="none" stroke="url(#g)" stroke-width="7" stroke-dasharray="434 145" stroke-dashoffset="0" transform="rotate(130 100 100)" stroke-linecap="round" style="transition:stroke-dasharray .3s"/>
+        </svg>
+        <div class="face"><small>Inside now</small><div class="temp"><span id="temp">88</span><sup>°</sup></div><span class="mode" id="mode">Cooling to 72°</span></div>
+      </div>
+      <div class="ctrl"><button id="dn" aria-label="Lower the temperature">−</button><button id="up" aria-label="Raise the temperature">+</button></div>
+    </div>
+  </div>
+</section>
+
+<div class="strip"><div class="wrap">
+  <div><b>Same day</b><span>for calls before 2 p.m.</span></div>
+  <div><b>4.9 stars</b><span>from 302 Google reviews</span></div>
+  <div><b>10-year</b><span>parts and labor on new systems</span></div>
+  <div><b>$0</b><span>second opinions on replacement quotes</span></div>
+</div></div>
+
+<section class="rr" id="replace">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Repair or replace? Do the math.</h2>
+      <p class="lede">Move the sliders to match your system. It's the same rule of thumb our techs use at your kitchen table.</p>
+      <p class="rule">The $5,000 rule: multiply your system's age by the repair price. Over $5,000, replacing usually saves you money.</p>
+    </div>
+    <form class="calc" id="rr" onsubmit="return false">
+      <label for="age">System age <output id="ageO">12 years</output></label>
+      <input type="range" id="age" min="1" max="25" value="12">
+      <label for="cost">Repair quote <output id="costO">$450</output></label>
+      <input type="range" id="cost" min="100" max="2500" step="50" value="450">
+      <div class="verdict" id="v" aria-live="polite"><b id="vT"></b><p id="vP"></p></div>
+    </form>
+  </div>
+</section>
+
+<section class="svc" id="services">
+  <div class="wrap">
+    <h2 class="h2">What we take care of</h2>
+    <p class="lede">Every brand, every age, and a written price before we start.</p>
+    <div class="grid">
+      <article><img loading="lazy" src="https://images.unsplash.com/photo-1651474738521-efacfb201039?w=900&q=80&auto=format&fit=crop" alt="Outdoor AC condenser unit beside a house"><div><h3>AC repair</h3><p>Warm air, ice on the lines, odd noises or a unit that won't kick on.</p><em>$89 diagnosis, waived with repair</em></div></article>
+      <article><img loading="lazy" src="https://images.unsplash.com/photo-1776860150305-108ed577d7d4?w=900&q=80&auto=format&fit=crop" alt="Modern heat pump outside a brick home"><div><h3>New systems</h3><p>High-efficiency AC, heat pumps and furnaces, sized with a real load calculation.</p><em>From $6,900 installed</em></div></article>
+      <article><img loading="lazy" src="https://images.unsplash.com/photo-1665826254141-bfa10685e002?w=900&q=80&auto=format&fit=crop" alt="Wall-mounted mini-split unit outdoors"><div><h3>Mini-splits</h3><p>Ductless comfort for garages, additions and that one bedroom that's always hot.</p><em>From $3,400 installed</em></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="club" id="club">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Join the Comfort Club.</h2>
+      <p class="lede">Two tune-ups a year keep your system efficient and catch small problems before a July breakdown.</p>
+      <div class="price">$14<small> a month</small></div>
+      <a class="btn btn-ink" href="#quote">Join the club</a>
+    </div>
+    <ul>
+      <li><span>Spring AC and fall heating tune-ups</span><b>Included</b></li>
+      <li><span>Front of the line on hot days</span><b>Included</b></li>
+      <li><span>Discount on any repair</span><b>15%</b></li>
+      <li><span>Trip charge</span><b>Waived</b></li>
+    </ul>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <h2 class="h2">4.9 from 302 neighbors</h2>
+    <div class="rv">
+      <figure><blockquote>AC died on a 104° Saturday. They were here by 4 and we were cool by dinner, no weekend upcharge.</blockquote><figcaption><b>Jenna P.</b>, Allen</figcaption></figure>
+      <figure><blockquote>Another company told us we needed a new system. Bluebonnet replaced a $280 capacitor and it's been running two years since.</blockquote><figcaption><b>Mark S.</b>, McKinney</figcaption></figure>
+      <figure><blockquote>When it was finally time to replace, they showed us three options and never pushed the expensive one.</blockquote><figcaption><b>Angela T.</b>, Plano</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap two">
+    <div><h2 class="h2">Where we work</h2><p class="lede">Collin County, seven days a week in summer.</p>
+      <ul class="towns"><li>Allen</li><li>McKinney</li><li>Plano</li><li>Fairview</li><li>Lucas</li><li>Wylie</li><li>Murphy</li></ul></div>
+    <div>
+      <details open><summary>Do you charge more on weekends?</summary><p>No. Nights and weekends are the same price as weekdays.</p></details>
+      <details><summary>Which brands do you service?</summary><p>All of them, including Trane, Carrier, Lennox, Goodman, Rheem and older systems that other companies won't touch.</p></details>
+      <details><summary>Do you offer financing?</summary><p>Yes, on new systems, including 0% options for qualified buyers.</p></details>
+      <details><summary>How long does a new system take?</summary><p>Most installs are done in one day, including haul-away of the old unit.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div>
+      <h2 class="h2">Get cool today</h2>
+      <p class="lede">Tell us what's happening and we'll call with the next open time, usually the same afternoon.</p>
+      <a class="phone" href="tel:+15550108844"><small>Faster by phone</small>(555) 010-8844</a>
+    </div>
+    <form class="q" id="qf" novalidate>
+      <h3>Book service</h3>
+      <div class="f2"><label>Name<input name="name" autocomplete="name"></label><label>Phone<input name="phone" type="tel" autocomplete="tel"></label></div>
+      <label>What's going on?<select name="need"><option>AC not cooling</option><option>No heat</option><option>Strange noise or smell</option><option>Thinking about a new system</option><option>Tune-up</option></select></label>
+      <label>Details (optional)<textarea name="msg"></textarea></label>
+      <button class="btn btn-cool" type="submit">Request service</button>
+      <p class="sent" id="sent" role="status">Request sent. This is an example site, so nothing was actually sent.</p>
+    </form>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div><div class="brand">Bluebonnet Heating &amp; Air</div><a href="tel:+15550108844">(555) 010-8844</a> &nbsp;/&nbsp; service@bluebonnetair.example<br>TACLA license on file</div>
+    <div style="text-align:right">© <span id="yr"></span> Bluebonnet Heating &amp; Air<br>Website by <a href="https://kloverin.com" target="_blank" rel="noopener">Kloverin</a></div>
+  </div>
+</footer>
+<div class="callbar"><a class="btn btn-cool" href="tel:+15550108844">Call now</a><a class="btn" style="background:#fff;color:var(--ink)" href="#quote">Book service</a></div>
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  var hero=document.getElementById('hero'),T=document.getElementById('temp'),M=document.getElementById('mode'),arc=document.getElementById('arc'),cur=88,set=72;
+  function draw(){T.textContent=cur;var k=(cur-60)/(90-60);arc.style.strokeDasharray=(434*Math.max(.02,Math.min(1,k)))+' 999';
+    var t=Math.max(0,Math.min(1,(88-cur)/16));hero.style.setProperty('--t',t);
+    M.textContent=cur>set?'Cooling to '+set+'°':cur<set?'Heating to '+set+'°':'Holding at '+set+'°'}
+  function run(){if(cur!==set){cur+=cur>set?-1:1;draw();setTimeout(run,matchMedia('(prefers-reduced-motion: reduce)').matches?0:110)}}
+  document.getElementById('dn').onclick=function(){set=Math.max(62,set-1);draw();run()};
+  document.getElementById('up').onclick=function(){set=Math.min(85,set+1);draw();run()};
+  draw();setTimeout(run,700);
+})();
+(function(){
+  var a=document.getElementById('age'),c=document.getElementById('cost');
+  function upd(){var s=a.value*c.value,v=document.getElementById('v');
+    document.getElementById('ageO').textContent=a.value+' years';document.getElementById('costO').textContent='$'+(+c.value).toLocaleString();
+    if(s>5000){v.className='verdict replace';document.getElementById('vT').textContent='Replacing likely makes sense.';document.getElementById('vP').textContent=a.value+' × $'+(+c.value).toLocaleString()+' = $'+s.toLocaleString()+'. Put that money toward a new, more efficient system instead. We’ll quote both so you can compare.'}
+    else{v.className='verdict fix';document.getElementById('vT').textContent='Repair it.';document.getElementById('vP').textContent=a.value+' × $'+(+c.value).toLocaleString()+' = $'+s.toLocaleString()+'. Your system has good life left, and the repair is the smart spend.'}}
+  a.oninput=c.oninput=upd;upd();
+})();
+document.getElementById('qf').addEventListener('submit',function(e){
+  e.preventDefault();var n=e.target.elements['name'],p=e.target.elements['phone'];
+  if(!n.value.trim()||!p.value.trim()){(n.value.trim()?p:n).focus();return}
+  document.getElementById('sent').style.display='block';
+});
+</script>
+</body>
+</html>
