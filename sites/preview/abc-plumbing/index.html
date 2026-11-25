@@ -36,7 +36,7 @@ h1,h2,h3{font-family:"Barlow Condensed",sans-serif;line-height:1.02;margin:0;let
 header{position:sticky;top:0;z-index:40;background:rgba(251,251,250,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .hd{display:flex;align-items:center;justify-content:space-between;gap:18px;height:84px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand .mk{width:64px;height:64px;background:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Sm6Bd0T3cSbXWUjrH5EIMqTPMOpssGaq1F6WOMmdSTJ-RZ_HSpvMHCXZYGeqErViDV6pqR1hAeRyTLQnp5VPm1OyjlbTUR0U6oBytpXiOLtxX3Tm4fSMoQerKUKrMrlm5YPeP1=s300) center/112% no-repeat;mix-blend-mode:multiply;flex:none}
+.brand .mk{width:64px;height:64px;background:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Sm6Bd0T3cSbXWUjrH5EIMqTPMOpssGaq1F6WOMmdSTJ-RZ_HSpvMHCXZYGeqErViDV6pqR1hAeRyTLQnp5VPm1OyjlbTUR0U6oBytpXiOLtxX3Tm4fSMoQerKUKrMrlm5YPeP1=s300) center/contain no-repeat;mix-blend-mode:multiply;filter:grayscale(1) brightness(1.45) contrast(3);flex:none}
 .brand .wm{display:flex;flex-direction:column;line-height:1}
 .brand .wm i{font:italic 500 20px/1 "Source Serif 4",serif;color:var(--ink)}
 .brand .wm b{font:italic 800 27px/1 "Barlow Condensed";letter-spacing:1px;text-transform:uppercase}
@@ -58,8 +58,6 @@ nav a{text-decoration:none;font-weight:600;font-size:15px;color:var(--ink2)}nav 
 .pic .ph{aspect-ratio:1/1;border-radius:14px;background:#333 url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QxFhjyDa4K2-tWZ_RseXzh4Tkcre8bEU-iWVVBbLP8uk3zsk0GVjHZcaYNMU063R3qZz933x0zhnqWvpS5_BJoGgHVfL3HJsKnyS7X4b0TlYJSQe3QqDrsnfGHZVbAD-sZxiRE=w1500) 50% 60%/cover;box-shadow:0 40px 70px -30px rgba(0,0,0,.8)}
 .card{position:absolute;left:-34px;bottom:-26px;background:#fff;color:var(--ink);border-radius:12px;padding:16px 18px;display:flex;gap:14px;align-items:center;box-shadow:0 24px 40px -20px rgba(0,0,0,.6)}
 .gauge{width:84px;height:52px;flex:none}
-.gauge .nd{transform-origin:42px 44px;transform:rotate(-80deg);transition:transform 1.8s cubic-bezier(.3,1.35,.4,1)}
-.gauge.on .nd{transform:rotate(var(--a,64deg))}
 .card b{font:800 30px/1 "Barlow Condensed"}.card small{display:block;color:var(--mut);font-size:13px;line-height:1.3}
 .stripe{height:6px;background:repeating-linear-gradient(90deg,var(--red) 0 60px,var(--ink) 60px 64px,var(--steel) 64px 124px,var(--ink) 124px 128px)}
 section{padding:96px 0}
@@ -143,7 +141,7 @@ footer{background:#0a0b0c;color:#9da1a8;padding:56px 0 100px;font-size:15px}
 footer h4{color:#fff;font:700 18px "Barlow Condensed";text-transform:uppercase;letter-spacing:1px;margin:0 0 12px}
 footer a{color:#d8dade}
 .chip{display:inline-flex;align-items:center;gap:10px;background:#fff;border-radius:10px;padding:10px 16px 10px 10px;color:var(--ink)}
-.chip .mk{width:46px;height:46px;background:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Sm6Bd0T3cSbXWUjrH5EIMqTPMOpssGaq1F6WOMmdSTJ-RZ_HSpvMHCXZYGeqErViDV6pqR1hAeRyTLQnp5VPm1OyjlbTUR0U6oBytpXiOLtxX3Tm4fSMoQerKUKrMrlm5YPeP1=s200) center/112% no-repeat;mix-blend-mode:multiply}
+.chip .mk{width:46px;height:46px;background:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Sm6Bd0T3cSbXWUjrH5EIMqTPMOpssGaq1F6WOMmdSTJ-RZ_HSpvMHCXZYGeqErViDV6pqR1hAeRyTLQnp5VPm1OyjlbTUR0U6oBytpXiOLtxX3Tm4fSMoQerKUKrMrlm5YPeP1=s200) center/contain no-repeat;mix-blend-mode:multiply;filter:grayscale(1) brightness(1.45) contrast(3)}
 .chip span{font:italic 800 20px/1 "Barlow Condensed";text-transform:uppercase}
 .legal{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid #222;margin-top:36px;padding-top:20px}
 .mbar{display:none}
@@ -198,7 +196,7 @@ footer a{color:#d8dade}
   </div>
   <div class="pic">
    <div class="ph" role="img" aria-label="ABC Plumbing service truck"></div>
-   <div class="card"><svg class="gauge" id="gauge" viewBox="0 0 84 52" aria-hidden="true"><path d="M6 44a36 36 0 0 1 72 0" fill="none" stroke="#e3e5e8" stroke-width="7" stroke-linecap="round"/><path d="M6 44a36 36 0 0 1 72 0" fill="none" stroke="#d3202a" stroke-width="7" stroke-linecap="round" stroke-dasharray="113" stroke-dashoffset="5"/><g class="nd"><line x1="42" y1="44" x2="42" y2="14" stroke="#111214" stroke-width="3" stroke-linecap="round"/></g><circle cx="42" cy="44" r="5" fill="#111214"/></svg><div><b>4.8</b><small>Google rating<br>31 reviews</small></div></div>
+   <div class="card"><svg class="gauge" id="gauge" viewBox="0 0 84 52" aria-hidden="true"><path d="M6 44a36 36 0 0 1 72 0" fill="none" stroke="#e3e5e8" stroke-width="7" stroke-linecap="round"/><path d="M6 44a36 36 0 0 1 72 0" fill="none" stroke="#d3202a" stroke-width="7" stroke-linecap="round" stroke-dasharray="113" stroke-dashoffset="5"/><g class="nd" transform="rotate(-80 42 44)"><line x1="42" y1="44" x2="42" y2="14" stroke="#111214" stroke-width="3" stroke-linecap="round"/></g><circle cx="42" cy="44" r="5" fill="#111214"/></svg><div><b>4.8</b><small>Google rating<br>31 reviews</small></div></div>
   </div>
  </div>
 </section>
@@ -213,7 +211,7 @@ footer a{color:#d8dade}
 <section id="services">
  <div class="wrap">
   <span class="kick">What Brandon handles</span>
-  <h2 class="h2">From a leaky faucet to the gas line</h2>
+  <h2 class="h2">From the kitchen sink to the gas line</h2>
   <p class="lead">Every job below comes from Brandon's own photos and from what his customers wrote about him.</p>
   <div class="svc">
    <div class="rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7S6 9.4 6 14a6 6 0 0 0 12 0c0-4.6-6-11.3-6-11.3z"/></svg></span><h3>Leak finding &amp; repair</h3><p>Water and gas leaks tracked down and fixed, including the ones other companies missed.</p><span class="from">"found and fixed 6 leaks after other companies said there was only 1"</span></div>
@@ -268,7 +266,7 @@ footer a{color:#d8dade}
    <figure class="t rv"><div style="background-image:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Tip73_dw1hfd9rtL2bc-TY1qf1qOvN8CKH3bTIG9otT_72C-bHV6dQlJl0Kcme-7qosuljcN8-cP0243bpQ6loxLzME5UlhCkJjhAMtDHcHRJb73Nw0twt8rFGUqCbSmlHyBkF=w900)"></div><figcaption>Shower valve &amp; trim</figcaption></figure>
    <figure class="rv"><div style="background-image:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SZA_qlFBhZf6oYLa3Ksb93SpbvxHY6iZMXIw2rkmveMKR2BdTaVVAiU2dJyCqAketL-5g-Ob7KnzdGnhajBLYzfnL-iNbIWeJSJMwa7MuUuus16DVzbDYnKxK9HMBw8-hGMg5otc6_kUP8=w700)"></div><figcaption>Tub &amp; shower valve</figcaption></figure>
    <figure class="rv"><div style="background-image:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SKVzaBwEWE_NbzSLuxJd2DeVnd5RLFLFMg8pOZPM5NUmhnP8wBfFWaDfSZL2hfDmMiEGpyJVnhtICTfb9NIUhPxk9HBN2znfxI6FQDhsSrYhyz4epwh3RaCDJpTPK2S-vrRfH4h9U49qI3=w700)"></div><figcaption>Pressure tank &amp; filter</figcaption></figure>
-   <figure class="t rv"><div style="background-image:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QjBSBzHzk16K_j9kuuxmLPbv0VkAvgbAeA4DX9CFMH7hO8qdgNGWEzTjex4dlW5jH51yYb_lHfOb8Mk_czzlAJLo7EVm5L2PtjACbaht_pk3htjH7oH4kPLv5tft765697v3qSbKYW4FAr=w900)"></div><figcaption>Water heater</figcaption></figure>
+   <figure class="w rv"><div style="background-image:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QjBSBzHzk16K_j9kuuxmLPbv0VkAvgbAeA4DX9CFMH7hO8qdgNGWEzTjex4dlW5jH51yYb_lHfOb8Mk_czzlAJLo7EVm5L2PtjACbaht_pk3htjH7oH4kPLv5tft765697v3qSbKYW4FAr=w1200);background-position:50% 65%"></div><figcaption>Water heater</figcaption></figure>
    <figure class="rv"><div style="background-image:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TDoD5YoLNIt6tWt2_pwjgxww13uk-7mOqe_gBBEsO9BrlOHHJyNV87a3MlWmXnS3iJ5JMvKfdSMwRexe1ELKKd4LlOIo7BEU9dW9qc7H6pN8wMA3cNRhJgFV5-dJ0ZskpFPBn39Hb8dqE=w700)"></div><figcaption>Water samples</figcaption></figure>
    <figure class="rv"><div style="background-image:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QrbuFelhQvkiW2xLoBVMGqc456EobPi5fYGOOV2qPxMhT4DFgOYZJTi-Lx_ElmPcTq7mMh_NwO1Y77yfJac297Yc1gZqtncYnUjrOB06653zvVMjlfW3oP6P_4JWNxRLkOWsP-eY1FgiI=w700);background-position:50% 60%"></div><figcaption>On the job</figcaption></figure>
   </div>
@@ -366,7 +364,7 @@ html.fx.fx-go .hero .card{opacity:1;transform:none;transition:opacity .7s 1.2s,t
 .fx-shine::after{content:'';position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.4),transparent);transform:skewX(-18deg);animation:fxShine 5s 2.6s ease-in-out infinite}
 @keyframes fxShine{0%,70%{left:-60%}100%{left:140%}}
 .stripe{transform-origin:left;animation:fxStripe 1.4s .4s cubic-bezier(.7,0,.2,1) both}@keyframes fxStripe{from{transform:scaleX(0)}to{transform:none}}
-@media (prefers-reduced-motion:reduce){html.fx .hero [data-fx],html.fx .hero .pic .ph,html.fx .hero .card{opacity:1!important;transform:none!important;filter:none!important;clip-path:none!important}.fx-shine::after,.stripe{animation:none}.gauge .nd{transition:none}.rv{opacity:1;transform:none;transition:none}}
+@media (prefers-reduced-motion:reduce){html.fx .hero [data-fx],html.fx .hero .pic .ph,html.fx .hero .card{opacity:1!important;transform:none!important;filter:none!important;clip-path:none!important}.fx-shine::after,.stripe{animation:none}.rv{opacity:1;transform:none;transition:none}}
 </style>
 <script id="fx-js">
 (()=>{const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;const D=document,root=D.documentElement;
@@ -377,7 +375,7 @@ if(hero&&!RM){root.classList.add('fx');
  requestAnimationFrame(()=>requestAnimationFrame(()=>root.classList.add('fx-go')));
  setTimeout(()=>{seq.forEach(e=>{e.removeAttribute('data-fx');e.style.removeProperty('--d')});root.classList.remove('fx')},3400)}
 /* pressure gauge needle settles on the 4.8 rating */
-const g=D.getElementById('gauge');if(g){g.style.setProperty('--a',(-90+180*4.8/5)+'deg');setTimeout(()=>g.classList.add('on'),RM?0:1500)}
+const g=D.getElementById('gauge');if(g){const nd=g.querySelector('.nd'),A0=-80,A1=-90+180*4.8/5;const set=a=>nd.setAttribute('transform','rotate('+a.toFixed(2)+' 42 44)');if(RM)set(A1);else setTimeout(()=>{const t0=performance.now();const f=t=>{const k=Math.min(1,(t-t0)/1700);const e=1-Math.pow(1-k,3)*Math.cos(k*4.2);set(A0+(A1-A0)*Math.min(e,1.06));if(k<1)requestAnimationFrame(f);else set(A1)};requestAnimationFrame(f)},1500)}
 /* leak count climbs from 1 to 6 */
 const n=D.getElementById('leakN');if(n){if(RM)n.textContent='6';else new IntersectionObserver((es,o)=>es.forEach(e=>{if(!e.isIntersecting)return;o.disconnect();let v=1;const t=setInterval(()=>{v++;n.textContent=v;if(v>=6)clearInterval(t)},260)}),{threshold:.6}).observe(n)}
 /* stagger sibling reveals */

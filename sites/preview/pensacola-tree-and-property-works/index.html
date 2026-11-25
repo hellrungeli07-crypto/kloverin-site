@@ -204,10 +204,10 @@ footer .fl img{height:56px;width:auto}
   <p class="lead">Again and again, reviews describe huge trees right next to a house, a fence or a pool, and no damage when the job was done.</p>
   <div class="cgrid">
    <div class="calls" id="calls">
-    <div class="call rv" style="--w:12%"><div class="dist">3 ft<small>from the house</small></div><div><p>"It was only 3 feet from the front of the house and over 30 feet tall … they cut it and removed it with no damage to the House."</p><cite>ARTSY FWKS (from their review)</cite><div class="meter"><i></i></div></div></div>
-    <div class="call rv" style="--w:4%"><div class="dist">Inches<small>from the fence</small></div><div><p>"They skillfully removed a dead pine tree situated within inches of my fence with extreme precision and left no damage."</p><cite>Chrystina H. (from her review)</cite><div class="meter"><i></i></div></div></div>
-    <div class="call rv" style="--w:22%"><div class="dist">Over<small>the greenhouse</small></div><div><p>"We had a rather large dead oak overhanging our greenhouse and a neighbors shed and pool. They got the tree down with no damage."</p><cite>Jason A. (from his review)</cite><div class="meter"><i></i></div></div></div>
-    <div class="call rv" style="--w:30%"><div class="dist">By<small>the pool &amp; deck</small></div><div><p>"He … explained how he would take the tree down and avoid any damage to the pool, deck and house, as this was a big concern for me."</p><cite>Carroll M. (from his review)</cite><div class="meter"><i></i></div></div></div>
+    <div class="call rv" style="--w:12%"><div class="dist">3 ft<small>from the house</small></div><div><p>"It was only 3 feet from the front of the house and over 30 feet tall … they cut it and removed it with no damage to the House."</p><cite>ARTSY FWKS (from their review)</cite></div></div>
+    <div class="call rv" style="--w:4%"><div class="dist">Inches<small>from the fence</small></div><div><p>"They skillfully removed a dead pine tree situated within inches of my fence with extreme precision and left no damage."</p><cite>Chrystina H. (from her review)</cite></div></div>
+    <div class="call rv" style="--w:22%"><div class="dist">Over<small>the greenhouse</small></div><div><p>"We had a rather large dead oak overhanging our greenhouse and a neighbors shed and pool. They got the tree down with no damage."</p><cite>Jason A. (from his review)</cite></div></div>
+    <div class="call rv" style="--w:30%"><div class="dist">By<small>the pool &amp; deck</small></div><div><p>"He … explained how he would take the tree down and avoid any damage to the pool, deck and house, as this was a big concern for me."</p><cite>Carroll M. (from his review)</cite></div></div>
    </div>
    <div class="cphoto rv" role="img" aria-label="Bucket truck trimming an oak over a house"></div>
   </div>
@@ -237,7 +237,7 @@ footer .fl img{height:56px;width:auto}
   <span class="lbl">Recent jobs</span>
   <h2 class="h2">From the job site</h2>
   <div class="gal" id="gal">
-   <figure class="t rv"><div style="background-image:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TTD6a5UNBqMDS2d4swF0iQlRGfHtaIjJjaY5Ng3uUfXqkqgVuvGQhgeXAQsmpTUHNt4yf2MPm3zVqlJV-mXVJJRSPbaLHxtr371IOU1H1CSl_8u-CE4By-BB-yqSBRhPsrN7Sr=w900)"></div><figcaption>Climbing a tall pine</figcaption></figure>
+   <figure class="t rv"><div style="background-image:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TTD6a5UNBqMDS2d4swF0iQlRGfHtaIjJjaY5Ng3uUfXqkqgVuvGQhgeXAQsmpTUHNt4yf2MPm3zVqlJV-mXVJJRSPbaLHxtr371IOU1H1CSl_8u-CE4By-BB-yqSBRhPsrN7Sr=w900)"></div><figcaption>Up in the tree</figcaption></figure>
    <figure class="w rv"><div style="background-image:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TmkxRMTauQlfN8Q8jtYV-Dm2-KTW1ZxGiZrLIgLbTZKU9HKatENLF5qmkVJDZKpPmFP2XXR_hM86_X1hOC7HKsKM64ak0WaTvQW_aDcpXuuQUWiRjNWhvQU5okgjLi18Ghn9KJdm3ValE=w1300)"></div><figcaption>The crew moving a log</figcaption></figure>
    <figure class="rv"><div style="background-image:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TiZbJn_5gjU9DB-r0lFzYjXmr3mmB32AM-cOr7RKV7_mrJUiJm_Q9xxXRsXuPDvkpuk2ROdbI8fL-HAcbm4J0lSJLNeEXRNF_ZWUufsw4bxPoZqLn4iOzMbSRAqdI93Fqgrn2QDBlWllM=w800)"></div><figcaption>Oak over the roof</figcaption></figure>
    <figure class="rv"><div style="background-image:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SQmAwFduq6FH1Da7v28ZzzeStm6eUio5xfhEkPTZvBEthAUU1dNvznwhkLk8AP-W1datZL5hOvLYvcHc63h0dang_9gBjC6-hTzzw689CvyKK8X9RCgnAanARa-044UEkGKi5Pqh9Nmkwe=w800)"></div><figcaption>Waterfront clearing</figcaption></figure>
@@ -346,8 +346,6 @@ if(hero&&!RM){root.classList.add('fx');
  seq.forEach((e,i)=>{e.setAttribute('data-fx','');e.style.setProperty('--d',(.1+i*.12)+'s')});
  requestAnimationFrame(()=>requestAnimationFrame(()=>root.classList.add('fx-go')));
  setTimeout(()=>{seq.forEach(e=>{e.removeAttribute('data-fx');e.style.removeProperty('--d')});root.classList.remove('fx','fx-go');hero.querySelector('.bg').style.backgroundPosition='50% 40%'},3800)}
-/* the clearance meters measure out how close each tree was */
-const calls=[...D.querySelectorAll('.call')];calls.forEach(c=>new IntersectionObserver((es,o)=>es.forEach(e=>{if(!e.isIntersecting)return;o.disconnect();setTimeout(()=>c.classList.add('on'),RM?0:350)}),{threshold:.6}).observe(c));
 /* gentle depth on the job photos */
 const ph=[...D.querySelectorAll('#gal figure>div')];
 if(!RM&&ph.length){let tick=false;const upd=()=>{const vh=innerHeight;ph.forEach(p=>{const r=p.parentElement.getBoundingClientRect();if(r.bottom<0||r.top>vh)return;const k=(r.top+r.height/2-vh/2)/vh;p.style.transform='translateY('+(k*-18).toFixed(1)+'px)'});tick=false};addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});upd()}
