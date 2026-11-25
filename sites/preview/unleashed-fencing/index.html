@@ -56,7 +56,7 @@ section{padding:96px 0}
 /* HOA */
 .hoa .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:60px;align-items:center}
 .hoa-steps{position:relative;display:grid;gap:14px;margin-top:30px}
-.hoa-steps>div{position:relative;display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+.hoa-steps>div{position:relative;overflow:hidden;display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px}
 .hoa-steps .n{width:52px;height:52px;border-radius:50%;background:var(--sand-l);display:grid;place-items:center;font:700 22px "Zilla Slab";color:var(--sand-d)}
 .hoa-steps b{font:700 20px "Zilla Slab";display:block}
 .hoa-steps p{margin:2px 0 0;color:var(--mut);font-size:15.5px}
@@ -157,7 +157,7 @@ footer a{color:#e5ded2}
  form{grid-template-columns:1fr;padding:22px}
  .fg{grid-template-columns:1fr}
  .hoa-steps>div:nth-child(2){padding-right:20px}
- .stamp{position:static;display:inline-block;margin-top:8px;grid-column:2}
+ .stamp{position:static;display:inline-block;margin-top:8px;grid-column:2;justify-self:start}
  .mbar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:45;background:#fff;padding:10px 12px;box-shadow:0 -8px 20px -10px rgba(0,0,0,.25)}
  .mbar .btn{padding:14px 10px;font-size:15px}
  .ai{bottom:84px;right:14px}
