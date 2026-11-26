@@ -62,19 +62,19 @@ section{padding:90px 0}
 .head h2{font-size:clamp(32px,4vw,52px);margin:10px 0 14px;color:var(--navy)}
 .head p{color:var(--muted);font-size:18.5px}
 /* before / after */
-.ba-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.ba{position:relative;aspect-ratio:2/1;border-radius:18px;overflow:hidden;background:#bcd3dd;--x:100%;touch-action:pan-y}
-.ba .l{position:absolute;inset:0;background-size:100% 200%;background-repeat:no-repeat}
-.ba .after{background-position:0 100%}
-.ba .before{background-position:0 0;clip-path:inset(0 calc(100% - var(--x)) 0 0)}
+.pairs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px}.pairs .pp{position:relative;aspect-ratio:1/1;border-radius:18px;background:#bcd3dd center/cover}.pairs figcaption{margin-top:10px;font-weight:700;color:var(--navy)}.pairs .t.a2{left:10px;top:calc(50% + 8px)}.pairs .t.a3{left:auto;right:10px}
+.ba{position:relative;aspect-ratio:2.05/1;border-radius:18px;overflow:hidden;background:#bcd3dd;--x:100%;touch-action:pan-y}
+.ba .l{position:absolute;inset:0;background-size:103% 206%;background-repeat:no-repeat}
+.ba .after{background-position:50% 99.1%}
+.ba .before{background-position:50% 1.9%;clip-path:inset(0 calc(100% - var(--x)) 0 0)}
 .ba .edge{position:absolute;top:0;bottom:0;left:var(--x);width:3px;margin-left:-1.5px;background:#fff;box-shadow:0 0 14px 3px rgba(255,255,255,.8)}
 .ba .edge::after{content:'';position:absolute;top:50%;left:50%;width:38px;height:38px;margin:-19px 0 0 -19px;border-radius:50%;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230b2a3c' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m9 6-6 6 6 6M15 6l6 6-6 6'/%3E%3C/svg%3E") center/20px no-repeat;box-shadow:0 6px 16px rgba(0,0,0,.25)}
 .ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
-.ba .t{position:absolute;top:10px;font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;background:rgba(11,42,60,.72);color:#fff;padding:5px 9px;border-radius:8px;pointer-events:none}
-.ba .t.b{left:10px}.ba .t.a{right:10px}
+.ba .t,.pairs .t{position:absolute;top:10px;font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;background:rgba(11,42,60,.72);color:#fff;padding:5px 9px;border-radius:8px;pointer-events:none}
+.ba .t.b,.pairs .t.b{left:10px}.ba .t.a{right:10px}
 .ba-cap{margin-top:10px;font-weight:700;color:var(--navy)}
 .ba-cap small{display:block;font-weight:600;color:var(--muted)}
-@media(max-width:900px){.ba-wrap{grid-template-columns:1fr}}
+@media(max-width:900px){.pairs{grid-template-columns:1fr 1fr}}@media(max-width:560px){.pairs{grid-template-columns:1fr}}
 /* services */
 .svc{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .svc div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;transition:transform .25s,box-shadow .25s,border-color .25s}
@@ -192,20 +192,15 @@ footer a{color:#fff}
 
 <section id="results" style="padding-top:60px">
   <div class="wrap">
-    <div class="head rv"><span class="eyebrow">Before &amp; after</span><h2>Night and day.</h2><p>Real jobs from their Google page. Drag across each photo.</p></div>
-    <div class="ba-wrap">
-      <div class="rv">
-        <div class="ba" style="--img:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TwR1xhUeLKW1xqxPYoFoBXIf-zef-6E47o2Dk_mqgWbSAEu1IvqNyYUjs_O-mmudv8T9uRmEnanhobbS5_7f-Cdd4IO4Xl01FI-A-a1N7KnQoLyL2dT4tdnzuHVoNwr3EhqJ6MWQ=w1600)"><div class="l after"></div><div class="l before"></div><span class="edge"></span><span class="t b">Before</span><span class="t a">After</span><input type="range" min="0" max="100" value="100" aria-label="Before and after: driveway"></div>
-        <p class="ba-cap">Driveway<small>Stained concrete, back to bright.</small></p>
-      </div>
-      <div class="rv">
-        <div class="ba" style="--img:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Sl3OKdkUtzrQoI0iHX90ga97cN5SWEjy-mWh59SSdomOCVmLudXTVlgLCrephWY593bIVbmbiya1ARTTOBJTxhT9r3nl2MnCWRTCg1O_Lrz9BlVWmg21IS-o45HeBlxbK6nzBjIw=w1600)"><div class="l after"></div><div class="l before"></div><span class="edge"></span><span class="t b">Before</span><span class="t a">After</span><input type="range" min="0" max="100" value="100" aria-label="Before and after: front walkway"></div>
-        <p class="ba-cap">Front walkway<small>“My driveway is so clean it's still blinding me in the sun!” Justin B.</small></p>
-      </div>
-      <div class="rv">
-        <div class="ba" style="--img:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9ThqDifKGc1X0kIsaiYn4SmfMmToCGnDKTExVn06e0VxWyjKODIgmlsrLO0_AIuCtKtjL0CvlJO4tuck4qnONOEheefV9teV3nAel6KXEa0waHcrLs1MOLHOTVOLxPLQQUkOD3G=w1600)"><div class="l after"></div><div class="l before"></div><span class="edge"></span><span class="t b">Before</span><span class="t a">After</span><input type="range" min="0" max="100" value="100" aria-label="Before and after: dealership entrance"></div>
-        <p class="ba-cap">Dealership entrance<small>Commercial steps and walkways.</small></p>
-      </div>
+    <div class="head rv"><span class="eyebrow">Before &amp; after</span><h2>Night and day.</h2><p>Real jobs from their Google page.</p></div>
+    <div class="rv">
+      <div class="ba" style="--img:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9ThqDifKGc1X0kIsaiYn4SmfMmToCGnDKTExVn06e0VxWyjKODIgmlsrLO0_AIuCtKtjL0CvlJO4tuck4qnONOEheefV9teV3nAel6KXEa0waHcrLs1MOLHOTVOLxPLQQUkOD3G=w2000)"><div class="l after"></div><div class="l before"></div><span class="edge"></span><span class="t b">Before</span><span class="t a">After</span><input type="range" min="0" max="100" value="100" aria-label="Before and after: dealership entrance"></div>
+      <p class="ba-cap">Car dealership entrance, Pensacola<small>Drag across the photo. Commercial steps, walks and planters.</small></p>
+    </div>
+    <div class="pairs">
+      <figure class="rv"><div class="pp" style="background-image:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TwR1xhUeLKW1xqxPYoFoBXIf-zef-6E47o2Dk_mqgWbSAEu1IvqNyYUjs_O-mmudv8T9uRmEnanhobbS5_7f-Cdd4IO4Xl01FI-A-a1N7KnQoLyL2dT4tdnzuHVoNwr3EhqJ6MWQ=w1200)"><span class="t b">Before</span><span class="t a2">After</span></div><figcaption>Driveway &amp; front of the house</figcaption></figure>
+      <figure class="rv"><div class="pp" style="background-image:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Sl3OKdkUtzrQoI0iHX90ga97cN5SWEjy-mWh59SSdomOCVmLudXTVlgLCrephWY593bIVbmbiya1ARTTOBJTxhT9r3nl2MnCWRTCg1O_Lrz9BlVWmg21IS-o45HeBlxbK6nzBjIw=w1200)"><span class="t b">Before</span><span class="t a2">After</span></div><figcaption>Front walkway</figcaption></figure>
+      <figure class="rv"><div class="pp" style="background-image:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TvX8WkE4780WULoyfDc423rHgtIUR0wf4bXAErqt40vYbLUiGc60dxB2wZ7zT6tQnnLJ9L1NkO6WoXPIpOcf4sfrY7vrMBs7iqgBm4D8GVRXdjih8Qg2pHPkjL2mgcT82-XvEo=w1200)"><span class="t b">Before</span><span class="t a3">After</span></div><figcaption>Grocery storefront</figcaption></figure>
     </div>
   </div>
 </section>
